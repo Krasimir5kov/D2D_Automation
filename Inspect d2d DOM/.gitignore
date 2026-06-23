@@ -1,0 +1,5 @@
+node_modules/
+.audit-profile/
+ui-audit/
+scripts/ui-audit.routes.local.json
+scripts/ui-audit.predefined-filters.local.json

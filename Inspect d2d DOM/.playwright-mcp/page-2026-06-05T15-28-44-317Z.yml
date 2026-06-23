@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: "Environment: integration"
+        - generic [ref=e8]:
+          - text: "Portal Version: 1.28.30,"
+          - link "Widget Versions" [ref=e9] [cursor=pointer]:
+            - /url: javascript:void(0)
+      - generic [ref=e10] [cursor=pointer]:
+        - text: 
+        - generic [ref=e11]: Krasimir Petkov
+      - text: 
+    - img [ref=e16]
+  - main [ref=e17]:
+    - navigation [ref=e18]:
+      - generic "Navigation" [ref=e19] [cursor=pointer]: 
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e24]:
+          - link "Door 2 Door" [ref=e25]:
+            - /url: ""
+        - listitem [ref=e26]:
+          - link "Timey" [ref=e27] [cursor=pointer]:
+            - /url: /timey
+        - listitem [ref=e28]:
+          - link "Cockpit-Leistungspositionen" [ref=e29] [cursor=pointer]:
+            - /url: /leistungspositionen
+        - listitem [ref=e30]:
+          - link "Case Comments" [ref=e31] [cursor=pointer]:
+            - /url: /case_comments
+        - listitem [ref=e32]:
+          - link "Case Document Viewer" [ref=e33] [cursor=pointer]:
+            - /url: /CaseDocumentViewer
+        - listitem [ref=e34]:
+          - link "Address List" [ref=e35] [cursor=pointer]:
+            - /url: /address_list
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - list [ref=e48]:
+          - listitem [ref=e49]: D2D
+          - listitem [ref=e50]:
+            - link "Baulose" [ref=e51] [cursor=pointer]:
+              - /url: "#/baulose"
+          - listitem [ref=e52]:
+            - link "Objekte" [ref=e53] [cursor=pointer]:
+              - /url: "#/objekte"
+          - listitem [ref=e54]:
+            - link "Sales Action" [ref=e55] [cursor=pointer]:
+              - /url: "#/sales-actions"
+          - listitem [ref=e56]:
+            - link "Benutzerverwaltung" [ref=e57] [cursor=pointer]:
+              - /url: "#/benutzerverwaltung"
+          - listitem [ref=e58]:
+            - link "Importe" [ref=e59] [cursor=pointer]:
+              - /url: "#/importe"
+          - listitem [ref=e60]:
+            - link "Konfiguration" [ref=e61] [cursor=pointer]:
+              - /url: "#/konfiguration"
+        - generic [ref=e63]:
+          - generic [ref=e64]: Krasimir Petkov
+          - generic [ref=e65]: Pseudo A1 Organization
+      - generic [ref=e28697]:
+        - generic [ref=e28698]:
+          - generic [ref=e28701]:
+            - generic: Suche in Benutzerverwaltung...
+            - textbox "Suche in Benutzerverwaltung..." [ref=e28702]
+            - button "" [ref=e28703] [cursor=pointer]
+          - generic [ref=e28704]:
+            - button "Benutzer erstellen" [ref=e28707] [cursor=pointer]:
+              - generic [ref=e28708]:
+                - img [ref=e28711]
+                - generic [ref=e28713]: Benutzer erstellen
+            - button "Team erstellen" [ref=e28716] [cursor=pointer]:
+              - generic [ref=e28717]:
+                - img [ref=e28720]
+                - generic [ref=e28722]: Team erstellen
+            - button "Admin A1 erstellen" [ref=e28725] [cursor=pointer]:
+              - generic [ref=e28726]:
+                - img [ref=e28729]
+                - generic [ref=e28731]: Admin A1 erstellen
+        - generic [ref=e28732]:
+          - link "BENUTZER (973)" [ref=e28734] [cursor=pointer]:
+            - /url: "#/benutzerverwaltung/users"
+          - link "TEAMS (76)" [ref=e28736] [cursor=pointer]:
+            - /url: "#/benutzerverwaltung/teams"
+          - link "ORGANISATIONEN (0)" [ref=e28738] [cursor=pointer]:
+            - /url: "#/benutzerverwaltung/organisationen"
+        - generic [ref=e28741]:
+          - generic [ref=e28742]:
+            - generic [ref=e28743]:
+              - button "aktiv" [ref=e28744] [cursor=pointer]
+              - button "inaktiv" [ref=e28745] [cursor=pointer]
+            - button "ohne Rolle" [ref=e28747] [cursor=pointer]
+            - button "Organisation" [ref=e28749] [cursor=pointer]:
+              - text: Organisation
+              - button [ref=e28750]:
+                - img [ref=e28752]
+            - button "Rolle" [ref=e28755] [cursor=pointer]:
+              - text: Rolle
+              - button [ref=e28756]:
+                - img [ref=e28758]
+          - button "" [ref=e28761] [cursor=pointer]:
+            - generic [ref=e28762]: 
+  - generic [ref=e2084]:
+    - text:  Due to inactivity, the authentication will expire in 00:00
+    - link "Extend authentication" [ref=e2085] [cursor=pointer]:
+      - /url: javascript:void(0)
+  - generic [ref=e2088]:
+    - generic [ref=e2089]: Title
+    - generic [ref=e2090] [cursor=pointer]: 
+  - contentinfo [ref=e2092]:
+    - link "A1 Telekom Austria Group" [ref=e2094] [cursor=pointer]:
+      - /url: https://www.a1.group/

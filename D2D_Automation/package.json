@@ -1,0 +1,26 @@
+{
+  "name": "d2d_automation",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript UI and API automation framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:chrome": "playwright test --project=chrome",
+    "test:ui": "playwright test tests/ui --project=chrome",
+    "test:api": "playwright test tests/api --project=chrome",
+    "auth:setup": "playwright test --project=setup",
+    "auth:clear": "node scripts/clear-auth-state.cjs",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^26.0.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^6.0.3"
+  }
+}

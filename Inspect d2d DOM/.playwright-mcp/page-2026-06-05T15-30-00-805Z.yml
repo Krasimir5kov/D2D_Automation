@@ -1,0 +1,437 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: "Environment: integration"
+        - generic [ref=e8]:
+          - text: "Portal Version: 1.28.30,"
+          - link "Widget Versions" [ref=e9] [cursor=pointer]:
+            - /url: javascript:void(0)
+      - generic [ref=e10] [cursor=pointer]:
+        - text: 
+        - generic [ref=e11]: Krasimir Petkov
+      - text: 
+    - img [ref=e16]
+  - main [ref=e17]:
+    - navigation [ref=e18]:
+      - generic "Navigation" [ref=e19] [cursor=pointer]: 
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e24]:
+          - link "Door 2 Door" [ref=e25]:
+            - /url: ""
+        - listitem [ref=e26]:
+          - link "Timey" [ref=e27] [cursor=pointer]:
+            - /url: /timey
+        - listitem [ref=e28]:
+          - link "Cockpit-Leistungspositionen" [ref=e29] [cursor=pointer]:
+            - /url: /leistungspositionen
+        - listitem [ref=e30]:
+          - link "Case Comments" [ref=e31] [cursor=pointer]:
+            - /url: /case_comments
+        - listitem [ref=e32]:
+          - link "Case Document Viewer" [ref=e33] [cursor=pointer]:
+            - /url: /CaseDocumentViewer
+        - listitem [ref=e34]:
+          - link "Address List" [ref=e35] [cursor=pointer]:
+            - /url: /address_list
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - list [ref=e48]:
+          - listitem [ref=e49]: D2D
+          - listitem [ref=e50]:
+            - link "Baulose" [ref=e51] [cursor=pointer]:
+              - /url: "#/baulose"
+          - listitem [ref=e52]:
+            - link "Objekte" [ref=e53] [cursor=pointer]:
+              - /url: "#/objekte"
+          - listitem [ref=e54]:
+            - link "Sales Action" [ref=e55] [cursor=pointer]:
+              - /url: "#/sales-actions"
+          - listitem [ref=e56]:
+            - link "Benutzerverwaltung" [ref=e57] [cursor=pointer]:
+              - /url: "#/benutzerverwaltung"
+          - listitem [ref=e58]:
+            - link "Importe" [ref=e59] [cursor=pointer]:
+              - /url: "#/importe"
+          - listitem [ref=e60]:
+            - link "Konfiguration" [ref=e61] [cursor=pointer]:
+              - /url: "#/konfiguration"
+        - generic [ref=e63]:
+          - generic [ref=e64]: Krasimir Petkov
+          - generic [ref=e65]: Pseudo A1 Organization
+      - generic [ref=e30906]:
+        - generic [ref=e30907]:
+          - generic [ref=e30908]: Konfiguration
+          - link "Übersicht" [ref=e30909] [cursor=pointer]:
+            - /url: "#/konfiguration/übersicht"
+          - link "Abschlussgründe" [ref=e30910] [cursor=pointer]:
+            - /url: "#/konfiguration/abschlussgründe"
+          - link "Aufgaben" [ref=e30911]:
+            - /url: "#/konfiguration/aufgaben"
+          - link "Gruppen" [ref=e30912] [cursor=pointer]:
+            - /url: "#/konfiguration/gruppen"
+          - link "Regime" [ref=e30913] [cursor=pointer]:
+            - /url: "#/konfiguration/regime"
+          - link "Aktivitäten Setup" [ref=e30914] [cursor=pointer]:
+            - /url: "#/konfiguration/aktivitäten-setup"
+        - generic [ref=e30918]:
+          - generic [ref=e30919]:
+            - heading "Aufgaben" [level=2] [ref=e30920]
+            - button "Aufgabe erstellen" [ref=e30923] [cursor=pointer]:
+              - generic [ref=e30924]:
+                - img [ref=e30927]
+                - generic [ref=e30929]: Aufgabe erstellen
+          - generic [ref=e30933]:
+            - generic: Suche in Aufgaben...
+            - textbox "Suche in Aufgaben..." [ref=e30934]
+            - button "" [ref=e30935] [cursor=pointer]
+          - generic [ref=e30936]: 47 Ergebnisse
+          - table [ref=e30938]:
+            - rowgroup [ref=e30939]:
+              - row "ID TASK_TYPE Anzeigename" [ref=e30940]:
+                - cell "ID" [ref=e30941]
+                - cell "TASK_TYPE" [ref=e30942]
+                - cell "Anzeigename" [ref=e30943]
+            - rowgroup [ref=e30944]:
+              - row "133 AUFGABE_TEST Aufgabe" [ref=e30945]:
+                - cell "133" [ref=e30946]:
+                  - generic [ref=e30947]: "133"
+                - cell "AUFGABE_TEST" [ref=e30948]:
+                  - generic [ref=e30949]: AUFGABE_TEST
+                - cell "Aufgabe" [ref=e30950]:
+                  - generic [ref=e30951]: Aufgabe
+              - row "134 AUFGABE_TEST2 Aufgabe success modal test content" [ref=e30952]:
+                - cell "134" [ref=e30953]:
+                  - generic [ref=e30954]: "134"
+                - cell "AUFGABE_TEST2" [ref=e30955]:
+                  - generic [ref=e30956]: AUFGABE_TEST2
+                - cell "Aufgabe success modal test content" [ref=e30957]:
+                  - generic [ref=e30958]: Aufgabe success modal test content
+              - row "191 AUFGABEN aufgaben" [ref=e30959]:
+                - cell "191" [ref=e30960]:
+                  - generic [ref=e30961]: "191"
+                - cell "AUFGABEN" [ref=e30962]:
+                  - generic [ref=e30963]: AUFGABEN
+                - cell "aufgaben" [ref=e30964]:
+                  - generic [ref=e30965]: aufgaben
+              - row "13 BBI_ZU_FWA BBI zu FWA" [ref=e30966]:
+                - cell "13" [ref=e30967]:
+                  - generic [ref=e30968]: "13"
+                - cell "BBI_ZU_FWA" [ref=e30969]:
+                  - generic [ref=e30970]: BBI_ZU_FWA
+                - cell "BBI zu FWA" [ref=e30971]:
+                  - generic [ref=e30972]: BBI zu FWA
+              - row "43 BBI_ZU_NETCUBE BBI zu Netcube" [ref=e30973]:
+                - cell "43" [ref=e30974]:
+                  - generic [ref=e30975]: "43"
+                - cell "BBI_ZU_NETCUBE" [ref=e30976]:
+                  - generic [ref=e30977]: BBI_ZU_NETCUBE
+                - cell "BBI zu Netcube" [ref=e30978]:
+                  - generic [ref=e30979]: BBI zu Netcube
+              - row "172 BULGARIA BULGARIA" [ref=e30980]:
+                - cell "172" [ref=e30981]:
+                  - generic [ref=e30982]: "172"
+                - cell "BULGARIA" [ref=e30983]:
+                  - generic [ref=e30984]: BULGARIA
+                - cell "BULGARIA" [ref=e30985]:
+                  - generic [ref=e30986]: BULGARIA
+              - row "136 DDDDDDDDDDDDD222222222222222222222222222 dddddddd22222222222" [ref=e30987]:
+                - cell "136" [ref=e30988]:
+                  - generic [ref=e30989]: "136"
+                - cell "DDDDDDDDDDDDD222222222222222222222222222" [ref=e30990]:
+                  - generic [ref=e30991]: DDDDDDDDDDDDD222222222222222222222222222
+                - cell "dddddddd22222222222" [ref=e30992]:
+                  - generic [ref=e30993]: dddddddd22222222222
+              - row "131 FIRST TEST First Test" [ref=e30994]:
+                - cell "131" [ref=e30995]:
+                  - generic [ref=e30996]: "131"
+                - cell "FIRST TEST" [ref=e30997]:
+                  - generic [ref=e30998]: FIRST TEST
+                - cell "First Test" [ref=e30999]:
+                  - generic [ref=e31000]: First Test
+              - row "171 KRASI_PETKOV KRASIMIR PETKOV" [ref=e31001]:
+                - cell "171" [ref=e31002]:
+                  - generic [ref=e31003]: "171"
+                - cell "KRASI_PETKOV" [ref=e31004]:
+                  - generic [ref=e31005]: KRASI_PETKOV
+                - cell "KRASIMIR PETKOV" [ref=e31006]:
+                  - generic [ref=e31007]: KRASIMIR PETKOV
+              - row "173 KRASI_TESTER KRASIMIR TESTER" [ref=e31008]:
+                - cell "173" [ref=e31009]:
+                  - generic [ref=e31010]: "173"
+                - cell "KRASI_TESTER" [ref=e31011]:
+                  - generic [ref=e31012]: KRASI_TESTER
+                - cell "KRASIMIR TESTER" [ref=e31013]:
+                  - generic [ref=e31014]: KRASIMIR TESTER
+              - row "18 KUPFER_OUT Kupfer Phase Out" [ref=e31015]:
+                - cell "18" [ref=e31016]:
+                  - generic [ref=e31017]: "18"
+                - cell "KUPFER_OUT" [ref=e31018]:
+                  - generic [ref=e31019]: KUPFER_OUT
+                - cell "Kupfer Phase Out" [ref=e31020]:
+                  - generic [ref=e31021]: Kupfer Phase Out
+              - row "17 KUPFER_ZU_GLAS_A1 Kupfer zu Glasfaser A1 Netz" [ref=e31022]:
+                - cell "17" [ref=e31023]:
+                  - generic [ref=e31024]: "17"
+                - cell "KUPFER_ZU_GLAS_A1" [ref=e31025]:
+                  - generic [ref=e31026]: KUPFER_ZU_GLAS_A1
+                - cell "Kupfer zu Glasfaser A1 Netz" [ref=e31027]:
+                  - generic [ref=e31028]: Kupfer zu Glasfaser A1 Netz
+              - row "2 LVRR Leerverrohrungscheck" [ref=e31029]:
+                - cell "2" [ref=e31030]:
+                  - generic [ref=e31031]: "2"
+                - cell "LVRR" [ref=e31032]:
+                  - generic [ref=e31033]: LVRR
+                - cell "Leerverrohrungscheck" [ref=e31034]:
+                  - generic [ref=e31035]: Leerverrohrungscheck
+              - row "121 LEVEL0 Level 0 (Ableger öffentl)" [ref=e31036]:
+                - cell "121" [ref=e31037]:
+                  - generic [ref=e31038]: "121"
+                - cell "LEVEL0" [ref=e31039]:
+                  - generic [ref=e31040]: LEVEL0
+                - cell "Level 0 (Ableger öffentl)" [ref=e31041]:
+                  - generic [ref=e31042]: Level 0 (Ableger öffentl)
+              - row "122 LEVEL1 Level 1 (Ableger priv)" [ref=e31043]:
+                - cell "122" [ref=e31044]:
+                  - generic [ref=e31045]: "122"
+                - cell "LEVEL1" [ref=e31046]:
+                  - generic [ref=e31047]: LEVEL1
+                - cell "Level 1 (Ableger priv)" [ref=e31048]:
+                  - generic [ref=e31049]: Level 1 (Ableger priv)
+              - row "125 LEVEL3 Level 3 (GF im Haus ohne Abschlusspunkt)" [ref=e31050]:
+                - cell "125" [ref=e31051]:
+                  - generic [ref=e31052]: "125"
+                - cell "LEVEL3" [ref=e31053]:
+                  - generic [ref=e31054]: LEVEL3
+                - cell "Level 3 (GF im Haus ohne Abschlusspunkt)" [ref=e31055]:
+                  - generic [ref=e31056]: Level 3 (GF im Haus ohne Abschlusspunkt)
+              - row "126 LEVEL4 Level 4 (GF im Wohnbereich)" [ref=e31057]:
+                - cell "126" [ref=e31058]:
+                  - generic [ref=e31059]: "126"
+                - cell "LEVEL4" [ref=e31060]:
+                  - generic [ref=e31061]: LEVEL4
+                - cell "Level 4 (GF im Wohnbereich)" [ref=e31062]:
+                  - generic [ref=e31063]: Level 4 (GF im Wohnbereich)
+              - row "1 NVD Nachverdichtung" [ref=e31064]:
+                - cell "1" [ref=e31065]:
+                  - generic [ref=e31066]: "1"
+                - cell "NVD" [ref=e31067]:
+                  - generic [ref=e31068]: NVD
+                - cell "Nachverdichtung" [ref=e31069]:
+                  - generic [ref=e31070]: Nachverdichtung
+              - row "63 NETCUBE_ZU_BBI Netcube zu BBI" [ref=e31071]:
+                - cell "63" [ref=e31072]:
+                  - generic [ref=e31073]: "63"
+                - cell "NETCUBE_ZU_BBI" [ref=e31074]:
+                  - generic [ref=e31075]: NETCUBE_ZU_BBI
+                - cell "Netcube zu BBI" [ref=e31076]:
+                  - generic [ref=e31077]: Netcube zu BBI
+              - row "11 NETCUBE_ZU_BBI_A1 Netcube zu BBI A1 Netz" [ref=e31078]:
+                - cell "11" [ref=e31079]:
+                  - generic [ref=e31080]: "11"
+                - cell "NETCUBE_ZU_BBI_A1" [ref=e31081]:
+                  - generic [ref=e31082]: NETCUBE_ZU_BBI_A1
+                - cell "Netcube zu BBI A1 Netz" [ref=e31083]:
+                  - generic [ref=e31084]: Netcube zu BBI A1 Netz
+              - row "10 NETCUBE_ZU_BBI_OAN Netcube zu BBI OAN/TP" [ref=e31085]:
+                - cell "10" [ref=e31086]:
+                  - generic [ref=e31087]: "10"
+                - cell "NETCUBE_ZU_BBI_OAN" [ref=e31088]:
+                  - generic [ref=e31089]: NETCUBE_ZU_BBI_OAN
+                - cell "Netcube zu BBI OAN/TP" [ref=e31090]:
+                  - generic [ref=e31091]: Netcube zu BBI OAN/TP
+              - row "14 NETCUBE_ZU_FWA Netcube zu FWA" [ref=e31092]:
+                - cell "14" [ref=e31093]:
+                  - generic [ref=e31094]: "14"
+                - cell "NETCUBE_ZU_FWA" [ref=e31095]:
+                  - generic [ref=e31096]: NETCUBE_ZU_FWA
+                - cell "Netcube zu FWA" [ref=e31097]:
+                  - generic [ref=e31098]: Netcube zu FWA
+              - row "151 NEW NEW" [ref=e31099]:
+                - cell "151" [ref=e31100]:
+                  - generic [ref=e31101]: "151"
+                - cell "NEW" [ref=e31102]:
+                  - generic [ref=e31103]: NEW
+                - cell "NEW" [ref=e31104]:
+                  - generic [ref=e31105]: NEW
+              - row "137 NEW_TASK new task" [ref=e31106]:
+                - cell "137" [ref=e31107]:
+                  - generic [ref=e31108]: "137"
+                - cell "NEW_TASK" [ref=e31109]:
+                  - generic [ref=e31110]: NEW_TASK
+                - cell "new task" [ref=e31111]:
+                  - generic [ref=e31112]: new task
+              - row "22 POTS_OUT POTS Phase out" [ref=e31113]:
+                - cell "22" [ref=e31114]:
+                  - generic [ref=e31115]: "22"
+                - cell "POTS_OUT" [ref=e31116]:
+                  - generic [ref=e31117]: POTS_OUT
+                - cell "POTS Phase out" [ref=e31118]:
+                  - generic [ref=e31119]: POTS Phase out
+              - row "20 POTS_ZU_BBI_A1 POTS zu BBI A1 Netz" [ref=e31120]:
+                - cell "20" [ref=e31121]:
+                  - generic [ref=e31122]: "20"
+                - cell "POTS_ZU_BBI_A1" [ref=e31123]:
+                  - generic [ref=e31124]: POTS_ZU_BBI_A1
+                - cell "POTS zu BBI A1 Netz" [ref=e31125]:
+                  - generic [ref=e31126]: POTS zu BBI A1 Netz
+              - row "21 POTS_ZU_BBI_OAN POTS zu BBI OAN/TP" [ref=e31127]:
+                - cell "21" [ref=e31128]:
+                  - generic [ref=e31129]: "21"
+                - cell "POTS_ZU_BBI_OAN" [ref=e31130]:
+                  - generic [ref=e31131]: POTS_ZU_BBI_OAN
+                - cell "POTS zu BBI OAN/TP" [ref=e31132]:
+                  - generic [ref=e31133]: POTS zu BBI OAN/TP
+              - row "132 TEST_14_05_2026 test 14 05 2026" [ref=e31134]:
+                - cell "132" [ref=e31135]:
+                  - generic [ref=e31136]: "132"
+                - cell "TEST_14_05_2026" [ref=e31137]:
+                  - generic [ref=e31138]: TEST_14_05_2026
+                - cell "test 14 05 2026" [ref=e31139]:
+                  - generic [ref=e31140]: test 14 05 2026
+              - row "138 TEST_NEW_TASK TEST NEW TASK" [ref=e31141]:
+                - cell "138" [ref=e31142]:
+                  - generic [ref=e31143]: "138"
+                - cell "TEST_NEW_TASK" [ref=e31144]:
+                  - generic [ref=e31145]: TEST_NEW_TASK
+                - cell "TEST NEW TASK" [ref=e31146]:
+                  - generic [ref=e31147]: TEST NEW TASK
+              - row "135 TTTTTTTTTT2TTTTTTT ttttttttttttttttt" [ref=e31148]:
+                - cell "135" [ref=e31149]:
+                  - generic [ref=e31150]: "135"
+                - cell "TTTTTTTTTT2TTTTTTT" [ref=e31151]:
+                  - generic [ref=e31152]: TTTTTTTTTT2TTTTTTT
+                - cell "ttttttttttttttttt" [ref=e31153]:
+                  - generic [ref=e31154]: ttttttttttttttttt
+              - row "8 UM_ZU_OAN_HC Umsteiger zu OAN/TP (HC)" [ref=e31155]:
+                - cell "8" [ref=e31156]:
+                  - generic [ref=e31157]: "8"
+                - cell "UM_ZU_OAN_HC" [ref=e31158]:
+                  - generic [ref=e31159]: UM_ZU_OAN_HC
+                - cell "Umsteiger zu OAN/TP (HC)" [ref=e31160]:
+                  - generic [ref=e31161]: Umsteiger zu OAN/TP (HC)
+              - row "9 UM_ZU_OAN_HP Umsteiger zu OAN/TP (HP)" [ref=e31162]:
+                - cell "9" [ref=e31163]:
+                  - generic [ref=e31164]: "9"
+                - cell "UM_ZU_OAN_HP" [ref=e31165]:
+                  - generic [ref=e31166]: UM_ZU_OAN_HP
+                - cell "Umsteiger zu OAN/TP (HP)" [ref=e31167]:
+                  - generic [ref=e31168]: Umsteiger zu OAN/TP (HP)
+              - row "4 UP_BBI Upsell BBI" [ref=e31169]:
+                - cell "4" [ref=e31170]:
+                  - generic [ref=e31171]: "4"
+                - cell "UP_BBI" [ref=e31172]:
+                  - generic [ref=e31173]: UP_BBI
+                - cell "Upsell BBI" [ref=e31174]:
+                  - generic [ref=e31175]: Upsell BBI
+              - row "12 UP_BBI_A1 Upsell BBI A1 Netz" [ref=e31176]:
+                - cell "12" [ref=e31177]:
+                  - generic [ref=e31178]: "12"
+                - cell "UP_BBI_A1" [ref=e31179]:
+                  - generic [ref=e31180]: UP_BBI_A1
+                - cell "Upsell BBI A1 Netz" [ref=e31181]:
+                  - generic [ref=e31182]: Upsell BBI A1 Netz
+              - row "42 UP_NETCUBE Upsell Netcube" [ref=e31183]:
+                - cell "42" [ref=e31184]:
+                  - generic [ref=e31185]: "42"
+                - cell "UP_NETCUBE" [ref=e31186]:
+                  - generic [ref=e31187]: UP_NETCUBE
+                - cell "Upsell Netcube" [ref=e31188]:
+                  - generic [ref=e31189]: Upsell Netcube
+              - row "101 UP_HV_VOICE Upsell/Weiterbindung HV Voice" [ref=e31190]:
+                - cell "101" [ref=e31191]:
+                  - generic [ref=e31192]: "101"
+                - cell "UP_HV_VOICE" [ref=e31193]:
+                  - generic [ref=e31194]: UP_HV_VOICE
+                - cell "Upsell/Weiterbindung HV Voice" [ref=e31195]:
+                  - generic [ref=e31196]: Upsell/Weiterbindung HV Voice
+              - row "3 VK_BBI Verkauf BBI" [ref=e31197]:
+                - cell "3" [ref=e31198]:
+                  - generic [ref=e31199]: "3"
+                - cell "VK_BBI" [ref=e31200]:
+                  - generic [ref=e31201]: VK_BBI
+                - cell "Verkauf BBI" [ref=e31202]:
+                  - generic [ref=e31203]: Verkauf BBI
+              - row "7 VK_BBI_A1 Verkauf BBI A1 Netz" [ref=e31204]:
+                - cell "7" [ref=e31205]:
+                  - generic [ref=e31206]: "7"
+                - cell "VK_BBI_A1" [ref=e31207]:
+                  - generic [ref=e31208]: VK_BBI_A1
+                - cell "Verkauf BBI A1 Netz" [ref=e31209]:
+                  - generic [ref=e31210]: Verkauf BBI A1 Netz
+              - row "5 VK_BBI_OAN_HC Verkauf BBI OAN/TP (HC)" [ref=e31211]:
+                - cell "5" [ref=e31212]:
+                  - generic [ref=e31213]: "5"
+                - cell "VK_BBI_OAN_HC" [ref=e31214]:
+                  - generic [ref=e31215]: VK_BBI_OAN_HC
+                - cell "Verkauf BBI OAN/TP (HC)" [ref=e31216]:
+                  - generic [ref=e31217]: Verkauf BBI OAN/TP (HC)
+              - row "6 VK_BBI_OAN_HP Verkauf BBI OAN/TP (HP)" [ref=e31218]:
+                - cell "6" [ref=e31219]:
+                  - generic [ref=e31220]: "6"
+                - cell "VK_BBI_OAN_HP" [ref=e31221]:
+                  - generic [ref=e31222]: VK_BBI_OAN_HP
+                - cell "Verkauf BBI OAN/TP (HP)" [ref=e31223]:
+                  - generic [ref=e31224]: Verkauf BBI OAN/TP (HP)
+              - row "19 VK_FTTH_BBI Verkauf FTTH BBI" [ref=e31225]:
+                - cell "19" [ref=e31226]:
+                  - generic [ref=e31227]: "19"
+                - cell "VK_FTTH_BBI" [ref=e31228]:
+                  - generic [ref=e31229]: VK_FTTH_BBI
+                - cell "Verkauf FTTH BBI" [ref=e31230]:
+                  - generic [ref=e31231]: Verkauf FTTH BBI
+              - row "15 VK_FWA Verkauf FWA" [ref=e31232]:
+                - cell "15" [ref=e31233]:
+                  - generic [ref=e31234]: "15"
+                - cell "VK_FWA" [ref=e31235]:
+                  - generic [ref=e31236]: VK_FWA
+                - cell "Verkauf FWA" [ref=e31237]:
+                  - generic [ref=e31238]: Verkauf FWA
+              - row "16 VK_INFRA_U_SERVICE Verkauf Hausanschluss + Service" [ref=e31239]:
+                - cell "16" [ref=e31240]:
+                  - generic [ref=e31241]: "16"
+                - cell "VK_INFRA_U_SERVICE" [ref=e31242]:
+                  - generic [ref=e31243]: VK_INFRA_U_SERVICE
+                - cell "Verkauf Hausanschluss + Service" [ref=e31244]:
+                  - generic [ref=e31245]: Verkauf Hausanschluss + Service
+              - row "61 VK_HV_VOICE Verkauf High Value Voice" [ref=e31246]:
+                - cell "61" [ref=e31247]:
+                  - generic [ref=e31248]: "61"
+                - cell "VK_HV_VOICE" [ref=e31249]:
+                  - generic [ref=e31250]: VK_HV_VOICE
+                - cell "Verkauf High Value Voice" [ref=e31251]:
+                  - generic [ref=e31252]: Verkauf High Value Voice
+              - row "41 VK_NETCUBE Verkauf Netcube" [ref=e31253]:
+                - cell "41" [ref=e31254]:
+                  - generic [ref=e31255]: "41"
+                - cell "VK_NETCUBE" [ref=e31256]:
+                  - generic [ref=e31257]: VK_NETCUBE
+                - cell "Verkauf Netcube" [ref=e31258]:
+                  - generic [ref=e31259]: Verkauf Netcube
+              - row "62 VK_NEXT Verkauf Next" [ref=e31260]:
+                - cell "62" [ref=e31261]:
+                  - generic [ref=e31262]: "62"
+                - cell "VK_NEXT" [ref=e31263]:
+                  - generic [ref=e31264]: VK_NEXT
+                - cell "Verkauf Next" [ref=e31265]:
+                  - generic [ref=e31266]: Verkauf Next
+              - row "81 VV_OAN_TP Vorvertrag OAN/TP" [ref=e31267]:
+                - cell "81" [ref=e31268]:
+                  - generic [ref=e31269]: "81"
+                - cell "VV_OAN_TP" [ref=e31270]:
+                  - generic [ref=e31271]: VV_OAN_TP
+                - cell "Vorvertrag OAN/TP" [ref=e31272]:
+                  - generic [ref=e31273]: Vorvertrag OAN/TP
+  - generic [ref=e2084]:
+    - text:  Due to inactivity, the authentication will expire in 00:00
+    - link "Extend authentication" [ref=e2085] [cursor=pointer]:
+      - /url: javascript:void(0)
+  - generic [ref=e2088]:
+    - generic [ref=e2089]: Title
+    - generic [ref=e2090] [cursor=pointer]: 
+  - contentinfo [ref=e2092]:
+    - link "A1 Telekom Austria Group" [ref=e2094] [cursor=pointer]:
+      - /url: https://www.a1.group/

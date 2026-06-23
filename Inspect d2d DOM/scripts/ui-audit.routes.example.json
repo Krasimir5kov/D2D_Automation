@@ -1,0 +1,14 @@
+[
+  {
+    "area": "example-area",
+    "page": "example-list",
+    "state": "default",
+    "url": "<ADD_INTERNAL_INT_ROUTE_LOCALLY>"
+  },
+  {
+    "area": "example-area",
+    "page": "example-detail",
+    "state": "detail-open",
+    "url": "<ADD_INTERNAL_INT_ROUTE_LOCALLY>"
+  }
+]

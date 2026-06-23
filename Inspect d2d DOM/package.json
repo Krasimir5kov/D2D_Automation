@@ -1,0 +1,23 @@
+{
+  "name": "d2d-dom-ui-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ui:audit": "tsx scripts/ui-audit.ts",
+    "ui:audit:dropdowns": "tsx scripts/ui-audit.ts --dropdown-only",
+    "ui:audit:predefined-filters": "tsx scripts/ui-audit.ts --predefined-filter-audit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.11.3",
+    "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "^0.0.75",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

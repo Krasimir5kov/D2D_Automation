@@ -1,0 +1,145 @@
+{
+  "pageId": "konfiguration",
+  "pageUrl": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/%C3%BCbersicht",
+  "timestamp": "2026-06-20T11:36:32.274Z",
+  "totalFound": 13,
+  "clicked": 13,
+  "skipped": 0,
+  "errors": 13,
+  "byChangeType": {
+    "none": 3,
+    "navigation": 10
+  },
+  "elements": [
+    {
+      "index": 0,
+      "text": "Widget Versions",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/%C3%BCbersicht",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 1,
+      "text": "Baulose",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/baulose/ftth",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 2,
+      "text": "Objekte",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 3,
+      "text": "Sales Action",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/sales-actions/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 4,
+      "text": "Benutzerverwaltung",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/benutzerverwaltung/users",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 5,
+      "text": "Importe",
+      "tag": "a",
+      "safetyClass": "RISKY_DATA_CHANGE",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/importe",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 6,
+      "text": "Konfiguration",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/%C3%BCbersicht",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 7,
+      "text": "Übersicht",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/%C3%BCbersicht",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 8,
+      "text": "Abschlussgründe",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/abschlussgr%C3%BCnde",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 9,
+      "text": "Aufgaben",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/aufgaben",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 10,
+      "text": "Gruppen",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/gruppen",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 11,
+      "text": "Regime",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/regime",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 12,
+      "text": "Aktivitäten Setup",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/aktivit%C3%A4ten-setup",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ]
+}

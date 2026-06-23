@@ -1,0 +1,12 @@
+[    1272ms] [LOG] JQMIGRATE: Migrate is installed with logging active, version 3.5.2 @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:3
+[    1326ms] [WARNING] JQMIGRATE: jQuery.trim is deprecated; use String.prototype.trim @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    1469ms] [WARNING] JQMIGRATE: jQuery.isFunction() is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    1488ms] [WARNING] JQMIGRATE: jQuery.fn.click() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    1886ms] [WARNING] JQMIGRATE: jQuery.isArray is deprecated; use Array.isArray @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2114ms] [WARNING] JQMIGRATE: jQuery.parseJSON is deprecated; use JSON.parse @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2286ms] [LOG] ctxsFormsAuthentication:could not parse Input node @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/ctxs.webui.min.js:237
+[    2287ms] [WARNING] JQMIGRATE: jQuery.fn.change() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2288ms] [WARNING] JQMIGRATE: jQuery.fn.keyup() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2291ms] [WARNING] JQMIGRATE: jQuery.fn.submit() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2323ms] [WARNING] JQMIGRATE: jQuery.fn.focus() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1
+[    2325ms] [WARNING] JQMIGRATE: jQuery.fn.select() event shorthand is deprecated @ https://authpingid.a1telekom.at/logon/LogonPoint/receiver/js/external/jquery-migrate.min.js:1

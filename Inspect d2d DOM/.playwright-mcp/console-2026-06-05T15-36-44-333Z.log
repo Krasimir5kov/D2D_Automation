@@ -1,0 +1,27 @@
+[     681ms] [LOG] # Abv home page script v.1.2.01 # @ https://home.abv.bg/js/main.min.js?v=2.1:4
+[     686ms] [LOG] # Abv home page banners library v.1.9.2 # @ https://home.abv.bg/js/main.min.js?v=2.1:3170
+[     686ms] [LOG] # GDPR abv v.12.1.20 # @ https://home.abv.bg/js/main.min.js?v=2.1:4581
+[     687ms] [LOG] ### Gemius v.2.2.3 ### @ https://home.abv.bg/js/main.min.js?v=2.1:4715
+[     693ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://home.abv.bg/:0
+[     698ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[     704ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[     707ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[     826ms] [LOG] * Counters v.3.9 * @ https://img.abv.bg/e/s/counters.html?v=2.2:78
+[     847ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[     850ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[     854ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://home.abv.bg/js/jquery.min.js:2192
+[    1043ms] [LOG] # w2g diagnose library v.1.0 # @ https://lib.wtg-ads.com/publisher/abv.bg/diagno/lib.min.js:0
+[    1471ms] [LOG] #~ Gemius event fired:  [pyM6ETuay1axb8mosdTjz6R..KfGoHBcgod0mxirr8X.07] pyM6ETuay1axb8mosdTjz6R..KfGoHBcgod0mxirr8X.07 [] pp_gemius_hit#pyM6ETuay1axb8mosdTjz6R..KfGoHBcgod0mxirr8X.07 pp_gemius_hit('pyM6ETuay1axb8mosdTjz6R..KfGoHBcgod0mxirr8X.07'); @ https://img.abv.bg/e/s/counters.html?v=2.2:109
+[    1744ms] [LOG] ### Gtm html v.3.6.15 ### @ https://img.abv.bg/e/s/gtm.html?t=1780673806026:26
+[    2127ms] [LOG] HA @ :0
+[    2459ms] [LOG] [BeX Tracking] TCF API present immediate @ https://analytics.contentexchange.me/bex/load/5f9ae8347f08c7237d8609f9:33
+[    2461ms] [LOG] [BeX Tracking] TCF event OK undefined @ https://analytics.contentexchange.me/bex/load/5f9ae8347f08c7237d8609f9:33
+[    2461ms] [LOG] [BeX Tracking] Have tcdata {tcfPolicyVersion: 5, cmpId: 300, cmpVersion: 2, gdprApplies: true, cmpStatus: loaded} @ https://analytics.contentexchange.me/bex/load/5f9ae8347f08c7237d8609f9:33
+[    2462ms] [LOG] [BeX Tracking] storing disallowed @ https://analytics.contentexchange.me/bex/load/5f9ae8347f08c7237d8609f9:33
+[    2462ms] [LOG] [BeX Tracking] tracker ready CE @ https://analytics.contentexchange.me/bex/load/5f9ae8347f08c7237d8609f9:33
+[    2524ms] [LOG] ##~ Abv GTM 2 receiver check dataLayer:  @ https://img.abv.bg/e/s/gtm.html?t=1780673806026:63
+[    2524ms] [LOG] [Object, Object, Object, Object] @ https://img.abv.bg/e/s/gtm.html?t=1780673806026:64
+[    2524ms] [LOG] ##~ Abv GTM receiver path state ~:  {} / 
+ ~ object path:  {} @ https://img.abv.bg/e/s/gtm.html?t=1780673806026:103
+[   44263ms] [LOG] ### consent 1:  {tcfPolicyVersion: 5, cmpId: 300, cmpVersion: 2, gdprApplies: true, cmpStatus: loaded} @ https://home.abv.bg/js/main.min.js?v=2.1:4622
+[   44272ms] [LOG] ### consent 1:  {tcString: CQlVK8AQlVK8AEsACBBGCiFoAP_gAEPgAAIwMGpB7C7lbWFCyL…AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA.cAAAD_wAAAA, tcfPolicyVersion: 5, gdprApplies: true, cmpId: 300, cmpVersion: 2} @ https://home.abv.bg/js/main.min.js?v=2.1:4622

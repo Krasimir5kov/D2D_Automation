@@ -1,0 +1,121 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: "Environment: integration"
+        - generic [ref=e8]:
+          - text: "Portal Version: 1.28.30,"
+          - link "Widget Versions" [ref=e9] [cursor=pointer]:
+            - /url: javascript:void(0)
+      - generic [ref=e10] [cursor=pointer]:
+        - text: 
+        - generic [ref=e11]: Krasimir Petkov
+      - text: 
+    - img [ref=e16]
+  - main [ref=e17]:
+    - navigation [ref=e18]:
+      - generic "Navigation" [ref=e19] [cursor=pointer]: 
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e24]:
+          - link "Door 2 Door" [ref=e25]:
+            - /url: ""
+        - listitem [ref=e26]:
+          - link "Timey" [ref=e27] [cursor=pointer]:
+            - /url: /timey
+        - listitem [ref=e28]:
+          - link "Cockpit-Leistungspositionen" [ref=e29] [cursor=pointer]:
+            - /url: /leistungspositionen
+        - listitem [ref=e30]:
+          - link "Case Comments" [ref=e31] [cursor=pointer]:
+            - /url: /case_comments
+        - listitem [ref=e32]:
+          - link "Case Document Viewer" [ref=e33] [cursor=pointer]:
+            - /url: /CaseDocumentViewer
+        - listitem [ref=e34]:
+          - link "Address List" [ref=e35] [cursor=pointer]:
+            - /url: /address_list
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - list [ref=e48]:
+          - listitem [ref=e49]: D2D
+          - listitem [ref=e50]:
+            - link "Baulose" [ref=e51] [cursor=pointer]:
+              - /url: "#/baulose"
+          - listitem [ref=e52]:
+            - link "Objekte" [ref=e53] [cursor=pointer]:
+              - /url: "#/objekte"
+          - listitem [ref=e54]:
+            - link "Sales Action" [ref=e55] [cursor=pointer]:
+              - /url: "#/sales-actions"
+          - listitem [ref=e56]:
+            - link "Benutzerverwaltung" [ref=e57] [cursor=pointer]:
+              - /url: "#/benutzerverwaltung"
+          - listitem [ref=e58]:
+            - link "Importe" [ref=e59] [cursor=pointer]:
+              - /url: "#/importe"
+          - listitem [ref=e60]:
+            - link "Konfiguration" [ref=e61] [cursor=pointer]:
+              - /url: "#/konfiguration"
+        - generic [ref=e63]:
+          - generic [ref=e64]: Krasimir Petkov
+          - generic [ref=e65]: Pseudo A1 Organization
+      - generic [ref=e32507]:
+        - generic [ref=e32510]:
+          - generic: Suche in Objekte...
+          - textbox "Suche in Objekte..." [ref=e32511]
+          - button "" [ref=e32512] [cursor=pointer]
+        - generic [ref=e32514]:
+          - button "alle Filter" [ref=e32518] [cursor=pointer]:
+            - img [ref=e32521]
+            - generic [ref=e32523]: alle Filter
+          - generic [ref=e32525]:
+            - generic [ref=e32526]:
+              - generic [ref=e32527]:
+                - button "nicht übergeben" [ref=e32528] [cursor=pointer]
+                - button "zurückgewiesen" [ref=e32529] [cursor=pointer]
+                - button "übergeben" [ref=e32530] [cursor=pointer]
+              - button "Baulos/Einsatzname" [ref=e32532] [cursor=pointer]:
+                - text: Baulos/Einsatzname
+                - button [ref=e32533]:
+                  - img [ref=e32535]
+              - button "PLZ" [ref=e32538] [cursor=pointer]:
+                - text: PLZ
+                - button [ref=e32539]:
+                  - img [ref=e32541]
+              - button "Organisation" [ref=e32544] [cursor=pointer]:
+                - text: Organisation
+                - button [ref=e32545]:
+                  - img [ref=e32547]
+              - button "Verkaufsstart" [ref=e32550] [cursor=pointer]:
+                - text: Verkaufsstart
+                - button [ref=e32551]:
+                  - img [ref=e32553]
+              - button "Fragebogen" [ref=e32556] [cursor=pointer]:
+                - text: Fragebogen
+                - button [ref=e32557]:
+                  - img [ref=e32559]
+            - button "" [ref=e32562] [cursor=pointer]:
+              - generic [ref=e32563]: 
+        - generic [ref=e32565]:
+          - link "NEUBAU (104)" [ref=e32567] [cursor=pointer]:
+            - /url: "#/objekte/neubau"
+            - generic [ref=e32568]: NEUBAU (104)
+          - link "FTTH-AUSBAU (115.573)" [ref=e32570] [cursor=pointer]:
+            - /url: "#/objekte/ftth"
+            - generic [ref=e32571]: FTTH-AUSBAU (115.573)
+          - link "BESTANDSBAU (40.344)" [ref=e32573] [cursor=pointer]:
+            - /url: "#/objekte/bestandsbau"
+            - generic [ref=e32574]: BESTANDSBAU (40.344)
+  - generic [ref=e2084]:
+    - text:  Due to inactivity, the authentication will expire in 00:00
+    - link "Extend authentication" [ref=e2085] [cursor=pointer]:
+      - /url: javascript:void(0)
+  - generic [ref=e2088]:
+    - generic [ref=e2089]: Title
+    - generic [ref=e2090] [cursor=pointer]: 
+  - contentinfo [ref=e2092]:
+    - link "A1 Telekom Austria Group" [ref=e2094] [cursor=pointer]:
+      - /url: https://www.a1.group/

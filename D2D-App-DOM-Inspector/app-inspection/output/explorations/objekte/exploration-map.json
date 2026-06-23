@@ -1,0 +1,385 @@
+{
+  "pageId": "objekte",
+  "pageUrl": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+  "timestamp": "2026-06-20T11:29:38.410Z",
+  "totalFound": 37,
+  "clicked": 37,
+  "skipped": 0,
+  "errors": 37,
+  "byChangeType": {
+    "none": 27,
+    "navigation": 10
+  },
+  "elements": [
+    {
+      "index": 0,
+      "text": "",
+      "tag": "button",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 1,
+      "text": "alle Filter",
+      "tag": "div",
+      "safetyClass": "SAFE_OPEN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 2,
+      "text": "nicht übergeben",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 3,
+      "text": "zurückgewiesen",
+      "tag": "div",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 4,
+      "text": "übergeben",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 5,
+      "text": "Baulos/Einsatzname",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 6,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 7,
+      "text": "PLZ",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 8,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 9,
+      "text": "Organisation",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 10,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 11,
+      "text": "Verkaufsstart",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 12,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 13,
+      "text": "Fragebogen",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 14,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 15,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 16,
+      "text": "Verkaufsstart",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 17,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 18,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 19,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 20,
+      "text": "",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 21,
+      "text": "25",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 22,
+      "text": "50",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 23,
+      "text": "100",
+      "tag": "div",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 24,
+      "text": "Widget Versions",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 25,
+      "text": "Baulose",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/baulose/ftth",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 26,
+      "text": "Objekte",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 27,
+      "text": "Sales Action",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/sales-actions/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 28,
+      "text": "Benutzerverwaltung",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/benutzerverwaltung/users",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 29,
+      "text": "Importe",
+      "tag": "a",
+      "safetyClass": "RISKY_DATA_CHANGE",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/importe",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 30,
+      "text": "Konfiguration",
+      "tag": "a",
+      "safetyClass": "SAFE_NAVIGATION",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/konfiguration/%C3%BCbersicht",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 31,
+      "text": "NEUBAU (4)",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "none",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 32,
+      "text": "FTTH-AUSBAU (1.056)",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/ftth",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 33,
+      "text": "BESTANDSBAU (529)",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/bestandsbau",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 34,
+      "text": "5621 St.Veit im Pongau Grafenhof-Dorf 7",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau/134555/info",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 35,
+      "text": "6091 Götzens Oberer Feldweg 33",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau/136975/info",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "index": 36,
+      "text": "8490 Bad Radkersburg Theatergasse 1",
+      "tag": "a",
+      "safetyClass": "UNKNOWN",
+      "clicked": true,
+      "uiChangeType": "navigation",
+      "urlAfter": "https://portal-int.open-frontends.a1.net/door2door#/objekte/neubau/140266/info",
+      "error": "Error: page.evaluate: ReferenceError: __name is not defined\n    at eval (eval at evaluate (:303:30), <anonymous>:1:17)\n    at UtilityScript.evaluate (<anonymous>:305:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ]
+}

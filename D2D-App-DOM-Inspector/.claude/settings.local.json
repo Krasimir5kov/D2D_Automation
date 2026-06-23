@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(mkdir -p \"c:/Users/a1bg520419/Desktop/D2D-App-DOM-Inspector/app-inspection/.claude/agents\" && mkdir -p \"c:/Users/a1bg520419/Desktop/D2D-App-DOM-Inspector/app-inspection/scripts/agents\" && echo \"Directories ready\")",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\a1bg520419\\Desktop\\D2D-App-DOM-Inspector\\app-inspection\\.claude"
+    ]
+  }
+}
