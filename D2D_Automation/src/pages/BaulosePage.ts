@@ -8,6 +8,7 @@ import { FilterBar } from '../components/FilterBar';
 import { TableView } from '../components/TableView';
 // Imports shared page behavior and known Door2Door routes.
 import { BasePage, door2doorRoutes } from './BasePage';
+import { SearchField } from '../components/SearchField';
 
 // Represents the Baulose main page.
 export class BaulosePage extends BasePage {
@@ -18,11 +19,13 @@ export class BaulosePage extends BasePage {
   // Shared table/list helper.
   readonly table: TableView;
   // Locator for the Baulose search input.
-  readonly searchInput: Locator;
+  // readonly searchInput: Locator;
+  readonly searchField: SearchField;
   // Locator for the FTTH tab.
   readonly ftthTab: Locator;
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
+  
 
   // Builds the Baulose page object for the active browser page.
   constructor(page: Page) {
@@ -35,10 +38,15 @@ export class BaulosePage extends BasePage {
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the Baulose search input using known test id/id first, then placeholder text as fallback.
-    this.searchInput = page.locator('[data-testid="baulose-search-field"], #baulose-search-field').or(
+    this.searchField = new SearchField(page, page.locator('input[id="baulose-search-field"]').or(
       // Uses the documented placeholder fallback from the DOM investigation.
       page.getByPlaceholder(/Suche nach Baulose\/Einsatznamen/i),
-    );
+    ));
+    // this.searchInput
+    //  = page.locator('[data-testid="baulose-search-field"], #baulose-search-field').or(
+    //   // Uses the documented placeholder fallback from the DOM investigation.
+    //   page.getByPlaceholder(/Suche nach Baulose\/Einsatznamen/i),
+    //  )
     // Locates the FTTH tab by link role or tab role depending on how the component renders.
     this.ftthTab = page.getByRole('link', { name: /FTTH/i }).or(page.getByRole('tab', { name: /FTTH/i }));
     // Locates the Bestandsbau tab by link role or tab role depending on how the component renders.
@@ -49,25 +57,40 @@ export class BaulosePage extends BasePage {
   }
 
   // Opens the Baulose FTTH route directly.
-  async goto(): Promise<void> {
+  // async goto(): Promise<void> {
+  //   // Navigates to the confirmed Baulose route.
+  //   await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
+  // }
+  async gotoBestandsbau(): Promise<void> {
     // Navigates to the confirmed Baulose route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.bauloseFtth);
+    await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.bestandsbau);
   }
-
+  async gotoFTTH(): Promise<void> {
+    // Navigates to the confirmed Baulose route.
+    await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
+  }
   // Verifies the Baulose page loaded.
-  async expectLoaded(): Promise<void> {
+  // async expectLoaded(): Promise<void> {
+  //   // Checks that the URL is the Baulose FTTH route.
+  //   await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
+  //   // Checks that the Baulose search field is visible.
+  //   await this.searchField.expectVisible();
+  // }
+  async expectLoadedBestandsbau(): Promise<void> {
+    // Checks that the URL is the Baulose Bestandsbau route.
+    await expect(this.page).toHaveURL(/\/door2door#\/baulose\/bestandsbau/);
+  }
+  async expectLoadedFTTH(): Promise<void> {
     // Checks that the URL is the Baulose FTTH route.
     await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
-    // Checks that the Baulose search field is visible.
-    await expect(this.searchInput).toBeVisible();
   }
 
   // Searches the Baulose list.
   async search(text: string): Promise<void> {
     // Fills the Baulose search input.
-    await this.searchInput.fill(text);
+    await this.searchField.search(text);
     // Presses Enter to submit/apply the search.
-    await this.searchInput.press('Enter');
+    await this.searchField.expectVisible();
   }
 
   // Opens the Organisation filter on Baulose.

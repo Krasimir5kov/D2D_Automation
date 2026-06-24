@@ -1,0 +1,190 @@
+flowchart TD
+  root["D2D_Automation"]
+
+  subgraph rootFiles["Root files"]
+    env[".env\nlocal environment values and secrets\nnot committed"]
+    envExample[".env.example\ntemplate for required environment variables"]
+    gitignore[".gitignore\nignores dependencies, reports, env, auth json"]
+    packageJson["package.json\nnpm scripts and dev dependencies"]
+    packageLock["package-lock.json\nlocked dependency versions"]
+    playwrightConfig["playwright.config.ts\nPlaywright projects and shared runtime config"]
+    readme["README.md\nsetup and usage notes"]
+    tsconfig["tsconfig.json\nTypeScript compiler settings"]
+  end
+
+  subgraph authState["playwright/.auth"]
+    authGitkeep[".gitkeep\nkeeps auth folder in git"]
+    authUser["user.json\nsaved Playwright storageState cookies\nignored by git"]
+  end
+
+  subgraph scripts["scripts"]
+    clearAuth["clear-auth-state.cjs\ndeletes saved auth state"]
+  end
+
+  subgraph constants["src/constants"]
+    authConstants["auth.ts\nAUTH_DIR, AUTH_FILE, default manual auth timeout"]
+  end
+
+  subgraph fixtures["src/fixtures"]
+    apiFixture["api.fixture.ts\nauthenticated APIRequestContext fixture"]
+  end
+
+  subgraph components["src/components"]
+    appNavigation["AppNavigation.ts\ntop D2D navigation helper"]
+    filterBar["FilterBar.ts\nshared filter button/dropdown helper"]
+    konfigSidebar["KonfigurationSideBar.ts\nleft Konfiguration sidebar helper"]
+    modalDialog["ModalDialog.ts\ngeneric role=dialog helper"]
+    searchField["SearchField.ts\nshared search input helper"]
+    sidePanel["SidePanel.ts\nright-side detail panel helper"]
+    tableView["TableView.ts\nshared table/list row helper"]
+  end
+
+  subgraph pages["src/pages"]
+    basePage["BasePage.ts\nabstract base POM, env URL builder, route constants"]
+    baulosePage["BaulosePage.ts\nBaulose page POM"]
+    benutzerPage["BenutzerverwaltungPage.ts\nusers/teams/org page POM"]
+    importePage["ImportePage.ts\nImporte page POM"]
+    indexPage["index.ts\nbarrel exports for page objects"]
+    konfigPage["KonfigurationPage.ts\nKonfiguration page POM"]
+    loginPage["LoginPage.ts\nmanual login POM"]
+    objektePage["ObjektePage.ts\nObjekte page POM"]
+    preFlightAlias["PreFlight.ts\nlegacy alias export for PreFlightPage"]
+    preFlightPage["PreFlightPage.ts\nauthenticated smoke page POM"]
+    salesPage["SalesActionsPage.ts\nSales Actions page POM"]
+  end
+
+  subgraph tests["tests"]
+    authSetup["setup/auth.setup.ts\nmanual login setup test"]
+    preflightSpec["preflight/preflight.spec.ts\nauthenticated UI smoke test"]
+    healthSpec["api/health.spec.ts\nauthenticated API smoke test"]
+  end
+
+  root --> rootFiles
+  root --> authState
+  root --> scripts
+  root --> constants
+  root --> fixtures
+  root --> components
+  root --> pages
+  root --> tests
+
+  packageJson --> playwrightConfig
+  packageJson --> clearAuth
+  packageJson --> tsconfig
+  packageLock --> packageJson
+  readme --> envExample
+  gitignore --> env
+  gitignore --> authUser
+
+  env --> playwrightConfig
+  playwrightConfig --> authConstants
+  playwrightConfig --> authSetup
+  playwrightConfig --> preflightSpec
+  playwrightConfig --> healthSpec
+  authConstants --> authUser
+  clearAuth --> authUser
+
+  authSetup --> loginPage
+  loginPage --> basePage
+  authSetup --> authConstants
+  authSetup --> authUser
+
+  preflightSpec --> preFlightPage
+  preFlightPage --> basePage
+  preFlightPage --> appNavigation
+
+  healthSpec --> apiFixture
+  apiFixture --> authConstants
+  apiFixture --> authUser
+  apiFixture --> env
+
+  indexPage --> basePage
+  indexPage --> loginPage
+  indexPage --> preFlightPage
+  indexPage --> baulosePage
+  indexPage --> objektePage
+  indexPage --> salesPage
+  indexPage --> benutzerPage
+  indexPage --> importePage
+  indexPage --> konfigPage
+  preFlightAlias --> preFlightPage
+
+  baulosePage --> basePage
+  baulosePage --> appNavigation
+  baulosePage --> filterBar
+  baulosePage --> tableView
+
+  objektePage --> basePage
+  objektePage --> appNavigation
+  objektePage --> filterBar
+  objektePage --> modalDialog
+  objektePage --> sidePanel
+  objektePage --> tableView
+
+  salesPage --> basePage
+  salesPage --> appNavigation
+  salesPage --> filterBar
+  salesPage --> modalDialog
+  salesPage --> sidePanel
+  salesPage --> tableView
+
+  benutzerPage --> basePage
+  benutzerPage --> appNavigation
+  benutzerPage --> filterBar
+  benutzerPage --> modalDialog
+  benutzerPage --> sidePanel
+  benutzerPage --> tableView
+
+  importePage --> basePage
+  importePage --> appNavigation
+  importePage --> filterBar
+  importePage --> modalDialog
+  importePage --> tableView
+
+  konfigPage --> basePage
+  konfigPage --> appNavigation
+  konfigPage --> modalDialog
+  konfigPage --> tableView
+
+  searchField -. "available helper; page POMs can compose it" .-> baulosePage
+  searchField -. "available helper; page POMs can compose it" .-> objektePage
+  searchField -. "available helper; page POMs can compose it" .-> salesPage
+  searchField -. "available helper; page POMs can compose it" .-> benutzerPage
+  searchField -. "available helper; page POMs can compose it" .-> importePage
+  konfigSidebar -. "available helper; can replace inline sidebar locators" .-> konfigPage
+
+  subgraph routes["Door2Door hash route constants in BasePage.ts"]
+    routesRoot["door2doorRoutes"]
+    routeBaulose["baulose\n#/baulose/ftth\n#/baulose/bestandsbau"]
+    routeObjekte["objekte\n#/objekte/neubau\n#/objekte/ftth\n#/objekte/bestandsbau"]
+    routeSales["salesActions\n#/sales-actions/neubau\n#/sales-actions/ftth\n#/sales-actions/bestandsbau"]
+    routeBenutzer["benutzerverwaltung\n#/benutzerverwaltung/users\n#/benutzerverwaltung/teams\n#/benutzerverwaltung/organisationen"]
+    routeImporte["importe\n#/importe"]
+    routeKonfig["konfiguration\n#/konfiguration/uebersicht\n#/konfiguration/abschlussgruende\n#/konfiguration/aufgaben\n#/konfiguration/gruppen\n#/konfiguration/regime\n#/konfiguration/aktivitaeten-setup"]
+  end
+
+  basePage --> routesRoot
+  routesRoot --> routeBaulose
+  routesRoot --> routeObjekte
+  routesRoot --> routeSales
+  routesRoot --> routeBenutzer
+  routesRoot --> routeImporte
+  routesRoot --> routeKonfig
+  baulosePage --> routeBaulose
+  objektePage --> routeObjekte
+  salesPage --> routeSales
+  benutzerPage --> routeBenutzer
+  importePage --> routeImporte
+  konfigPage --> routeKonfig
+
+  classDef config fill:#e8f2ff,stroke:#3b73b9,color:#1b1b1b
+  classDef src fill:#eef8ee,stroke:#4d934d,color:#1b1b1b
+  classDef test fill:#fff3d8,stroke:#c78a12,color:#1b1b1b
+  classDef auth fill:#ffecec,stroke:#c75353,color:#1b1b1b
+  classDef note fill:#f5f5f5,stroke:#8a8a8a,color:#1b1b1b
+
+  class env,envExample,gitignore,packageJson,packageLock,playwrightConfig,readme,tsconfig,clearAuth config
+  class authGitkeep,authUser,authConstants auth
+  class apiFixture,appNavigation,filterBar,konfigSidebar,modalDialog,searchField,sidePanel,tableView,basePage,baulosePage,benutzerPage,importePage,indexPage,konfigPage,loginPage,objektePage,preFlightAlias,preFlightPage,salesPage src
+  class authSetup,preflightSpec,healthSpec test
+  class routesRoot,routeBaulose,routeObjekte,routeSales,routeBenutzer,routeImporte,routeKonfig note

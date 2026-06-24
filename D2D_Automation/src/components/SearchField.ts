@@ -11,7 +11,7 @@ export class SearchField {
         await this.locator.fill(text);
         await this.locator.press('Enter');
     }
-
+    
     async expectVisible():Promise<void>{
         await expect(this.locator).toBeVisible();
     }
