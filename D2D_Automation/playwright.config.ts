@@ -47,10 +47,22 @@ export default defineConfig({
       },
     },
     {
+      // Scope: this project opens Chrome in headed mode for manual username, password, and two-factor login.
+      name: 'ui-preflight',
+      dependencies: ['setup'],
+      testMatch: /preflight\/.*\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        storageState: AUTH_FILE,
+        headless: false,
+      },
+    },
+    {
       // Scope: this is the only active browser pvroject for now, as requested.
       name: 'chrome',
-      dependencies: ['setup'],
-      testIgnore: /.*\.setup\.ts/,
+      dependencies: ['ui-preflight'],
+      testIgnore: [/.*\.setup\.ts/, /preflight\/.*\.spec\.ts/],
       use: {  
         ...devices['Desktop Chrome'],
         channel: 'chrome',
