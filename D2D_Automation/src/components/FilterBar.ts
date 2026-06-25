@@ -3,8 +3,11 @@ import { type Locator, type Page } from '@playwright/test';
 
 // Represents the filter controls shown above Door2Door list/table pages.
 export class FilterBar {
+  readonly allFiltersButtonViaAlleFilterModal: Locator;
   // Stores the active Playwright page so filter locators can be created from it.
-  constructor(private readonly page: Page) {}
+  constructor(private readonly page: Page) {
+    this.allFiltersButtonViaAlleFilterModal = page.getByRole('button', { name: /alle filter/i });
+  }
 
   // Returns a filter trigger button by visible name; this depends on current DOM text until stable attributes exist.
   filterButton(name: string | RegExp): Locator {
@@ -13,10 +16,10 @@ export class FilterBar {
   }
 
   // Returns the "alle Filter" button that opens the full Alle Filter modal.
-  get allFiltersButtonViaAlleFilterModal(): Locator {
-    // Locates the filter trigger by visible text; replace with data-testid when developers add one.
-    return this.filterButton(/alle filter/i);
-  }
+  // get allFiltersButtonViaAlleFilterModal(): Locator {
+  //   // Locates the filter trigger by visible text; replace with data-testid when developers add one.
+  //   return this.filterButton(/alle filter/i);
+  // }
 
   // Opens one named filter dropdown from the inline filter bar.
   async openFilter(name: string | RegExp): Promise<void> {

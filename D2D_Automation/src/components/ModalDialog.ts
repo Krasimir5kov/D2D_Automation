@@ -3,14 +3,17 @@ import { expect, type Locator, type Page } from '@playwright/test';
 
 // Represents generic Door2Door modal dialogs such as Alle Filter, Benutzer erstellen, or Daten importieren.
 export class ModalDialog {
+  readonly any: Locator;
   // Stores the active Playwright page so modal locators can be created from it.
-  constructor(private readonly page: Page) {}
+  constructor(private readonly page: Page) {
+    this.any = page.getByRole('dialog');
+  }
 
   // Returns any currently rendered modal dialog.
-  get any(): Locator {
-    // Uses role=dialog because the provided DOM snippets include role="dialog" on the modal wrapper.
-    return this.page.getByRole('dialog');
-  }
+  // get any(): Locator {
+  //   // Uses role=dialog because the provided DOM snippets include role="dialog" on the modal wrapper.
+  //   return this.page.getByRole('dialog');
+  // }
 
   // Returns a modal dialog that contains specific visible text.
   byText(text: string | RegExp): Locator {

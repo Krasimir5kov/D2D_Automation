@@ -3,45 +3,22 @@ import { expect, type Locator, type Page } from '@playwright/test';
 
 // Represents the top Door2Door application navigation/header links.
 export class AppNavigation {
+  readonly bauloseLink: Locator;
+  readonly objekteLink: Locator;
+  readonly salesActionsLink: Locator;
+  readonly benutzerverwaltungLink: Locator;
+  readonly importeLink: Locator;
+  readonly konfigurationLink: Locator;
   // Stores the active Playwright page so every navigation locator can be created from the same browser page.
-  constructor(private readonly page: Page) {}
-
-  // Returns the Baulose navigation link from the top application header.
-  get bauloseLink(): Locator {
-    // Locates the visible header link named exactly "Baulose".
-    return this.page.getByRole('link', { name: /^Baulose$/i });
+  constructor(private readonly page: Page) {
+    this.bauloseLink = page.getByRole('link', { name: /Baulose/i });
+    this.objekteLink = page.getByRole('link', { name: /Objekte/i });
+    this.salesActionsLink = page.getByRole('link', { name: /Sales Action/i });
+    this.benutzerverwaltungLink = page.getByRole('link', { name: /Benutzerverwaltung/i });
+    this.importeLink = page.getByRole('link', { name: /Importe/i });
+    this.konfigurationLink = page.getByRole('link', { name: /Konfiguration/i });
   }
-
-  // Returns the Objekte navigation link from the top application header.
-  get objekteLink(): Locator {
-    // Locates the visible header link named exactly "Objekte".
-    return this.page.getByRole('link', { name: /^Objekte$/i });
-  }
-
-  // Returns the Sales Action navigation link from the top application header.
-  get salesActionsLink(): Locator {
-    // Locates the visible header link named exactly "Sales Action".
-    return this.page.getByRole('link', { name: /^Sales Action$/i });
-  }
-
-  // Returns the Benutzerverwaltung navigation link from the top application header.
-  get benutzerverwaltungLink(): Locator {
-    // Locates the visible header link named exactly "Benutzerverwaltung".
-    return this.page.getByRole('link', { name: /^Benutzerverwaltung$/i });
-  }
-
-  // Returns the Importe navigation link from the top application header.
-  get importeLink(): Locator {
-    // Locates the visible header link named exactly "Importe"; this can be role/admin dependent.
-    return this.page.getByRole('link', { name: /^Importe$/i });
-  }
-
-  // Returns the Konfiguration navigation link from the top application header.
-  get konfigurationLink(): Locator {
-    // Locates the visible header link named exactly "Konfiguration"; this can be role/admin dependent.
-    return this.page.getByRole('link', { name: /^Konfiguration$/i });
-  }
-
+  
   // Verifies that the core navigation links are visible after the app loads.
   async expectVisible(): Promise<void> {
     // Confirms the authenticated user can see the Baulose area.

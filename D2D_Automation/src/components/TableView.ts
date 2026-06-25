@@ -3,20 +3,25 @@ import { expect, type Locator, type Page } from '@playwright/test';
 
 // Represents common Door2Door table/list behavior.
 export class TableView {
+  readonly table: Locator;
+  readonly rows: Locator
   // Stores the active Playwright page so table locators can be created from it.
-  constructor(private readonly page: Page) {}
+  constructor(private readonly page: Page) {
+    this.table = page.locator('table, [role="table"], [class*="Table"]').first();
+    this.rows = page.locator('tbody tr, [role="row"]');
+  }
 
   // Returns the first visible table-like element on a list page.
-  get table(): Locator {
-    // Uses table, role=table, or class containing "Table"; replace class fallback with data-testid when devs add one.
-    return this.page.locator('table, [role="table"], [class*="Table"]').first();
-  }
+  // get table(): Locator {
+  //   // Uses table, role=table, or class containing "Table"; replace class fallback with data-testid when devs add one.
+  //   return this.page.locator('table, [role="table"], [class*="Table"]').first();
+  // }
 
-  // Returns all table row elements.
-  get rows(): Locator {
-    // Locates standard table rows and ARIA rows.
-    return this.page.locator('tbody tr, [role="row"]');
-  }
+  // // Returns all table row elements.
+  // get rows(): Locator {
+  //   // Locates standard table rows and ARIA rows.
+  //   return this.page.locator('tbody tr, [role="row"]');
+  // }
 
   // Returns a table row containing specific visible text.
   rowByText(text: string | RegExp): Locator {
