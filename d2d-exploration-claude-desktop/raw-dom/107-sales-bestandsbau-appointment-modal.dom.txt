@@ -1,0 +1,169 @@
+STATE: Sales Action > BESTANDSBAU > Termin buchen flow
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - button "D2D D2D":
+    - generic: D2D
+    - generic: D2D
+  - button " Planskizze Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Planskizze
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Termin ":
+    - button "":
+      - generic: 
+    - generic: Termin
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Hauptstraße ,HAUPTS Aalfang 3860 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Hauptstraße ,HAUPTS
+    - generic: Aalfang 3860
+    - button "":
+      - generic: 
+  - text:                                                
+  - heading "A1 fiber optic appointment" [level=1]
+  - heading "Address" [level=4]
+  - paragraph: The non-binding consultation takes place on site at the manufacturing address. Please provide address details.
+  - text: Postcode
+  - generic: (optional)
+  - textbox "Postcode (optional)"
+  - text: Ort
+  - generic: (optional)
+  - textbox "Ort (optional)"
+  - generic: Street
+  - textbox "Street"
+  - generic: House
+  - textbox "House" [disabled]
+  - generic: Door
+  - textbox "Door" [disabled]
+  - button "Check address" [disabled]:
+    - generic: Check address
+  - heading "Select date" [level=4]
+  - textbox "Date" [disabled]:
+    - /placeholder: dd.mm.yyyy
+  - generic: Date
+  - button [disabled]:
+  - textbox "Time" [disabled]:
+    - /placeholder: HH:MM - HH:MM
+  - generic: Time
+  - button [disabled]:
+  - heading "Contact information" [level=4]
+  - generic: Firstname
+  - textbox "Firstname"
+  - generic: Name
+  - textbox "Name"
+  - paragraph: Appointment confirmation will be sent to this number via SMS.
+  - generic: Phone number
+  - generic: "+43"
+  - generic: 
+  - textbox
+  - heading "Remark (optional)" [level=4]
+  - paragraph: This information helps to optimally prepare for the appointment.
+  - generic: Remark (optional)
+  - textbox "Remark (optional)"
+  - button "Create appointment":
+    - generic: Create appointment
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "Basement/Anteroom/Attic":
+  - generic: Basement/Anteroom/Attic
+- menuitem "Living room":
+  - generic: Living room
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "500":
+  - generic: "500"
+- menuitem "1":
+  - generic: "1"
+- menuitem "2":
+  - generic: "2"
+- menuitem "3":
+  - generic: "3"
+- menuitem "4":
+  - generic: "4"
+- menuitem "5":
+  - generic: "5"
+- menuitem "6":
+  - generic: "6"
+- menuitem "7":
+  - generic: "7"
+- menuitem "8":
+  - generic: "8"
+- menuitem "9":
+  - generic: "9"
+- menuitem "10":
+  - generic: "10"
+- menuitem "11":
+  - generic: "11"
+- menuitem "12":
+  - generic: "12"
+- menuitem "13":
+  - generic: "13"
+- menuitem "14":
+  - generic: "14"
+- menuitem "15":
+  - generic: "15"
+- menuitem "16":
+  - generic: "16"
+- menuitem "17":
+  - generic: "17"
+- menuitem "18":
+  - generic: "18"
+- menuitem "19":
+  - generic: "19"
+- menuitem "20":
+  - generic: "20"
+- menuitem "21":
+  - generic: "21"
+- menuitem "22":
+  - generic: "22"

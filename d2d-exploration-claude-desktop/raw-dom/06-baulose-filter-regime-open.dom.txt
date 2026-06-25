@@ -1,0 +1,160 @@
+URL: https://portal-int.open-frontends.a1.net/door2door#/baulose/ftth
+STATE: Regime filter open
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - generic: Suche nach...
+  - textbox "Suche nach..."
+  - button ""
+  - generic: Regime (0)
+  - checkbox ""
+  - generic: 
+  - button "alle Regime auswählen":
+    - generic: alle Regime auswählen
+  - generic: FTTH-Ausbau
+  - checkbox ""
+  - generic: 
+  - button "VHCN":
+    - generic: VHCN
+  - checkbox ""
+  - generic: 
+  - button "vULL":
+    - generic: vULL
+  - checkbox ""
+  - generic: 
+  - button "vULL 2.0":
+    - generic: vULL 2.0
+  - checkbox ""
+  - generic: 
+  - button "ZAG":
+    - generic: ZAG
+  - generic: Bestand
+  - button "28 weitere anzeigen":
+    - generic: 28 weitere anzeigen
+  - button "Zurücksetzen":
+    - generic: Zurücksetzen
+  - button "Anwenden":
+    - generic: Anwenden
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche nach Baulose/Einsatznamen...
+  - textbox "Suche nach Baulose/Einsatznamen...": Göttlesbrunn
+  - button ""
+  - button ""
+  - generic: Drücke den “Suche-Button” (Lupe) oder “Enter” um die Suche zu starten!
+  - button "Organisation":
+    - text: Organisation
+    - button:
+  - button "Regime" [active]:
+    - text: Regime
+    - button:
+  - button "Phase":
+    - text: Phase
+    - button:
+  - button "Status":
+    - text: Status
+    - button:
+  - link "FTTH-AUSBAU (1)":
+    - /url: "#/baulose/ftth"
+    - generic: FTTH-AUSBAU (1)
+  - link "BESTANDSBAU (3)":
+    - /url: "#/baulose/bestandsbau"
+    - generic: BESTANDSBAU (3)
+  - table:
+    - rowgroup:
+      - row "Baulos / Regime Organisation / Phase Status Pre-Contracting 2nd Run Anzahl":
+        - cell "Baulos / Regime"
+        - cell "Organisation / Phase"
+        - cell "Status"
+        - cell "Pre-Contracting"
+        - cell "2nd Run"
+        - cell "Anzahl"
+    - rowgroup:
+      - 'row "24_Göttlesbrunn_2_VULL_Testteam _BL11 26416 vULL 2.0 Network Nord Keine Phase CLOSED Start: 25.05.2024 Ende: 15.10.2024 kein 2nd Run D2D SA: 517 PE: 61 zu Sales Actions"':
+        - cell "24_Göttlesbrunn_2_VULL_Testteam _BL11 26416 vULL 2.0":
+          - generic: 24_Göttlesbrunn_2_VULL_Testteam _BL11
+          - generic: "26416"
+          - generic: vULL 2.0
+        - cell "Network Nord Keine Phase":
+          - generic: Network Nord
+          - generic: Keine Phase
+        - cell "CLOSED":
+          - generic: CLOSED
+        - 'cell "Start: 25.05.2024 Ende: 15.10.2024"':
+          - generic: "Start: 25.05.2024"
+          - generic: "Ende: 15.10.2024"
+        - cell "kein 2nd Run":
+          - generic: kein 2nd Run
+        - 'cell "D2D SA: 517 PE: 61 zu Sales Actions"':
+          - generic: "D2D SA: 517"
+          - generic: "PE: 61"
+          - button "zu Sales Actions":
+            - generic: zu Sales Actions
+  - generic: Datensätze pro Seite
+  - button "25":
+    - generic: "25"
+  - button "": 
+  - generic: 1-1 von 1 Datensätzen
+  - button "1":
+    - generic: "1"
+  - button "": 
+  - generic: von 1 Seiten
+  - button "":
+    - generic: 
+  - button "":
+    - generic: 
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "500":
+  - generic: "500"

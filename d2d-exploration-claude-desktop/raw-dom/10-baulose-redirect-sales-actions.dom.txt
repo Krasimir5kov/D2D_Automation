@@ -1,0 +1,215 @@
+ACTION: Clicked first Baulose row's zu Sales Actions button
+STATE: Redirected filtered Sales Action list
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche in Sales Actions...
+  - textbox "Suche in Sales Actions..."
+  - button ""
+  - button "alle Filter (1)":
+    - generic: alle Filter (1)
+  - button "Baulos/Einsatzname (1)":
+    - strong: Baulos/Einsatzname (1)
+    - button:
+  - button "Organisation":
+    - text: Organisation
+    - button:
+  - button "Regime":
+    - text: Regime
+    - button:
+  - button "Phase":
+    - text: Phase
+    - button:
+  - button "Termin":
+    - text: Termin
+    - button:
+  - button "Immobilienart":
+    - text: Immobilienart
+    - button:
+  - button "Status":
+    - text: Status
+    - button:
+  - button "Aufgabe":
+    - text: Aufgabe
+    - button:
+  - button "Ergebnis":
+    - text: Ergebnis
+    - button:
+  - button "Planskizze":
+    - text: Planskizze
+    - button:
+  - button "Bestellung über D2D":
+    - text: Bestellung über D2D
+    - button:
+  - button "Ableger Zustimmung":
+    - text: Ableger Zustimmung
+    - button:
+  - button "Kundendaten":
+    - text: Kundendaten
+    - button:
+  - button "Sales Action-Type":
+    - text: Sales Action-Type
+    - button:
+  - button "Objekt":
+    - text: Objekt
+    - button:
+  - button "zugewiesen an":
+    - text: zugewiesen an
+    - button:
+  - button "upselling Potential":
+    - text: upselling Potential
+    - button:
+  - button "":
+    - generic: 
+  - button "BBI Push Aalfang - BBI Push Aalfang":
+    - generic: BBI Push Aalfang - BBI Push Aalfang
+  - button:
+  - button "Alle Filter entfernen":
+    - generic: Alle Filter entfernen
+  - link "NEUBAU (0)":
+    - /url: "#/sales-actions/neubau"
+    - generic: NEUBAU (0)
+  - link "FTTH-AUSBAU (0)":
+    - /url: "#/sales-actions/ftth"
+    - generic: FTTH-AUSBAU (0)
+  - link "BESTANDSBAU ( )":
+    - /url: "#/sales-actions/bestandsbau"
+    - text: BESTANDSBAU (
+    - text: )
+  - table:
+    - rowgroup:
+      - row " Adresse Status zugewiesen an":
+        - cell "":
+          - checkbox ""
+          - generic: 
+        - cell "Adresse":
+          - button "Adresse":
+            - generic: Adresse
+        - cell "Status":
+          - button "Status":
+            - generic: Status
+        - cell
+        - cell "zugewiesen an":
+          - button "zugewiesen an":
+            - generic: zugewiesen an
+        - cell
+    - rowgroup:
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+      - row:
+        - cell
+  - generic: Datensätze pro Seite
+  - button "25":
+    - generic: "25"
+  - button "": 
+  - generic: 1-0 von 0 Datensätzen
+  - button
+  - button "": 
+  - generic: von 0 Seiten
+  - button "":
+    - generic: 
+  - button "":
+    - generic: 
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "500":
+  - generic: "500"

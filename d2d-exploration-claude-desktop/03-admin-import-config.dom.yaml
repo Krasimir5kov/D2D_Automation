@@ -1,0 +1,77 @@
+page: Benutzerverwaltung
+route: "#/benutzerverwaltung"
+top-actions: ["Benutzer erstellen", "Team erstellen", "Admin A1 erstellen"]
+tabs:
+  Benutzer:
+    count: 221
+    columns: [Vorname, Name, Status, "E-Mail Adresse", Organisation, Rolle]
+    filters: [aktiv, inaktiv, "ohne Rolle", Organisation, Rolle]
+    paging: "25 rows; 9 pages"
+  Teams:
+    count: 7
+    columns: [Team, Organisation, "Anzahl Teammitglieder"]
+    filters: ["Teams ohne Mitglieder", Organisation]
+  Organisationen:
+    count: 3
+    columns: [Organisation, Vertriebsschienenregion, "Admin A1 Region", "Admin Extern"]
+    filters: ["ohne Admin extern", "ohne Admin A1 Region", Vertriebsschienenregion]
+creation-forms:
+  Benutzer:
+    fields: [Organisation, "Corporate Account", Partnerweb-ID, Vorname, Nachname, "E-Mail Adresse", Rollen]
+    actions: ["Rolle hinzufügen", Abbrechen, Erstellen]
+  Team:
+    fields: [Organisation, Teambezeichnung]
+    actions: [Abbrechen, Erstellen]
+  "Admin A1":
+    fields: [Organisation, "Corporate Account", Partnerweb-ID, Vorname, Nachname, "E-Mail Adresse", Vertriebsschienenregionen]
+    actions: [Abbrechen, Erstellen]
+
+page: Importe
+route: "#/importe"
+top-actions: ["Organisation wechseln", "Daten importieren"]
+quick-filters: ["System Import", "Datei Import"]
+filter-strip: [Importdatum, Organisation, Benutzer]
+table:
+  count: 1386
+  columns: [Import, Baulos, Organisation, Details, Aktionen]
+  paging: "25 rows; 56 pages"
+  row-actions: ["Rückgängig machen"]
+dialogs:
+  "Daten importieren":
+    steps: [Auswählen, Prüfen, Übergeben, Erstellen]
+    uploader: ".CSV; max 5 MB"
+    action: Abbrechen
+  "Organisation wechseln":
+    steps: ["Baulos wählen", "Organisation wählen", "Baulos übergeben"]
+    warning: "moves all objects and Sales Actions, preserves status, removes user assignments"
+    actions: [Abbrechen, "Organisation wählen"]
+
+page: Konfiguration
+route: "#/konfiguration"
+sections:
+  Übersicht:
+    heading: Übersicht
+  Abschlussgründe:
+    count: 177
+    top-action: "Abschlussgrunde erstellen"
+    filters: [aktiv, inaktiv, Endergebnis, Kundenkontakt]
+    columns: [ID, Anzeigename, Endergebnis, Kundenkontakt, Status]
+  Aufgaben:
+    count: 54
+    top-action: "Aufgabe erstellen"
+  Gruppen:
+    count: 103
+  Regime:
+    count: 34
+    top-action: "Regime erstellen"
+  "Aktivitäten Setup":
+    count: 10
+    top-action: "Setup erstellen"
+
+global-shell:
+  environment: integration
+  portal-version: 1.28.30
+  global-nav: [Home, "Door 2 Door", Timey, Cockpit-Leistungspositionen, "Case Comments", "Case Document Viewer", "Address List"]
+  d2d-nav: [Baulose, Objekte, "Sales Action", Benutzerverwaltung, Importe, Konfiguration]
+  persistent-session-banner: "Due to inactivity, the authentication will expire in 00:00"
+  footer: "A1 Telekom Austria Group"

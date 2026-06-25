@@ -1,0 +1,209 @@
+STATE: Konfiguration > Aktivitäten Setup
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - button "D2D D2D":
+    - generic: D2D
+    - generic: D2D
+  - button " Planskizze Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Planskizze
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Termin ":
+    - button "":
+      - generic: 
+    - generic: Termin
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Hauptstraße ,HAUPTS Aalfang 3860 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Hauptstraße ,HAUPTS
+    - generic: Aalfang 3860
+    - button "":
+      - generic: 
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Konfiguration
+  - link "Übersicht":
+    - /url: "#/konfiguration/übersicht"
+  - link "Abschlussgründe":
+    - /url: "#/konfiguration/abschlussgründe"
+  - link "Aufgaben":
+    - /url: "#/konfiguration/aufgaben"
+  - link "Gruppen":
+    - /url: "#/konfiguration/gruppen"
+  - link "Regime":
+    - /url: "#/konfiguration/regime"
+  - link "Aktivitäten Setup":
+    - /url: "#/konfiguration/aktivitäten-setup"
+  - heading "Aktivitäten Setup" [level=2]
+  - button "Setup erstellen":
+    - generic: Setup erstellen
+  - button "Neubau"
+  - button "FTTH-Ausbau"
+  - button "Bestandsbau"
+  - generic: 10 Ergebnisse
+  - table:
+    - rowgroup:
+      - row "Objekttyp Regime Aufgabe":
+        - cell "Objekttyp"
+        - cell "Regime"
+        - cell "Aufgabe"
+        - cell
+    - rowgroup:
+      - row "Neubau - -":
+        - cell "Neubau":
+          - generic: Neubau
+        - cell "-":
+          - generic: "-"
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "FTTH-Ausbau - -":
+        - cell "FTTH-Ausbau":
+          - generic: FTTH-Ausbau
+        - cell "-":
+          - generic: "-"
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "FTTH-Ausbau - Leerverrohrungscheck":
+        - cell "FTTH-Ausbau":
+          - generic: FTTH-Ausbau
+        - cell "-":
+          - generic: "-"
+        - cell "Leerverrohrungscheck":
+          - generic: Leerverrohrungscheck
+        - cell:
+          - button:
+      - row "FTTH-Ausbau VHCN -":
+        - cell "FTTH-Ausbau":
+          - generic: FTTH-Ausbau
+        - cell "VHCN":
+          - generic: VHCN
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "Bestandsbau - -":
+        - cell "Bestandsbau":
+          - generic: Bestandsbau
+        - cell "-":
+          - generic: "-"
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "Bestandsbau NVD Trial 01 -":
+        - cell "Bestandsbau":
+          - generic: Bestandsbau
+        - cell "NVD Trial 01":
+          - generic: NVD Trial 01
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "Bestandsbau OAN/TP 1 -":
+        - cell "Bestandsbau":
+          - generic: Bestandsbau
+        - cell "OAN/TP 1":
+          - generic: OAN/TP 1
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "Bestandsbau OAN/TP 2 -":
+        - cell "Bestandsbau":
+          - generic: Bestandsbau
+        - cell "OAN/TP 2":
+          - generic: OAN/TP 2
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "Bestandsbau OAN/TP 3 -":
+        - cell "Bestandsbau":
+          - generic: Bestandsbau
+        - cell "OAN/TP 3":
+          - generic: OAN/TP 3
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+      - row "- - -":
+        - cell "-":
+          - generic: "-"
+        - cell "-":
+          - generic: "-"
+        - cell "-":
+          - generic: "-"
+        - cell:
+          - button:
+  - text:                
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "Basement/Anteroom/Attic":
+  - generic: Basement/Anteroom/Attic
+- menuitem "Living room":
+  - generic: Living room

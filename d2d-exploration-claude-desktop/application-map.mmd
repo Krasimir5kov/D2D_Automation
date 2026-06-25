@@ -1,0 +1,169 @@
+flowchart TB
+  PORTAL["Portal shell<br/>integration · v1.28.30"] --> D2D["Door 2 Door"]
+
+  D2D --> B
+  D2D --> O
+  D2D --> S
+  D2D --> U
+  D2D --> I
+  D2D --> C
+  D2D --> RAW["Raw accessible-DOM archive<br/>97 captured states"]
+
+  subgraph BAULOSE["Baulose"]
+    B["Baulose landing"] --> BSEARCH["Search field<br/>submitted + settled results"]
+    B --> BFTTH["FTTH-AUSBAU list view"]
+    B --> BBEST["BESTANDSBAU list view"]
+    B --> BF["Horizontal filter bar"]
+    BF --> BFO["Organisation popover"]
+    BF --> BFR["Regime popover"]
+    BF --> BFP["Phase popover"]
+    BF --> BFS["Status popover"]
+    BFTTH --> BFI["Visible list rows/items<br/>row itself is not clickable"]
+    BBEST --> BBI["Visible list rows/items<br/>row itself is not clickable"]
+    BFI -->|click row button| BREDIRECT["zu Sales Actions"]
+    BBI -->|click row button| BREDIRECT
+    BREDIRECT --> S
+  end
+
+  subgraph OBJEKTE["Objekte"]
+    O["Objekte landing"] --> OAF["Alle Filter modal"]
+    O --> ONL["NEUBAU list view"]
+    O --> OFL["FTTH-AUSBAU list view"]
+    O --> OBL["BESTANDSBAU list view"]
+
+    ONL --> ONI["List-view item / row"]
+    ONI -->|direct item click| OND["Neubau side panel"]
+    ONI -->|click 3-dot control| ONM["Context menu"]
+    ONM --> ONA1["Detailansicht öffnen"]
+    ONM --> ONA2["Fragebogen öffnen"]
+    ONM --> ONA3["Objekt zurückweisen"]
+    ONA1 -->|menu action| OND
+    ONA2 --> ONQ["Fragebogen<br/>9 questions"]
+    ONA3 --> ONR["Rejection dialog<br/>not submitted"]
+    OND --> ONOV["Übersicht"]
+    OND --> ONQ
+    OND --> OND2D["D2D Verkauf"]
+    OND --> ONSA["Objekt Sales Actions"]
+    ONOV --> ONE["Inline edit form"]
+    ONOV --> ONN["Hinweis form"]
+
+    OFL --> OFI["List-view item / row"]
+    OFI -->|direct item click| OFD["FTTH side panel"]
+    OFI -->|click 3-dot control| OFM["Context menu"]
+    OFM -->|Detailansicht öffnen| OFD
+    OFD --> OFOV["Übersicht"]
+    OFD --> OFD2D["D2D Verkauf"]
+    OFD --> OFN["Hinweis form"]
+
+    OBL --> OBI["List-view item / row"]
+    OBI -->|direct item click| OBD["Bestandsbau side panel"]
+    OBI -->|click 3-dot control| OBM["Context menu"]
+    OBM -->|Detailansicht öffnen| OBD
+    OBD --> OBOV["Übersicht"]
+    OBD --> OBD2D["D2D Verkauf"]
+    OBD --> OBN["Hinweis form"]
+  end
+
+  subgraph SALES["Sales Action"]
+    S["Sales Action landing"] --> SAF["Horizontal filter strip + Alle Filter"]
+    SAF --> SAT["Sales Action-Type<br/>first option + expanded options"]
+    S --> SNL["NEUBAU list view"]
+    S --> SFL["FTTH-AUSBAU list view"]
+    S --> SBL["BESTANDSBAU list view"]
+
+    SNL --> SNI["Object-level list item"]
+    SNI -->|direct item click| SNOBJ["Object-level Verkaufsstand drawer"]
+    SNL --> SND2DL["D2D Verkauf filtered list view"]
+    SND2DL --> SND2DI["Door-level list item"]
+    SND2DI -->|direct item click| SND["Door-level D2D drawer"]
+    SND --> SNA["Aktivität erfassen<br/>Kunde nicht angetroffen<br/>Kunde überlegt noch<br/>nicht bezogen<br/>Termin vereinbart"]
+    SND --> SNAS["ZUGEWIESEN AN editor"]
+    SND --> SNT["AKTIVITÄTEN tab"]
+
+    SFL --> SFFIRST["Bauträger Übergabemappe<br/>empty result"]
+    SFL --> SFD2DL["D2D Verkauf chip applied"]
+    SFD2DL --> SFI["FTTH list-view item"]
+    SFI -->|direct item click| SFD["FTTH drawer<br/>vULL 2.0"]
+    SFD --> SFA["Aktivität erfassen<br/>11 FTTH-specific outcomes"]
+    SFA --> SFAO["Mitbewerb/A1 FTTH · Identadresse<br/>Infra/KGV/Leerparzelle checks<br/>Luft-/Erdkabel · MGWB · Reihenhaus<br/>Verkauf anderer POS"]
+    SFD --> SFP["Planskizze widget + detail"]
+    SFD --> SFO["Bestellung erfassen widget"]
+    SFD --> SFAP["Termin buchen widget"]
+    SFD --> SFAS["ZUGEWIESEN AN editor"]
+    SFD --> SFT["AKTIVITÄTEN tab"]
+    SFD --> SFDOC["DOKUMENTE tab"]
+    SFD --> SFOS["BESTELLSTATUS tab"]
+
+    SBL --> SBFIRST["Bauträger Übergabemappe<br/>empty result"]
+    SBL --> SBD2DL["D2D Verkauf chip applied"]
+    SBD2DL --> SBI["Bestandsbau list-view item"]
+    SBI -->|direct item click| SBD["Bestandsbau drawer<br/>BBI-Push"]
+    SBD --> SBA["Aktivität erfassen<br/>Kunde überlegt noch<br/>nicht erreicht<br/>Termin vereinbart"]
+    SBD --> SBO["Bestellung erfassen widget"]
+    SBD --> SBAP["Termin buchen widget"]
+    SBD --> SBAS["ZUGEWIESEN AN editor"]
+    SBD --> SBT["AKTIVITÄTEN tab"]
+  end
+
+  subgraph ADMIN["Benutzerverwaltung"]
+    U["Benutzerverwaltung landing"] --> UU["Benutzer list view"] --> UUI["User list item"]
+    UUI -->|direct item click| UUD["User side panel"] --> UUE["User edit form"]
+    U --> UT["Teams list view"] --> UTI["Team list item"]
+    UTI -->|direct item click| UTD["Team side panel"] --> UTE["Team edit form"]
+    U --> UO["Organisationen list view"] --> UOI["Organization list item"]
+    UOI -->|direct item click| UOD["Organization side panel"]
+  end
+
+  subgraph IMPORTE["Importe"]
+    I["Import list view"] --> II["Import row/item"]
+    I --> IF["Importdatum · Organisation · Benutzer filters"]
+    I --> IO["Organisation wechseln modal"]
+    I --> IU["Daten importieren wizard<br/>Auswählen → Prüfen → Übergeben → Erstellen"]
+    IU --> IFILE["CSV only · max 5 MB"]
+    II -->|click row action| IR["Rückgängig machen<br/>not executed"]
+  end
+
+  subgraph CONFIG["Konfiguration"]
+    C["Konfiguration landing"] --> C0["Übersicht"]
+    C --> C1["Abschlussgründe<br/>177 results"] --> C1M["Create modal"]
+    C --> C2["Aufgaben<br/>54 results"] --> C2M["Create modal"]
+    C --> C3["Gruppen<br/>103 results"]
+    C --> C4["Regime<br/>34 results"] --> C4M["Create modal"]
+    C --> C5["Aktivitäten Setup<br/>10 results"] --> C5M["Setup erstellen clicked<br/>no form appeared"]
+  end
+
+  subgraph ISSUES["Observed issues / risks"]
+    X1["FTTH + Bestandsbau filter mismatch<br/>D2D chip active, other subtype rows remain"]
+    X2["Setup erstellen has no observable result"]
+    X3["Session countdown remains at 00:00<br/>while application stays interactive"]
+    X4["Many symbol-only / unlabeled controls"]
+  end
+
+  SFD2DL -. reproducible mismatch .-> X1
+  SBD2DL -. reproducible mismatch .-> X1
+  C5M -. no modal DOM .-> X2
+  PORTAL -. observed globally .-> X3
+  O -. context menus and panels .-> X4
+  S -. drawers and widgets .-> X4
+
+  RAW --> R1["Baulose · 12 states"]
+  RAW --> R2["Objekte · 21 states"]
+  RAW --> R3["Sales Action Neubau · 16 states"]
+  RAW --> R4["Sales Action FTTH · 14 states"]
+  RAW --> R5["Sales Action Bestandsbau · 10 states"]
+  RAW --> R6["Benutzerverwaltung · 8 states"]
+  RAW --> R7["Importe · 6 states"]
+  RAW --> R8["Konfiguration · 10 states"]
+
+  classDef section fill:#e8f3ff,stroke:#1976d2,color:#102a43,stroke-width:2px;
+  classDef state fill:#ffffff,stroke:#98a2b3,color:#172033;
+  classDef modal fill:#fff6d8,stroke:#b7791f,color:#3d2b00;
+  classDef danger fill:#ffe8e8,stroke:#c53030,color:#4a0e0e;
+  classDef issue fill:#f4e8ff,stroke:#7e22ce,color:#3b0764,stroke-width:2px;
+  classDef archive fill:#ecfdf3,stroke:#027a48,color:#054f31;
+
+  class B,O,S,U,I,C section;
+  class OND,ONQ,ONR,ONE,ONN,OFD,OFN,OBD,OBN,SNOBJ,SND,SNA,SNAS,SFD,SFA,SFP,SFO,SFAP,SFAS,SBD,SBA,SBO,SBAP,SBAS,UUD,UUE,UTD,UTE,UOD,IO,IU,C1M,C2M,C4M modal;
+  class IR danger;
+  class X1,X2,X3,X4,C5M issue;
+  class RAW,R1,R2,R3,R4,R5,R6,R7,R8 archive;

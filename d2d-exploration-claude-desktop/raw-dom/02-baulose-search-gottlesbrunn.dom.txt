@@ -1,0 +1,168 @@
+URL: https://portal-int.open-frontends.a1.net/door2door#/baulose/ftth
+ACTION: Filled search with Göttlesbrunn
+STATE: Search results settled
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - list:
+    - listitem: D2D
+    - link "Baulose" [active]:
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche nach Baulose/Einsatznamen...
+  - textbox "Suche nach Baulose/Einsatznamen..."
+  - button ""
+  - button "Organisation":
+    - text: Organisation
+    - button:
+  - button "Regime":
+    - text: Regime
+    - button:
+  - button "Phase":
+    - text: Phase
+    - button:
+  - button "Status":
+    - text: Status
+    - button:
+  - link "FTTH-AUSBAU (3)":
+    - /url: "#/baulose/ftth"
+    - generic: FTTH-AUSBAU (3)
+  - link "BESTANDSBAU (3)":
+    - /url: "#/baulose/bestandsbau"
+    - generic: BESTANDSBAU (3)
+  - table:
+    - rowgroup:
+      - row "Baulos / Regime Organisation / Phase Status Pre-Contracting 2nd Run Anzahl":
+        - cell "Baulos / Regime"
+        - cell "Organisation / Phase"
+        - cell "Status"
+        - cell "Pre-Contracting"
+        - cell "2nd Run"
+        - cell "Anzahl"
+    - rowgroup:
+      - 'row "24_Göttlesbrunn_2_VULL_Testteam _BL11 26416 vULL 2.0 Network Nord Keine Phase CLOSED Start: 25.05.2024 Ende: 15.10.2024 kein 2nd Run D2D SA: 517 PE: 61 zu Sales Actions"':
+        - cell "24_Göttlesbrunn_2_VULL_Testteam _BL11 26416 vULL 2.0":
+          - generic: 24_Göttlesbrunn_2_VULL_Testteam _BL11
+          - generic: "26416"
+          - generic: vULL 2.0
+        - cell "Network Nord Keine Phase":
+          - generic: Network Nord
+          - generic: Keine Phase
+        - cell "CLOSED":
+          - generic: CLOSED
+        - 'cell "Start: 25.05.2024 Ende: 15.10.2024"':
+          - generic: "Start: 25.05.2024"
+          - generic: "Ende: 15.10.2024"
+        - cell "kein 2nd Run":
+          - generic: kein 2nd Run
+        - 'cell "D2D SA: 517 PE: 61 zu Sales Actions"':
+          - generic: "D2D SA: 517"
+          - generic: "PE: 61"
+          - button "zu Sales Actions":
+            - generic: zu Sales Actions
+      - 'row "23_Grieskirchen_BL1 23718 VHCN NMAV NÖ 1 Keine Phase CLOSED Start: 11.05.2023 Ende: 03.08.2023 kein 2nd Run D2D SA: 607 PE: 730 zu Sales Actions"':
+        - cell "23_Grieskirchen_BL1 23718 VHCN":
+          - generic: 23_Grieskirchen_BL1
+          - generic: "23718"
+          - generic: VHCN
+        - cell "NMAV NÖ 1 Keine Phase":
+          - generic: NMAV NÖ 1
+          - generic: Keine Phase
+        - cell "CLOSED":
+          - generic: CLOSED
+        - 'cell "Start: 11.05.2023 Ende: 03.08.2023"':
+          - generic: "Start: 11.05.2023"
+          - generic: "Ende: 03.08.2023"
+        - cell "kein 2nd Run":
+          - generic: kein 2nd Run
+        - 'cell "D2D SA: 607 PE: 730 zu Sales Actions"':
+          - generic: "D2D SA: 607"
+          - generic: "PE: 730"
+          - button "zu Sales Actions":
+            - generic: zu Sales Actions
+      - 'row "24_Fantsch_Gleinstätten_S2ATestteam_BL1 25805 VHCN NMAV NÖ 2 2nd Run CLOSED Start: 01.01.2024 Ende: 15.01.2024 Start: 31.05.2023 Ende: 26.05.2024 D2D SA: 5 PE: 5 zu Sales Actions"':
+        - cell "24_Fantsch_Gleinstätten_S2ATestteam_BL1 25805 VHCN":
+          - generic: 24_Fantsch_Gleinstätten_S2ATestteam_BL1
+          - generic: "25805"
+          - generic: VHCN
+        - cell "NMAV NÖ 2 2nd Run":
+          - generic: NMAV NÖ 2
+          - generic: 2nd Run
+        - cell "CLOSED":
+          - generic: CLOSED
+        - 'cell "Start: 01.01.2024 Ende: 15.01.2024"':
+          - generic: "Start: 01.01.2024"
+          - generic: "Ende: 15.01.2024"
+        - 'cell "Start: 31.05.2023 Ende: 26.05.2024"':
+          - generic: "Start: 31.05.2023"
+          - generic: "Ende: 26.05.2024"
+        - 'cell "D2D SA: 5 PE: 5 zu Sales Actions"':
+          - generic: "D2D SA: 5"
+          - generic: "PE: 5"
+          - button "zu Sales Actions":
+            - generic: zu Sales Actions
+  - generic: Datensätze pro Seite
+  - button "25":
+    - generic: "25"
+  - button "": 
+  - generic: 1-3 von 3 Datensätzen
+  - button "1":
+    - generic: "1"
+  - button "": 
+  - generic: von 1 Seiten
+  - button "":
+    - generic: 
+  - button "":
+    - generic: 
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "500":
+  - generic: "500"

@@ -1,0 +1,55 @@
+page: Objekte
+routes:
+  - "#/objekte/neubau"
+  - "#/objekte/ftth"
+  - "#/objekte/bestandsbau"
+counts:
+  Neubau: 4
+  FTTH-AUSBAU: 1056
+  BESTANDSBAU: 529
+search: "Suche in Objekte..."
+quick-status-buttons: ["nicht übergeben", zurückgewiesen, übergeben]
+filter-strip: ["alle Filter", "Baulos/Einsatzname", PLZ, Organisation, Verkaufsstart, Fragebogen]
+all-filters-modal:
+  title: "Alle Filter"
+  categories:
+    Übergabestatus: ["nicht übergeben", zurückgewiesen, übergeben]
+    "Baulos/Einsatzname": "search input"
+    PLZ: ["PLZ - Bereich", "exakte PLZ"]
+    Organisation: ["Network Nord", "NMAV NÖ 1", "NMAV NÖ 2"]
+    "Verkaufsstart-Termin": ["in den nächsten 8 Tagen", "in den nächsten 6 Wochen"]
+    "Verkaufsstart-Status": ["Vor Aviso", Bestätigt, Ersttermin]
+    Fragebogen: [vollständig, unvollständig]
+  actions: ["Alle Filter entfernen", "Filter anwenden"]
+neubau-table:
+  columns: [Objekt, Subtyp, Organisation, Verkaufsstart, "Privat / D2D SA", Fragebogen]
+  example: "5621 St.Veit im Pongau, Grafenhof-Dorf 7 | WBTM Neubau | FTTH_PW | NMAV NÖ 1 | übergeben | 28.03.2026 | 0/15 | unvollständig"
+detail-drawer:
+  title: "OBJEKT: 5621 St.Veit im Pongau, Grafenhof-Dorf 7"
+  actions: ["zu Sales Actions wechseln", Zurückweisen]
+  tabs:
+    Übersicht:
+      fields: [Neubau, "28.03.2026", "mehrgeschoßiger Wohnbau", "Mitbewerb: ja", "Wohneinheiten Privat: 0", "NMAV NÖ 1", übergeben, Bezugstermin, Bauträger, "Lokation (2)"]
+      nested-actions:
+        Bearbeiten:
+          mode: inline
+          fields: [Verkaufsstarttermin, "Status Verkaufsstarttermin"]
+          actions: [Abbrechen, Übernehmen]
+        "Notiz hinzufügen":
+          mode: inline
+          fields: [Notiz, "Notiz an A1 senden"]
+          actions: [Abbrechen, Speichern]
+    Fragebogen:
+      questions: 9
+      states: [offen, "noch kein Eintrag", "nicht durchführbar"]
+      action: "Fragebogen bearbeiten"
+    "D2D VERKAUF":
+      count: 15
+      locations: 2
+      expanded-location: "LKMS-ID 26563395; Tür 1-15; all offen; not assigned"
+      empty-location: "LKMS-ID 26563377; no Sales Actions; generation disabled"
+    "OBJEKT SA":
+      count: 2
+      items:
+        - "Werbemittelmaßnahmen | offen | nicht zugewiesen"
+        - "Verkaufsstand | nicht durchführbar | DAAA DAAA"

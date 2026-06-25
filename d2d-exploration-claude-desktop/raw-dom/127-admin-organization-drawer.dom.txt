@@ -1,0 +1,200 @@
+STATE: Benutzerverwaltung > Organisationen > item detail side panel
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - button "D2D D2D":
+    - generic: D2D
+    - generic: D2D
+  - button " Planskizze Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Planskizze
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Termin ":
+    - button "":
+      - generic: 
+    - generic: Termin
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Hauptstraße ,HAUPTS Aalfang 3860 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Hauptstraße ,HAUPTS
+    - generic: Aalfang 3860
+    - button "":
+      - generic: 
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche in Benutzerverwaltung...
+  - textbox "Suche in Benutzerverwaltung..."
+  - button ""
+  - button "Benutzer erstellen":
+    - generic: Benutzer erstellen
+  - button "Team erstellen":
+    - generic: Team erstellen
+  - button "Admin A1 erstellen":
+    - generic: Admin A1 erstellen
+  - link "BENUTZER (221)":
+    - /url: "#/benutzerverwaltung/users"
+  - link "TEAMS (7)":
+    - /url: "#/benutzerverwaltung/teams"
+  - link "ORGANISATIONEN (3)":
+    - /url: "#/benutzerverwaltung/organisationen"
+  - button "ohne Admin extern"
+  - button "ohne Admin A1 Region"
+  - button "Vertriebsschienenregion":
+    - text: Vertriebsschienenregion
+    - button:
+  - table:
+    - rowgroup:
+      - row "Organisation Vertriebsschienenregion Admin A1 Region Admin Extern":
+        - cell "Organisation"
+        - cell "Vertriebsschienenregion"
+        - cell "Admin A1 Region"
+        - cell "Admin Extern"
+    - rowgroup:
+      - row "Network Nord Network Nord TEST21.05.2026 Admin Nasko BeChovek ... Shisho Bakshisho Regtesttest2 Regtesttest2":
+        - cell "Network Nord":
+          - link "Network Nord" [active]:
+            - /url: "#/benutzerverwaltung/organisationen/302/302"
+            - generic: Network Nord
+        - cell "Network Nord":
+          - generic: Network Nord
+        - cell "TEST21.05.2026 Admin Nasko BeChovek ...":
+          - list:
+            - generic: TEST21.05.2026 Admin
+            - generic: Nasko BeChovek
+            - text: ...
+        - cell "Shisho Bakshisho Regtesttest2 Regtesttest2":
+          - list:
+            - generic: Shisho Bakshisho
+            - generic: Regtesttest2 Regtesttest2
+      - row "NMAV NÖ 1 NMAV Ost TEST21.05.2026 Admin Nasko BeChovek ... Dorn sEda":
+        - cell "NMAV NÖ 1":
+          - link "NMAV NÖ 1":
+            - /url: "#/benutzerverwaltung/organisationen/302/322"
+            - generic: NMAV NÖ 1
+        - cell "NMAV Ost":
+          - generic: NMAV Ost
+        - cell "TEST21.05.2026 Admin Nasko BeChovek ...":
+          - list:
+            - generic: TEST21.05.2026 Admin
+            - generic: Nasko BeChovek
+            - text: ...
+        - cell "Dorn sEda":
+          - list:
+            - generic: Dorn sEda
+      - row "NMAV NÖ 2 NMAV Ost TEST21.05.2026 Admin Nasko BeChovek ... Boji Gol":
+        - cell "NMAV NÖ 2":
+          - link "NMAV NÖ 2":
+            - /url: "#/benutzerverwaltung/organisationen/302/324"
+            - generic: NMAV NÖ 2
+        - cell "NMAV Ost":
+          - generic: NMAV Ost
+        - cell "TEST21.05.2026 Admin Nasko BeChovek ...":
+          - list:
+            - generic: TEST21.05.2026 Admin
+            - generic: Nasko BeChovek
+            - text: ...
+        - cell "Boji Gol":
+          - list:
+            - generic: Boji Gol
+  - generic: "ORGANISATION: Network Nord"
+  - link:
+    - /url: "#/benutzerverwaltung/organisationen"
+    - button:
+  - generic: Organisation
+  - generic: Network Nord
+  - generic: E-Mail Adresse(n)
+  - generic: georg.kloiber@a1.at
+  - generic: Vertriebsschienenregion
+  - generic: Network Nord
+  - generic: Admin A1 Region
+  - generic: TEST21.05.2026 Admin
+  - generic: Tester DONT DELETE Admin A1 Region
+  - generic: Nasko BeChovek
+  - generic: Adash Bobovow
+  - generic: BigBagAdmiN Derm
+  - generic: dhgchgghfh fhcgghfghfg
+  - generic: Nai Golemiq
+  - generic: Bobi Ivanov
+  - generic: Dermato lOgaa Ivan
+  - generic: Podloga NaBoiko
+  - generic: Kosym NaGyzy
+  - generic: Ubavicata Namama
+  - generic: pol okl
+  - generic: Elza Parini
+  - generic: Krasimir Petkov
+  - generic: Asen Petkov
+  - generic: Roberto Petkov
+  - generic: Ivan Piqnicata
+  - generic: Renate Regional (demo12)(Admin Regional)
+  - generic: Charlie Schnie
+  - generic: Lili Sprihavata
+  - generic: TEST24.04.2026 TEST24.04.2026
+  - generic: Ivanov Tester
+  - generic: Tryn vOkoto
+  - text:                
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "Basement/Anteroom/Attic":
+  - generic: Basement/Anteroom/Attic
+- menuitem "Living room":
+  - generic: Living room

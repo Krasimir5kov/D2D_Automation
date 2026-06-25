@@ -1,0 +1,598 @@
+ACTION: Clicked first BESTANDSBAU row three-dot menu
+STATE: Bestandsbau context menu open
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche in Objekte...
+  - textbox "Suche in Objekte..."
+  - button ""
+  - button "alle Filter":
+    - generic: alle Filter
+  - button "nicht übergeben"
+  - button "zurückgewiesen"
+  - button "übergeben"
+  - button "Baulos/Einsatzname":
+    - text: Baulos/Einsatzname
+    - button:
+  - button "PLZ":
+    - text: PLZ
+    - button:
+  - button "Organisation":
+    - text: Organisation
+    - button:
+  - button "Verkaufsstart":
+    - text: Verkaufsstart
+    - button:
+  - button "Fragebogen":
+    - text: Fragebogen
+    - button:
+  - button "":
+    - generic: 
+  - link "NEUBAU (4)":
+    - /url: "#/objekte/neubau"
+    - generic: NEUBAU (4)
+  - link "FTTH-AUSBAU (1.056)":
+    - /url: "#/objekte/ftth"
+    - generic: FTTH-AUSBAU (1.056)
+  - link "BESTANDSBAU (529)":
+    - /url: "#/objekte/bestandsbau"
+    - generic: BESTANDSBAU (529)
+  - table:
+    - rowgroup:
+      - row "Objekt Regime Organisation Verkaufsstart D2D SA":
+        - cell "Objekt":
+          - generic: Objekt
+        - cell "Regime":
+          - generic: Regime
+        - cell "Organisation":
+          - generic: Organisation
+        - cell "Verkaufsstart":
+          - generic: Verkaufsstart
+        - cell "D2D SA":
+          - generic: D2D SA
+        - cell
+    - rowgroup:
+      - row "3860 Aalfang Hauptstraße ,HAUPTS BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Hauptstraße ,HAUPTS BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Hauptstraße ,HAUPTS":
+            - /url: "#/objekte/bestandsbau/129750"
+            - generic: 3860 Aalfang
+            - generic: Hauptstraße ,HAUPTS
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button [active]:
+      - row "3860 Aalfang Hauptstraße 0 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Hauptstraße 0 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Hauptstraße 0":
+            - /url: "#/objekte/bestandsbau/129742"
+            - generic: 3860 Aalfang
+            - generic: Hauptstraße 0
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Hauptstraße NB BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Hauptstraße NB BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Hauptstraße NB":
+            - /url: "#/objekte/bestandsbau/129740"
+            - generic: 3860 Aalfang
+            - generic: Hauptstraße NB
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Seyfriedser Straße 24 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Seyfriedser Straße 24 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Seyfriedser Straße 24":
+            - /url: "#/objekte/bestandsbau/129935"
+            - generic: 3860 Aalfang
+            - generic: Seyfriedser Straße 24
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Seyfriedser Straße 26 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Seyfriedser Straße 26 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Seyfriedser Straße 26":
+            - /url: "#/objekte/bestandsbau/129932"
+            - generic: 3860 Aalfang
+            - generic: Seyfriedser Straße 26
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Seyfriedser Straße 59 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Seyfriedser Straße 59 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Seyfriedser Straße 59":
+            - /url: "#/objekte/bestandsbau/129931"
+            - generic: 3860 Aalfang
+            - generic: Seyfriedser Straße 59
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Seyfriedser Straße 8 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Seyfriedser Straße 8 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Seyfriedser Straße 8":
+            - /url: "#/objekte/bestandsbau/129586"
+            - generic: 3860 Aalfang
+            - generic: Seyfriedser Straße 8
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3860 Aalfang Seyfriedser Straße 96 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3860 Aalfang Seyfriedser Straße 96 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3860 Aalfang Seyfriedser Straße 96":
+            - /url: "#/objekte/bestandsbau/129578"
+            - generic: 3860 Aalfang
+            - generic: Seyfriedser Straße 96
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Birkenweg 320 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Birkenweg 320 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Birkenweg 320":
+            - /url: "#/objekte/bestandsbau/129974"
+            - generic: 3872 Aalfang
+            - generic: Birkenweg 320
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Birkenweg PRZ 320 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Birkenweg PRZ 320 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Birkenweg PRZ 320":
+            - /url: "#/objekte/bestandsbau/129902"
+            - generic: 3872 Aalfang
+            - generic: Birkenweg PRZ 320
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Braunauweg BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Braunauweg BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Braunauweg":
+            - /url: "#/objekte/bestandsbau/129766"
+            - generic: 3872 Aalfang
+            - generic: Braunauweg
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Braunauweg ? BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Braunauweg ? BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Braunauweg ?":
+            - /url: "#/objekte/bestandsbau/129904"
+            - generic: 3872 Aalfang
+            - generic: Braunauweg ?
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Hauptstraße BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Hauptstraße BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Hauptstraße":
+            - /url: "#/objekte/bestandsbau/129965"
+            - generic: 3872 Aalfang
+            - generic: Hauptstraße
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Hauptstraße (KG07201#Pz148) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Hauptstraße (KG07201#Pz148) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Hauptstraße (KG07201#Pz148)":
+            - /url: "#/objekte/bestandsbau/129985"
+            - generic: 3872 Aalfang
+            - generic: Hauptstraße
+            - generic: (KG07201#Pz148)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Hauptstraße N BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Hauptstraße N BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Hauptstraße N":
+            - /url: "#/objekte/bestandsbau/129966"
+            - generic: 3872 Aalfang
+            - generic: Hauptstraße N
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Hauptstraße P/W BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Hauptstraße P/W BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Hauptstraße P/W":
+            - /url: "#/objekte/bestandsbau/129938"
+            - generic: 3872 Aalfang
+            - generic: Hauptstraße P/W
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Hauptstraße PW9 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Hauptstraße PW9 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Hauptstraße PW9":
+            - /url: "#/objekte/bestandsbau/129937"
+            - generic: 3872 Aalfang
+            - generic: Hauptstraße PW9
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Heidenreichsteiner Straße BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Heidenreichsteiner Straße BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Heidenreichsteiner Straße":
+            - /url: "#/objekte/bestandsbau/129749"
+            - generic: 3872 Aalfang
+            - generic: Heidenreichsteiner Straße
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Heidenreichsteiner Straße (EBG GESMBH.) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Heidenreichsteiner Straße (EBG GESMBH.) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Heidenreichsteiner Straße (EBG GESMBH.)":
+            - /url: "#/objekte/bestandsbau/129943"
+            - generic: 3872 Aalfang
+            - generic: Heidenreichsteiner Straße
+            - generic: (EBG GESMBH.)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Heidenreichsteiner Straße (GNR 369 /4) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Heidenreichsteiner Straße (GNR 369 /4) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Heidenreichsteiner Straße (GNR 369 /4)":
+            - /url: "#/objekte/bestandsbau/129926"
+            - generic: 3872 Aalfang
+            - generic: Heidenreichsteiner Straße
+            - generic: (GNR 369 /4)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Heidenreichsteiner Straße 777 BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Heidenreichsteiner Straße 777 BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Heidenreichsteiner Straße 777":
+            - /url: "#/objekte/bestandsbau/129914"
+            - generic: 3872 Aalfang
+            - generic: Heidenreichsteiner Straße 777
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Oberaalfanger Straße BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Oberaalfanger Straße BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Oberaalfanger Straße":
+            - /url: "#/objekte/bestandsbau/129933"
+            - generic: 3872 Aalfang
+            - generic: Oberaalfanger Straße
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Oberaalfanger Straße (ALTRICHTER GERHARD UND RENATE) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Oberaalfanger Straße (ALTRICHTER GERHARD UND RENATE) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Oberaalfanger Straße (ALTRICHTER GERHARD UND RENATE)":
+            - /url: "#/objekte/bestandsbau/129944"
+            - generic: 3872 Aalfang
+            - generic: Oberaalfanger Straße
+            - generic: (ALTRICHTER GERHARD UND RENATE)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Oberaalfanger Straße (ARTH MARIA) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Oberaalfanger Straße (ARTH MARIA) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Oberaalfanger Straße (ARTH MARIA)":
+            - /url: "#/objekte/bestandsbau/129945"
+            - generic: 3872 Aalfang
+            - generic: Oberaalfanger Straße
+            - generic: (ARTH MARIA)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+      - row "3872 Aalfang Oberaalfanger Straße (GNR 175 /2) BBI Push Aalfang - BBI Push Aalfang BBI-Push NMAV NÖ 2 (NMAV Ost) 25.10.2023 1":
+        - cell "3872 Aalfang Oberaalfanger Straße (GNR 175 /2) BBI Push Aalfang - BBI Push Aalfang":
+          - link "3872 Aalfang Oberaalfanger Straße (GNR 175 /2)":
+            - /url: "#/objekte/bestandsbau/129927"
+            - generic: 3872 Aalfang
+            - generic: Oberaalfanger Straße
+            - generic: (GNR 175 /2)
+          - generic: BBI Push Aalfang - BBI Push Aalfang
+        - cell "BBI-Push"
+        - cell "NMAV NÖ 2 (NMAV Ost)":
+          - generic: NMAV NÖ 2 (NMAV Ost)
+        - cell "25.10.2023":
+          - generic: 25.10.2023
+        - cell "1":
+          - generic: "1"
+        - cell:
+          - button:
+            - button:
+  - generic: Datensätze pro Seite
+  - button "25":
+    - generic: "25"
+  - button "": 
+  - generic: 1-25 von 529 Datensätzen
+  - button "1":
+    - generic: "1"
+  - button "": 
+  - generic: von 22 Seiten
+  - button "":
+    - generic: 
+  - button "":
+    - generic: 
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "1":
+  - generic: "1"
+- menuitem "2":
+  - generic: "2"
+- menuitem "3":
+  - generic: "3"
+- menuitem "4":
+  - generic: "4"
+- menuitem "5":
+  - generic: "5"
+- menuitem "6":
+  - generic: "6"
+- menuitem "7":
+  - generic: "7"
+- menuitem "8":
+  - generic: "8"
+- menuitem "9":
+  - generic: "9"
+- menuitem "10":
+  - generic: "10"
+- menuitem "11":
+  - generic: "11"
+- menuitem "12":
+  - generic: "12"
+- menuitem "13":
+  - generic: "13"
+- menuitem "14":
+  - generic: "14"
+- menuitem "15":
+  - generic: "15"
+- menuitem "16":
+  - generic: "16"
+- menuitem "17":
+  - generic: "17"
+- menuitem "18":
+  - generic: "18"
+- menuitem "19":
+  - generic: "19"
+- menuitem "20":
+  - generic: "20"
+- menuitem "21":
+  - generic: "21"
+- menuitem "22":
+  - generic: "22"
+- button "Detailansicht öffnen"

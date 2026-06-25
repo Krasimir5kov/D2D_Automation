@@ -1,0 +1,692 @@
+STATE: Importe > Organisation wechseln modal
+CAPTURED: 2026-06-21
+
+- banner:
+  - generic: "Environment: integration"
+  - text: "Portal Version: 1.28.30,"
+  - link "Widget Versions":
+    - /url: javascript:void(0)
+  - text: 
+  - generic: Krasimir Petkov
+  - text: 
+- main:
+  - navigation:
+    - generic "Navigation": 
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Door 2 Door":
+        - /url: ""
+      - link "Timey":
+        - /url: /timey
+      - link "Cockpit-Leistungspositionen":
+        - /url: /leistungspositionen
+      - link "Case Comments":
+        - /url: /case_comments
+      - link "Case Document Viewer":
+        - /url: /CaseDocumentViewer
+      - link "Address List":
+        - /url: /address_list
+  - button "D2D D2D":
+    - generic: D2D
+    - generic: D2D
+  - button " Planskizze Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Planskizze
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Dorfplatz 1 Göttlesbrunn 2464 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Dorfplatz 1
+    - generic: Göttlesbrunn 2464
+    - button "":
+      - generic: 
+  - button " Termin ":
+    - button "":
+      - generic: 
+    - generic: Termin
+    - button "":
+      - generic: 
+  - button " Bestellung erfassen Hauptstraße ,HAUPTS Aalfang 3860 ":
+    - button "":
+      - generic: 
+    - generic: Bestellung erfassen
+    - generic: Hauptstraße ,HAUPTS
+    - generic: Aalfang 3860
+    - button "":
+      - generic: 
+  - list:
+    - listitem: D2D
+    - link "Baulose":
+      - /url: "#/baulose"
+    - link "Objekte":
+      - /url: "#/objekte"
+    - link "Sales Action":
+      - /url: "#/sales-actions"
+    - link "Benutzerverwaltung":
+      - /url: "#/benutzerverwaltung"
+    - link "Importe":
+      - /url: "#/importe"
+    - link "Konfiguration":
+      - /url: "#/konfiguration"
+  - generic: Krasimir Petkov
+  - generic: Pseudo A1 Organization
+  - generic: Suche in Importe...
+  - textbox "Suche in Importe..."
+  - button ""
+  - button "Organisation wechseln" [active]:
+    - generic: Organisation wechseln
+  - button "Daten importieren":
+    - generic: Daten importieren
+  - button "":
+    - generic: 
+  - button "System Import"
+  - button "Datei Import"
+  - button "Importdatum":
+    - text: Importdatum
+    - button:
+  - button "Organisation":
+    - text: Organisation
+    - button:
+  - button "Benutzer":
+    - text: Benutzer
+    - button:
+  - table:
+    - rowgroup:
+      - row "Import Baulos Organisation Details Aktionen":
+        - cell "Import"
+        - cell "Baulos"
+        - cell "Organisation"
+        - cell "Details"
+        - cell "Aktionen"
+    - rowgroup:
+      - row "17.06.2026 16:50 Krasimir Petkov FBB CORT_6 FBB CORT_6 Network Ost Importdateiname FBB_CORT_6_FTTC_bigfile.csv Rückgängig machen":
+        - cell "17.06.2026 16:50 Krasimir Petkov":
+          - generic: 17.06.2026
+          - generic: 16:50
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "FBB CORT_6 FBB CORT_6":
+          - generic: FBB CORT_6
+          - generic: FBB CORT_6
+        - cell "Network Ost":
+          - generic: Network Ost
+        - cell "Importdateiname FBB_CORT_6_FTTC_bigfile.csv":
+          - generic: Importdateiname
+          - generic: FBB_CORT_6_FTTC_bigfile.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "17.06.2026 16:34 Krasimir Petkov - 2026_NVD_SUED_001 Network Ost Importdateiname d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv Rückgängig machen":
+        - cell "17.06.2026 16:34 Krasimir Petkov":
+          - generic: 17.06.2026
+          - generic: 16:34
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- 2026_NVD_SUED_001":
+          - generic: "-"
+          - generic: 2026_NVD_SUED_001
+        - cell "Network Ost":
+          - generic: Network Ost
+        - cell "Importdateiname d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv":
+          - generic: Importdateiname
+          - generic: d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "17.06.2026 16:31 Krasimir Petkov 26_st_andrä_bl_1-5_nachverdichtung 2026_NVD_SUED_001 Network Ost Importdateiname d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv Rückgängig machen":
+        - cell "17.06.2026 16:31 Krasimir Petkov":
+          - generic: 17.06.2026
+          - generic: 16:31
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "26_st_andrä_bl_1-5_nachverdichtung 2026_NVD_SUED_001":
+          - generic: 26_st_andrä_bl_1-5_nachverdichtung
+          - generic: 2026_NVD_SUED_001
+        - cell "Network Ost":
+          - generic: Network Ost
+        - cell "Importdateiname d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv":
+          - generic: Importdateiname
+          - generic: d2d_import_nvd_trial_9433_9422_941_20260428_aufgaben_import_INT (3).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "20.04.2026 17:38 System Import 25_Laubichl_Pfarrwerfen_VHCN_Testteam_BL2 32991 E2E Team 1.0 letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+        - cell "20.04.2026 17:38 System Import":
+          - generic: 20.04.2026
+          - generic: 17:38
+          - generic: System
+          - generic: Import
+        - cell "25_Laubichl_Pfarrwerfen_VHCN_Testteam_BL2 32991":
+          - generic: 25_Laubichl_Pfarrwerfen_VHCN_Testteam_BL2
+          - generic: "32991"
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+          - generic: letzter Abgleich mit KI-DB
+          - generic: am 21.05.2026 06:00
+          - generic: erfolgreich
+        - cell
+      - row "14.05.2026 13:45 System Import 24_Teichmühle_Mariazell_ZAG_Testteam_BL1 29602 Network Ost letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+        - cell "14.05.2026 13:45 System Import":
+          - generic: 14.05.2026
+          - generic: 13:45
+          - generic: System
+          - generic: Import
+        - cell "24_Teichmühle_Mariazell_ZAG_Testteam_BL1 29602":
+          - generic: 24_Teichmühle_Mariazell_ZAG_Testteam_BL1
+          - generic: "29602"
+        - cell "Network Ost":
+          - generic: Network Ost
+        - cell "letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+          - generic: letzter Abgleich mit KI-DB
+          - generic: am 21.05.2026 06:00
+          - generic: erfolgreich
+        - cell
+      - row "24.04.2026 09:44 System Import 24_Hengsberg_VHCN_Testteam_BL3 26356 E2E Team 1.0 letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+        - cell "24.04.2026 09:44 System Import":
+          - generic: 24.04.2026
+          - generic: 09:44
+          - generic: System
+          - generic: Import
+        - cell "24_Hengsberg_VHCN_Testteam_BL3 26356":
+          - generic: 24_Hengsberg_VHCN_Testteam_BL3
+          - generic: "26356"
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "letzter Abgleich mit KI-DB am 21.05.2026 06:00 erfolgreich":
+          - generic: letzter Abgleich mit KI-DB
+          - generic: am 21.05.2026 06:00
+          - generic: erfolgreich
+        - cell
+      - row "13.05.2026 16:54 Krasimir Petkov - Urban_Push_Mühlau_NDV_TRIAL_01 E2E Team 1.0 Importdateiname ndv_trial_01_mühlau_02 (1).csv Rückgängig machen":
+        - cell "13.05.2026 16:54 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:54
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_Mühlau_NDV_TRIAL_01":
+          - generic: "-"
+          - generic: Urban_Push_Mühlau_NDV_TRIAL_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname ndv_trial_01_mühlau_02 (1).csv":
+          - generic: Importdateiname
+          - generic: ndv_trial_01_mühlau_02 (1).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:53 Krasimir Petkov - Urban_Push_02_Mühlau E2E Team 1.0 Importdateiname bbi_push_02_mühlau_02 (2).csv Rückgängig machen":
+        - cell "13.05.2026 16:53 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:53
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_02_Mühlau":
+          - generic: "-"
+          - generic: Urban_Push_02_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_02_mühlau_02 (2).csv":
+          - generic: Importdateiname
+          - generic: bbi_push_02_mühlau_02 (2).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:08 Krasimir Petkov Urban_Push_Mühlau_NDV_TRIAL_01 Urban_Push_Mühlau_NDV_TRIAL_01 E2E Team 1.0 Importdateiname ndv_trial_01_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 16:08 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:08
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau_NDV_TRIAL_01 Urban_Push_Mühlau_NDV_TRIAL_01":
+          - generic: Urban_Push_Mühlau_NDV_TRIAL_01
+          - generic: Urban_Push_Mühlau_NDV_TRIAL_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname ndv_trial_01_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: ndv_trial_01_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:07 Krasimir Petkov - Urban_Push_04_Mühlau E2E Team 1.0 Importdateiname bbi_push_04_mühlau_02.csv Rückgängig machen":
+        - cell "13.05.2026 16:07 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:07
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_04_Mühlau":
+          - generic: "-"
+          - generic: Urban_Push_04_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_04_mühlau_02.csv":
+          - generic: Importdateiname
+          - generic: bbi_push_04_mühlau_02.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:06 Krasimir Petkov - Urban_Push_03_Mühlau E2E Team 1.0 Importdateiname bbi_push_03_mühlau_02.csv Rückgängig machen":
+        - cell "13.05.2026 16:06 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:06
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_03_Mühlau":
+          - generic: "-"
+          - generic: Urban_Push_03_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_03_mühlau_02.csv":
+          - generic: Importdateiname
+          - generic: bbi_push_03_mühlau_02.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:05 Krasimir Petkov - Urban_Push_Mühlau_OANTP1_01 E2E Team 1.0 Importdateiname oan_tp_3_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 16:05 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:05
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_Mühlau_OANTP1_01":
+          - generic: "-"
+          - generic: Urban_Push_Mühlau_OANTP1_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname oan_tp_3_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: oan_tp_3_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 16:05 Krasimir Petkov - Urban_Push_Mühlau_OANTP1_01 E2E Team 1.0 Importdateiname oan_tp_2_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 16:05 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 16:05
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "- Urban_Push_Mühlau_OANTP1_01":
+          - generic: "-"
+          - generic: Urban_Push_Mühlau_OANTP1_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname oan_tp_2_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: oan_tp_2_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:54 Krasimir Petkov Urban_Push_Mühlau_OANTP1_01 Urban_Push_Mühlau_OANTP1_01 E2E Team 1.0 Importdateiname oan_tp_1_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:54 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:54
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau_OANTP1_01 Urban_Push_Mühlau_OANTP1_01":
+          - generic: Urban_Push_Mühlau_OANTP1_01
+          - generic: Urban_Push_Mühlau_OANTP1_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname oan_tp_1_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: oan_tp_1_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:54 Krasimir Petkov Urban_Push_Mühlau_FTTC_01 Urban_Push_Mühlau_FTTC_01 E2E Team 1.0 Importdateiname fttc_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:54 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:54
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau_FTTC_01 Urban_Push_Mühlau_FTTC_01":
+          - generic: Urban_Push_Mühlau_FTTC_01
+          - generic: Urban_Push_Mühlau_FTTC_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname fttc_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: fttc_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:53 Krasimir Petkov Urban_Push_Mühlau_TRIAL_01 Urban_Push_Mühlau_TRIAL_01 E2E Team 1.0 Importdateiname trial_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:53 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:53
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau_TRIAL_01 Urban_Push_Mühlau_TRIAL_01":
+          - generic: Urban_Push_Mühlau_TRIAL_01
+          - generic: Urban_Push_Mühlau_TRIAL_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname trial_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: trial_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:51 Krasimir Petkov Urban_Push_Mühlau_FTTB_01 Urban_Push_Mühlau_FTTB_01 E2E Team 1.0 Importdateiname fttb_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:51 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:51
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau_FTTB_01 Urban_Push_Mühlau_FTTB_01":
+          - generic: Urban_Push_Mühlau_FTTB_01
+          - generic: Urban_Push_Mühlau_FTTB_01
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname fttb_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: fttb_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:50 Krasimir Petkov Urban_Push_05_Mühlau Urban_Push_05_Mühlau E2E Team 1.0 Importdateiname bbi_push_05_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:50 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:50
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_05_Mühlau Urban_Push_05_Mühlau":
+          - generic: Urban_Push_05_Mühlau
+          - generic: Urban_Push_05_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_05_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: bbi_push_05_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:49 Krasimir Petkov Urban_Push_04_Mühlau Urban_Push_04_Mühlau E2E Team 1.0 Importdateiname bbi_push_04_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:49 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:49
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_04_Mühlau Urban_Push_04_Mühlau":
+          - generic: Urban_Push_04_Mühlau
+          - generic: Urban_Push_04_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_04_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: bbi_push_04_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:48 Krasimir Petkov Urban_Push_03_Mühlau Urban_Push_03_Mühlau E2E Team 1.0 Importdateiname bbi_push_03_mühlau_01.csv Rückgängig machen":
+        - cell "13.05.2026 15:48 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:48
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_03_Mühlau Urban_Push_03_Mühlau":
+          - generic: Urban_Push_03_Mühlau
+          - generic: Urban_Push_03_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_03_mühlau_01.csv":
+          - generic: Importdateiname
+          - generic: bbi_push_03_mühlau_01.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "13.05.2026 15:46 Krasimir Petkov Urban_Push_Mühlau Urban_Push_02_Mühlau E2E Team 1.0 Importdateiname bbi_push_02_mühlau_01 (1).csv Rückgängig machen":
+        - cell "13.05.2026 15:46 Krasimir Petkov":
+          - generic: 13.05.2026
+          - generic: 15:46
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Urban_Push_Mühlau Urban_Push_02_Mühlau":
+          - generic: Urban_Push_Mühlau
+          - generic: Urban_Push_02_Mühlau
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname bbi_push_02_mühlau_01 (1).csv":
+          - generic: Importdateiname
+          - generic: bbi_push_02_mühlau_01 (1).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "12.05.2026 15:04 Krasimir Petkov 26_Trofaiach_8793_150-1000 Trofaiach_26 E2E Team 1.0 Importdateiname 26_Trofaiach_8793_150-1000_Regime FTTB_MM Voice_T1_v 2026_05_04_KW 19-20 (4).csv Rückgängig machen":
+        - cell "12.05.2026 15:04 Krasimir Petkov":
+          - generic: 12.05.2026
+          - generic: 15:04
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "26_Trofaiach_8793_150-1000 Trofaiach_26":
+          - generic: 26_Trofaiach_8793_150-1000
+          - generic: Trofaiach_26
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname 26_Trofaiach_8793_150-1000_Regime FTTB_MM Voice_T1_v 2026_05_04_KW 19-20 (4).csv":
+          - generic: Importdateiname
+          - generic: 26_Trofaiach_8793_150-1000_Regime FTTB_MM Voice_T1_v 2026_05_04_KW 19-20 (4).csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "04.05.2026 15:01 Krasimir Petkov Viktring_26 26_Viktring_9073_250-300_RES E2E Team 1.0 Importdateiname 26_Viktring - 26_Viktring_9073_250-300_RES_v 2026_04-20_KW 17.csv Rückgängig machen":
+        - cell "04.05.2026 15:01 Krasimir Petkov":
+          - generic: 04.05.2026
+          - generic: 15:01
+          - generic: Krasimir
+          - generic: Petkov
+        - cell "Viktring_26 26_Viktring_9073_250-300_RES":
+          - generic: Viktring_26
+          - generic: 26_Viktring_9073_250-300_RES
+        - cell "E2E Team 1.0":
+          - generic: E2E Team 1.0
+        - cell "Importdateiname 26_Viktring - 26_Viktring_9073_250-300_RES_v 2026_04-20_KW 17.csv":
+          - generic: Importdateiname
+          - generic: 26_Viktring - 26_Viktring_9073_250-300_RES_v 2026_04-20_KW 17.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "28.04.2026 09:57 Claudia Stockinger (demo21)(Admin+) FBB CORT_1 FBB CORT_1 Network Ost Importdateiname FBB_CORT_1_FTTC_200_rows_krasimir.csv Rückgängig machen":
+        - cell "28.04.2026 09:57 Claudia Stockinger (demo21)(Admin+)":
+          - generic: 28.04.2026
+          - generic: 09:57
+          - generic: Claudia
+          - generic: Stockinger (demo21)(Admin+)
+        - cell "FBB CORT_1 FBB CORT_1":
+          - generic: FBB CORT_1
+          - generic: FBB CORT_1
+        - cell "Network Ost":
+          - generic: Network Ost
+        - cell "Importdateiname FBB_CORT_1_FTTC_200_rows_krasimir.csv":
+          - generic: Importdateiname
+          - generic: FBB_CORT_1_FTTC_200_rows_krasimir.csv
+        - cell "Rückgängig machen":
+          - button "Rückgängig machen":
+            - generic: Rückgängig machen
+      - row "24.04.2024 19:07 System Import 24_Hard_104_VULL_Testteam _BL104 26177 A1 Shop Lugner City letzter Abgleich mit KI-DB am 24.04.2026 06:02 erfolgreich":
+        - cell "24.04.2024 19:07 System Import":
+          - generic: 24.04.2024
+          - generic: 19:07
+          - generic: System
+          - generic: Import
+        - cell "24_Hard_104_VULL_Testteam _BL104 26177":
+          - generic: 24_Hard_104_VULL_Testteam _BL104
+          - generic: "26177"
+        - cell "A1 Shop Lugner City":
+          - generic: A1 Shop Lugner City
+        - cell "letzter Abgleich mit KI-DB am 24.04.2026 06:02 erfolgreich":
+          - generic: letzter Abgleich mit KI-DB
+          - generic: am 24.04.2026 06:02
+          - generic: erfolgreich
+        - cell
+  - generic: Datensätze pro Seite
+  - button "25":
+    - generic: "25"
+  - button "": 
+  - generic: 1-25 von 1386 Datensätzen
+  - button "1":
+    - generic: "1"
+  - button "": 
+  - generic: von 56 Seiten
+  - button "":
+    - generic: 
+  - button "":
+    - generic: 
+  - text:                
+- text:  Due to inactivity, the authentication will expire in 00:00
+- link "Extend authentication":
+  - /url: javascript:void(0)
+- generic: Title
+- generic: 
+- contentinfo:
+  - link "A1 Telekom Austria Group":
+    - /url: https://www.a1.group/
+- menuitem "Basement/Anteroom/Attic":
+  - generic: Basement/Anteroom/Attic
+- menuitem "Living room":
+  - generic: Living room
+- menuitem "25":
+  - generic: "25"
+- menuitem "50":
+  - generic: "50"
+- menuitem "100":
+  - generic: "100"
+- menuitem "500":
+  - generic: "500"
+- menuitem "1":
+  - generic: "1"
+- menuitem "2":
+  - generic: "2"
+- menuitem "3":
+  - generic: "3"
+- menuitem "4":
+  - generic: "4"
+- menuitem "5":
+  - generic: "5"
+- menuitem "6":
+  - generic: "6"
+- menuitem "7":
+  - generic: "7"
+- menuitem "8":
+  - generic: "8"
+- menuitem "9":
+  - generic: "9"
+- menuitem "10":
+  - generic: "10"
+- menuitem "11":
+  - generic: "11"
+- menuitem "12":
+  - generic: "12"
+- menuitem "13":
+  - generic: "13"
+- menuitem "14":
+  - generic: "14"
+- menuitem "15":
+  - generic: "15"
+- menuitem "16":
+  - generic: "16"
+- menuitem "17":
+  - generic: "17"
+- menuitem "18":
+  - generic: "18"
+- menuitem "19":
+  - generic: "19"
+- menuitem "20":
+  - generic: "20"
+- menuitem "21":
+  - generic: "21"
+- menuitem "22":
+  - generic: "22"
+- menuitem "23":
+  - generic: "23"
+- menuitem "24":
+  - generic: "24"
+- menuitem "25":
+  - generic: "25"
+- menuitem "26":
+  - generic: "26"
+- menuitem "27":
+  - generic: "27"
+- menuitem "28":
+  - generic: "28"
+- menuitem "29":
+  - generic: "29"
+- menuitem "30":
+  - generic: "30"
+- menuitem "31":
+  - generic: "31"
+- menuitem "32":
+  - generic: "32"
+- menuitem "33":
+  - generic: "33"
+- menuitem "34":
+  - generic: "34"
+- menuitem "35":
+  - generic: "35"
+- menuitem "36":
+  - generic: "36"
+- menuitem "37":
+  - generic: "37"
+- menuitem "38":
+  - generic: "38"
+- menuitem "39":
+  - generic: "39"
+- menuitem "40":
+  - generic: "40"
+- menuitem "41":
+  - generic: "41"
+- menuitem "42":
+  - generic: "42"
+- menuitem "43":
+  - generic: "43"
+- menuitem "44":
+  - generic: "44"
+- menuitem "45":
+  - generic: "45"
+- menuitem "46":
+  - generic: "46"
+- menuitem "47":
+  - generic: "47"
+- menuitem "48":
+  - generic: "48"
+- menuitem "49":
+  - generic: "49"
+- menuitem "50":
+  - generic: "50"
+- menuitem "51":
+  - generic: "51"
+- menuitem "52":
+  - generic: "52"
+- menuitem "53":
+  - generic: "53"
+- menuitem "54":
+  - generic: "54"
+- menuitem "55":
+  - generic: "55"
+- menuitem "56":
+  - generic: "56"
+- dialog "Modal Fenster":
+  - heading "Organisation wechseln" [level=3]
+  - button:
+  - generic: Baulos wählen
+  - generic: Organisation wählen
+  - generic: Baulos übergeben
+  - generic: Mit der Funktion Organisationswechsel kann ein Bestandsbau Baulos an eine neue Organisation übergeben werden.
+  - generic: Alle Objekte und Sales Actions des gewählten Bauloses werden an die ausgewählte Organisation übergeben. Bearbeitungsstatus der Sales Actions bleiben unverändert, jedoch werden alle derzeitig zugewiesene Benutzer entfernt.
+  - button
+  - generic: Bestandsbau Baulos wählen
+  - button "Bestandsbau Baulos suchen oder wählen":
+    - generic: Bestandsbau Baulos suchen oder wählen
+    - textbox
+  - button "": 
+  - button "Abbrechen":
+    - generic: Abbrechen
+  - button "Organisation wählen" [disabled]:
+    - generic: Organisation wählen
