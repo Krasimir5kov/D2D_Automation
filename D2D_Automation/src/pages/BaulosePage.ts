@@ -61,11 +61,11 @@ export class BaulosePage extends BasePage {
   //   // Navigates to the confirmed Baulose route.
   //   await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
   // }
-  async gotoBestandsbau(): Promise<void> {
+  async gotoBestandsbauListSection(): Promise<void> {
     // Navigates to the confirmed Baulose route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.bestandsbau);
   }
-  async gotoFTTH(): Promise<void> {
+  async gotoFTTHListSection(): Promise<void> {
     // Navigates to the confirmed Baulose route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
   }
