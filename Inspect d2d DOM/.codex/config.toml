@@ -1,8 +1,0 @@
-[mcp_servers.playwright-test]
-command = "npx.cmd"
-args = ["playwright", "run-test-mcp-server"]
-cwd = "C:\\Users\\a1bg520419\\Desktop\\Inspect d2d DOM"
-startup_timeout_sec = 30
-tool_timeout_sec = 120
-enabled = true
-
