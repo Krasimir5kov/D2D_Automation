@@ -4,11 +4,19 @@ import { expect, type Locator, type Page } from '@playwright/test';
 // Represents common Door2Door table/list behavior.
 export class TableView {
   readonly table: Locator;
-  readonly rows: Locator
+  readonly rows: Locator;
+  readonly loadingCells: Locator;
   // Stores the active Playwright page so table locators can be created from it.
   constructor(private readonly page: Page) {
     this.table = page.locator('table, [role="table"], [class*="Table"]').first();
-    this.rows = page.locator('tbody tr, [role="row"]');
+    // Scoped under this.table (not page-wide) so another table-like element elsewhere
+    // on the page can't contribute rows. Scoped to tbody on both halves too — a plain
+    // <tr> has an implicit ARIA role of "row" even inside <thead>, so an unscoped
+    // `[role="row"]` would also match the header row.
+    this.rows = this.table.locator('tbody tr, tbody [role="row"]');
+    // While a row is still loading, TableEntry.tsx renders it as one wide placeholder
+    // cell (<td colSpan={100}>) instead of the real per-column cells.
+    this.loadingCells = this.table.locator('td[colspan="100"]');
   }
 
   // Returns the first visible table-like element on a list page.
@@ -23,15 +31,28 @@ export class TableView {
   //   return this.page.locator('tbody tr, [role="row"]');
   // }
 
-  // Returns a table row containing specific visible text.
+  // Returns a table row containing specific visible text. Generic fallback for pages/
+  // rows with no known stable attribute. Baulose/Objekte/Sales Action rows already have
+  // a data-display-name attribute (added in POSS-3402) — prefer rowByDisplayName()
+  // over this for those, since visible text can shift with formatting/copy changes.
   rowByText(text: string | RegExp): Locator {
-    // Filters rows by text until rows get stable entity attributes like data-object-id or data-sales-action-id.
-    return this.page.locator('tr, [role="row"]').filter({ hasText: text });
+    return this.table.locator('tr, [role="row"]').filter({ hasText: text });
   }
 
-  // Returns the row context menu button for a row containing specific text.
+  // Returns a table row by its stable data-display-name attribute (Baulose/Objekte/
+  // Sales Action rows, POSS-3402). Use this instead of rowByText() when the entity's
+  // display name is known.
+  rowByDisplayName(name: string): Locator {
+    return this.table.locator(`[data-display-name="${name}"]`);
+  }
+
+  // Returns the row context menu button for a row containing specific text. Baulose/
+  // Objekte/Sales Action row action buttons still don't have a stable id, so `.last()`
+  // remains correct for those. Regime, Abschlussgründe, and Aktivitäten Setup rows DO
+  // have stable context-menu-button ids now (POSS-3416/3419/3421) — if a page object
+  // ever composes TableView against one of those tables, locate its context menu
+  // button directly by that page-specific id pattern instead of through this fallback.
   rowContextMenu(text: string | RegExp): Locator {
-    // Uses the last button in the row because current row action buttons lack stable aria-labels or data-testid attributes.
     return this.rowByText(text).locator('button').last();
   }
 
