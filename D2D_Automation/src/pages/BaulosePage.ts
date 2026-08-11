@@ -79,10 +79,18 @@ export class BaulosePage extends BasePage {
   async expectLoadedBestandsbau(): Promise<void> {
     // Checks that the URL is the Baulose Bestandsbau route.
     await expect(this.page).toHaveURL(/\/door2door#\/baulose\/bestandsbau/);
+    // "Importdatum" is a column only Bestandsbau's table has — waiting for it confirms
+    // the Bestandsbau-specific table has actually rendered, not just that the URL
+    // changed. Without this, stale FTTH rows could still be showing (and coincidentally
+    // match whatever filter was just applied) for a moment after navigating here.
+    await expect(this.page.getByRole('cell', { name: 'Importdatum' })).toBeVisible();
   }
   async expectLoadedFTTH(): Promise<void> {
     // Checks that the URL is the Baulose FTTH route.
     await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
+    // "Pre-Contracting" is a column only FTTH's table has — same reasoning as above,
+    // for the opposite direction (stale Bestandsbau rows after navigating to FTTH).
+    await expect(this.page.getByRole('cell', { name: 'Pre-Contracting' })).toBeVisible();
   }
 
   // Searches the Baulose list.
@@ -93,27 +101,32 @@ export class BaulosePage extends BasePage {
     await this.searchField.expectVisible();
   }
 
-  // Opens the Organisation filter on Baulose.
+  // Opens the Organisation filter on Baulose. Uses the stable id-based trigger, not
+  // visible-name matching — the trigger's accessible name grows a "(N)" suffix once a
+  // choice is applied (e.g. "Organisation" -> "Organisation (1)"), which would break a
+  // name-based locator on any reopen after the first use.
   async openOrganisationFilter(): Promise<void> {
-    // Clicks the Organisation filter by visible label.
-    await this.filters.openFilter(/^Organisation$/i);
+    await this.filters.organisationFilterOpen();
   }
 
-  // Opens the Regime filter on Baulose.
+  // Opens the Regime filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openRegimeFilter(): Promise<void> {
-    // Clicks the Regime filter by visible label.
-    await this.filters.openFilter(/^Regime$/i);
+    await this.filters.regimeFilterOpen();
   }
 
-  // Opens the Phase filter on Baulose.
+  // Opens the Phase filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openPhaseFilter(): Promise<void> {
-    // Clicks the Phase filter by visible label.
-    await this.filters.openFilter(/^Phase$/i);
+    await this.filters.phaseFilterOpen();
   }
 
-  // Opens the Status filter on Baulose.
+  // Opens the Status filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openStatusFilter(): Promise<void> {
-    // Clicks the Status filter by visible label.
-    await this.filters.openFilter(/^Status$/i);
+    await this.filters.statusFilterOpen();
+  }
+
+  // Opens the Importdatum filter bar button on Baulose. Same stable-id reasoning as
+  // openOrganisationFilter.
+  async openImportDateFilter(): Promise<void> {
+    await this.filters.importDateFilterOpen();
   }
 }
