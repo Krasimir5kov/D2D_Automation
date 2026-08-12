@@ -16,7 +16,16 @@ type PageWithFilters = {
 // Opens a filter and checks one choice by its visible label. Does not apply it —
 // call applyFilterAndWaitForResults separately, so the caller can assert the
 // checkbox state in between the two actions if it wants to.
-export async function selectFilterChoice(
+export async function selectFilterChoiceThatContainSearchInput(
+  pageObject: PageWithFilters,
+  openFilter: () => Promise<void>,
+  choiceLabel: string,
+): Promise<void> {
+  await openFilter();
+  await pageObject.filters.expandMoreChoicesIfPresent();
+  await pageObject.filters.choiceLabelButton(choiceLabel).click();
+}
+export async function selectFilterChoiceWithOutSearchInput(
   pageObject: PageWithFilters,
   openFilter: () => Promise<void>,
   choiceLabel: string,

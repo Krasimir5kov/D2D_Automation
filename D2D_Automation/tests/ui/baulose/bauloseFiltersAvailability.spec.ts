@@ -6,7 +6,7 @@
  */
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 
-test.describe('Verification Baulose Page Filters Availability Across Sections', () => {
+test.describe('Verification Baulose Page Filters Availability', () => {
     test.describe('Bestandsbau Section',
         { tag: ['@Admin', '@Admin-Regional'] },
          () => {

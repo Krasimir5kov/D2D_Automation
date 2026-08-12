@@ -39,7 +39,12 @@ export async function expectEveryRowColumnToContain(
 }
 
 // Asserts the list is currently empty (no data rows).
-export async function expectListIsEmpty(pageObject: PageWithTable): Promise<void> {
+export async function expectListIsEmptyWithMessage(pageObject: PageWithTable): Promise<void> {
   await waitForTableSettled(pageObject);
-  await expect(pageObject.table.rows).toHaveCount(0);
+  await expect(pageObject.table.emptyStateHeading).toBeVisible();
+  await expect(pageObject.table.emptyStateDescription).toBeVisible();
+}
+export async function expectListIsNotEmpty(pageObject: PageWithTable): Promise<void> {
+  await waitForTableSettled(pageObject);
+  await expect(pageObject.table.rows.first()).toBeVisible();
 }

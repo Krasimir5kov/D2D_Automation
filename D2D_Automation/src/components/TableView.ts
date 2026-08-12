@@ -6,6 +6,8 @@ export class TableView {
   readonly table: Locator;
   readonly rows: Locator;
   readonly loadingCells: Locator;
+  readonly emptyStateHeading : Locator;
+  readonly emptyStateDescription : Locator;
   // Stores the active Playwright page so table locators can be created from it.
   constructor(private readonly page: Page) {
     this.table = page.locator('table, [role="table"], [class*="Table"]').first();
@@ -17,6 +19,8 @@ export class TableView {
     // While a row is still loading, TableEntry.tsx renders it as one wide placeholder
     // cell (<td colSpan={100}>) instead of the real per-column cells.
     this.loadingCells = this.table.locator('td[colspan="100"]');
+    this.emptyStateHeading = page.getByRole('heading', { name: "Kein Ergebnis gefunden", exact: true });
+    this.emptyStateDescription = page.getByText("Wählen Sie andere Filter aus, oder setzen Sie alle Filter zurück");
   }
 
   // Returns the first visible table-like element on a list page.

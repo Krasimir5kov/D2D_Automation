@@ -26,6 +26,7 @@ export class BaulosePage extends BasePage {
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
   
+  
 
   // Builds the Baulose page object for the active browser page.
   constructor(page: Page) {
@@ -88,9 +89,9 @@ export class BaulosePage extends BasePage {
   async expectLoadedFTTH(): Promise<void> {
     // Checks that the URL is the Baulose FTTH route.
     await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
-    // "Pre-Contracting" is a column only FTTH's table has — same reasoning as above,
+    // "Baulose / Regime" is a column only FTTH's table has — same reasoning as above,
     // for the opposite direction (stale Bestandsbau rows after navigating to FTTH).
-    await expect(this.page.getByRole('cell', { name: 'Pre-Contracting' })).toBeVisible();
+    await expect(this.page.getByRole('cell', { name: 'Baulos / Regime' })).toBeVisible();
   }
 
   // Searches the Baulose list.
