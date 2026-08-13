@@ -33,6 +33,8 @@ export class SalesActionsPage extends BasePage {
   readonly ftthTab: Locator;
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
+  // Locator for Neubau List view
+  readonly neubauListView : Locator
 
   // Builds the Sales Actions page object for the active browser page.
   constructor(page: Page) {
@@ -45,7 +47,7 @@ export class SalesActionsPage extends BasePage {
     // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
     // Creates a helper for the right-side Sales Action detail panel.
-    this.sidePanel = new SidePanel(page);
+    this.sidePanel = new SidePanel(page, 'sales-action-panel', page.getByRole('button', { name: /schließen|close/i }));
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
@@ -59,18 +61,38 @@ export class SalesActionsPage extends BasePage {
       // Falls back to role=tab if the tab component exposes ARIA tab semantics.
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
+    this.neubauListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.Neubau_SA_Table")
+    this.ftthAusbauListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.FTTH_SA_Table")
+    this.bestandsbauTabListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.Bestandsbau_SA_Table")
+
   }
 
   // Opens the Sales Actions Neubau route directly.
   async goto(): Promise<void> {
     // Navigates to the confirmed Sales Actions route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.salesActionsNeubau);
+    await this.gotoDoor2DoorRoute(door2doorRoutes.salesActions.neubau);
   }
 
-  // Verifies the Sales Actions page loaded.
-  async expectLoaded(): Promise<void> {
+  // Verifies the Sales Actions Neubau section loaded.
+  async expectLoadedNeubau(): Promise<void> {
     // Checks that the URL is the Sales Actions Neubau route.
     await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau/);
+    // Checks that the Sales Actions search field is visible.
+    await expect(this.searchInput).toBeVisible();
+  }
+
+  // Verifies the Sales Actions FTTH section loaded.
+  async expectLoadedFTTH(): Promise<void> {
+    // Checks that the URL is the Sales Actions FTTH route.
+    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/ftth/);
+    // Checks that the Sales Actions search field is visible.
+    await expect(this.searchInput).toBeVisible();
+  }
+
+  // Verifies the Sales Actions Bestandsbau section loaded.
+  async expectLoadedBestandsbau(): Promise<void> {
+    // Checks that the URL is the Sales Actions Bestandsbau route.
+    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/bestandsbau/);
     // Checks that the Sales Actions search field is visible.
     await expect(this.searchInput).toBeVisible();
   }
@@ -86,7 +108,7 @@ export class SalesActionsPage extends BasePage {
   // Opens the Alle Filter modal from the Sales Actions page.
   async openAllFilters(): Promise<void> {
     // Opens the filter modal; note the current FilterBar method name may need alignment if it was renamed.
-    await this.filters.openAllFilters();
+    await this.filters.openAllFiltersInAlleFilterModal();
     // Verifies a filter modal opened.
     await this.modal.expectOpen(/Filter/i);
   }
@@ -96,4 +118,5 @@ export class SalesActionsPage extends BasePage {
     // Clicks the row matching the supplied Sales Action text.
     await this.table.rowByText(text).click();
   }
+  async ftthTableView()
 }

@@ -25,6 +25,8 @@ export class BaulosePage extends BasePage {
   readonly ftthTab: Locator;
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
+  // Locator for Navigation button in the table row for a given Baulos.
+  readonly rowNavigationButton : Locator;
   
   
 
@@ -55,6 +57,7 @@ export class BaulosePage extends BasePage {
       // Falls back to role=tab if the tab component exposes ARIA tab semantics.
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
+    this.rowNavigationButton = this.table.rows.getByRole('button', { name: /zu Sales Actions/i });
   }
 
   // Opens the Baulose FTTH route directly.
@@ -129,5 +132,14 @@ export class BaulosePage extends BasePage {
   // openOrganisationFilter.
   async openImportDateFilter(): Promise<void> {
     await this.filters.importDateFilterOpen();
+  }
+  async expectEveryRowHasSalesActionNavigationButton(): Promise<void> {
+    const rowCount = await this.table.rows.count();
+    for (let i = 0; i < rowCount; i++) {
+      await expect(this.table.rows.nth(i).getByRole('button', { name: /zu Sales Actions/i })).toBeVisible();
+    };
+  }
+  salesActionButtonFor(displayName: string): Locator {
+    return this.table.rowByText(displayName).getByRole('button', { name: /zu Sales Actions/i });
   }
 }
