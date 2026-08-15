@@ -36,7 +36,7 @@ jobs:
       AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
       INTEGRATION_URL: ${{ secrets.INTEGRATION_URL }}
       MANUAL_AUTH_TIMEOUT_MINUTES: 15
-      AUTH_SUCCESS_URL_PATTERN: '**/neubau'
+      AUTH_SUCCESS_URL_PATTERN: '**/door2door#/**'
 
     steps:
       - name: Check out repository
