@@ -55,12 +55,19 @@ jobs:
       - name: Install Chrome for Playwright
         run: npx playwright install --with-deps chrome
 
+      - name: Clean auth state
+        run: |
+          rm -f playwright/.auth/user.json
+          mkdir -p playwright/.auth
+
       - name: Create fresh auth state
         env:
           REUSE_AUTH_STATE: false
         run: xvfb-run -a npm run auth:setup
 
       - name: Run tests
+        env:
+          REUSE_AUTH_STATE: true
         run: xvfb-run -a npm run ${{ inputs.test_command }}
 
       - name: Upload Playwright artifacts
