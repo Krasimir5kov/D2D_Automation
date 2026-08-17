@@ -8,7 +8,7 @@ export class SearchField {
         private readonly locator: Locator,
     ) {
         this.cleanSearchInputButton = page.locator('#baulose-search-field').locator('..').getByRole('button').first();
-        this.searchIcoButton = page.locator('#baulose-search-field').locator('..').getByRole('button');
+        this.searchIcoButton =  page.locator('button.search-button.icon-a1-lupe')
     }
 
 
