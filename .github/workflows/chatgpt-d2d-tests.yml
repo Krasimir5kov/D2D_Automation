@@ -1,0 +1,104 @@
+name: ChatGPT D2D Tests
+
+on:
+  push:
+    branches:
+      - chatgpt/d2d-test-trigger
+    paths:
+      - D2D_Automation/.automation/chatgpt-run-trigger.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chatgpt-d2d-tests
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    defaults:
+      run:
+        working-directory: D2D_Automation
+
+    env:
+      CI: true
+      AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
+      AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
+      INTEGRATION_URL: ${{ secrets.INTEGRATION_URL }}
+      MANUAL_AUTH_TIMEOUT_MINUTES: 15
+      AUTH_SUCCESS_URL_PATTERN: '**/door2door#/**'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Read and validate test command
+        id: trigger
+        shell: bash
+        run: |
+          trigger_file='D2D_Automation/.automation/chatgpt-run-trigger.json'
+
+          if ! test_command="$(
+            git -C "$GITHUB_WORKSPACE" show "${GITHUB_SHA}:${trigger_file}" |
+              jq -er 'if (.test_command | type) == "string" then .test_command else error("test_command must be a string") end'
+          )"; then
+            echo "::error::Unable to read a string test_command from the trigger JSON."
+            exit 1
+          fi
+
+          case "$test_command" in
+            test|test:chrome|test:ui|test:api)
+              ;;
+            *)
+              echo "::error::Unsupported test_command. Allowed values: test, test:chrome, test:ui, test:api."
+              exit 1
+              ;;
+          esac
+
+          printf 'test_command=%s\n' "$test_command" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: D2D_Automation/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chrome for Playwright
+        run: npx playwright install --with-deps chrome
+
+      - name: Clean auth state
+        run: |
+          rm -f playwright/.auth/user.json
+          mkdir -p playwright/.auth
+
+      - name: Create fresh auth state
+        env:
+          REUSE_AUTH_STATE: false
+        run: xvfb-run -a npm run auth:setup
+
+      - name: Run tests
+        env:
+          REUSE_AUTH_STATE: true
+          TEST_COMMAND: ${{ steps.trigger.outputs.test_command }}
+        run: xvfb-run -a npm run "$TEST_COMMAND"
+
+      - name: Upload Playwright artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            D2D_Automation/playwright-report
+            D2D_Automation/test-results
+          if-no-files-found: ignore
+          retention-days: 7
