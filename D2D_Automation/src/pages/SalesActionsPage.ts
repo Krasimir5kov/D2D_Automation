@@ -34,7 +34,11 @@ export class SalesActionsPage extends BasePage {
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
   // Locator for Neubau List view
-  readonly neubauListView : Locator
+  readonly neubauListView : Locator;
+  // Locator for FTTH List view
+  readonly ftthAusbauListView : Locator;
+  // Locator for Bestandsbau List view
+  readonly bestandsbauTabListView : Locator;
 
   // Builds the Sales Actions page object for the active browser page.
   constructor(page: Page) {
@@ -51,7 +55,7 @@ export class SalesActionsPage extends BasePage {
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
-    this.searchInput = page.locator('[data-testid="objects-search-field"], #objects-search-field, input[placeholder*="Suche"]').first();
+    this.searchInput = page.locator('#sales-actions-search-field').or(page.locator('input[placeholder="Suche"]'));
     // Locates the Neubau tab by link role or tab role.
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
     // Locates the FTTH tab by link role or tab role.
@@ -61,9 +65,9 @@ export class SalesActionsPage extends BasePage {
       // Falls back to role=tab if the tab component exposes ARIA tab semantics.
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
-    this.neubauListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.Neubau_SA_Table")
-    this.ftthAusbauListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.FTTH_SA_Table")
-    this.bestandsbauTabListView = page.getByRole(`table`).locator(".MqHtbkdfMGAlebPCVeVf.Bestandsbau_SA_Table")
+    this.neubauListView = page.getByRole(`table`)
+    this.ftthAusbauListView = page.getByRole(`table`)
+    this.bestandsbauTabListView = page.getByRole(`table`)
 
   }
 
@@ -118,5 +122,5 @@ export class SalesActionsPage extends BasePage {
     // Clicks the row matching the supplied Sales Action text.
     await this.table.rowByText(text).click();
   }
-  async ftthTableView()
+  
 }

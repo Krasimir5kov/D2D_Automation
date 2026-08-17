@@ -5,6 +5,7 @@ import { SalesActionsPage } from '../pages';
 type BauloseFixtures = {
     baulosePage: BaulosePage;
     salesActionsPage : SalesActionsPage;
+    page: Page;
 };
 
 export const test = base.extend<BauloseFixtures>({

@@ -46,3 +46,26 @@ export async function applyFilterAndWaitForResults(
     pageObject.filters.applyFilter(),
   ]);
 }
+export async function searchByPressingEnterAndWaitForResults(
+  page: Page,
+  pageObject: PageWithFilters & { searchField: { triggerSearchByPressingEnter: (text: string) => Promise<void> } },
+  waitForResponseUrlIncludes: string,
+  text: string,
+): Promise<void> {
+  await Promise.all([
+    page.waitForResponse((res) => res.url().includes(waitForResponseUrlIncludes) && res.ok()),
+    pageObject.searchField.triggerSearchByPressingEnter(text),
+  ]);
+}
+
+export async function searchByClickingButtonAndWaitForResults(
+  page: Page,
+  pageObject: PageWithFilters & { searchField: { triggerSearchByClickingSearchButton: (text: string) => Promise<void> } },
+  waitForResponseUrlIncludes: string,
+  text: string,
+): Promise<void> {
+  await Promise.all([
+    page.waitForResponse((res) => res.url().includes(waitForResponseUrlIncludes) && res.ok()),
+    pageObject.searchField.triggerSearchByClickingSearchButton(text),
+  ]);
+}

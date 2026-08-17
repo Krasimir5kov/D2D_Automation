@@ -1,11 +1,20 @@
 // Explicit assertion helpers for filter/list-result checks. Named with an "expect"
 // prefix on purpose, unlike the action helpers in filterHelpers.ts, so it's
 // unmistakable at a glance that these functions DO contain assertions.
-import { expect } from '@playwright/test';
+import { expect, type Locator } from '@playwright/test';
 import type { TableView } from '../components/TableView';
 
 type PageWithTable = {
   table: TableView;
+};
+
+// Empty-state message locators are page-specific (each page's empty state has its own
+// wording), so they live on the page object itself rather than on the shared TableView.
+type PageWithEmptyState = PageWithTable & {
+  emptyStateHeadingByFilterDropdown: Locator;
+  emptyStateDescriptionByFilterDropdown: Locator;
+  emptyStateHeadingBySearchInput: Locator;
+  emptyStateDescriptionBySearchInput: Locator;
 };
 
 // Waits for any loading-placeholder rows to be gone. The network response resolving
@@ -39,10 +48,15 @@ export async function expectEveryRowColumnToContain(
 }
 
 // Asserts the list is currently empty (no data rows).
-export async function expectListIsEmptyWithMessage(pageObject: PageWithTable): Promise<void> {
+export async function expectListIsEmptyWithMessageByFilterDropDown(pageObject: PageWithEmptyState): Promise<void> {
   await waitForTableSettled(pageObject);
-  await expect(pageObject.table.emptyStateHeading).toBeVisible();
-  await expect(pageObject.table.emptyStateDescription).toBeVisible();
+  await expect(pageObject.emptyStateHeadingByFilterDropdown).toBeVisible();
+  await expect(pageObject.emptyStateDescriptionByFilterDropdown).toBeVisible();
+}
+export async function expectListIsEmptyWithMessageBySearchInput(pageObject: PageWithEmptyState): Promise<void> {
+  await waitForTableSettled(pageObject);
+  await expect(pageObject.emptyStateHeadingBySearchInput).toBeVisible();
+  await expect(pageObject.emptyStateDescriptionBySearchInput).toBeVisible();
 }
 export async function expectListIsNotEmpty(pageObject: PageWithTable): Promise<void> {
   await waitForTableSettled(pageObject);

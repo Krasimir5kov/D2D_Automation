@@ -5,7 +5,7 @@
  */
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { selectFilterChoiceThatContainSearchInput, applyFilterAndWaitForResults, selectFilterChoiceWithOutSearchInput } from '../../../src/helpers/filterHelpers';
-import { expectEveryRowColumnToContain, expectListIsEmptyWithMessage, expectListIsNotEmpty } from '../../../src/helpers/filterAssertions';
+import { expectEveryRowColumnToContain, expectListIsEmptyWithMessageByFilterDropDown, expectListIsNotEmpty } from '../../../src/helpers/filterAssertions';
 import { BESTANDSBAU_COLUMNS, FTTH_COLUMNS } from '../../../src/constants/baulose';
 
 const CONTRACT_SECTION_ENDPOINT = '/contract-section/paginatedContractSections';
@@ -84,7 +84,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
       await test.step("Verify that Bestendsbau list view is empty for the applied Regime Filter", async () => {
         await baulosePage.gotoBestandsbauListSection();
         await baulosePage.expectLoadedBestandsbau();
-        await expectListIsEmptyWithMessage(baulosePage);
+        await expectListIsEmptyWithMessageByFilterDropDown(baulosePage);
         // await expect(page.getByText("Kein Ergebnis gefunden")).toBeVisible();
         //await expect(page.getByText("          Wählen Sie andere Filter aus, oder setzen Sie alle Filter zurück")).toBeVisible();
       });
@@ -110,7 +110,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
       await test.step("Verify that FTTH-AUSBAU list view is empty for the applied Regime Filter", async () => {
         await baulosePage.gotoFTTHListSection();
         await baulosePage.expectLoadedFTTH();
-        await expectListIsEmptyWithMessage(baulosePage);
+        await expectListIsEmptyWithMessageByFilterDropDown(baulosePage);
       });
     });
   });
@@ -146,7 +146,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
           if (phaseValue.expectedInBestandsbau) {
             await expectListIsNotEmpty(baulosePage);
           } else {
-            await expectListIsEmptyWithMessage(baulosePage);
+            await expectListIsEmptyWithMessageByFilterDropDown(baulosePage);
           }
         });
       });
@@ -179,7 +179,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
                 expectedText: statusValue.Name,
               });
             } else {
-              await expectListIsEmptyWithMessage(baulosePage);
+              await expectListIsEmptyWithMessageByFilterDropDown(baulosePage);
             }
           });
 
@@ -192,7 +192,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
                 expectedText: statusValue.Name,
               });
             } else {
-              await expectListIsEmptyWithMessage(baulosePage);
+              await expectListIsEmptyWithMessageByFilterDropDown(baulosePage);
             }
           });
         });
