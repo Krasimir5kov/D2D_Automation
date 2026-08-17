@@ -5,8 +5,6 @@
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { expectEveryRowColumnToContain } from '../../../src/helpers/filterAssertions';
 
-const escapeForRegExp = (text: string): string => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
 test.describe('Baulose — Zu Sales Actions Navigation', () => {
   test.describe('Navigation button in Bestandsbau Section list items', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     test(`Verify Bualose list items are not empty and have navigation buttons`, async ({page, baulosePage, salesActionsPage}) => {
@@ -38,7 +36,8 @@ test.describe('Baulose — Zu Sales Actions Navigation', () => {
       });
       await test.step('Verify the Baulose is applied as a filter in the Sales Actions page', async () => {
         await expect(page.getByRole('button', { name: /^Baulos\/Einsatzname \(1\)$/ })).toBeVisible();
-        await expect(page.getByRole('button', { name: new RegExp(escapeForRegExp(firstRowDisplayName), 'i') })).toBeVisible();
+        const expectedChipText = `${firstRowDisplayName} - ${firstRowDisplayName}`;
+        await expect(salesActionsPage.filters.filterBarChip(expectedChipText)).toBeVisible();
       });
     });
   })
@@ -63,7 +62,7 @@ test.describe('Baulose — Zu Sales Actions Navigation', () => {
       });
       await test.step('Verify the Baulose is applied as a filter in the Sales Actions page and chip is displayed', async () => {
         const exppectedChipFtthAusbauText = `${firstRowDisplayNameInFtthAusbau} - ${secondRowDisplayNameInFtthAusbau}`;
-        await expect(baulosePage.filters.filterBarChip(exppectedChipFtthAusbauText)).toBeVisible();
+        await expect(salesActionsPage.filters.filterBarChip(exppectedChipFtthAusbauText)).toBeVisible();
         await expect(salesActionsPage.ftthAusbauListView).toBeVisible();
       });
       await test.step('Verify that the Bestandsbau Section list view is empty', async () => {

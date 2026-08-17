@@ -72,7 +72,7 @@ export class KonfigurationPage extends BasePage {
   // Opens the Konfiguration overview route directly.
   async goto(): Promise<void> {
     // Navigates to the confirmed Konfiguration overview route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.konfigurationOverview);
+    await this.gotoDoor2DoorRoute(door2doorRoutes.konfiguration.overview);
   }
 
   // Verifies the Konfiguration page loaded.

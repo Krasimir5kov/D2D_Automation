@@ -45,7 +45,7 @@ export class ObjektePage extends BasePage {
     // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
     // Creates a helper for the right-side object detail panel.
-    this.sidePanel = new SidePanel(page);
+    this.sidePanel = new SidePanel(page,'object-side-panel', page.locator('#object-side-panel-close-button'));
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
@@ -64,7 +64,7 @@ export class ObjektePage extends BasePage {
   // Opens the Objekte Neubau route directly.
   async goto(): Promise<void> {
     // Navigates to the confirmed Objekte route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.objekteNeubau);
+    await this.gotoDoor2DoorRoute(door2doorRoutes.objekte.neubau);
   }
 
   // Verifies the Objekte page loaded.
@@ -86,7 +86,7 @@ export class ObjektePage extends BasePage {
   // Opens the Alle Filter modal from the Objekte page.
   async openAllFilters(): Promise<void> {
     // Opens the filter modal; note the current FilterBar method name may need alignment if it was renamed.
-    await this.filters.openAllFilters();
+    await this.filters.openAllFiltersInAlleFilterModal();
     // Verifies a filter modal opened.
     await this.modal.expectOpen(/Filter/i);
   }

@@ -51,13 +51,13 @@ export class BenutzerverwaltungPage extends BasePage {
     // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
     // Creates a helper for the right-side administration detail panel.
-    this.sidePanel = new SidePanel(page);
+    this.sidePanel = new SidePanel(page,'user-side-panel', page.locator('#user-side-panel-close-button'));
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the shared search input using known test id/id first, then a generic Suche placeholder fallback.
     this.searchInput = page.locator('[data-testid="shared-search-field"], #shared-search-field, input[placeholder*="Suche"]').first();
     // Locates the Benutzer tab by link role or tab role.
-    this.usersTab = page.getByRole('link', { name: /Benutzer/i }).or(page.getByRole('tab', { name: /Benutzer/i }));
+this.usersTab = page.getByRole('link', { name: /\bBenutzer\b/i }).or(page.getByRole('tab', { name: /\bBenutzer\b/i }));
     // Locates the Teams tab by link role or tab role.
     this.teamsTab = page.getByRole('link', { name: /Teams/i }).or(page.getByRole('tab', { name: /Teams/i }));
     // Locates the Organisationen tab by link role or tab role.
@@ -76,7 +76,7 @@ export class BenutzerverwaltungPage extends BasePage {
   // Opens the Benutzerverwaltung users route directly.
   async goto(): Promise<void> {
     // Navigates to the confirmed Benutzerverwaltung route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.benutzerverwaltungUsers);
+    await this.gotoDoor2DoorRoute(door2doorRoutes.benutzerverwaltung.users);
   }
 
   // Verifies the Benutzerverwaltung page loaded.

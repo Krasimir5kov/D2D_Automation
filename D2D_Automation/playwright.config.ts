@@ -98,7 +98,7 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         channel: 'chrome',
-        headless: false,
+        headless: true,
       },
     },
     {
@@ -110,7 +110,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         storageState: AUTH_FILE,
-        headless: false,
+        headless: true,
       },
     },
     {
@@ -126,7 +126,7 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         storageState: AUTH_FILE,
-        headless: false,
+        headless: true,
       },
     },
 
