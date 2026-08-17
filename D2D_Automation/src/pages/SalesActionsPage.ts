@@ -56,6 +56,7 @@ export class SalesActionsPage extends BasePage {
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
     this.searchInput = page.locator('#sales-actions-search-field').or(page.locator('input[placeholder="Suche"]'));
+    this.searchInput = page.locator('#sales-actions-search-field');
     // Locates the Neubau tab by link role or tab role.
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
     // Locates the FTTH tab by link role or tab role.

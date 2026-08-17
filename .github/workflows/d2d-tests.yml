@@ -1,0 +1,82 @@
+name: D2D Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_command:
+        description: Test script to run
+        required: true
+        default: test
+        type: choice
+        options:
+          - test
+          - test:chrome
+          - test:ui
+          - test:api
+
+permissions:
+  contents: read
+
+concurrency:
+  group: d2d-tests
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    defaults:
+      run:
+        working-directory: D2D_Automation
+
+    env:
+      CI: true
+      AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
+      AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
+      INTEGRATION_URL: ${{ secrets.INTEGRATION_URL }}
+      MANUAL_AUTH_TIMEOUT_MINUTES: 15
+      AUTH_SUCCESS_URL_PATTERN: '**/door2door#/**'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: D2D_Automation/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chrome for Playwright
+        run: npx playwright install --with-deps chrome
+
+      - name: Clean auth state
+        run: |
+          rm -f playwright/.auth/user.json
+          mkdir -p playwright/.auth
+
+      - name: Create fresh auth state
+        env:
+          REUSE_AUTH_STATE: false
+        run: xvfb-run -a npm run auth:setup
+
+      - name: Run tests
+        env:
+          REUSE_AUTH_STATE: true
+        run: xvfb-run -a npm run ${{ inputs.test_command }}
+
+      - name: Upload Playwright artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            D2D_Automation/playwright-report
+            D2D_Automation/test-results
+          if-no-files-found: ignore
+          retention-days: 7

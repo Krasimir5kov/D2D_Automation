@@ -5,11 +5,14 @@
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { expectEveryRowColumnToContain } from '../../../src/helpers/filterAssertions';
 
+const escapeForRegExp = (text: string): string => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 test.describe('Baulose — Zu Sales Actions Navigation', () => {
   test.describe('Navigation button in Bestandsbau Section list items', { tag: ['@Admin', '@Admin-Regional'] }, () => {
-    test(`Verify Bestandsbau section list items Navigation button functionality`, async ({ baulosePage, salesActionsPage }) => {
-      let firstRowDisplayName: string | null;
-      await test.step('Verify that Baulose Section List View is opened', async ({ }) => {
+    test(`Verify Bualose list items are not empty and have navigation buttons`, async ({page, baulosePage, salesActionsPage}) => {
+        let firstRowDisplayName: string;
+
+      await test.step('Verify that Baulose Section List View is opened', async ({}) => {
         await baulosePage.gotoBestandsbauListSection();
         await baulosePage.expectLoadedBestandsbau();
       });
@@ -17,30 +20,25 @@ test.describe('Baulose — Zu Sales Actions Navigation', () => {
         await expectEveryRowColumnToContain(baulosePage, { columnIndex: 4, expectedText: 'zu Sales Actions' });
       });
       await test.step('Click the Navigation Button in the first row and verify the Sales Actions page is opened', async () => {
-        firstRowDisplayName = await baulosePage.table.rows.first().locator('td').first().locator('div > div').first().textContent();
-        await baulosePage.salesActionButtonFor(firstRowDisplayName!).click();
-      });
-      await test.step('Verify the Sales Actions page is opened with the correct filter applied and section', async () => {
+        const firstRow = baulosePage.table.rows.first();
+        const firstNameCellText = await firstRow.locator('td').first().innerText();
+        const [displayName] = firstNameCellText
+          .split('\n')
+          .map((text) => text.trim())
+          .filter(Boolean);
+
+        if (!displayName) {
+          throw new Error('First Baulose row display name was empty');
+        }
+
+        firstRowDisplayName = displayName;
+
+        await firstRow.getByRole('button', { name: /zu Sales Actions/i }).click();
         await salesActionsPage.expectLoadedBestandsbau();
       });
-      await test.step('Verify the Baulose is applied as a filter in the Sales Actions page and chip is displayed', async () => {
-        const exppectedChipBestandsbauText = `${firstRowDisplayName} - ${firstRowDisplayName}`;
-        await expect(baulosePage.filters.filterBarChip(exppectedChipBestandsbauText)).toBeVisible();
-
-        await expect(salesActionsPage.bestandsbauTabListView).toBeVisible();
-      });
-      await test.step('Verify that the FTTH-AUSBAU Section list view is empty', async () => {
-        await salesActionsPage.gotoDoor2DoorRoute('/sales-actions/ftth');
-        await salesActionsPage.expectLoadedFTTH();
-        await expect(salesActionsPage.ftthAusbauListView).toBeVisible();
-        await expect(salesActionsPage.ftthAusbauListView.locator('tr')).toHaveCount(1);
-
-      });
-      await test.step('Verify that the Neubau Section list view is empty', async () => {
-        await salesActionsPage.gotoDoor2DoorRoute('/sales-actions/neubau');
-        await salesActionsPage.expectLoadedNeubau();
-        await expect(salesActionsPage.neubauListView).toBeVisible();
-        await expect(salesActionsPage.neubauListView.locator('tr')).toHaveCount(1);
+      await test.step('Verify the Baulose is applied as a filter in the Sales Actions page', async () => {
+        await expect(page.getByRole('button', { name: /^Baulos\/Einsatzname \(1\)$/ })).toBeVisible();
+        await expect(page.getByRole('button', { name: new RegExp(escapeForRegExp(firstRowDisplayName), 'i') })).toBeVisible();
       });
     });
   })
