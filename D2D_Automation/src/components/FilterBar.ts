@@ -53,6 +53,13 @@ export class FilterBar {
       .filter({ has: this.page.getByText(exactLabel) })
       .locator('input[type="checkbox"]');
   }
+choiceRadio(choiceLabel: string): Locator {
+  const escaped = this.escapeForRegExp(choiceLabel);
+  return this.page
+    .locator('#filter-dropdown-root')
+    .getByLabel(new RegExp(`^${escaped}$`, 'i'));
+}
+
   // Returns the visible label/button for one choice inside the open filter dropdown —
   // this is the real click target. The checkbox's own custom-styled visual (a
   // decorative "square" span) sits on top of the real input and intercepts direct
@@ -70,6 +77,7 @@ export class FilterBar {
     const escaped = this.escapeForRegExp(filterId);
     return this.page.locator('.gucci-common-label-content').filter({ hasText: new RegExp(`^${escaped}$`, 'i') });
   }
+  
   // Returns a filter trigger button by visible name — legacy fallback only. The five
   // Baulose filters (Organisation/Regime/Phase/Status/Importdatum) already have stable
   // ids (added in POSS-3397) — use trigger(filterId) or the named readonly properties

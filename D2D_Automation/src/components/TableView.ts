@@ -17,6 +17,7 @@ export class TableView {
     // While a row is still loading, TableEntry.tsx renders it as one wide placeholder
     // cell (<td colSpan={100}>) instead of the real per-column cells.
     this.loadingCells = this.table.locator('td[colspan="100"]');
+    
   }
 
   // Returns the first visible table-like element on a list page.
@@ -43,9 +44,9 @@ export class TableView {
   // Sales Action rows, POSS-3402). Use this instead of rowByText() when the entity's
   // display name is known.
   rowByDisplayName(name: string): Locator {
-    return this.table.locator(`[data-display-name="${name}"]`);
+    return this.table.locator(`[data-display-name="${name}"]`); 
   }
-
+ 
   // Returns the row context menu button for a row containing specific text. Baulose/
   // Objekte/Sales Action row action buttons still don't have a stable id, so `.last()`
   // remains correct for those. Regime, Abschlussgründe, and Aktivitäten Setup rows DO

@@ -35,6 +35,12 @@ export class ObjektePage extends BasePage {
   readonly ftthTab: Locator;
   // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
+  readonly baulosEinsatznameFilter: Locator;
+  readonly plzFilter: Locator;
+  readonly fragenBogenFilterStatus: Locator;
+  readonly verkaufsstartFilter: Locator;
+  readonly plzFromInput: Locator;
+  readonly plzOutInput: Locator;
 
   // Builds the Objekte page object for the active browser page.
   constructor(page: Page) {
@@ -63,19 +69,48 @@ export class ObjektePage extends BasePage {
       // Falls back to role=tab if the tab component exposes ARIA tab semantics.
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
+    this.plzFromInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'PLZ ab' });
+    this.plzOutInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'PLZ bis' });
+    this.baulosEinsatznameFilter = page.locator('#contractSection');
+    this.plzFilter = page.locator('#zip');
+
+    this.verkaufsstartFilter = page.locator('#salesStart');
+    this.fragenBogenFilterStatus = page.locator('#fragebogenStatus');
   }
 
+  async goToObjektePage(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.objekte.main);
+  }
+
+  async expectLoadedObjekte(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte/);
+    await expect(this.searchInput).toBeVisible();
+  }
   // Opens the Objekte Neubau route directly.
-  async goto(): Promise<void> {
+  async gotoNeubauSection(): Promise<void> {
     // Navigates to the confirmed Objekte route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.objekte.neubau);
   }
+  async gotoFtthSection(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.objekte.ftth);
+  }
+  async gotoBestandsbauSection(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.objekte.bestandsbau);
+  }
 
   // Verifies the Objekte page loaded.
-  async expectLoaded(): Promise<void> {
+  async expectLoadedNeubau(): Promise<void> {
     // Checks that the URL is the Objekte Neubau route.
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/neubau/);
     // Checks that the Objekte search field is visible.
+    await expect(this.searchInput).toBeVisible();
+  }
+  async expectLoadedFtth(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/ftth/);
+    await expect(this.searchInput).toBeVisible();
+  }
+  async expectLoadedBestandsbau(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau/);
     await expect(this.searchInput).toBeVisible();
   }
 
@@ -112,4 +147,5 @@ export class ObjektePage extends BasePage {
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau\/\d+/);
     await expect(this.bestandsbauSidePanel.root).toBeVisible();
   }
+  
 }

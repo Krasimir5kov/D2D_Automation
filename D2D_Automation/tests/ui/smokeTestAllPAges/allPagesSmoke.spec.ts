@@ -17,10 +17,10 @@ test.describe('Smoke Test: All Door2Door Pages and Sections',{tag: ['@Admin','@A
             open: (page: Page) => new BaulosePage(page).gotoBestandsbauListSection(),
             verify : (page: Page) => new BaulosePage(page).expectLoadedBestandsbau() },
         { name: 'Objekte',
-            open: (page: Page) => new ObjektePage(page).goto(),
-            verify : (page: Page) => new ObjektePage(page).expectLoaded() },
+            open: (page: Page) => new ObjektePage(page).gotoNeubauSection(),
+            verify : (page: Page) => new ObjektePage(page).expectLoadedNeubau() },
         { name: 'Sales Actions',
-            open: (page: Page) => new SalesActionsPage(page).goto(),
+            open: (page: Page) => new SalesActionsPage(page).gotoNeubauSalesAction(),
             verify : (page: Page) => new SalesActionsPage(page).expectLoadedNeubau() },
         { name: 'Benutzerverwaltung',
             open: (page: Page) => new BenutzerverwaltungPage(page).goto(),
@@ -67,7 +67,7 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     },
     {
         pageName: 'Baulose', sectionName: 'FTTH-AUSBAU',
-        landOnPage: (page) => new BaulosePage(page).gotoBestandsbauListSection(),
+        landOnPage: (page) => new BaulosePage(page).gotoFTTHListSection(),
         openTab: (page) => new BaulosePage(page).ftthTab.click(),
         verifyOpened: async (page) => {
             const baulosePage = new BaulosePage(page);
@@ -80,16 +80,16 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     // method (kept out of scope here on purpose — smoke test file only).
     {
         pageName: 'Objekte', sectionName: 'Neubau',
-        landOnPage: (page) => new ObjektePage(page).goto(),
+        landOnPage: (page) => new ObjektePage(page).gotoNeubauSection(),
         openTab: (page) => new ObjektePage(page).neubauTab.click(),
         verifyOpened: async (page) => {
-            await new ObjektePage(page).expectLoaded();
+            await new ObjektePage(page).expectLoadedNeubau();
             await new ObjektePage(page).table.expectVisible();
         },
     },
     {
         pageName: 'Objekte', sectionName: 'FTTH-AUSBAU',
-        landOnPage: (page) => new ObjektePage(page).goto(),
+        landOnPage: (page) => new ObjektePage(page).gotoFtthSection(),
         openTab: (page) => new ObjektePage(page).ftthTab.click(),
         verifyOpened: async (page) => {
             await expect(page).toHaveURL(/\/door2door#\/objekte\/ftth/);
@@ -98,7 +98,7 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     },
     {
         pageName: 'Objekte', sectionName: 'Bestandsbau',
-        landOnPage: (page) => new ObjektePage(page).goto(),
+        landOnPage: (page) => new ObjektePage(page).gotoBestandsbauSection(),
         openTab: (page) => new ObjektePage(page).bestandsbauTab.click(),
         verifyOpened: async (page) => {
             await expect(page).toHaveURL(/\/door2door#\/objekte\/bestandsbau/);
@@ -108,7 +108,7 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     // Sales Actions — 3 sections, dedicated expectLoaded* methods already exist
     {
         pageName: 'Sales Actions', sectionName: 'Neubau',
-        landOnPage: (page) => new SalesActionsPage(page).goto(),
+        landOnPage: (page) => new SalesActionsPage(page).gotoNeubauSalesAction(),
         openTab: (page) => new SalesActionsPage(page).neubauTab.click(),
         verifyOpened: async (page) => {
             const salesActionsPage = new SalesActionsPage(page);
@@ -118,7 +118,7 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     },
     {
         pageName: 'Sales Actions', sectionName: 'FTTH-AUSBAU',
-        landOnPage: (page) => new SalesActionsPage(page).goto(),
+        landOnPage: (page) => new SalesActionsPage(page).gotoFtthSalesAction(),
         openTab: (page) => new SalesActionsPage(page).ftthTab.click(),
         verifyOpened: async (page) => {
             const salesActionsPage = new SalesActionsPage(page);
@@ -128,7 +128,7 @@ const SECTIONS_TO_SMOKE_TEST: SectionSmokeTest[] = [
     },
     {
         pageName: 'Sales Actions', sectionName: 'Bestandsbau',
-        landOnPage: (page) => new SalesActionsPage(page).goto(),
+        landOnPage: (page) => new SalesActionsPage(page).gotoBestandsbauSalesAction(),
         openTab: (page) => new SalesActionsPage(page).bestandsbauTab.click(),
         verifyOpened: async (page) => {
             const salesActionsPage = new SalesActionsPage(page);

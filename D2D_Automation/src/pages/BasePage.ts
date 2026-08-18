@@ -8,6 +8,7 @@ export const door2doorRoutes = {
     bestandsbau: '#/baulose/bestandsbau',
   },
   objekte: {
+    main: '#/objekte',
     neubau: '#/objekte/neubau',
     ftth: '#/objekte/ftth',
     bestandsbau: '#/objekte/bestandsbau',

@@ -14,5 +14,6 @@ export const test = base.extend<ObjekteFixtures>({
     },
     salesActionsPage: async ({ page }, use) => {
         await use(new SalesActionsPage(page));
-    }
+    },
+    
 });

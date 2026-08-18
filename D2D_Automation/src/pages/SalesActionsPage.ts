@@ -76,9 +76,17 @@ export class SalesActionsPage extends BasePage {
   }
 
   // Opens the Sales Actions Neubau route directly.
-  async goto(): Promise<void> {
+  async gotoNeubauSalesAction(): Promise<void> {
     // Navigates to the confirmed Sales Actions route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.salesActions.neubau);
+  }
+  async gotoFtthSalesAction(): Promise<void> {
+    // Navigates to the confirmed Sales Actions route.
+    await this.gotoDoor2DoorRoute(door2doorRoutes.salesActions.ftth);
+  }
+  async gotoBestandsbauSalesAction(): Promise<void> {
+    // Navigates to the confirmed Sales Actions route.
+    await this.gotoDoor2DoorRoute(door2doorRoutes.salesActions.bestandsbau);
   }
 
   // Verifies the Sales Actions Neubau section loaded.
