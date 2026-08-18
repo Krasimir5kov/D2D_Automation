@@ -22,7 +22,9 @@ export class ObjektePage extends BasePage {
   // Shared modal helper for Alle Filter and other dialogs.
   readonly modal: ModalDialog;
   // Shared side panel helper for object details; update its root when stable DOM attributes exist.
-  readonly sidePanel: SidePanel;
+  readonly neubauSidePanel: SidePanel;
+  readonly ftthAusbauSidePanel: SidePanel;
+  readonly bestandsbauSidePanel: SidePanel;
   // Shared table/list helper.
   readonly table: TableView;
   // Locator for the Objekte search input.
@@ -45,7 +47,9 @@ export class ObjektePage extends BasePage {
     // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
     // Creates a helper for the right-side object detail panel.
-    this.sidePanel = new SidePanel(page,'object-side-panel', page.locator('#object-side-panel-close-button'));
+    this.neubauSidePanel = new SidePanel(page,'neubau-object-side-panel', page.locator('#neubau-object-side-panel-close-button'));
+    this.ftthAusbauSidePanel = new SidePanel(page,'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
+    this.bestandsbauSidePanel = new SidePanel(page,'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
@@ -95,5 +99,17 @@ export class ObjektePage extends BasePage {
   async openObjectRow(text: string | RegExp): Promise<void> {
     // Clicks the row matching the supplied object/address text.
     await this.table.rowByText(text).click();
+  }
+  async expectNeubauObjectSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/neubau\/\d+/);
+    await expect(this.neubauSidePanel.root).toBeVisible();
+  }
+  async expectFtthObjectSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/ftth\/\d+/);
+    await expect(this.ftthAusbauSidePanel.root).toBeVisible();
+  }
+  async expectBestandsbauObjectSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau\/\d+/);
+    await expect(this.bestandsbauSidePanel.root).toBeVisible();
   }
 }

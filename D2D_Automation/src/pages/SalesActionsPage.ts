@@ -22,7 +22,9 @@ export class SalesActionsPage extends BasePage {
   // Shared modal helper for Alle Filter and other dialogs.
   readonly modal: ModalDialog;
   // Shared side panel helper for Sales Action details; update its root when stable DOM attributes exist.
-  readonly sidePanel: SidePanel;
+  readonly ftthSidePanel: SidePanel;
+  readonly neubauSidePanel: SidePanel;
+  readonly bestandsbauSidePanel: SidePanel
   // Shared table/list helper.
   readonly table: TableView;
   // Locator for the Sales Actions search input.
@@ -51,7 +53,9 @@ export class SalesActionsPage extends BasePage {
     // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
     // Creates a helper for the right-side Sales Action detail panel.
-    this.sidePanel = new SidePanel(page, 'sales-action-panel', page.getByRole('button', { name: /schließen|close/i }));
+    this.neubauSidePanel = new SidePanel(page, 'neubau-object-side-panel', page.locator('#neubau-object-side-panel-close-button'));
+    this.ftthSidePanel = new SidePanel(page, 'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
+    this.bestandsbauSidePanel = new SidePanel(page, 'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
@@ -122,5 +126,16 @@ export class SalesActionsPage extends BasePage {
     // Clicks the row matching the supplied Sales Action text.
     await this.table.rowByText(text).click();
   }
-  
+  async expectNeubauSalesActionSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau\/\d+/);
+    await expect(this.neubauSidePanel.root).toBeVisible();
+  }
+  async expectFtthSalesActionSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/ftth\/\d+/);
+    await expect(this.ftthSidePanel.root).toBeVisible();
+  }
+  async expectBestandsbauSalesActionSidePanelOpen(): Promise<void> {
+    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/bestandsbau\/\d+/);
+    await expect(this.bestandsbauSidePanel.root).toBeVisible();
+  }
 }

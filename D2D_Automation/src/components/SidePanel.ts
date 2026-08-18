@@ -1,5 +1,4 @@
 import {expect,Page,Locator} from '@playwright/test';
-import { strict } from 'assert';
 
 export class SidePanel {
   readonly root:Locator;
@@ -11,7 +10,7 @@ export class SidePanel {
     private readonly closeButtonSidePanel: Locator
     
   ) {
-    this.root = page.getByTestId(this.testId);
+    this.root = page.locator(`#${this.testId}`)
     this.closeButton = closeButtonSidePanel;
   }
     
