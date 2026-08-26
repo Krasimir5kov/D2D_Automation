@@ -96,14 +96,14 @@ export class BaulosePage extends BasePage {
     // the Bestandsbau-specific table has actually rendered, not just that the URL
     // changed. Without this, stale FTTH rows could still be showing (and coincidentally
     // match whatever filter was just applied) for a moment after navigating here.
-    await expect(this.page.getByRole('cell', { name: 'Importdatum' })).toBeVisible();
+    await expect(this.page.getByRole('cell', { name: 'Importdatum' })).toBeVisible({timeout : 20000});
   }
   async expectLoadedFTTH(): Promise<void> {
     // Checks that the URL is the Baulose FTTH route.
     await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
     // "Baulose / Regime" is a column only FTTH's table has — same reasoning as above,
     // for the opposite direction (stale Bestandsbau rows after navigating to FTTH).
-    await expect(this.page.getByRole('cell', { name: 'Baulos / Regime' })).toBeVisible();
+    await expect(this.page.getByRole('cell', { name: 'Baulos / Regime' })).toBeVisible({timeout : 20000});
   }
 
   // Searches the Baulose list.

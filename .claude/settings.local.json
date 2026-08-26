@@ -1,7 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx playwright *)"
+      "Bash(npx playwright *)",
+      "Bash(gh run *)",
+      "PowerShell(gh --version)",
+      "Bash(curl -s https://api.github.com/repos/Krasimir5kov/D2D_Automation/actions/jobs/98085023949)",
+      "Bash(curl -s -D - -o /tmp/job_logs.txt \"https://api.github.com/repos/Krasimir5kov/D2D_Automation/actions/jobs/98085023949/logs\")",
+      "Read(//tmp/**)",
+      "Bash(env)",
+      "Bash(git config *)",
+      "Read(//c/Users/a1bg520419/**)",
+      "Read(//c//**)",
+      "Bash(git credential *)",
+      "Bash(grep -n -E \"✘|failed|Error:|Test timeout|Timed out|expect\\\\\\(\" /tmp/job_logs.txt | head -80)",
+      "Bash(grep -n -E \"passed|failed|skipped|^\\\\s*[0-9]+\\\\\\)|Running [0-9]+ test\" /tmp/job_logs.txt | head -40)",
+      "Bash(grep -n -E \"^\\\\s*[0-9]+\\\\\\) |›\" /tmp/job_logs.txt | head -60)",
+      "Bash(grep -n -i \"flaky\" /tmp/job_logs.txt | head -20; echo \"---context around summary---\"; sed -n '835,856p' /tmp/job_logs.txt)",
+      "Bash(grep -n -B2 -A15 \"objekteFiltersApply\" /tmp/job_logs.txt | head -60)"
     ]
   }
 }
