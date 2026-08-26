@@ -103,15 +103,15 @@ export class ObjektePage extends BasePage {
     // Checks that the URL is the Objekte Neubau route.
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/neubau/);
     // Checks that the Objekte search field is visible.
-    await expect(this.searchInput).toBeVisible({timeout : 20000});
+    await expect(this.searchInput).toBeVisible();
   }
   async expectLoadedFtth(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/ftth/);
-    await expect(this.searchInput).toBeVisible({timeout : 20000});
+    await expect(this.searchInput).toBeVisible();
   }
   async expectLoadedBestandsbau(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau/);
-    await expect(this.searchInput).toBeVisible({timeout : 20000});
+    await expect(this.searchInput).toBeVisible();
   }
 
   // Searches the Objekte list.

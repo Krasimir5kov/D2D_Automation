@@ -10,11 +10,11 @@ test.describe('Objekte Filters Apply', () => {
             await objektePage.expectLoadedObjekte();
         });
         test('Apply PLZ filter and check results in three section', async ({ objektePage, page }) => {
-            await test.step('Go to Neubau section', async () => {
-                await objektePage.gotoNeubauSection();
+            await test.step('Go to Bestandsbau section', async () => {
+                await objektePage.gotoBestandsbauSection();
             });
-            await test.step('Verify that Neubau tab section is loaded', async () => {
-                await objektePage.expectLoadedNeubau();
+            await test.step('Verify that Bestandsbau tab section is loaded', async () => {
+                await objektePage.expectLoadedBestandsbau();
             });
             await test.step('Verify filter PLZ is visible', async () => {
                 await expect(objektePage.plzFilter).toBeVisible();
@@ -40,11 +40,11 @@ test.describe('Objekte Filters Apply', () => {
 
             const otherObjectSections = [
                 { name: 'FTTH-Ausbau', tab: objektePage.ftthTab },
-                { name: 'Bestandsbau', tab: objektePage.bestandsbauTab },
+                { name: 'Neubau', tab: objektePage.neubauTab },
             ];
 
             for (const section of otherObjectSections) {
-                await test.step(`Verify PLZ filter still applies in ${section.name} and list results is correct`, async () => {
+                await test.step(`Verify PLZ filter still applies in ${section.name} and list results are correct`, async () => {
                     await section.tab.click();
                     await expectPlzRangeChipVisible(objektePage, plzRange);
                     await expectEveryRowPlzWithinRange(objektePage, plzRange);

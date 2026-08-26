@@ -29,7 +29,7 @@ export async function expectTableSettled(
   pageObject: PageWithTable,
   { timeout = 30000 }: { timeout?: number } = {},
 ): Promise<void> {
-  await expect(pageObject.table.loadingCells).toHaveCount(0, { timeout });
+  await expect(pageObject.table.loadingCells).toHaveCount(0);
 }
 
 export type ExpectEveryRowColumnToContainOptions = {
