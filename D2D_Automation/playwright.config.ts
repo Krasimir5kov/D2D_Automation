@@ -1,9 +1,15 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import { AUTH_FILE } from './src/constants/auth';
+import path from 'path';
+
 
 // Scope: load local environment values from .env before Playwright reads the config.
-dotenv.config({ quiet: true });
+//dotenv.config({ quiet: true });
+dotenv.config({
+  path: path.resolve(__dirname, '.env'),
+  quiet: true,
+});
 
 // Scope: define the Playwright projects and shared test behavior for this framework.
 export default defineConfig({
