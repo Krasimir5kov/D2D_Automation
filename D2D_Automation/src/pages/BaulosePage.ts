@@ -30,8 +30,7 @@ export class BaulosePage extends BasePage {
   // Empty-state heading/message shown when an applied filter yields zero rows.
   // Baulose-specific text — Sales Actions shows a different message for its own
   // empty state, so this doesn't belong on the shared TableView.
-  readonly emptyStateHeadingByFilterDropdown: Locator;
-  readonly emptyStateDescriptionByFilterDropdown: Locator;
+ 
   readonly emptyStateHeadingBySearchInput: Locator;
   readonly emptyStateDescriptionBySearchInput: Locator;
 
@@ -63,9 +62,7 @@ export class BaulosePage extends BasePage {
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
     this.rowNavigationButton = this.table.rows.getByRole('button', { name: /zu Sales Actions/i });
-    this.emptyStateHeadingByFilterDropdown = page.getByRole('heading', { name: 'Kein Ergebnis gefunden', exact: true });
-    this.emptyStateDescriptionByFilterDropdown = page.getByText('Wählen Sie andere Filter aus, oder setzen Sie alle Filter zurück');
-    this.emptyStateHeadingBySearchInput = page.getByRole('heading', { name: 'Keine Baulose/Einsatznamen gefunden', exact: true });
+     this.emptyStateHeadingBySearchInput = page.getByRole('heading', { name: 'Keine Baulose/Einsatznamen gefunden', exact: true });
     this.emptyStateDescriptionBySearchInput = page.getByText('Es wurden keine Baulose/Einsatznamen zu Ihrer Eingabe gefunden. Ändern Sie Ihre Sucheingabe oder setzen Sie die Suche zurück');
   }
 

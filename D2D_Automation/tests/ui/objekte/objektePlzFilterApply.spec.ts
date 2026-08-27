@@ -2,7 +2,7 @@ import { test } from '../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
 import { expectEveryRowPlzWithinRange, expectPlzRangeChipVisible, expectTableSettled } from '../../../src/helpers/filterAssertions';
 import { plzOptions } from '../../../src/constants/objectFilterValues';
-test.describe('Objekte Filters Apply', () => {
+test.describe('Objekte PLZ Filter Apply', () => {
     test.describe("Verify PLZ filter functionality and results in three sections", async () => {
         const plzValues = [{ 'from': '1010', 'to': '1020' }];
         test.beforeEach(async ({ objektePage }) => {

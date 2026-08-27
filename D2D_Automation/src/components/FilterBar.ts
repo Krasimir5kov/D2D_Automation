@@ -14,6 +14,7 @@ export class FilterBar {
   readonly importDateFilter: Locator;
   readonly showChoicesButton: Locator;
   readonly dropDownSearchInput: Locator;
+  readonly inputSearchLabelMostlyUsed: Locator;
 
   // Stores the active Playwright page so filter locators can be created from it.
   constructor(private readonly page: Page) {
@@ -28,10 +29,15 @@ export class FilterBar {
     this.importDateFilter = page.locator('#importData', { hasText: 'Importdatum' });
     this.showChoicesButton = page.locator('#filter-dropdown-root').getByText(/weitere anzeigen/i);
     this.dropDownSearchInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'Suche nach...' });
+    this.inputSearchLabelMostlyUsed = page.getByLabel('Suche nach...');
   }
   trigger(filterId: string): Locator {
     return this.page.locator(`#${filterId}`);
   }
+  dropDownSearchInputByLabel(labelText: string): Locator {
+  return this.page.locator('#filter-dropdown-root').getByLabel(labelText);
+}
+
   // Returns the checkbox input for one choice inside the open filter dropdown, located
   // by its visible label. Scoped to the dropdown's portal root (#filter-dropdown-root)
   // to avoid ambiguity with identical text elsewhere on the page — e.g. the same
@@ -58,6 +64,20 @@ choiceRadio(choiceLabel: string): Locator {
   return this.page
     .locator('#filter-dropdown-root')
     .getByLabel(new RegExp(`^${escaped}$`, 'i'));
+}
+// Returns the clickable label for the first choice currently rendered in the open filter
+// dropdown, regardless of which one it is. Resolves to the <label>, not the raw <input>,
+// for the same reason choiceLabelButton() exists instead of clicking choiceCheckbox()
+// directly — a decorative "square" span sits on top of the real input and intercepts
+// direct clicks on it; clicking its associated <label> toggles it natively instead.
+// Only meaningful after a search term has already narrowed results down — the dropdown
+// shows nothing before that, so calling this on an empty list finds nothing.
+firstFoundAvailableChoiceCheckbox(): Locator {
+  return this.page
+    .locator('#filter-dropdown-root')
+    .locator('input[type="checkbox"]')
+    .first()
+    .locator('xpath=following-sibling::label');
 }
 
   // Returns the visible label/button for one choice inside the open filter dropdown —
@@ -139,3 +159,4 @@ choiceRadio(choiceLabel: string): Locator {
     }
   }
 }
+
