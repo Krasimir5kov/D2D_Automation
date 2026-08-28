@@ -15,25 +15,17 @@ import { BasePage, door2doorRoutes } from './BasePage';
 
 // Represents the Objekte main page.
 export class ObjektePage extends BasePage {
-  // Shared top navigation helper.
+  // Shared top navigation heler.
   readonly navigation: AppNavigation;
-  // Shared filter bar helper.
   readonly filters: FilterBar;
-  // Shared modal helper for Alle Filter and other dialogs.
   readonly modal: ModalDialog;
-  // Shared side panel helper for object details; update its root when stable DOM attributes exist.
   readonly neubauSidePanel: SidePanel;
   readonly ftthAusbauSidePanel: SidePanel;
   readonly bestandsbauSidePanel: SidePanel;
-  // Shared table/list helper.
   readonly table: TableView;
-  // Locator for the Objekte search input.
   readonly searchInput: Locator;
-  // Locator for the Neubau tab.
   readonly neubauTab: Locator;
-  // Locator for the FTTH tab.
   readonly ftthTab: Locator;
-  // Locator for the Bestandsbau tab.
   readonly bestandsbauTab: Locator;
   readonly baulosEinsatznameFilter: Locator;
   readonly plzFilter: Locator;
@@ -45,46 +37,43 @@ export class ObjektePage extends BasePage {
   readonly quickFilterRejectButton: Locator;
   readonly quickFilterAssignedButton: Locator;
   readonly searchInputField: Locator;
+  readonly neubauObjectName: Locator;
+  readonly ftthObjectName: Locator;
+  readonly bestandsbauObjectName: Locator;
+  readonly emptyStateHeadingMessageBySearchInput: Locator;
+  readonly emptyStateDescriptionMessageBySearchInput: Locator;
 
 
-  // Builds the Objekte page object for the active browser page.
   constructor(page: Page) {
-    // Passes the Playwright page into BasePage.
     super(page);
-    // Creates a helper for top navigation links.
     this.navigation = new AppNavigation(page);
-    // Creates a helper for inline filters.
     this.filters = new FilterBar(page);
-    // Creates a helper for modal dialogs.
     this.modal = new ModalDialog(page);
-    // Creates a helper for the right-side object detail panel.
-    this.neubauSidePanel = new SidePanel(page,'neubau-object-side-panel', page.locator('#neubau-object-side-panel-close-button'));
-    this.ftthAusbauSidePanel = new SidePanel(page,'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
-    this.bestandsbauSidePanel = new SidePanel(page,'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
-    // Creates a helper for table/list behavior.
+    this.neubauSidePanel = new SidePanel(page, 'neubau-object-side-panel', page.locator('#neubau-object-side-panel-close-button'));
+    this.ftthAusbauSidePanel = new SidePanel(page, 'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
+    this.bestandsbauSidePanel = new SidePanel(page, 'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
     this.table = new TableView(page);
-    // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
     this.searchInput = page.locator('#objects-search-field');
-    // Locates the Neubau tab by link role or tab role.
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
-    // Locates the FTTH tab by link role or tab role.
     this.ftthTab = page.getByRole('link', { name: /FTTH/i }).or(page.getByRole('tab', { name: /FTTH/i }));
-    // Locates the Bestandsbau tab by link role or tab role.
     this.bestandsbauTab = page.getByRole('link', { name: /Bestandsbau/i }).or(
-      // Falls back to role=tab if the tab component exposes ARIA tab semantics.
       page.getByRole('tab', { name: /Bestandsbau/i }),
     );
     this.plzFromInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'PLZ ab' });
     this.plzOutInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'PLZ bis' });
     this.baulosEinsatznameFilter = page.locator('#contractSection');
     this.plzFilter = page.locator('#zip');
-
     this.verkaufsstartFilter = page.locator('#salesStart');
     this.fragenBogenFilterStatus = page.locator('#fragebogenStatus');
     this.quickFilterAssignedButton = page.locator('#quick-filter-objectStatus-assigned');
     this.quickFilterRejectButton = page.locator('#quick-filter-objectStatus-rejected');
     this.quickFilterOpenButton = page.locator('#quick-filter-objectStatus-open');
     this.searchInputField = page.locator('#objects-search-field');
+    this.neubauObjectName = page.locator('tr[data-object-type="NEUBAU"]');
+    this.ftthObjectName = page.locator('tr[data-object-type="FTTH"]');
+    this.bestandsbauObjectName = page.locator('tr[data-object-type="BESTANDSBAU"]');
+    this.emptyStateHeadingMessageBySearchInput = page.getByRole('heading', { name: 'Kein Ergebnis gefunden' });
+    this.emptyStateDescriptionMessageBySearchInput = page.getByText("Es wurden keine Ergebnisse zu Ihrer Eingabe gefunden. Ändern Sie Ihre Sucheingabe oder setzen Sie die Suche zurück");
   }
 
   async goToObjektePage(): Promise<void> {
@@ -156,5 +145,5 @@ export class ObjektePage extends BasePage {
     await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau\/\d+/);
     await expect(this.bestandsbauSidePanel.root).toBeVisible();
   }
-  
+
 }

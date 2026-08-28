@@ -56,4 +56,106 @@ test.describe('Objekte Input Search Field', { tag: ['@Admin', '@Admin-Regional']
       });
     });
   });
+  test.describe('Trigger Search Functionality With First Item Title Text Based On List Section', () => {
+    let firstNeubauObjectName: string | null;
+    let firstFtthObjectName: string | null;
+    let firstBestandsbauObjectName: string | null;
+    test('NEUBAU : Verify that the result return only search item title text in the list', async ({ page, objektePage }) => {
+      await test.step('Navigate to the Objekte Neubau section', async () => {
+        await objektePage.goToObjektePage();
+        await objektePage.gotoNeubauSection();
+        await objektePage.expectLoadedNeubau();
+      });
+      await test.step('Get the first item title text from the list', async () => {
+        firstNeubauObjectName = await objektePage.neubauObjectName.first().getAttribute('data-object-name');
+
+      });
+      await test.step('Enter the first item title text into the search field and trigger search', async () => {
+        await objektePage.searchInputField.fill(firstNeubauObjectName ?? '');
+        await objektePage.searchInputField.press('Enter');
+      });
+      await test.step('Verify that the result return only search item title text in the list', async () => {
+        await expect(objektePage.table.loadingCells).toHaveCount(0);
+        await expectEveryRowDataObjectNameToContain(objektePage, firstNeubauObjectName ?? '');
+      });
+      await test.step('Verify that FTTH-AUSBAU list section is in an empty state', async () => {
+        await objektePage.gotoFtthSection();
+        await objektePage.expectLoadedFtth();
+        await expect(objektePage.ftthObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+      await test.step('Verify that BESTANDSBAU list section is in an empty state', async () => {
+        await objektePage.gotoBestandsbauSection();
+        await objektePage.expectLoadedBestandsbau();
+        await expect(objektePage.bestandsbauObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+    });
+    test('FTTH : Verify that the result return only search item title text in the list', async ({ page, objektePage }) => {
+      await test.step('Navigate to the Objekte FTTH section', async () => {
+        await objektePage.goToObjektePage();
+        await objektePage.gotoFtthSection();
+        await objektePage.expectLoadedFtth();
+      });
+      await test.step('Get the first item title text from the list', async () => {
+        firstFtthObjectName = await objektePage.ftthObjectName.first().getAttribute('data-object-name');
+      });
+      await test.step('Enter the first item title text into the search field and trigger search', async () => {
+        await objektePage.searchInputField.fill(firstFtthObjectName ?? '');
+        await objektePage.searchInputField.press('Enter');
+      });
+      await test.step('Verify that the result return only search item title text in the list', async () => {
+        await expect(objektePage.table.loadingCells).toHaveCount(0);
+        await expectEveryRowDataObjectNameToContain(objektePage, firstFtthObjectName ?? '');
+      });
+      await test.step('Verify that NEUBAU list section is in an empty state', async () => {
+        await objektePage.gotoNeubauSection();
+        await objektePage.expectLoadedNeubau();
+        await expect(objektePage.neubauObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+      await test.step('Verify that BESTANDSBAU list section is in an empty state', async () => {
+        await objektePage.gotoBestandsbauSection();
+        await objektePage.expectLoadedBestandsbau();
+        await expect(objektePage.bestandsbauObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+    });
+    test('Bestandsbau : Verify that the result return only search item title text in the list', async ({ page, objektePage }) => {
+      await test.step('Navigate to the Objekte Bestandsbau section', async () => {
+        await objektePage.goToObjektePage();
+        await objektePage.gotoBestandsbauSection();
+        await objektePage.expectLoadedBestandsbau();
+      });
+      await test.step('Get the first item title text from the list', async () => {
+        firstBestandsbauObjectName = await objektePage.bestandsbauObjectName.first().getAttribute('data-object-name');
+      });
+      await test.step('Enter the first item title text into the search field and trigger search', async () => {
+        await objektePage.searchInputField.fill(firstBestandsbauObjectName ?? '');
+        await objektePage.searchInputField.press('Enter');
+      });
+      await test.step('Verify that the result return only search item title text in the list', async () => {
+        await expect(objektePage.table.loadingCells).toHaveCount(0);
+        await expectEveryRowDataObjectNameToContain(objektePage, firstBestandsbauObjectName ?? '');
+      });
+      await test.step('Verify that FTTH-AUSBAU list section is in an empty state', async () => {
+        await objektePage.gotoFtthSection();
+        await objektePage.expectLoadedFtth();
+        await expect(objektePage.ftthObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+      await test.step('Verify that NEUBAU list section is in an empty state', async () => {
+        await objektePage.gotoNeubauSection();
+        await objektePage.expectLoadedNeubau();
+        await expect(objektePage.neubauObjectName).toHaveCount(0);
+        await expect(objektePage.emptyStateHeadingMessageBySearchInput).toBeVisible();
+        await expect(objektePage.emptyStateDescriptionMessageBySearchInput).toBeVisible();
+      });
+    });
+  });
 });
