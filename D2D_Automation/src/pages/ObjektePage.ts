@@ -41,6 +41,10 @@ export class ObjektePage extends BasePage {
   readonly verkaufsstartFilter: Locator;
   readonly plzFromInput: Locator;
   readonly plzOutInput: Locator;
+  readonly quickFilterOpenButton: Locator;
+  readonly quickFilterRejectButton: Locator;
+  readonly quickFilterAssignedButton: Locator;
+
 
   // Builds the Objekte page object for the active browser page.
   constructor(page: Page) {
@@ -76,6 +80,9 @@ export class ObjektePage extends BasePage {
 
     this.verkaufsstartFilter = page.locator('#salesStart');
     this.fragenBogenFilterStatus = page.locator('#fragebogenStatus');
+    this.quickFilterAssignedButton = page.locator('#quick-filter-objectStatus-assigned')
+    this.quickFilterRejectButton = page.locator('#quick-filter-objectStatus-rejected')
+    this.quickFilterOpenButton = page.locator('#quick-filter-objectStatus-open')
   }
 
   async goToObjektePage(): Promise<void> {

@@ -14,4 +14,6 @@ export const TABLE_STATUS_CHIP_COLORS: Record<string, string> = {
     'unvollständig': 'rgb(229, 151, 0)',
     'vor Aviso': 'rgb(98, 149, 172)',
     'zurückgewiesen': 'rgb(218, 41, 28)',
+    'nicht übergeben': 'rgb(229, 151, 0)',
+    'übergeben': 'rgb(98, 149, 172)'
 };

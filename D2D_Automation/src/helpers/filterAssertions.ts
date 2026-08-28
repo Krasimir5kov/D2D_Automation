@@ -170,3 +170,29 @@ export async function expectEveryRowOrganisationToBe(
     expect(organisation, `row ${i}: Organisation "${organisation}" does not match expected "${name}"`).toBe(name);
   });
 }
+export async function expectEveryRowOrganisationStatusToBe(
+  pageObject: PageWithTable,
+  expectedStatus: string,
+  expectedBackgroundColor?: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const organisationCellTexts = await rows.locator(`td[id$='-organisation']`).allInnerTexts();
+  for (let i = 0; i < organisationCellTexts.length; i++) {
+    const status = organisationCellTexts[i].split('\n')[1]?.trim() ?? '';
+    expect(status, `row ${i}: expected status "${expectedStatus}" but got "${status}"`).toBe(expectedStatus);
+    if (expectedBackgroundColor) {
+      // Same reasoning as expectEveryRowColumnToContain: background-color doesn't
+      // inherit, so climb to the nearest ancestor that actually has a real one.
+      const backgroundColor = await nearestNonTransparentBackgroundColor(
+        rows.nth(i).getByText(expectedStatus, { exact: true }),
+      );
+      expect(
+        backgroundColor,
+        `row ${i}: expected background ${expectedBackgroundColor}, got ${backgroundColor}`,
+      ).toBe(expectedBackgroundColor);
+    }
+  }
+}

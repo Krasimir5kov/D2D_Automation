@@ -116,7 +116,7 @@ export type FirstRowOrganisation = {
 // Neubau, this cell also contains a second, separate status-chip line (e.g. "übergeben")
 // — innerText() joins it onto the organisation text with a newline, so only the first
 // line is the actual organisation.
-export async function getFirstRowOrganisation(pageObject: { table: TableView }): Promise<FirstRowOrganisation> {
+export async function getFirstRowOrganisationNeubau(pageObject: { table: TableView }): Promise<FirstRowOrganisation> {
   const cellText = (await pageObject.table.rows.first().locator("td[id$='-organisation']").innerText()).trim();
   const text = cellText.split('\n')[0].trim();
   const regionMatch = text.match(/^(.*?)\s*\(([^)]+)\)\s*$/);

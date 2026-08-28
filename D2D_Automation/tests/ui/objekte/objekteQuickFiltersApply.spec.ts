@@ -1,5 +1,9 @@
 import { test } from '../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
+import { ObjektePage } from '../../../src/pages';
+import { } from '../../../src/helpers/filterHelpers';
+import { expectEveryRowOrganisationStatusToBe, expectEveryRowOrganisationToBe, expectTableSettled } from '../../../src/helpers/filterAssertions';
+import { TABLE_STATUS_CHIP_COLORS } from '../../../src/constants/objectStatusChipColors';
 
 // TODO — UNCONFIRMED, verify all of the following via devtools before trusting this file:
 // - Real stable id: D2D_Playwright_Attributes_Reference.md only documents the *pattern*
@@ -15,10 +19,14 @@ import { expect } from '@playwright/test';
 //   "Privat / D2D SA", not "Übergabestatus"; unclear if these are the same concept. No
 //   row-level content check is included below for that reason — add one once confirmed,
 //   rather than guessing a column here.
-const uebergabestatusChoices = ['nicht übergeben', 'zurückgewiesen', 'übergeben'];
+const uebergabestatusChoices = [
+    { label: 'nicht übergeben', getButton: (objektePage: ObjektePage) => objektePage.quickFilterOpenButton },
+    { label: 'zurückgewiesen', getButton: (objektePage: ObjektePage) => objektePage.quickFilterRejectButton },
+    { label: 'übergeben', getButton: (objektePage: ObjektePage) => objektePage.quickFilterAssignedButton },
+];
+test.describe('Objekte Quick Filters Apply', () => {
 
-test.describe.skip('Objekte Quick Filters (Übergabestatus) Apply', () => {
-    test.describe('Verify Übergabestatus quick filters on Neubau', () => {
+    test.describe('Verify quick filters are clickable and activated', () => {
         test.beforeEach(async ({ objektePage }) => {
             await objektePage.goToObjektePage();
             await objektePage.gotoNeubauSection();
@@ -26,13 +34,14 @@ test.describe.skip('Objekte Quick Filters (Übergabestatus) Apply', () => {
         });
 
         for (const choice of uebergabestatusChoices) {
-            test(`Apply "${choice}" quick filter and verify it becomes pressed`, async ({ objektePage, page }) => {
-                const quickFilterButton = page.getByRole('button', { name: choice, exact: true });
+            test(`Apply "${choice.label}" quick filter and verify it becomes pressed`, async ({ objektePage, page }) => {
 
-                await test.step(`Verify "${choice}" quick filter is visible`, async () => {
+                const quickFilterButton = choice.getButton(objektePage);
+
+                await test.step(`Verify "${choice.label}" quick filter is visible`, async () => {
                     await expect(quickFilterButton).toBeVisible();
                 });
-                await test.step(`Click "${choice}" quick filter`, async () => {
+                await test.step(`Click "${choice.label}" quick filter`, async () => {
                     await quickFilterButton.click();
                 });
                 await test.step('Verify the quick filter is now pressed', async () => {
@@ -42,4 +51,209 @@ test.describe.skip('Objekte Quick Filters (Übergabestatus) Apply', () => {
             });
         }
     });
+    test.describe('Verify that quick filters update list view accordingly in three sections', () => {
+        const statusesText = [{ open: 'nicht übergeben', rejected: 'zurückgewiesen', assigned: 'übergeben', none: '' }];
+        test.beforeEach(async ({ objektePage }) => {
+            await objektePage.goToObjektePage();
+        });
+        test('NEUBAU : Verify results after applying quick filter Nicht übergeben', async ({ objektePage }) => {
+            await test.step('Go to Neubau section', async () => {
+                await objektePage.gotoNeubauSection();
+                await objektePage.expectLoadedNeubau();
+            });
+            await test.step('Click Nicht übergeben quick filter', async () => {
+                await objektePage.quickFilterOpenButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterOpenButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly', async () => {
+                await expectTableSettled(objektePage);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].open);
+            });
+            await test.step('Verify that the status chip color is correct for Nicht übergeben', async () => {
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].open, TABLE_STATUS_CHIP_COLORS['nicht übergeben']);
+            });
+        });
+        test('FTTH-AUSBAU : Verify that the list view is in an empty state after applying quick filter Nicht übergeben', async ({ objektePage }) => {
+            await test.step('Go to FTTH section', async () => {
+                await objektePage.gotoFtthSection();
+                await objektePage.expectLoadedFtth();
+            });
+            await test.step('Click Nicht übergeben quick filter', async () => {
+                await objektePage.quickFilterOpenButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterOpenButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
+            });
+        });
+        test('BESTANDSBAU : Verify that the list view is in an empty state after applying quick filter Nicht übergeben ', async ({ objektePage }) => {
+            await test.step('Go to Bestandsbau section', async () => {
+                await objektePage.gotoBestandsbauSection();
+                await objektePage.expectLoadedBestandsbau();
+            });
+            await test.step('Click Nicht übergeben quick filter', async () => {
+                await objektePage.quickFilterOpenButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterOpenButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
+            });
+        });
+        test('NEUBAU : Verify results after applying quick filter Zurückgewiesen', async ({ objektePage }) => {
+            await test.step('Go to Neubau section', async () => {
+                await objektePage.gotoNeubauSection();
+                await objektePage.expectLoadedNeubau();
+            });
+            await test.step('Click Zurückgewiesen quick filter', async () => {
+                await objektePage.quickFilterRejectButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterRejectButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly and contains Zurückgewiesen status and chip', async () => {
+                await expectTableSettled(objektePage);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].rejected);
+            });
+            await test.step('Verify that the status chip color is correct for Zurückgewiesen', async () => {
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].rejected, TABLE_STATUS_CHIP_COLORS['zurückgewiesen']);
+            });
+        });
+        test('FTTH-AUSBAU : Verify that the list view is in an empty state after applying quick filter Zurückgewiesen', async ({ objektePage }) => {
+            await test.step('Go to FTTH section', async () => {
+                await objektePage.gotoFtthSection();
+                await objektePage.expectLoadedFtth();
+            });
+            await test.step('Click Zurückgewiesen quick filter', async () => {
+                await objektePage.quickFilterRejectButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterRejectButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
+            });
+        });
+        test('BESTANDSBAU : Verify that the list view is in an empty state after applying quick filter Zurückgewiesen', async ({ objektePage }) => {
+            await test.step('Go to Bestandsbau section', async () => {
+                await objektePage.gotoBestandsbauSection();
+                await objektePage.expectLoadedBestandsbau();
+            });
+            await test.step('Click Zurückgewiesen quick filter', async () => {
+                await objektePage.quickFilterRejectButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterRejectButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
+            });
+            await test.step('Verify that the list view is in an empty state after applying quick filter Zurückgewiesen', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
+            });
+        });
+        test('NEUBAU : Verify results after applying quick filter Übergeben', async ({ objektePage }) => {
+            await test.step('Go to Neubau section', async () => {
+                await objektePage.gotoNeubauSection();
+                await objektePage.expectLoadedNeubau();
+            });
+            await test.step('Click Übergeben quick filter', async () => {
+                await objektePage.quickFilterAssignedButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterAssignedButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly and contains Übergeben status and chip', async () => {
+                await expectTableSettled(objektePage);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].assigned);
+            });
+            await test.step('Verify that the status chip color is correct for Übergeben', async () => {
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].assigned, TABLE_STATUS_CHIP_COLORS['übergeben']);
+            });
+        });
+        test('FTTH-AUSBAU : Verify results after applying quick filter Übergeben', async ({ objektePage }) => {
+            await test.step('Go to FTTH section', async () => {
+                await objektePage.gotoFtthSection();
+                await objektePage.expectLoadedFtth();
+            });
+            await test.step('Click Übergeben quick filter', async () => {
+                await objektePage.quickFilterAssignedButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterAssignedButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly and contains Übergeben status and chip', async () => {
+                await expectTableSettled(objektePage);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].none);
+            });
+            await test.step('Verify that the list view is updated accordingly and there is no chip for Übergeben', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.loadingCells).toHaveCount(0);
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).not.toBeVisible();
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).not.toBeVisible();
+                await expect(objektePage.table.rows).toHaveCount(25);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].none);
+            });
+        });
+        test('BESTANDSBAU : Verify results after applying quick filter Übergeben', async ({ objektePage }) => {
+            await test.step('Go to Bestandsbau section', async () => {
+                await objektePage.gotoBestandsbauSection();
+                await objektePage.expectLoadedBestandsbau();
+            });
+            await test.step('Click Übergeben quick filter', async () => {
+                await objektePage.quickFilterAssignedButton.click();
+            });
+            await test.step('Verify the quick filter is now pressed', async () => {
+                await expect(objektePage.quickFilterAssignedButton).toHaveAttribute('aria-pressed', 'true');
+            });
+            await test.step('Verify that the chip is displayed in the filter bar', async () => {
+                await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
+            });
+            await test.step('Verify that the list view is updated accordingly and there is no chip for Übergeben', async () => {
+                await expectTableSettled(objektePage);
+                await expect(objektePage.table.loadingCells).toHaveCount(0);
+                await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).not.toBeVisible();
+                await expect(objektePage.table.emptyStateHeadingByFilterDropdown).not.toBeVisible();
+                await expect(objektePage.table.rows).toHaveCount(25);
+                await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].none);
+            });
+        });
+    });
+
+
 });
+

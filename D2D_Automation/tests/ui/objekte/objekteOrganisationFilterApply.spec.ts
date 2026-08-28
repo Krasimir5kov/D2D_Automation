@@ -1,7 +1,7 @@
 import { test } from '../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
 import { expectEveryRowOrganisationToBe } from '../../../src/helpers/filterAssertions';
-import { getFirstRowOrganisation } from '../../../src/helpers/filterHelpers';
+import {  getFirstRowOrganisationNeubau } from '../../../src/helpers/filterHelpers';
 
 test.describe('Objekte Organisation Filter Apply', () => {
     test.describe('Verify Organisation filter functionality and results in three sections', () => {
@@ -21,7 +21,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
                 await objektePage.expectLoadedFtth();
             });
             await test.step('Get the first row\'s Organisation value', async () => {
-                ({ name, fullDisplayText } = await getFirstRowOrganisation(objektePage));
+                ({ name, fullDisplayText } = await getFirstRowOrganisationNeubau(objektePage));
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
@@ -49,7 +49,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
                 await objektePage.expectLoadedBestandsbau();
             });
             await test.step('Get the first row\'s Organisation value', async () => {
-                ({ name, fullDisplayText } = await getFirstRowOrganisation(objektePage));
+                ({ name, fullDisplayText } = await getFirstRowOrganisationNeubau(objektePage));
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
@@ -77,7 +77,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
                 await objektePage.expectLoadedNeubau();
             });
             await test.step('Get the first row\'s Organisation value', async () => {
-                ({ name, fullDisplayText } = await getFirstRowOrganisation(objektePage));
+                ({ name, fullDisplayText } = await getFirstRowOrganisationNeubau(objektePage));
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
