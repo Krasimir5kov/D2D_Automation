@@ -39,7 +39,7 @@ test.describe('Baulose Input Search Field', () => {
         await expect(baulosePage.table.rows).toHaveCount(1);
       });
       await test.step('Clear the search input field and verify the list is updated', async () => {
-        await baulosePage.searchField.cleanSearchInput();
+        await baulosePage.cleanSearchInput();
         await expect(baulosePage.table.loadingCells).toHaveCount(0);
         await expect(baulosePage.table.rows).toHaveCount(25);
       });
@@ -72,7 +72,7 @@ test.describe('Baulose Input Search Field', () => {
         await expect(baulosePage.table.rows).toHaveCount(1);
       });
       await test.step('Clear the search input field and verify the list is updated', async () => {
-        await baulosePage.searchField.cleanSearchInput();
+        await baulosePage.cleanSearchInput();
         await expect(baulosePage.table.loadingCells).toHaveCount(0);
         await expect(baulosePage.table.rows).toHaveCount(25);
       });
@@ -129,7 +129,7 @@ test.describe('Baulose Input Search Field', () => {
         await expect(baulosePage.table.rows).toHaveCount(1);
       });
       await test.step('Clear the search input field and verify the list is updated', async () => {
-        await baulosePage.searchField.cleanSearchInput();
+        await baulosePage.cleanSearchInput();
         await expect(baulosePage.table.loadingCells).toHaveCount(0);
         await expect(baulosePage.table.rows).toHaveCount(25);
       });
@@ -161,7 +161,7 @@ test.describe('Baulose Input Search Field', () => {
         await expect(baulosePage.table.rows).toHaveCount(1);
       });
       await test.step('Clear the search input field and verify the list is updated', async () => {
-        await baulosePage.searchField.cleanSearchInput();
+        await baulosePage.cleanSearchInput();
         await expect(baulosePage.table.loadingCells).toHaveCount(0);
         await expect(baulosePage.table.rows).toHaveCount(25);
       });

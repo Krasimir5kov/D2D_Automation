@@ -44,6 +44,7 @@ export class ObjektePage extends BasePage {
   readonly quickFilterOpenButton: Locator;
   readonly quickFilterRejectButton: Locator;
   readonly quickFilterAssignedButton: Locator;
+  readonly searchInputField: Locator;
 
 
   // Builds the Objekte page object for the active browser page.
@@ -63,7 +64,7 @@ export class ObjektePage extends BasePage {
     // Creates a helper for table/list behavior.
     this.table = new TableView(page);
     // Locates the search input using known test id/id first, then a generic Suche placeholder fallback.
-    this.searchInput = page.locator('[data-testid="objects-search-field"], #objects-search-field, input[placeholder*="Suche"]').first();
+    this.searchInput = page.locator('#objects-search-field');
     // Locates the Neubau tab by link role or tab role.
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
     // Locates the FTTH tab by link role or tab role.
@@ -80,9 +81,10 @@ export class ObjektePage extends BasePage {
 
     this.verkaufsstartFilter = page.locator('#salesStart');
     this.fragenBogenFilterStatus = page.locator('#fragebogenStatus');
-    this.quickFilterAssignedButton = page.locator('#quick-filter-objectStatus-assigned')
-    this.quickFilterRejectButton = page.locator('#quick-filter-objectStatus-rejected')
-    this.quickFilterOpenButton = page.locator('#quick-filter-objectStatus-open')
+    this.quickFilterAssignedButton = page.locator('#quick-filter-objectStatus-assigned');
+    this.quickFilterRejectButton = page.locator('#quick-filter-objectStatus-rejected');
+    this.quickFilterOpenButton = page.locator('#quick-filter-objectStatus-open');
+    this.searchInputField = page.locator('#objects-search-field');
   }
 
   async goToObjektePage(): Promise<void> {

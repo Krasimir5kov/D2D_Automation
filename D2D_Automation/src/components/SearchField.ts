@@ -2,12 +2,10 @@ import { expect, Locator, Page } from '@playwright/test';
 
 export class SearchField {
     readonly searchIcoButton: Locator;
-    readonly cleanSearchInputButton: Locator;
     constructor(
         private readonly page: Page,
         private readonly locator: Locator,
     ) {
-        this.cleanSearchInputButton = page.locator('#baulose-search-field').locator('..').getByRole('button').first();
         this.searchIcoButton =  page.locator('button.search-button.icon-a1-lupe')
     }
 
@@ -23,8 +21,5 @@ export class SearchField {
 
     async expectVisible(): Promise<void> {
         await expect(this.locator).toBeVisible();
-    }
-    async cleanSearchInput(): Promise<void> {
-        await this.cleanSearchInputButton.click();
     }
 }

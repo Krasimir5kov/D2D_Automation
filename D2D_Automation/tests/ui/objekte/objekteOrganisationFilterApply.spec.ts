@@ -49,7 +49,9 @@ test.describe('Objekte Organisation Filter Apply', () => {
                 await objektePage.expectLoadedBestandsbau();
             });
             await test.step('Get the first row\'s Organisation value', async () => {
+                 await expect(objektePage.table.loadingCells).toHaveCount(0);
                 ({ name, fullDisplayText } = await getFirstRowOrganisationNeubau(objektePage));
+               
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
@@ -77,6 +79,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
                 await objektePage.expectLoadedNeubau();
             });
             await test.step('Get the first row\'s Organisation value', async () => {
+                await expect(objektePage.table.loadingCells).toHaveCount(0);
                 ({ name, fullDisplayText } = await getFirstRowOrganisationNeubau(objektePage));
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {

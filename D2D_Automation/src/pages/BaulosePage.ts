@@ -33,6 +33,9 @@ export class BaulosePage extends BasePage {
  
   readonly emptyStateHeadingBySearchInput: Locator;
   readonly emptyStateDescriptionBySearchInput: Locator;
+  // Clears the Baulose search input — Baulose-specific (targets #baulose-search-field),
+  // so it lives here rather than on the shared SearchField component.
+  readonly cleanSearchInputButton: Locator;
 
   // Builds the Baulose page object for the active browser page.
   constructor(page: Page) {
@@ -64,6 +67,7 @@ export class BaulosePage extends BasePage {
     this.rowNavigationButton = this.table.rows.getByRole('button', { name: /zu Sales Actions/i });
      this.emptyStateHeadingBySearchInput = page.getByRole('heading', { name: 'Keine Baulose/Einsatznamen gefunden', exact: true });
     this.emptyStateDescriptionBySearchInput = page.getByText('Es wurden keine Baulose/Einsatznamen zu Ihrer Eingabe gefunden. Ändern Sie Ihre Sucheingabe oder setzen Sie die Suche zurück');
+    this.cleanSearchInputButton = page.locator('#baulose-search-field').locator('..').getByRole('button').first();
   }
 
   // Opens the Baulose FTTH route directly.
@@ -113,6 +117,11 @@ export class BaulosePage extends BasePage {
     // Fills the Baulose search input.
     await this.searchField.triggerSearchByClickingSearchButton(text);
     // Clicks the search button to submit/apply the search.
+  }
+
+  // Clears the Baulose search input.
+  async cleanSearchInput(): Promise<void> {
+    await this.cleanSearchInputButton.click();
   }
 
   // Opens the Organisation filter on Baulose. Uses the stable id-based trigger, not

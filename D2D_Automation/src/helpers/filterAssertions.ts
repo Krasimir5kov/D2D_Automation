@@ -24,8 +24,7 @@ async function waitForTableSettled(pageObject: PageWithTable): Promise<void> {
   await expect(pageObject.table.loadingCells).toHaveCount(0, {timeout:60000});
 }
 export async function expectTableSettled(
-  pageObject: PageWithTable,
-  { timeout = 30000 }: { timeout?: number } = {},
+  pageObject: PageWithTable
 ): Promise<void> {
   await expect(pageObject.table.loadingCells).toHaveCount(0);
 }
@@ -195,4 +194,40 @@ export async function expectEveryRowOrganisationStatusToBe(
       ).toBe(expectedBackgroundColor);
     }
   }
+}
+export async function expectEveryRowDataObjectNameToContain(
+  pageObject: PageWithTable,
+  searchValue: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const objectNames = await rows.evaluateAll((rowElements) =>
+    rowElements.map((row) => row.getAttribute('data-object-name')),
+  );
+  const searchValueLower = searchValue.toLowerCase();
+  objectNames.forEach((name, i) => {
+    expect(
+      name?.toLowerCase().includes(searchValueLower),
+      `row ${i}: data-object-name "${name}" does not contain searched value "${searchValue}"`,
+    ).toBe(true);
+  });
+}
+export async function expectEveryRowNameCellToContain(
+  pageObject: PageWithTable,
+  searchValue: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const nameCellTexts = await rows.locator(`td[id$='-name']`).allInnerTexts();
+  const searchValueLower = searchValue.toLowerCase();
+  nameCellTexts.forEach((text, i) => {
+    expect(
+      text.toLowerCase().includes(searchValueLower),
+      `row ${i}: name cell "${text}" does not contain searched value "${searchValue}"`,
+    ).toBe(true);
+  });
 }

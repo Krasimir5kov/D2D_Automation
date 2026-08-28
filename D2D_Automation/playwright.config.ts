@@ -63,7 +63,7 @@ export default defineConfig({
     baseURL: process.env.INTEGRATION_URL,
 
     // Scope: collect traces on retries so failed tests are easier to debug.
-   // trace: 'on-first-retry',
+    // trace: 'on-first-retry',
     // trace: 'on',                      // Always record a trace (heavier, but max debuggability)
     trace: 'retain-on-failure',       // Record every test, but only keep the file if it failed
 
@@ -72,7 +72,7 @@ export default defineConfig({
 
     screenshot: 'only-on-failure',    // Auto-capture a screenshot when a test fails
     // screenshot: 'on',                 // Screenshot after every test, pass or fail
-   video: 'retain-on-failure',       // Record video, keep only for failed tests
+    video: 'retain-on-failure',       // Record video, keep only for failed tests
     // video: 'on',                      // Always record video (heavy — mainly for deep debugging sessions)
 
     // viewport: { width: 1920, height: 1080 }, // Browser window size for every test
@@ -135,6 +135,26 @@ export default defineConfig({
         headless: true,
       },
     },
+    // {
+    //   name: 'firefox',
+    //   dependencies: ['ui-preflight'],
+    //   testIgnore: [/.*\.setup\.ts/, /preflight\/.*\.spec\.ts/],
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //     storageState: AUTH_FILE,
+    //   },
+    // },
+    // {
+    //   name: 'Microsoft Edge',
+    //   dependencies: ['ui-preflight'],
+    //   testIgnore: [/.*\.setup\.ts/, /preflight\/.*\.spec\.ts/],
+    //   use: {
+    //     ...devices['Desktop Edge'],
+    //     channel: 'msedge',
+    //     storageState: AUTH_FILE,
+    //   },
+    // },
+
 
     // Scope: standard Playwright examples kept commented for later use.
     // {
