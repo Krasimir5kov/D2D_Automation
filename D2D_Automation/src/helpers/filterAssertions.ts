@@ -75,7 +75,7 @@ export async function expectPlzRangeChipVisible(
 // sitting in a plain, transparent inner span) — climbing up to the nearest ancestor
 // that actually has a non-transparent background avoids having to guess/hardcode how
 // many parent levels that takes, which can differ between chip variants.
-async function nearestNonTransparentBackgroundColor(locator: Locator): Promise<string> {
+export async function nearestNonTransparentBackgroundColor(locator: Locator): Promise<string> {
   return locator.evaluate((el) => {
     let node: Element | null = el;
     while (node) {
