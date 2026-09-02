@@ -95,15 +95,40 @@ export abstract class BasePage {
   async gotoIntegrationUrl(): Promise<void> {
     // Navigates to INTEGRATION_URL and waits until the DOM is available.
     await this.registerErrorRecoveryHandler();
-    await this.page.goto(this.getRequiredIntegrationUrl(), { waitUntil: 'domcontentloaded' });
-
+    await this.gotoWithRetry(this.getRequiredIntegrationUrl());
   }
 
   // Opens a specific Door2Door hash route.
   async gotoDoor2DoorRoute(route: string): Promise<void> {
     // Builds the full URL and navigates to it.
     await this.registerErrorRecoveryHandler();
-    await this.page.goto(this.buildDoor2DoorUrl(route), { waitUntil: 'domcontentloaded' });
+    await this.gotoWithRetry(this.buildDoor2DoorUrl(route));
+  }
+
+  // Retries page.goto() a few times on a transient connection-level failure
+  // (connection refused/aborted/reset, or the navigation itself timing out) before
+  // giving up — confirmed on CI, where the shared INT environment intermittently
+  // refuses/aborts the connection even with a single worker. Anything else (e.g. a
+  // real assertion failure later in the test) is unaffected, since this only wraps
+  // the goto() call itself.
+  private async gotoWithRetry(url: string, attempts = 3, delayMs = 3000): Promise<void> {
+    const isRetryableNetworkError = (error: unknown): boolean =>
+      error instanceof Error &&
+      /ERR_CONNECTION_REFUSED|ERR_ABORTED|ERR_CONNECTION_RESET|ERR_CONNECTION_CLOSED|ERR_EMPTY_RESPONSE|Timeout \d+ms exceeded/.test(
+        error.message,
+      );
+
+    for (let attempt = 1; attempt <= attempts; attempt++) {
+      try {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+        return;
+      } catch (error) {
+        if (attempt === attempts || !isRetryableNetworkError(error)) {
+          throw error;
+        }
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
+      }
+    }
   }
 
   // Verifies that the browser is on a Door2Door hash route.
