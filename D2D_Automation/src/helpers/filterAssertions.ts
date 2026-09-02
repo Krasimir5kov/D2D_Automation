@@ -4,10 +4,12 @@
 import { expect, type Locator } from '@playwright/test';
 import type { TableView } from '../components/TableView';
 import type { FilterBar } from '../components/FilterBar';
+import type { AppNavigation } from '../components/AppNavigation';
 
 type PageWithTable = {
   table: TableView;
   filters: FilterBar;
+  navigation: AppNavigation;
 };
 
 // Empty-state message locators are page-specific (each page's empty state has its own
@@ -20,34 +22,21 @@ type PageWithEmptyState = PageWithTable & {
 // Waits for any loading-placeholder rows to be gone. The network response resolving
 // doesn't guarantee React has already finished re-rendering to match it, so callers
 // should not read row count/content until this has settled.
-async function waitForTableSettled(pageObject: PageWithTable): Promise<void> {
-  await expect(pageObject.table.loadingCells).toHaveCount(0);
+async function waitForTableSettled(pageObject: PageWithTable, shortTimeout = 30000): Promise<void> {
+  try {
+    await expect(pageObject.table.loadingCells).toHaveCount(0, { timeout: shortTimeout });
+  } catch {
+    // Loading placeholders never cleared within the short timeout — bounce to
+    // another page and back (browser history, not a hard reload) to force a fresh
+    // fetch, then wait again. Confirmed to preserve already-applied filters.
+    await pageObject.navigation.bounceToAnotherPageAndBack();
+    await expect(pageObject.table.loadingCells).toHaveCount(0, { timeout: 60000 });
+  }
 }
 export async function expectTableSettled(
   pageObject: PageWithTable
 ): Promise<void> {
-  await expect(pageObject.table.loadingCells).toHaveCount(0);
-}
-
-// Same as expectTableSettled, but recovers from a stuck/never-clearing loading state
-// instead of just timing out. If the loading placeholders haven't cleared within
-// shortTimeout, bounces to another page and back (navigateAway/navigateBack) to force
-// a fresh fetch, then waits again — confirmed to preserve already-applied filters,
-// unlike a hard page reload. navigateAway/navigateBack must use in-app UI clicks (nav
-// links, tabs), never a page.goto()-based method, or this defeats the point.
-export async function expectTableSettledWithRecovery(
-  pageObject: PageWithTable,
-  navigateAway: () => Promise<void>,
-  navigateBack: () => Promise<void>,
-  shortTimeout = 30000,
-): Promise<void> {
-  try {
-    await expect(pageObject.table.loadingCells).toHaveCount(0, { timeout: shortTimeout });
-  } catch {
-    await navigateAway();
-    await navigateBack();
-    await expect(pageObject.table.loadingCells).toHaveCount(0, { timeout: 60000 });
-  }
+  await waitForTableSettled(pageObject);
 }
 
 export type ExpectEveryRowColumnToContainOptions = {

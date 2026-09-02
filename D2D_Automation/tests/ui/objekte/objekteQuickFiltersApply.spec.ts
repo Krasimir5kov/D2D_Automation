@@ -2,7 +2,7 @@ import { test } from '../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
 import { ObjektePage } from '../../../src/pages';
 import { } from '../../../src/helpers/filterHelpers';
-import { expectEveryRowOrganisationStatusToBe, expectEveryRowOrganisationToBe, expectTableSettledWithRecovery } from '../../../src/helpers/filterAssertions';
+import { expectEveryRowOrganisationStatusToBe, expectEveryRowOrganisationToBe, expectTableSettled } from '../../../src/helpers/filterAssertions';
 import { TABLE_STATUS_CHIP_COLORS } from '../../../src/constants/objectStatusChipColors';
 
 // TODO — UNCONFIRMED, verify all of the following via devtools before trusting this file:
@@ -71,14 +71,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.neubauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].open);
             });
             await test.step('Verify that the status chip color is correct for Nicht übergeben', async () => {
@@ -100,14 +93,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
             });
@@ -127,14 +113,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].open)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.bestandsbauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
             });
@@ -154,14 +133,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly and contains Zurückgewiesen status and chip', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.neubauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].rejected);
             });
             await test.step('Verify that the status chip color is correct for Zurückgewiesen', async () => {
@@ -183,14 +155,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
             });
@@ -210,14 +175,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].rejected)).toBeVisible();
             });
             await test.step('Verify that the list view is in an empty state after applying quick filter Zurückgewiesen', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.bestandsbauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).toBeVisible();
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).toBeVisible();
             });
@@ -237,14 +195,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly and contains Übergeben status and chip', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.neubauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].assigned);
             });
             await test.step('Verify that the status chip color is correct for Übergeben', async () => {
@@ -266,25 +217,11 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly and contains Übergeben status and chip', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expectEveryRowOrganisationStatusToBe(objektePage, statusesText[0].none);
             });
             await test.step('Verify that the list view is updated accordingly and there is no chip for Übergeben', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.loadingCells).toHaveCount(0);
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).not.toBeVisible();
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).not.toBeVisible();
@@ -307,14 +244,7 @@ test.describe('Objekte Quick Filters Apply', () => {
                 await expect(objektePage.filters.filterBarChip(statusesText[0].assigned)).toBeVisible();
             });
             await test.step('Verify that the list view is updated accordingly and there is no chip for Übergeben', async () => {
-                await expectTableSettledWithRecovery(
-                    objektePage,
-                    () => objektePage.navigation.goToBaulose(),
-                    async () => {
-                        await objektePage.navigation.goToObjekte();
-                        await objektePage.bestandsbauTab.click();
-                    },
-                );
+                await expectTableSettled(objektePage);
                 await expect(objektePage.table.loadingCells).toHaveCount(0);
                 await expect(objektePage.table.emptyStateDescriptionByFilterDropdown).not.toBeVisible();
                 await expect(objektePage.table.emptyStateHeadingByFilterDropdown).not.toBeVisible();

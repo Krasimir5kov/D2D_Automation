@@ -64,4 +64,21 @@ export class AppNavigation {
     // Clicks the Konfiguration header link.
     await this.konfigurationLink.click();
   }
+
+  // Bounces to another top-level page and immediately back, via in-app nav clicks
+  // plus browser history — confirmed to unstick a section that's stuck loading,
+  // without a hard reload that would reset already-applied filters. Since this
+  // pushes exactly one history entry itself, page.goBack() reliably restores the
+  // exact prior state (URL, section, filters) without needing to know what that
+  // state was — works from any page, in headless mode too (goBack() isn't
+  // display-dependent).
+  async bounceToAnotherPageAndBack(): Promise<void> {
+    const isOnBaulose = this.page.url().includes('/baulose');
+    if (isOnBaulose) {
+      await this.goToObjekte();
+    } else {
+      await this.goToBaulose();
+    }
+    await this.page.goBack();
+  }
 }

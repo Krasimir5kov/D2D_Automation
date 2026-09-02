@@ -9,7 +9,7 @@
 import { test } from '../../../src/fixtures/salesAction.fixture';
 import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions } from '../../../src/constants/salesActionFiltersValues';
 import { expect } from '@playwright/test';
-import { expectTableSettledWithRecovery } from '../../../src/helpers/filterAssertions';
+import { expectTableSettled } from '../../../src/helpers/filterAssertions';
 import { salesActionPhaseValues } from '../../../src/constants/salesActionPhaseValues';
 
 test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
@@ -52,14 +52,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerAbgelehnt);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettledWithRecovery(
-                    salesActionsPage,
-                    () => salesActionsPage.navigation.goToBaulose(),
-                    async () => {
-                        await salesActionsPage.navigation.goToSalesActions();
-                        await salesActionsPage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -99,14 +92,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerZugestimmt);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettledWithRecovery(
-                    salesActionsPage,
-                    () => salesActionsPage.navigation.goToBaulose(),
-                    async () => {
-                        await salesActionsPage.navigation.goToSalesActions();
-                        await salesActionsPage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -132,14 +118,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungsdokumentOptions.nichtErfasst);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettledWithRecovery(
-                    salesActionsPage,
-                    () => salesActionsPage.navigation.goToBaulose(),
-                    async () => {
-                        await salesActionsPage.navigation.goToSalesActions();
-                        await salesActionsPage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -173,14 +152,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
 
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettledWithRecovery(
-                    salesActionsPage,
-                    () => salesActionsPage.navigation.goToBaulose(),
-                    async () => {
-                        await salesActionsPage.navigation.goToSalesActions();
-                        await salesActionsPage.ftthTab.click();
-                    },
-                );
+                await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
