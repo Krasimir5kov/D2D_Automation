@@ -39,7 +39,7 @@ export default defineConfig({
   // reportSlowTests: { max: 5, threshold: 15_000 }, // Flag the N slowest test files over a threshold in the report
 
   // Scope: use fewer workers on CI to reduce flakiness from shared environments.
-  workers: process.env.CI ? 3 : 3,
+  workers: process.env.CI ? 1 : 3,
   // shard: { total: 4, current: 1 },    // Split the suite across N machines (CI matrix) — this machine runs shard 1 of 4
 
   // Scope: keep the default HTML report for local debugging.
