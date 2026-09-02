@@ -23,6 +23,7 @@ test.describe('Objekte Baulos/Einsatzname Filter Apply', () => {
             });
             await test.step('Open the Baulos/Einsatzname filter and select the first row\'s Baulos/Einsatzname value', async () => {
                 await objektePage.baulosEinsatznameFilter.click();
+                await objektePage.filters.expectDropdownOpened();
                 await expect(page.getByRole('textbox', { name: 'Baulos/Einsatzname suchen' })).toBeVisible();
                 await objektePage.filters.dropDownSearchInputByLabel('Baulos/Einsatzname suchen').fill(searchTerm);
                 await expect(page.locator('#filter-dropdown-root').getByText(searchTerm)).toBeVisible();
@@ -52,6 +53,7 @@ test.describe('Objekte Baulos/Einsatzname Filter Apply', () => {
             });
             await test.step('Open the Baulos/Einsatzname filter and select the first row\'s Baulos/Einsatzname value', async () => {
                 await objektePage.baulosEinsatznameFilter.click();
+                await objektePage.filters.expectDropdownOpened();
                 await expect(page.getByRole('textbox', { name: 'Baulos/Einsatzname suchen' })).toBeVisible();
                 await objektePage.filters.dropDownSearchInputByLabel('Baulos/Einsatzname suchen').fill(searchTerm);
                 await expect(page.locator('#filter-dropdown-root').getByText(searchTerm)).toBeVisible();
@@ -78,6 +80,7 @@ test.describe('Objekte Baulos/Einsatzname Filter Apply', () => {
             });
             await test.step('Open the Baulos/Einsatzname filter and apply random choice', async () => {
                 await objektePage.baulosEinsatznameFilter.click();
+                await objektePage.filters.expectDropdownOpened();
                 await expect(page.getByRole('textbox', { name: 'Baulos/Einsatzname suchen' })).toBeVisible();
                 await objektePage.filters.dropDownSearchInputByLabel('Baulos/Einsatzname suchen').fill('123');
                 await objektePage.filters.firstFoundAvailableChoiceCheckbox().click();

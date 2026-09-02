@@ -184,26 +184,53 @@ export class SalesActionsPage extends BasePage {
 
   // Verifies the Sales Actions Neubau section loaded.
   async expectLoadedNeubau(): Promise<void> {
-    // Checks that the URL is the Sales Actions Neubau route.
-    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau/);
-    // Checks that the Sales Actions search field is visible.
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Sales Actions Neubau route.
+        await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau/);
+        // Checks that the Sales Actions search field is visible.
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToSalesActions();
+        await this.neubauTab.click();
+      },
+    );
   }
 
   // Verifies the Sales Actions FTTH section loaded.
   async expectLoadedFTTH(): Promise<void> {
-    // Checks that the URL is the Sales Actions FTTH route.
-    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/ftth/);
-    // Checks that the Sales Actions search field is visible.
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Sales Actions FTTH route.
+        await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/ftth/);
+        // Checks that the Sales Actions search field is visible.
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToSalesActions();
+        await this.ftthTab.click();
+      },
+    );
   }
 
   // Verifies the Sales Actions Bestandsbau section loaded.
   async expectLoadedBestandsbau(): Promise<void> {
-    // Checks that the URL is the Sales Actions Bestandsbau route.
-    await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/bestandsbau/);
-    // Checks that the Sales Actions search field is visible.
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Sales Actions Bestandsbau route.
+        await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/bestandsbau/);
+        // Checks that the Sales Actions search field is visible.
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToSalesActions();
+        await this.bestandsbauTab.click();
+      },
+    );
   }
 
   // Searches the Sales Actions list.

@@ -21,6 +21,7 @@ test.describe('Objekte PLZ Filter Apply', () => {
             });
             await test.step('Open PLZ filter and fill in PLZ bis and ab', async () => {
                 await objektePage.plzFilter.click();
+                await objektePage.filters.expectDropdownOpened();
                 await objektePage.filters.choiceLabelButton(plzOptions[0]).click();
                 await expect(objektePage.filters.choiceRadio(plzOptions[0])).toBeChecked();
                 await objektePage.plzFromInput.fill(plzValues[0].from);

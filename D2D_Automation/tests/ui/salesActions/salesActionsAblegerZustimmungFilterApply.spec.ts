@@ -9,7 +9,7 @@
 import { test } from '../../../src/fixtures/salesAction.fixture';
 import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions } from '../../../src/constants/salesActionFiltersValues';
 import { expect } from '@playwright/test';
-import { expectTableSettled } from '../../../src/helpers/filterAssertions';
+import { expectTableSettledWithRecovery } from '../../../src/helpers/filterAssertions';
 import { salesActionPhaseValues } from '../../../src/constants/salesActionPhaseValues';
 
 test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
@@ -24,6 +24,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async ({ }) => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Zustimmung' filter option is available and displayed", async ({ }) => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerZugestimmt);
@@ -42,6 +43,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Abgelehnt' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerAbgelehnt);
@@ -50,7 +52,14 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerAbgelehnt);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettled(salesActionsPage);
+                await expectTableSettledWithRecovery(
+                    salesActionsPage,
+                    () => salesActionsPage.navigation.goToBaulose(),
+                    async () => {
+                        await salesActionsPage.navigation.goToSalesActions();
+                        await salesActionsPage.ftthTab.click();
+                    },
+                );
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -81,6 +90,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Zustimmung' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerZugestimmt);
@@ -89,7 +99,14 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerZugestimmt);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettled(salesActionsPage);
+                await expectTableSettledWithRecovery(
+                    salesActionsPage,
+                    () => salesActionsPage.navigation.goToBaulose(),
+                    async () => {
+                        await salesActionsPage.navigation.goToSalesActions();
+                        await salesActionsPage.ftthTab.click();
+                    },
+                );
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -106,6 +123,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'nicht Erfasst' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungsdokumentOptions.nichtErfasst);
@@ -114,7 +132,14 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungsdokumentOptions.nichtErfasst);
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettled(salesActionsPage);
+                await expectTableSettledWithRecovery(
+                    salesActionsPage,
+                    () => salesActionsPage.navigation.goToBaulose(),
+                    async () => {
+                        await salesActionsPage.navigation.goToSalesActions();
+                        await salesActionsPage.ftthTab.click();
+                    },
+                );
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
@@ -136,17 +161,26 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step("Select 'erfasst' option and apply filter", async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
                 await salesActionsPage.genericDropdownMenuOption.getByText(ablegerZustimmungsdokumentOptions.erfasst,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Apply 2ndRun Phase filter to verify that chip is present regardless of SA Phase', async () => {
                 await salesActionsPage.openPhaseFilterDropDown();
+                await salesActionsPage.filters.expectDropdownOpened();
                 await salesActionsPage.genericDropdownMenuOption.getByText(salesActionPhaseValues.secondRun,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
-               
+
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
-                await expectTableSettled(salesActionsPage);
+                await expectTableSettledWithRecovery(
+                    salesActionsPage,
+                    () => salesActionsPage.navigation.goToBaulose(),
+                    async () => {
+                        await salesActionsPage.navigation.goToSalesActions();
+                        await salesActionsPage.ftthTab.click();
+                    },
+                );
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
                 await salesActionsPage.openFirstItemSidePanel();
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();

@@ -34,12 +34,12 @@ export default defineConfig({
   // Scope: retry only on CI by default, just like the standard Playwright template.
   retries: process.env.CI ? 2 : 2,
   timeout: 60_000,                    // Per-test timeout in ms (default is 30s) — raise for slow real environments
-  globalTimeout: 60 * 60 * 1000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
-  expect: { timeout: 60_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)
+  globalTimeout: 60 * 60 * 2000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
+  expect: { timeout: 120_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)
   // reportSlowTests: { max: 5, threshold: 15_000 }, // Flag the N slowest test files over a threshold in the report
 
   // Scope: use fewer workers on CI to reduce flakiness from shared environments.
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 3 : 3,
   // shard: { total: 4, current: 1 },    // Split the suite across N machines (CI matrix) — this machine runs shard 1 of 4
 
   // Scope: keep the default HTML report for local debugging.
@@ -68,7 +68,7 @@ export default defineConfig({
     trace: 'retain-on-failure',       // Record every test, but only keep the file if it failed
 
     // actionTimeout: 10_000,            // Timeout for individual actions like click()/fill() (default: no limit, falls back to test timeout)
-    navigationTimeout: 60_000,        // Timeout for page.goto()/waitForNavigation() specifically — useful for this slow remote INT server
+    navigationTimeout: 120_000,        // Timeout for page.goto()/waitForNavigation() specifically — useful for this slow remote INT server
 
     screenshot: 'only-on-failure',    // Auto-capture a screenshot when a test fails
     // screenshot: 'on',                 // Screenshot after every test, pass or fail

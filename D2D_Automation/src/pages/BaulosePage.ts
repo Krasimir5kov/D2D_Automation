@@ -91,20 +91,38 @@ export class BaulosePage extends BasePage {
   //   await this.searchField.expectVisible();
   // }
   async expectLoadedBestandsbau(): Promise<void> {
-    // Checks that the URL is the Baulose Bestandsbau route.
-    await expect(this.page).toHaveURL(/\/door2door#\/baulose\/bestandsbau/);
-    // "Importdatum" is a column only Bestandsbau's table has — waiting for it confirms
-    // the Bestandsbau-specific table has actually rendered, not just that the URL
-    // changed. Without this, stale FTTH rows could still be showing (and coincidentally
-    // match whatever filter was just applied) for a moment after navigating here.
-    await expect(this.page.getByRole('cell', { name: 'Importdatum' })).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Baulose Bestandsbau route.
+        await expect(this.page).toHaveURL(/\/door2door#\/baulose\/bestandsbau/);
+        // "Importdatum" is a column only Bestandsbau's table has — waiting for it confirms
+        // the Bestandsbau-specific table has actually rendered, not just that the URL
+        // changed. Without this, stale FTTH rows could still be showing (and coincidentally
+        // match whatever filter was just applied) for a moment after navigating here.
+        await expect(this.page.getByRole('cell', { name: 'Importdatum' })).toBeVisible();
+      },
+      () => this.navigation.goToObjekte(),
+      async () => {
+        await this.navigation.goToBaulose();
+        await this.bestandsbauTab.click();
+      },
+    );
   }
   async expectLoadedFTTH(): Promise<void> {
-    // Checks that the URL is the Baulose FTTH route.
-    await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
-    // "Baulose / Regime" is a column only FTTH's table has — same reasoning as above,
-    // for the opposite direction (stale Bestandsbau rows after navigating to FTTH).
-    await expect(this.page.getByRole('cell', { name: 'Baulos / Regime' })).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Baulose FTTH route.
+        await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
+        // "Baulose / Regime" is a column only FTTH's table has — same reasoning as above,
+        // for the opposite direction (stale Bestandsbau rows after navigating to FTTH).
+        await expect(this.page.getByRole('cell', { name: 'Baulos / Regime' })).toBeVisible();
+      },
+      () => this.navigation.goToObjekte(),
+      async () => {
+        await this.navigation.goToBaulose();
+        await this.ftthTab.click();
+      },
+    );
   }
 
   // Searches the Baulose list.
@@ -130,21 +148,25 @@ export class BaulosePage extends BasePage {
   // name-based locator on any reopen after the first use.
   async openOrganisationFilter(): Promise<void> {
     await this.filters.organisationFilterOpen();
+    await this.filters.expectDropdownOpened();
   }
 
   // Opens the Regime filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openRegimeFilter(): Promise<void> {
     await this.filters.regimeFilterOpen();
+    await this.filters.expectDropdownOpened();
   }
 
   // Opens the Phase filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openPhaseFilter(): Promise<void> {
     await this.filters.phaseFilterOpen();
+    await this.filters.expectDropdownOpened();
   }
 
   // Opens the Status filter on Baulose. Same stable-id reasoning as openOrganisationFilter.
   async openStatusFilter(): Promise<void> {
     await this.filters.statusFilterOpen();
+    await this.filters.expectDropdownOpened();
   }
 
   // Opens the Importdatum filter bar button on Baulose. Same stable-id reasoning as

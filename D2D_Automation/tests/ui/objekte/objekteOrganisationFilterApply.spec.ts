@@ -25,6 +25,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
+                await objektePage.filters.expectDropdownOpened();
                 await objektePage.filters.dropDownSearchInput.fill(name);
                 await objektePage.filters.choiceLabelButton(name).click();
 
@@ -55,6 +56,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
+                await objektePage.filters.expectDropdownOpened();
                 await objektePage.filters.dropDownSearchInput.fill(name);
                 await objektePage.filters.choiceLabelButton(name).click();
 
@@ -84,6 +86,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
             });
             await test.step('Open the Organisation filter and select the first row\'s Organisation value', async () => {
                 await objektePage.filters.organisationFilterOpen();
+                await objektePage.filters.expectDropdownOpened();
                 await objektePage.filters.dropDownSearchInput.fill(name);
                 await objektePage.filters.choiceLabelButton(name).click();
 

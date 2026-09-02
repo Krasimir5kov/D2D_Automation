@@ -1,5 +1,5 @@
 // Imports the Playwright Locator and Page types used by this POM component.
-import { type Locator, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 // Represents the filter controls shown above Door2Door list/table pages.
 export class FilterBar {
@@ -15,6 +15,9 @@ export class FilterBar {
   readonly showChoicesButton: Locator;
   readonly dropDownSearchInput: Locator;
   readonly inputSearchLabelMostlyUsed: Locator;
+  // The single shared floating dropdown portal reused by every filter — at rest it's
+  // present but empty, and gets populated with whichever filter's content was triggered.
+  readonly dropdownRoot: Locator;
 
   // Stores the active Playwright page so filter locators can be created from it.
   constructor(private readonly page: Page) {
@@ -30,6 +33,7 @@ export class FilterBar {
     this.showChoicesButton = page.locator('#filter-dropdown-root').getByText(/weitere anzeigen/i);
     this.dropDownSearchInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'Suche nach...' });
     this.inputSearchLabelMostlyUsed = page.getByLabel('Suche nach...');
+    this.dropdownRoot = page.locator('#filter-dropdown-root');
   }
   trigger(filterId: string): Locator {
     return this.page.locator(`#${filterId}`);
@@ -107,6 +111,12 @@ firstFoundAvailableChoiceCheckbox(): Locator {
     return this.page.getByRole('button', { name });
   }
 
+  // Confirms a filter dropdown actually opened — the portal is present but empty at
+  // rest, and only gets populated once a filter trigger has been clicked and its
+  // content has rendered into it.
+  async expectDropdownOpened(): Promise<void> {
+    await expect(this.dropdownRoot).not.toBeEmpty();
+  }
   async applyFilter(): Promise<void> {
     await this.applyButton.click();
   }

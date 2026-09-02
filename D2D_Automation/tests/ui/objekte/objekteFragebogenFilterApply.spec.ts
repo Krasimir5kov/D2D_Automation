@@ -26,6 +26,7 @@ test.describe('Objekte Fragebogen Filter Apply', () => {
                 });
                 await test.step(`Open Fragebogen filter and select "${option}"`, async () => {
                     await objektePage.fragenBogenFilterStatus.click();
+                    await objektePage.filters.expectDropdownOpened();
 
                     await objektePage.filters.choiceLabelButton(option).click();
                     await expect(objektePage.filters.choiceRadio(option)).toBeChecked();

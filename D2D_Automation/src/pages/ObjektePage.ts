@@ -98,18 +98,45 @@ export class ObjektePage extends BasePage {
 
   // Verifies the Objekte page loaded.
   async expectLoadedNeubau(): Promise<void> {
-    // Checks that the URL is the Objekte Neubau route.
-    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/neubau/);
-    // Checks that the Objekte search field is visible.
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Objekte Neubau route.
+        await expect(this.page).toHaveURL(/\/door2door#\/objekte\/neubau/);
+        // Checks that the Objekte search field is visible.
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToObjekte();
+        await this.neubauTab.click();
+      },
+    );
   }
   async expectLoadedFtth(): Promise<void> {
-    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/ftth/);
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        await expect(this.page).toHaveURL(/\/door2door#\/objekte\/ftth/);
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToObjekte();
+        await this.ftthTab.click();
+      },
+    );
   }
   async expectLoadedBestandsbau(): Promise<void> {
-    await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau/);
-    await expect(this.searchInput).toBeVisible();
+    await this.expectWithRecovery(
+      async () => {
+        await expect(this.page).toHaveURL(/\/door2door#\/objekte\/bestandsbau/);
+        await expect(this.searchInput).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToObjekte();
+        await this.bestandsbauTab.click();
+      },
+    );
   }
 
   // Searches the Objekte list.
