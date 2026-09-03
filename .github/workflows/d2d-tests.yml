@@ -13,6 +13,10 @@ on:
           - test:chrome
           - test:ui
           - test:api
+          - test:objekte
+          - test:baulose
+          - test:salesActions
+          - test:smokeTestAllPAges
 
 permissions:
   contents: read
