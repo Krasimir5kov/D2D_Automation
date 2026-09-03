@@ -17,6 +17,14 @@ on:
           - test:baulose
           - test:salesActions
           - test:smokeTestAllPAges
+      environment:
+        description: Environment to run against
+        required: true
+        default: int
+        type: choice
+        options:
+          - int
+          - prod
 
 permissions:
   contents: read
@@ -39,6 +47,7 @@ jobs:
       AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
       AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
       INTEGRATION_URL: ${{ secrets.INTEGRATION_URL }}
+      PROD_URL: ${{ secrets.PROD_URL }}
       MANUAL_AUTH_TIMEOUT_MINUTES: 15
       AUTH_SUCCESS_URL_PATTERN: '**/door2door#/**'
 
@@ -67,12 +76,12 @@ jobs:
       - name: Create fresh auth state
         env:
           REUSE_AUTH_STATE: false
-        run: xvfb-run -a npm run auth:setup
+        run: xvfb-run -a npm run auth:setup:${{ inputs.environment }}
 
       - name: Run tests
         env:
           REUSE_AUTH_STATE: true
-        run: xvfb-run -a npm run ${{ inputs.test_command }}
+        run: xvfb-run -a npm run ${{ inputs.test_command }}:${{ inputs.environment }}
 
       - name: Upload Playwright artifacts
         if: always()

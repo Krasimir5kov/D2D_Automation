@@ -11,6 +11,16 @@ dotenv.config({
   quiet: true,
 });
 
+// Scope: switch the target environment via TEST_ENV=prod (default is int, i.e. leave
+// INTEGRATION_URL as-is). Resolved into INTEGRATION_URL so every page object and the
+// auth setup keep reading that one variable, unaware of which environment it is.
+if (process.env.TEST_ENV === 'prod') {
+  if (!process.env.PROD_URL) {
+    throw new Error('Set PROD_URL in .env before running tests with TEST_ENV=prod.');
+  }
+  process.env.INTEGRATION_URL = process.env.PROD_URL;
+}
+
 // Scope: define the Playwright projects and shared test behavior for this framework.
 export default defineConfig({
   // Scope: keep all test files under the tests folder.
@@ -33,9 +43,9 @@ export default defineConfig({
 
   // Scope: retry only on CI by default, just like the standard Playwright template.
   retries: process.env.CI ? 2 : 2,
-  timeout: 60_000,                    // Per-test timeout in ms (default is 30s) — raise for slow real environments
-  globalTimeout: 60 * 60 * 2000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
-  expect: { timeout: 120_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)
+  //timeout: 60_000,                    // Per-test timeout in ms (default is 30s) — raise for slow real environments
+  //globalTimeout: 60 * 60 * 2000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
+  //expect: { timeout: 120_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)
   // reportSlowTests: { max: 5, threshold: 15_000 }, // Flag the N slowest test files over a threshold in the report
 
   // Scope: use fewer workers on CI to reduce flakiness from shared environments.
