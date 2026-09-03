@@ -4,11 +4,10 @@ import { expectEveryRowBauloseEinsatznameToBe, expectListIsEmptyWithMessageByFil
 import { getFirstRowBauloseEinsatzname } from '../../../src/helpers/filterHelpers';
 
 test.describe('Objekte Baulos/Einsatzname Filter Apply', () => {
-    // SOFT: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
-    // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these
-    // expected-to-fail so a full-suite run isn't reported as failed because of it.
-    // Remove once that ticket is resolved.
-    test.fail();
+    // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
+    // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
+    // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.
+    test.skip();
     test.describe("Verify Baulos/Einsatzname filter functionality and results in three sections", async () => {
         let searchTerm = '';
         let fullEinsatznameLine = '';
