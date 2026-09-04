@@ -38,7 +38,7 @@ export class KonfigurationPage extends BasePage {
   // Locator for the "Konfiguration" header shown above all sidebar nav items — this page
   // has no search field, so this is the load-evidence used instead. UNCONFIRMED: exact
   // tag/role not yet verified via devtools, using a plain exact-text match for now.
-  readonly pageHeader: Locator;
+  readonly navSideBarHeader: Locator;
 
   // Builds the Konfiguration page object for the active browser page.
   constructor(page: Page) {
@@ -72,7 +72,7 @@ export class KonfigurationPage extends BasePage {
     // Locates the Abschlussgruende search field by documented placeholder.
     this.abschlussgruendeSearchInput = page.getByPlaceholder(/Suche in Abschluss/i);
     // Locates the "Konfiguration" page header above the sidebar nav — unconfirmed markup.
-    this.pageHeader = page.getByText('Konfiguration', { exact: true });
+    this.navSideBarHeader = page.locator('#configuration-navigation-sidebar').getByText('Konfiguration', { exact: true });
   }
 
   // Opens the bare Konfiguration route — the real app auto-redirects this to Übersicht.
@@ -91,7 +91,7 @@ export class KonfigurationPage extends BasePage {
         await expect(this.overviewNav).toBeVisible();
         // No search field on this page — the "Konfiguration" header is the load evidence
         // instead. See the pageHeader locator comment: not yet confirmed via devtools.
-        await expect(this.pageHeader).toBeVisible();
+        await expect(this.navSideBarHeader).toBeVisible();
       },
       () => this.navigation.goToBaulose(),
       () => this.navigation.goToKonfiguration(),
