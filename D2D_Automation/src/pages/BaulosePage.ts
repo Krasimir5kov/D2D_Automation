@@ -70,11 +70,27 @@ export class BaulosePage extends BasePage {
     this.cleanSearchInputButton = page.locator('#baulose-search-field').locator('..').getByRole('button').first();
   }
 
-  // Opens the Baulose FTTH route directly.
-  // async goto(): Promise<void> {
-  //   // Navigates to the confirmed Baulose route.
-  //   await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
-  // }
+  // Opens the bare Baulose route — the real app auto-redirects this to FTTH-AUSBAU.
+  async goToBaulosePage(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.main);
+  }
+
+  // Verifies the bare Baulose route loaded and redirected to FTTH-AUSBAU as expected.
+  async expectLoadedBaulose(): Promise<void> {
+    await this.expectWithRecovery(
+      async () => {
+        await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
+        await this.searchField.expectVisible();
+        await this.searchField.expectPlaceholder(/Suche nach Baulose\/Einsatznamen/i);
+      },
+      () => this.navigation.goToObjekte(),
+      async () => {
+        await this.navigation.goToBaulose();
+        await this.ftthTab.click();
+      },
+    );
+  }
+
   async gotoBestandsbauListSection(): Promise<void> {
     // Navigates to the confirmed Baulose route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.bestandsbau);
@@ -83,13 +99,6 @@ export class BaulosePage extends BasePage {
     // Navigates to the confirmed Baulose route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.baulose.ftth);
   }
-  // Verifies the Baulose page loaded.
-  // async expectLoaded(): Promise<void> {
-  //   // Checks that the URL is the Baulose FTTH route.
-  //   await expect(this.page).toHaveURL(/\/door2door#\/baulose\/ftth/);
-  //   // Checks that the Baulose search field is visible.
-  //   await this.searchField.expectVisible();
-  // }
   async expectLoadedBestandsbau(): Promise<void> {
     await this.expectWithRecovery(
       async () => {

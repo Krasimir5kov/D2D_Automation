@@ -1,9 +1,10 @@
 // Imports Playwright assertion support and the Page type used by all page objects.
-import { expect, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 // Stores the confirmed Door2Door hash routes used by the page objects.
 export const door2doorRoutes = {
   baulose: {
+    main: '#/baulose',
     ftth: '#/baulose/ftth',
     bestandsbau: '#/baulose/bestandsbau',
   },
@@ -14,11 +15,13 @@ export const door2doorRoutes = {
     bestandsbau: '#/objekte/bestandsbau',
   },
   salesActions: {
+    main: '#/sales-actions',
     neubau: '#/sales-actions/neubau',
     ftth: '#/sales-actions/ftth',
     bestandsbau: '#/sales-actions/bestandsbau',
   },
   benutzerverwaltung: {
+    main: '#/benutzerverwaltung',
     users: '#/benutzerverwaltung/users',
     teams: '#/benutzerverwaltung/teams',
     organisationen: '#/benutzerverwaltung/organisationen',
@@ -129,6 +132,21 @@ export abstract class BasePage {
         await new Promise((resolve) => setTimeout(resolve, delayMs));
       }
     }
+  }
+
+  // Asserts the "floating label" text shown next to a search input is visible with the
+  // expected wording. This is NOT a native placeholder attribute — every search field in
+  // this app renders <label for="{input-id}"><span>{text}</span></label> as a sibling of
+  // the <input>, inside a shared "flexed-container" wrapper, e.g.:
+  //   <div class="flexed-container primary">
+  //     <label for="sales-actions-search-field"><span>Suche in Sales Actions...</span></label>
+  //     <input id="sales-actions-search-field" .../>
+  //     <button class="search-button icon-a1-lupe" .../>
+  //   </div>
+  // So this climbs from the input to that shared wrapper and looks for the label text
+  // there, rather than asserting a placeholder attribute that doesn't actually exist.
+  async expectSearchFieldPlaceholderVisible(searchInput: Locator, expectedText: string | RegExp): Promise<void> {
+    await expect(searchInput.locator('..').getByText(expectedText)).toBeVisible();
   }
 
   // Verifies that the browser is on a Door2Door hash route.

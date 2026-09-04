@@ -5,7 +5,7 @@
  * filter dropdown's own content/structure — see bauloseRegimeFilterDropdown.spec.ts.
  */
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
-import { selectFilterChoiceThatContainSearchInput, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
+import { selectFilterChoiceExpandingAllOptions, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
 import { expectEveryRowColumnToContain, expectListIsEmptyWithMessageByFilterDropDown } from '../../../src/helpers/filterAssertions';
 import { BESTANDSBAU_COLUMNS, FTTH_COLUMNS } from '../../../src/constants/baulose';
 
@@ -23,7 +23,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
     const regimeValueFilterOnlyForBestandsbau2 = 'FTTC';
     test('Apply Regime filter that retrun results only in FTTH-AUSBAU section and Bestandsbau is empty', async ({ page, baulosePage }) => {
       await test.step('Open and Select the Regime Filter Value ', async () => {
-        await selectFilterChoiceThatContainSearchInput(baulosePage, () => baulosePage.openRegimeFilter(), regimeValueFilterOnlyForFTTH2);
+        await selectFilterChoiceExpandingAllOptions(baulosePage, () => baulosePage.openRegimeFilter(), regimeValueFilterOnlyForFTTH2);
       })
       await test.step("Verify the Regime checkbox is checked", async () => {
         await expect(baulosePage.filters.choiceCheckbox(regimeValueFilterOnlyForFTTH2)).toBeChecked();
@@ -51,7 +51,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
     });
     test("Apply Regime Filter Criteria That Returns Results in Bestandsbau List View Only and FTTH-AUSBAU is empty", async ({ page, baulosePage }) => {
       await test.step('Open and Select the Regime Filter value', async () => {
-        await selectFilterChoiceThatContainSearchInput(baulosePage, () => baulosePage.openRegimeFilter(), regimeValueFilterOnlyForBestandsbau);
+        await selectFilterChoiceExpandingAllOptions(baulosePage, () => baulosePage.openRegimeFilter(), regimeValueFilterOnlyForBestandsbau);
       });
       await test.step("Verify the Regime Option is checked", async () => {
         await expect(baulosePage.filters.choiceCheckbox(regimeValueFilterOnlyForBestandsbau)).toBeChecked();

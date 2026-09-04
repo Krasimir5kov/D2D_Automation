@@ -73,18 +73,30 @@ this.usersTab = page.getByRole('link', { name: /\bBenutzer\b/i }).or(page.getByR
     this.createAdminA1Button = page.getByRole('button', { name: /Admin A1 erstellen/i });
   }
 
-  // Opens the Benutzerverwaltung users route directly.
-  async goto(): Promise<void> {
-    // Navigates to the confirmed Benutzerverwaltung route.
-    await this.gotoDoor2DoorRoute(door2doorRoutes.benutzerverwaltung.users);
+  // Opens the bare Benutzerverwaltung route — the real app auto-redirects this to Benutzer.
+  async goToBenutzerverwaltungPage(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.benutzerverwaltung.main);
   }
 
-  // Verifies the Benutzerverwaltung page loaded.
-  async expectLoaded(): Promise<void> {
-    // Checks that the URL is the Benutzerverwaltung users route.
-    await expect(this.page).toHaveURL(/\/door2door#\/benutzerverwaltung\/users/);
-    // Checks that the Benutzer tab is visible.
-    await expect(this.usersTab).toBeVisible();
+  // Verifies the bare Benutzerverwaltung route loaded and redirected to Benutzer.
+  async expectLoadedBenutzerverwaltung(): Promise<void> {
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is the Benutzerverwaltung users route.
+        await expect(this.page).toHaveURL(/\/door2door#\/benutzerverwaltung\/users/);
+        // Checks that the Benutzer tab is visible.
+        await expect(this.usersTab).toBeVisible();
+        // Checks that the search field is visible, and its floating <label> text —
+        // confirmed real DOM, not a placeholder attribute: "Suche in Benutzerverwaltung...".
+        await expect(this.searchInput).toBeVisible();
+        await this.expectSearchFieldPlaceholderVisible(this.searchInput, /Suche in Benutzerverwaltung/i);
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToBenutzerverwaltung();
+        await this.usersTab.click();
+      },
+    );
   }
 
   // Searches the Benutzerverwaltung list.

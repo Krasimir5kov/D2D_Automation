@@ -22,4 +22,13 @@ export class SearchField {
     async expectVisible(): Promise<void> {
         await expect(this.locator).toBeVisible();
     }
+
+    // Asserts the "floating label" text shown next to the search input — NOT a native
+    // placeholder attribute. Every search field in this app renders
+    // <label for="{input-id}"><span>{text}</span></label> as a sibling of the <input>,
+    // inside a shared wrapper, so this climbs to that wrapper and checks the label text
+    // there instead of a placeholder attribute that doesn't actually exist.
+    async expectPlaceholder(text: string | RegExp): Promise<void> {
+        await expect(this.locator.locator('..').getByText(text)).toBeVisible();
+    }
 }

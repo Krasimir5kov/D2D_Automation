@@ -38,6 +38,7 @@ export class FilterBar {
   trigger(filterId: string): Locator {
     return this.page.locator(`#${filterId}`);
   }
+  
   dropDownSearchInputByLabel(labelText: string): Locator {
   return this.page.locator('#filter-dropdown-root').getByLabel(labelText);
 }

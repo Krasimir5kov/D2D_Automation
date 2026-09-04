@@ -35,6 +35,10 @@ export class KonfigurationPage extends BasePage {
   readonly regimeSearchInput: Locator;
   // Locator for the Abschlussgruende search input.
   readonly abschlussgruendeSearchInput: Locator;
+  // Locator for the "Konfiguration" header shown above all sidebar nav items — this page
+  // has no search field, so this is the load-evidence used instead. UNCONFIRMED: exact
+  // tag/role not yet verified via devtools, using a plain exact-text match for now.
+  readonly pageHeader: Locator;
 
   // Builds the Konfiguration page object for the active browser page.
   constructor(page: Page) {
@@ -67,20 +71,31 @@ export class KonfigurationPage extends BasePage {
     this.regimeSearchInput = page.getByPlaceholder(/Suche in Regime/i);
     // Locates the Abschlussgruende search field by documented placeholder.
     this.abschlussgruendeSearchInput = page.getByPlaceholder(/Suche in Abschluss/i);
+    // Locates the "Konfiguration" page header above the sidebar nav — unconfirmed markup.
+    this.pageHeader = page.getByText('Konfiguration', { exact: true });
   }
 
-  // Opens the Konfiguration overview route directly.
-  async goto(): Promise<void> {
+  // Opens the bare Konfiguration route — the real app auto-redirects this to Übersicht.
+  async goToKonfigurationPage(): Promise<void> {
     // Navigates to the confirmed Konfiguration overview route.
     await this.gotoDoor2DoorRoute(door2doorRoutes.konfiguration.overview);
   }
 
-  // Verifies the Konfiguration page loaded.
-  async expectLoaded(): Promise<void> {
-    // Checks that the URL is in the Konfiguration route area.
-    await expect(this.page).toHaveURL(/\/door2door#\/konfiguration\//);
-    // Checks that the overview navigation item is visible.
-    await expect(this.overviewNav).toBeVisible();
+  // Verifies the Konfiguration page loaded and redirected to Übersicht.
+  async expectLoadedKonfiguration(): Promise<void> {
+    await this.expectWithRecovery(
+      async () => {
+        // Checks that the URL is in the Konfiguration route area.
+        await expect(this.page).toHaveURL(/\/door2door#\/konfiguration\//);
+        // Checks that the overview navigation item is visible.
+        await expect(this.overviewNav).toBeVisible();
+        // No search field on this page — the "Konfiguration" header is the load evidence
+        // instead. See the pageHeader locator comment: not yet confirmed via devtools.
+        await expect(this.pageHeader).toBeVisible();
+      },
+      () => this.navigation.goToBaulose(),
+      () => this.navigation.goToKonfiguration(),
+    );
   }
 
   // Opens the Aufgaben configuration section.

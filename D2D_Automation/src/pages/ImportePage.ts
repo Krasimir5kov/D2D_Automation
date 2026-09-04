@@ -67,6 +67,8 @@ export class ImportePage extends BasePage {
     await expect(this.page).toHaveURL(/\/door2door#\/importe/);
     // Checks that the Importe search field is visible.
     await expect(this.searchInput).toBeVisible();
+    // Confirmed real DOM: this is a floating <label>, not a placeholder attribute.
+    await this.expectSearchFieldPlaceholderVisible(this.searchInput, /Suche in Importe/i);
   }
 
   // Searches the Importe list.

@@ -14,23 +14,23 @@ import {BaulosePage,
 test.describe('Smoke Test: All Door2Door Pages and Sections',{tag: ['@Admin','@Admin-Regional']}, () => {
     const PAGES_TO_SMOKE_TEST = [
         { name: 'Baulose',
-            open: (page: Page) => new BaulosePage(page).gotoBestandsbauListSection(),
-            verify : (page: Page) => new BaulosePage(page).expectLoadedBestandsbau() },
+            open: (page: Page) => new BaulosePage(page).goToBaulosePage(),
+            verify : (page: Page) => new BaulosePage(page).expectLoadedBaulose() },
         { name: 'Objekte',
-            open: (page: Page) => new ObjektePage(page).gotoNeubauSection(),
-            verify : (page: Page) => new ObjektePage(page).expectLoadedNeubau() },
+            open: (page: Page) => new ObjektePage(page).goToObjektePage(),
+            verify : (page: Page) => new ObjektePage(page).expectLoadedObjekte() },
         { name: 'Sales Actions',
-            open: (page: Page) => new SalesActionsPage(page).gotoNeubauSalesAction(),
-            verify : (page: Page) => new SalesActionsPage(page).expectLoadedNeubau() },
+            open: (page: Page) => new SalesActionsPage(page).goToSalesActionPage(),
+            verify : (page: Page) => new SalesActionsPage(page).expectLoadedSalesAction() },
         { name: 'Benutzerverwaltung',
-            open: (page: Page) => new BenutzerverwaltungPage(page).goto(),
-            verify : (page: Page) => new BenutzerverwaltungPage(page).expectLoaded() },
-        { name: 'Importe', 
+            open: (page: Page) => new BenutzerverwaltungPage(page).goToBenutzerverwaltungPage(),
+            verify : (page: Page) => new BenutzerverwaltungPage(page).expectLoadedBenutzerverwaltung() },
+        { name: 'Importe',
               open: (page: Page) => new ImportePage(page).goto(),
                 verify : (page: Page) => new ImportePage(page).expectLoaded() },
         { name: 'Konfiguration',
-              open: (page: Page) => new KonfigurationPage(page).goto(),
-                verify : (page: Page) => new KonfigurationPage(page).expectLoaded() }
+              open: (page: Page) => new KonfigurationPage(page).goToKonfigurationPage(),
+                verify : (page: Page) => new KonfigurationPage(page).expectLoadedKonfiguration() }
 
     ];
     for ( const pageInfo of PAGES_TO_SMOKE_TEST) {

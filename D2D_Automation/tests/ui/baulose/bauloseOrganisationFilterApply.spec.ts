@@ -5,7 +5,7 @@
  * filter dropdown's own content/structure — see bauloseOrganisationFilterDropdown.spec.ts.
  */
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
-import { selectFilterChoiceThatContainSearchInput, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
+import { selectFilterChoiceExpandingAllOptions, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
 import { expectEveryRowColumnToContain } from '../../../src/helpers/filterAssertions';
 import { BESTANDSBAU_COLUMNS, FTTH_COLUMNS } from '../../../src/constants/baulose';
 
@@ -21,7 +21,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
   test.describe('Organisation filter', () => {
     test('Apply Organisation filter and verify results', async ({ page, baulosePage }) => {
       await test.step('Open and select the Organisation filter value', async () => {
-        await selectFilterChoiceThatContainSearchInput(baulosePage, () => baulosePage.openOrganisationFilter(), organisationFilterOption);
+        await selectFilterChoiceExpandingAllOptions(baulosePage, () => baulosePage.openOrganisationFilter(), organisationFilterOption);
       });
 
       await test.step('Verify the Organisation checkbox is checked', async () => {

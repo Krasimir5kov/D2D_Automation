@@ -83,6 +83,8 @@ export class ObjektePage extends BasePage {
   async expectLoadedObjekte(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/objekte/);
     await expect(this.searchInput).toBeVisible();
+    // Confirmed real DOM: this is a floating <label>, not a placeholder attribute.
+    await this.expectSearchFieldPlaceholderVisible(this.searchInput, /Suche in Objekte/i);
   }
   // Opens the Objekte Neubau route directly.
   async gotoNeubauSection(): Promise<void> {

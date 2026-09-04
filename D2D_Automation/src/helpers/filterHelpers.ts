@@ -15,10 +15,12 @@ type PageWithFilters = {
   filters: FilterBar;
 };
 
-// Opens a filter and checks one choice by its visible label. Does not apply it —
-// call applyFilterAndWaitForResults separately, so the caller can assert the
-// checkbox state in between the two actions if it wants to.
-export async function selectFilterChoiceThatContainSearchInput(
+// Opens the given filter, expands its full choice list (clicks "weitere anzeigen" if
+// present, since some filters truncate the list until that's clicked), then checks one
+// choice by its visible label. Does not apply it — call applyFilterAndWaitForResults
+// separately, so the caller can assert the checkbox state in between the two actions
+// if it wants to.
+export async function selectFilterChoiceExpandingAllOptions(
   pageObject: PageWithFilters,
   openFilter: () => Promise<void>,
   choiceLabel: string,

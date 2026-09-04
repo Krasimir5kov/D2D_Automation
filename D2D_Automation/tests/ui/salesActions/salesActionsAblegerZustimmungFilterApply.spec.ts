@@ -24,7 +24,6 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async ({ }) => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Zustimmung' filter option is available and displayed", async ({ }) => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerZugestimmt);
@@ -43,7 +42,6 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Abgelehnt' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerAbgelehnt);
@@ -86,7 +84,6 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'Ableger Zustimmung' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungOptions.ablegerZugestimmt);
@@ -115,7 +112,6 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Open Ableger Zustimmung Filter DropDown', async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
             });
             await test.step("Verify that 'nicht Erfasst' filter option is available and displayed", async () => {
                 await salesActionsPage.expectAblegerAbgelehntFilterOptionDisplayed(ablegerZustimmungsdokumentOptions.nichtErfasst);
@@ -149,13 +145,11 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step("Select 'erfasst' option and apply filter", async () => {
                 await salesActionsPage.openAblegerZustimmungFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
                 await salesActionsPage.genericDropdownMenuOption.getByText(ablegerZustimmungsdokumentOptions.erfasst,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Apply 2ndRun Phase filter to verify that chip is present regardless of SA Phase', async () => {
                 await salesActionsPage.openPhaseFilterDropDown();
-                await salesActionsPage.filters.expectDropdownOpened();
                 await salesActionsPage.genericDropdownMenuOption.getByText(salesActionPhaseValues.secondRun,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
 

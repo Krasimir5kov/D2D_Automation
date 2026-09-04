@@ -5,7 +5,7 @@
  * filter dropdown's own content/structure — see bauloseStatusFilterDropdown.spec.ts.
  */
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
-import { selectFilterChoiceThatContainSearchInput, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
+import { selectFilterChoiceExpandingAllOptions, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
 import { expectEveryRowColumnToContain, expectListIsEmptyWithMessageByFilterDropDown } from '../../../src/helpers/filterAssertions';
 import { BESTANDSBAU_COLUMNS, FTTH_COLUMNS } from '../../../src/constants/baulose';
 
@@ -26,7 +26,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
     for (const statusValue of statusValues) {
       test(`Apply Status Filter Option (${statusValue.Name}) and verify results in FTTH-AUSBAU list view`, async ({ page, baulosePage }) => {
         await test.step('Open and Select the Status Filter value', async () => {
-          await selectFilterChoiceThatContainSearchInput(baulosePage, () => baulosePage.openStatusFilter(), statusValue.Name);
+          await selectFilterChoiceExpandingAllOptions(baulosePage, () => baulosePage.openStatusFilter(), statusValue.Name);
         });
         await test.step(`Verify the Status Option (${statusValue.Name}) is checked`, async () => {
           await expect(baulosePage.filters.choiceCheckbox(statusValue.Name)).toBeChecked();

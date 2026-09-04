@@ -126,10 +126,71 @@ export class SalesActionsPage extends BasePage {
     this.ablegerErfasstChipInSidePanel = page.locator('#ftth-object-side-panel').getByText('Ableger Zustimmung', { exact: true });
     
   }
+  async openBaulosEinsatznameFilterDropDown(): Promise<void> {
+    await this.baulosEinsatznameFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openOrganisationFilterDropDown(): Promise<void> {
+    await this.filters.organisationFilterOpen();
+    await this.filters.expectDropdownOpened();
+  }
+  async openRegimeFilterDropDown(): Promise<void> {
+    await this.regimeFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
   async openPhaseFilterDropDown(): Promise<void> {
     await this.phaseFilter.click();
+    await this.filters.expectDropdownOpened();
   }
-  
+  async openTerminFilterDropDown(): Promise<void> {
+    await this.terminFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openImmobilienartFilterDropDown(): Promise<void> {
+    await this.immobilienartFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openStatusFilterDropDown(): Promise<void> {
+    await this.statusFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openAufgabeFilterDropDown(): Promise<void> {
+    await this.aufgabeFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openErgebnisFilterDropDown(): Promise<void> {
+    await this.ergebnisFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openPlanskizzeFilterDropDown(): Promise<void> {
+    await this.planskizzeFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openBestellungUeberD2DFilterDropDown(): Promise<void> {
+    await this.bestellungUeberD2DFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openKundendatenFilterDropDown(): Promise<void> {
+    await this.kundendatenFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openSalesActionTypeFilterDropDown(): Promise<void> {
+    await this.salesActionTypeFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openObjektFilterDropDown(): Promise<void> {
+    await this.objektFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openZugewiesenAnFilterDropDown(): Promise<void> {
+    await this.zugewiesenAnFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+  async openUpsellingPotentialFilterDropDown(): Promise<void> {
+    await this.upsellingPotentialFilter.click();
+    await this.filters.expectDropdownOpened();
+  }
+
   async expectAblegerErfasstChipInSidePanelVisible(): Promise<void> {
     await expect(this.ablegerErfasstChipInSidePanel).toBeVisible();
   }
@@ -168,6 +229,28 @@ export class SalesActionsPage extends BasePage {
   async openBestellscheinSidePanelSection(): Promise<void> {
     await this.bestellscheinSidePanelSection.click();
   }
+  // Opens the bare Sales Actions route — the real app auto-redirects this to Neubau.
+  async goToSalesActionPage(): Promise<void> {
+    await this.gotoDoor2DoorRoute(door2doorRoutes.salesActions.main);
+  }
+
+  // Verifies the bare Sales Actions route loaded and redirected to Neubau as expected.
+  async expectLoadedSalesAction(): Promise<void> {
+    await this.expectWithRecovery(
+      async () => {
+        await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau/);
+        await expect(this.searchInput).toBeVisible();
+        // Confirmed real DOM: this is a floating <label>, not a placeholder attribute.
+        await this.expectSearchFieldPlaceholderVisible(this.searchInput, /Suche in Sales Actions/i);
+      },
+      () => this.navigation.goToBaulose(),
+      async () => {
+        await this.navigation.goToSalesActions();
+        await this.neubauTab.click();
+      },
+    );
+  }
+
   // Opens the Sales Actions Neubau route directly.
   async gotoNeubauSalesAction(): Promise<void> {
     // Navigates to the confirmed Sales Actions route.
@@ -275,6 +358,7 @@ export class SalesActionsPage extends BasePage {
   }
   async openAblegerZustimmungFilterDropDown(): Promise<void> {
     await this.ablegerZustimmungFilter.click();
+    await this.filters.expectDropdownOpened();
   }
   async expectAblegerAbgelehntFilterOptionDisplayed(filterOption: string | RegExp): Promise<void> {
     await expect(this.genericDropdownMenuOption.getByText(filterOption,{exact: true})).toBeVisible();

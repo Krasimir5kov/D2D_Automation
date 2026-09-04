@@ -205,6 +205,40 @@ export async function expectEveryRowOrganisationStatusToBe(
     }
   }
 }
+
+// Asserts every row's overall Status chip (role="status", e.g. inside
+// #sales-action-row-{id}-status) shows the expected label, and optionally that it has
+// the expected background color. Scoped by the stable role="status" attribute rather
+// than a column index — Sales Actions has no column-index constants file the way
+// Baulose does, and the Status cell itself embeds more than just this chip (e.g. the
+// Ergebnis value and date sit in the same cell, as a separate, uncolored line).
+export async function expectEveryRowStatusChipToBe(
+  pageObject: PageWithTable,
+  expectedStatusLabel: string,
+  expectedBackgroundColor?: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const statusChips = pageObject.table.rows.locator('[role="status"]');
+  await expect(statusChips.first()).toBeVisible();
+
+  const count = await statusChips.count();
+  for (let i = 0; i < count; i++) {
+    await expect(statusChips.nth(i), `row ${i}: expected status "${expectedStatusLabel}"`).toContainText(expectedStatusLabel);
+    if (expectedBackgroundColor) {
+      // Climb from the text itself, not from [role="status"] — the actual colored chip
+      // div is a *child* of role="status", not an ancestor, so starting from role="status"
+      // climbs straight past it and lands on the table row's own (zebra-striped, so
+      // inconsistent) background instead.
+      const backgroundColor = await nearestNonTransparentBackgroundColor(
+        statusChips.nth(i).getByText(expectedStatusLabel, { exact: true }),
+      );
+      expect(
+        backgroundColor,
+        `row ${i}: expected background ${expectedBackgroundColor}, got ${backgroundColor}`,
+      ).toBe(expectedBackgroundColor);
+    }
+  }
+}
 export async function expectEveryRowDataObjectNameToContain(
   pageObject: PageWithTable,
   searchValue: string,
