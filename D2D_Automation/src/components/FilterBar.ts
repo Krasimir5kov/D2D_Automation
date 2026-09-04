@@ -101,6 +101,11 @@ firstFoundAvailableChoiceCheckbox(): Locator {
     const escaped = this.escapeForRegExp(filterId);
     return this.page.locator('.gucci-common-label-content').filter({ hasText: new RegExp(`^${escaped}$`, 'i') });
   }
+  filterBarChipPlusPrefix(prefix:string , filterId: string): Locator {
+    const escapedPrefix = this.escapeForRegExp(prefix);
+    const escapedFilterId = this.escapeForRegExp(filterId);
+    return this.page.locator('.gucci-common-label-content').filter({ hasText: new RegExp(`^${escapedPrefix}: ${escapedFilterId}$`, 'i') });
+  }
   
   // Returns a filter trigger button by visible name — legacy fallback only. The five
   // Baulose filters (Organisation/Regime/Phase/Status/Importdatum) already have stable

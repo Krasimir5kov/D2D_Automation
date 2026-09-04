@@ -51,6 +51,9 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             await test.step("Select 'Ableger Abgelehnt' option and apply filter", async () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerAbgelehnt);
             });
+            await test.step("Verify that 'Ableger Abgelehnt' filter chip is displayed in the filter bar", async () => {
+                await expect(salesActionsPage.filters.filterBarChip(ablegerZustimmungOptions.ablegerAbgelehnt)).toBeVisible();
+            });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
                 await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
@@ -91,6 +94,9 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             await test.step("Select 'Ableger Zustimmung' option and apply filter", async () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungOptions.ablegerZugestimmt);
             });
+            await test.step("Verify that 'Ableger Zustimmung' filter chip is displayed in the filter bar", async () => {
+                await expect(salesActionsPage.filters.filterBarChip(ablegerZustimmungOptions.ablegerZugestimmt)).toBeVisible();
+            });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
                 await expectTableSettled(salesActionsPage);
                 await expect(salesActionsPage.table.loadingCells).toHaveCount(0);
@@ -116,6 +122,9 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step("Select 'nicht Erfasst' option and apply filter", async () => {
                 await salesActionsPage.selectAblegerAbgelehntOptionAndApplyFilter(ablegerZustimmungsdokumentOptions.nichtErfasst);
+            });
+            await test.step("Verify that 'Ableger Zustimmung' filter chip is displayed in the filter bar", async () => {
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix('Ableger Zustimmungsdokument', ablegerZustimmungsdokumentOptions.nichtErfasst)).toBeVisible();
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
                 await expectTableSettled(salesActionsPage);
@@ -150,6 +159,10 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.genericDropdownMenuOption.getByText(salesActionPhaseValues.secondRun,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
 
+            });
+            await test.step("Verify that 'Ableger Zustimmung' filter chip with prefix is displayed in the filter bar", async () => {
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix('Ableger Zustimmungsdokument', ablegerZustimmungsdokumentOptions.erfasst)).toBeVisible();
+                await expect(salesActionsPage.filters.filterBarChip(salesActionPhaseValues.secondRun)).toBeVisible();
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
                 await expectTableSettled(salesActionsPage);
