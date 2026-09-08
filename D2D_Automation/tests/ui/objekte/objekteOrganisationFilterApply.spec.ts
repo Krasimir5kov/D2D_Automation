@@ -7,7 +7,7 @@ test.describe('Objekte Organisation Filter Apply', () => {
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.
-    test.skip();
+   // test.skip();
     test.describe('Verify Organisation filter functionality and results in three sections', () => {
         let name = '';
         let fullDisplayText = '';

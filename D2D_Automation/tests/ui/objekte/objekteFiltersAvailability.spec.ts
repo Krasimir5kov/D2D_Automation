@@ -16,7 +16,7 @@ test.describe('Objekte Page Filters — Availability', { tag: ['@Admin', '@Admin
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.
-    test.skip();
+   // test.skip();
     test.describe('Neubau Section', () => {
         test.beforeEach(async ({ objektePage }) => {
             await objektePage.goToObjektePage();

@@ -10,7 +10,7 @@ test.describe('Objekte Input Search Field', { tag: ['@Admin', '@Admin-Regional']
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.
-    test.skip();
+   // test.skip();
   test.describe('Object Search With Random Text Input that Always Returns Results', () => {
     const randomTextExpectResultsAlways = '100';
     test('NEUBAU: Verify that the results are correct and items title contains the search text', async ({ page, objektePage }) => {

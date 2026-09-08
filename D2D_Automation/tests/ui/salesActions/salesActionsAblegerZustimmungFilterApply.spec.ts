@@ -7,10 +7,9 @@
  * for the confirmed locators and plan.
  */
 import { test } from '../../../src/fixtures/salesAction.fixture';
-import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions } from '../../../src/constants/salesActionFiltersValues';
+import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions, phaseFilterOptions } from '../../../src/constants/salesActionFiltersValues';
 import { expect } from '@playwright/test';
 import { expectTableSettled } from '../../../src/helpers/filterAssertions';
-import { salesActionPhaseValues } from '../../../src/constants/salesActionPhaseValues';
 
 test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
     test.describe('Ableger Zustimmung Filter Apply', () => {
@@ -129,7 +128,7 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
                 await salesActionsPage.expectFtthSalesActionSidePanelOpen();
             });
             await test.step("Verify that SA is not in 2nd Run Phase", async () => {
-                await expect(salesActionsPage.phaseChipInSidePanelHeader(salesActionPhaseValues.secondRun)).not.toBeVisible();
+                await expect(salesActionsPage.phaseChipInSidePanelHeader(phaseFilterOptions.secondRun)).not.toBeVisible();
             });
             await test.step("Verify that 'Ableger Zustimmung' chip and header is not present in Side Panel", async () => {
                 await expect(salesActionsPage.ablegerErfasstChipInSidePanel).not.toBeVisible();
@@ -150,13 +149,13 @@ test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
             });
             await test.step('Apply 2ndRun Phase filter to verify that chip is present regardless of SA Phase', async () => {
                 await salesActionsPage.openPhaseFilterDropDown();
-                await salesActionsPage.genericDropdownMenuOption.getByText(salesActionPhaseValues.secondRun,{exact: true}).click();
+                await salesActionsPage.genericDropdownMenuOption.getByText(phaseFilterOptions.secondRun,{exact: true}).click();
                 await salesActionsPage.filters.applyFilter();
 
             });
             await test.step("Verify that 'Ableger Zustimmung' filter chip with prefix is displayed in the filter bar", async () => {
                 await expect(salesActionsPage.filters.filterBarChipPlusPrefix('Ableger Zustimmungsdokument', ablegerZustimmungsdokumentOptions.erfasst)).toBeVisible();
-                await expect(salesActionsPage.filters.filterBarChip(salesActionPhaseValues.secondRun)).toBeVisible();
+                await expect(salesActionsPage.filters.filterBarChip(phaseFilterOptions.secondRun)).toBeVisible();
             });
             await test.step("Verify that list items are updated accordingly by opening SA Side panel", async () => {
                 await expectTableSettled(salesActionsPage);

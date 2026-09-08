@@ -11,6 +11,11 @@ export const ergebnisFilterOptions = {
     ftthAusbauOption: 'KGV Check',
     bestandsbauOption : 'Gespräch verweigert'
 };
+export const phaseFilterOptions = {
+    preContracting: 'Pre-Contracting',
+    secondRun: '2nd Run',
+    noPhase: 'Keine Phase',
+};
 // Confirmed 2026-09-04: only leerverrohrungscheck and nachverdichtung return results in
 // FTTH-AUSBAU — every other Aufgabe value here is Bestandsbau-specific.
 export const aufgabeFilterOptions = {

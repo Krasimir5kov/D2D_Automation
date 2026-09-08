@@ -46,6 +46,10 @@ export type ExpectEveryRowColumnToContainOptions = {
   // color are unaffected. Must be the computed rgb()/rgba() form (what getComputedStyle
   // actually returns), not a CSS variable reference or hex value.
   expectedBackgroundColor?: string;
+  // Optional — some columns render filter-option-style words in a different case than the
+  // filter's own label (e.g. Verkaufsstart-Status shows "vor Aviso" for the "Vor Aviso"
+  // filter option), so this is opt-in rather than the default for every existing caller.
+  ignoreCase?: boolean;
 };
 export type ExpectEveryRowPlzWithinRangeOptions = {
   from: number;
@@ -68,6 +72,42 @@ export async function expectEveryRowPlzWithinRange(
     expect(plz).toBeLessThanOrEqual(to);
   });
 
+}
+export type ExpectEveryRowSalesStartWithinRelativeRangeOptions = {
+  columnIndex: number;
+  maxDaysFromToday: number;
+};
+// Verkaufsstart's column shows a real computed date ("13.09.2026 bestätigt"), never the
+// filter option's bucket label — unlike Fragebogen/PLZ-style filters where the column
+// literally echoes the selected option. So this parses the date out of the cell and checks
+// it falls within [today, today + maxDaysFromToday], instead of a literal text match.
+export async function expectEveryRowSalesStartWithinRelativeRange(
+  pageObject: PageWithTable,
+  { columnIndex, maxDaysFromToday }: ExpectEveryRowSalesStartWithinRelativeRangeOptions,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const maxDate = new Date(today);
+  maxDate.setDate(maxDate.getDate() + maxDaysFromToday);
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    const cellText = (await rows.nth(i).locator('td').nth(columnIndex).innerText()).trim();
+    const match = cellText.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+    expect(match, `row ${i}: could not parse a date from "${cellText}"`).not.toBeNull();
+    const [, day, month, year] = match!;
+    const rowDate = new Date(Number(year), Number(month) - 1, Number(day));
+    expect(
+      rowDate.getTime(),
+      `row ${i}: date ${cellText} not within [${today.toDateString()}, ${maxDate.toDateString()}]`,
+    ).toBeGreaterThanOrEqual(today.getTime());
+    expect(rowDate.getTime()).toBeLessThanOrEqual(maxDate.getTime());
+  }
 }
 export type ExpectPlzRangeChipVisibleOptions = {
   from: number;
@@ -103,7 +143,7 @@ export async function nearestNonTransparentBackgroundColor(locator: Locator): Pr
 // optionally that the badge showing that text has the expected background color.
 export async function expectEveryRowColumnToContain(
   pageObject: PageWithTable,
-  { columnIndex, expectedText, expectedBackgroundColor }: ExpectEveryRowColumnToContainOptions,
+  { columnIndex, expectedText, expectedBackgroundColor, ignoreCase }: ExpectEveryRowColumnToContainOptions,
 ): Promise<void> {
   await waitForTableSettled(pageObject);
 
@@ -114,12 +154,16 @@ export async function expectEveryRowColumnToContain(
 
   const rowCount = await rows.count();
   for (let i = 0; i < rowCount; i++) {
-    await expect(rows.nth(i).locator('td').nth(columnIndex)).toContainText(expectedText);
+    await expect(rows.nth(i).locator('td').nth(columnIndex)).toContainText(expectedText, { ignoreCase });
     if (expectedBackgroundColor) {
       // The color lives on the badge/pill itself, not the whole <td> (which is
-      // transparent) — locate it by its own visible text rather than the cell.
+      // transparent) — locate it by its own visible text rather than the cell. Matches
+      // ignoreCase too, so the color lookup doesn't break for a caller combining both.
+      const textLocator = ignoreCase
+        ? rows.nth(i).getByText(new RegExp(`^${expectedText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i'))
+        : rows.nth(i).getByText(expectedText, { exact: true });
       const backgroundColor = await nearestNonTransparentBackgroundColor(
-        rows.nth(i).getByText(expectedText, { exact: true }),
+        textLocator,
       );
       expect(
         backgroundColor,
