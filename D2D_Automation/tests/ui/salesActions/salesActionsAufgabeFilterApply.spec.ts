@@ -74,4 +74,30 @@ test.describe('Sales Actions Aufgabe Filter Apply', () => {
             });
         }
     });
+    test.describe('Verify BESTANDSBAU-specific Aufgabe options are absent from the other sections', () => {
+        for (const bestandsbauOption of Object.values(aufgabeFilterOptions).filter((option) => option.expectedInBestandsbau)) {
+            test(`Apply Aufgabe filter option (${bestandsbauOption.label}) then verify that FTTH-AUSBAU and Neubau are in empty state`, async ({ salesActionsPage }) => {
+                await test.step('Navigate to BESTANDSBAU section', async () => {
+                    await salesActionsPage.gotoBestandsbauSalesAction();
+                    await salesActionsPage.expectLoadedBestandsbau();
+                });
+                await test.step(`Select Aufgabe option "${bestandsbauOption.label}"`, async () => {
+                    await selectFilterChoiceExpandingAllOptions(salesActionsPage, () => salesActionsPage.openAufgabeFilterDropDown(), bestandsbauOption.label);
+                });
+                await test.step('Apply the filter', async () => {
+                    await salesActionsPage.filters.applyFilter();
+                });
+                await test.step('Navigate to FTTH-AUSBAU section and verify that the list is in empty state', async () => {
+                    await salesActionsPage.gotoFtthSalesAction();
+                    await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                    await expect(salesActionsPage.table.rows).toHaveCount(0);
+                });
+                await test.step('Navigate to Neubau section and verify that the list is in empty state', async () => {
+                    await salesActionsPage.gotoNeubauSalesAction();
+                    await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                    await expect(salesActionsPage.table.rows).toHaveCount(0);
+                });
+            });
+        }
+    });
 });
