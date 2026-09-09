@@ -2,27 +2,76 @@
  * Covers: the Sales Actions Aufgabe filter — applying it and verifying results.
  * Trigger: salesActionsPage.aufgabeFilter (#salesActionTasks).
  *
- * TODO: write this test — confirm control type via devtools before writing. See
- * reference-sales-actions-filters and project-sales-actions-filters-apply-progress memory
- * for the confirmed locators and plan.
+ * Confirmed via devtools 2026-09-09: only leerverrohrungscheck/nachverdichtung are
+ * FTTH-AUSBAU-specific tasks, every other option here is Bestandsbau-specific — see
+ * aufgabeFilterOptions (salesActionFiltersValues.ts) for the full per-option mapping.
+ * A row's task chip has no stable attribute of its own (see expectEveryRowAufgabeChipToBe),
+ * and its background color is always the same regardless of which task it is
+ * (SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR).
  */
-import { test  } from '../../../src/fixtures/salesAction.fixture';
-import { expect} from '@playwright/test';
+import { test } from '../../../src/fixtures/salesAction.fixture';
+import { expect } from '@playwright/test';
+import { aufgabeFilterOptions } from '../../../src/constants/salesActionFiltersValues';
+import { selectFilterChoiceExpandingAllOptions } from '../../../src/helpers/filterHelpers';
+import { expectEveryRowAufgabeChipToBe, expectListIsEmptyWithMessageByFilterDropDown } from '../../../src/helpers/filterAssertions';
+import { SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR } from '../../../src/constants/salesActionsTableChipColors';
 
 test.describe('Sales Actions Aufgabe Filter Apply', () => {
-    test.describe('Apply BESTANDSBAU-Specific Aufgabe Filter Criteria', () => {
-        test.beforeEach(async ({ salesActionsPage }) => {
-            await salesActionsPage.goToSalesActionPage();
-            await salesActionsPage.expectLoadedSalesAction();
-        });
-        test('Verify BESTANDSBAU-specific Aufgabe filter option updates the list accordingly', async ({ salesActionsPage }) => {
-            await test.step('Navigate to Bestandsbau section', async () => {
-                await salesActionsPage.gotoBestandsbauSalesAction();
-                await salesActionsPage.expectLoadedBestandsbau
+    test.describe('Apply every Aufgabe filter option in its expected section and verify results', () => {
+        for (const option of Object.values(aufgabeFilterOptions)) {
+            test(`Apply Aufgabe filter option (${option.label}) and verify results`, async ({ salesActionsPage }) => {
+                await test.step('Navigate to the section this task is expected in', async () => {
+                    if (option.expectedInFTTH) {
+                        await salesActionsPage.gotoFtthSalesAction();
+                        await salesActionsPage.expectLoadedFTTH();
+                    } else {
+                        await salesActionsPage.gotoBestandsbauSalesAction();
+                        await salesActionsPage.expectLoadedBestandsbau();
+                    }
+                });
+                await test.step('Verify Aufgabe filter is visible and available', async () => {
+                    await expect(salesActionsPage.aufgabeFilter).toBeVisible();
+                });
+                await test.step(`Select Aufgabe option "${option.label}"`, async () => {
+                    await selectFilterChoiceExpandingAllOptions(salesActionsPage, () => salesActionsPage.openAufgabeFilterDropDown(), option.label);
+                });
+                await test.step('Apply the filter', async () => {
+                    await salesActionsPage.filters.applyFilter();
+                });
+                await test.step('Verify that chip criteria is visible in the Bar Chip', async () => {
+                    await expect(salesActionsPage.filters.filterBarChip(option.label)).toBeVisible();
+                });
+                await test.step('Verify that every row shows the selected Aufgabe task', async () => {
+                    await expectEveryRowAufgabeChipToBe(salesActionsPage, option.label, SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR);
+                });
             });
-            await test.step('Verify Aufgabe filter is visible and available ', async () => {
-                await expect(salesActionsPage.aufgabeFilter).toBeVisible();
+        }
+    });
+
+    test.describe('Verify FTTH-AUSBAU-specific Aufgabe options are absent from the other sections', () => {
+        for (const ftthOption of Object.values(aufgabeFilterOptions).filter((option) => option.expectedInFTTH)) {
+            test(`Apply Aufgabe filter option (${ftthOption.label}) then verify that Neubau and Bestandsbau are in empty state`, async ({ salesActionsPage }) => {
+                await test.step('Navigate to FTTH-AUSBAU section', async () => {
+                    await salesActionsPage.gotoFtthSalesAction();
+                    await salesActionsPage.expectLoadedFTTH();
+                });
+                await test.step(`Select Aufgabe option "${ftthOption.label}"`, async () => {
+                    await selectFilterChoiceExpandingAllOptions(salesActionsPage, () => salesActionsPage.openAufgabeFilterDropDown(), ftthOption.label);
+                });
+                await test.step('Apply the filter', async () => {
+                    await salesActionsPage.filters.applyFilter();
+                });
+                await test.step('Navigate to Neubau section and verify that the list is in empty state', async () => {
+                    await salesActionsPage.gotoNeubauSalesAction();
+                    await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                    await expect(salesActionsPage.table.rows).toHaveCount(0);
+                });
+                await test.step('Navigate to Bestandsbau section and verify that the list is in empty state', async () => {
+                    await salesActionsPage.gotoBestandsbauSalesAction();
+                    await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                    await expect(salesActionsPage.table.rows).toHaveCount(0);
+                });
             });
-        });
+        }
     });
 });

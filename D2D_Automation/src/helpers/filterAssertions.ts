@@ -283,6 +283,37 @@ export async function expectEveryRowStatusChipToBe(
     }
   }
 }
+
+// Asserts every row shows the expected Aufgabe task chip, and optionally that it has the
+// expected background color. Confirmed via devtools 2026-09-09: a row's task chips render
+// as separate sibling divs alongside (not inside) the [role="status"] Status chip — none of
+// them carry role="status" or any other stable attribute, and a row can show several tasks
+// at once (e.g. a Bestandsbau row with "BBI zu Netcube"/"Upsell Netcube"/"Verkauf Netcube"
+// all applied). So this locates by the task's own exact visible text within the row, the
+// same technique already used for the color-lookup branches above, rather than a role or
+// column index.
+export async function expectEveryRowAufgabeChipToBe(
+  pageObject: PageWithTable,
+  expectedTaskLabel: string,
+  expectedBackgroundColor?: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    const taskChip = rows.nth(i).getByText(expectedTaskLabel, { exact: true });
+    await expect(taskChip, `row ${i}: expected Aufgabe task "${expectedTaskLabel}"`).toBeVisible();
+    if (expectedBackgroundColor) {
+      const backgroundColor = await nearestNonTransparentBackgroundColor(taskChip);
+      expect(
+        backgroundColor,
+        `row ${i}: expected background ${expectedBackgroundColor}, got ${backgroundColor}`,
+      ).toBe(expectedBackgroundColor);
+    }
+  }
+}
 export async function expectEveryRowDataObjectNameToContain(
   pageObject: PageWithTable,
   searchValue: string,
