@@ -15,6 +15,8 @@ import { BasePage, door2doorRoutes } from './BasePage';
 import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions } from '../constants/salesActionFiltersValues';
 import { nearestNonTransparentBackgroundColor } from '../helpers/filterAssertions';
 import { SIDE_PANEL_CHIP_COLORS } from '../constants/salesActionSidePanelChipColors';
+import { BestellungUeberD2DOptions } from '../constants/salesActionSidePanelChipStatus';
+
 
 // Represents the Sales Actions main page.
 export class SalesActionsPage extends BasePage {
@@ -30,6 +32,11 @@ export class SalesActionsPage extends BasePage {
   readonly bestandsbauSidePanel: SidePanel
   // Shared table/list helper.
   readonly table: TableView;
+  readonly listRows: Locator;
+  readonly firstRow: Locator;
+  readonly baulosEinsatznameContents: Locator;
+  readonly firstRowBaulosEinsatznameContent: Locator;
+  readonly baulosEinsatznameSearchInput: Locator;
   // Locator for the Sales Actions search input.
   readonly searchInput: Locator;
   // Locator for the Neubau tab.
@@ -76,7 +83,10 @@ export class SalesActionsPage extends BasePage {
   readonly accordionBodyContent: Locator;
   readonly customerInteractionAccordionBodyState: Locator;
   readonly ablegerErfasstChipInSidePanel: Locator;
+  readonly bestellungUberStatusInSAPanel : Locator
   readonly genericDropdownMenuOption : Locator;
+  readonly nichtErfasstRadioOptionInBestellungUeberD2DFilter: Locator;
+  readonly erfasstRadioOptionInBestellungUeberD2DFilter: Locator;
   constructor(page: Page) {
     super(page);
     this.navigation = new AppNavigation(page);
@@ -86,6 +96,11 @@ export class SalesActionsPage extends BasePage {
     this.ftthSidePanel = new SidePanel(page, 'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
     this.bestandsbauSidePanel = new SidePanel(page, 'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
     this.table = new TableView(page);
+    this.listRows = page.locator('tr[id^="sales-action-row-"]');
+    this.firstRow = this.listRows.first();
+    this.baulosEinsatznameContents = this.listRows.locator('div[id$="-main-info"]');
+    this.firstRowBaulosEinsatznameContent = this.firstRow.locator('div[id$="-main-info"]');
+    this.baulosEinsatznameSearchInput = this.filters.dropdownRoot.getByRole('textbox', { name: /Baulos\/Einsatzname/ });
     this.searchInput = page.locator('#sales-actions-search-field');
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
     this.ftthTab = page.getByRole('link', { name: /FTTH/i }).or(page.getByRole('tab', { name: /FTTH/i }));
@@ -124,6 +139,9 @@ export class SalesActionsPage extends BasePage {
     this.accordionBodyContent = page.locator('div[class*="gucci-common-accordion"]');
     this.customerInteractionAccordionBodyState = page.locator('div[class="gucci-common-accordion"]').locator('[class^="gucci-common-accordion-body"]');
     this.ablegerErfasstChipInSidePanel = page.locator('#ftth-object-side-panel').getByText('Ableger Zustimmung', { exact: true });
+    this.bestellungUberStatusInSAPanel = page.locator('#ftth-object-side-panel').getByText('Bestellung über D2D', { exact: true });
+    this.nichtErfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['non-recorded'], { exact: true });
+    this.erfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['recorded'], { exact: true });
     
   }
   async openBaulosEinsatznameFilterDropDown(): Promise<void> {
@@ -194,6 +212,9 @@ export class SalesActionsPage extends BasePage {
   async expectAblegerErfasstChipInSidePanelVisible(): Promise<void> {
     await expect(this.ablegerErfasstChipInSidePanel).toBeVisible();
   }
+   async checkBestellungUeberD2DStatusInSidePanel(expectedStatus: string | RegExp): Promise<void> {
+    await expect(this.bestellungUberStatusInSAPanel.locator('..').getByText(expectedStatus, { exact: true })).toBeVisible();
+  }
   phaseChipInSidePanelHeader(phaseValue: string): Locator {
     return this.page.locator('#ftth-object-side-panel')
       .locator('div.te1qfalAqINSiWe6H_Bs')
@@ -205,6 +226,14 @@ export class SalesActionsPage extends BasePage {
   async expectAblegerZustimmungChipColour(expectedStatus: keyof typeof SIDE_PANEL_CHIP_COLORS): Promise<void> {
     const chipValue = this.page.locator('#ftth-object-side-panel')
       .getByText('Ableger Zustimmung', { exact: true })
+      .locator('xpath=following-sibling::*[1]')
+      .getByText(expectedStatus, { exact: true });
+    const backgroundColor = await nearestNonTransparentBackgroundColor(chipValue);
+    expect(backgroundColor).toBe(SIDE_PANEL_CHIP_COLORS[expectedStatus]);
+  }
+  async expectBestellungUeberD2DStatusChipColour(expectedStatus: keyof typeof SIDE_PANEL_CHIP_COLORS): Promise<void> {
+    const chipValue = this.page.locator('#ftth-object-side-panel')
+      .getByText('Bestellung über D2D', { exact: true })
       .locator('xpath=following-sibling::*[1]')
       .getByText(expectedStatus, { exact: true });
     const backgroundColor = await nearestNonTransparentBackgroundColor(chipValue);
@@ -371,4 +400,5 @@ export class SalesActionsPage extends BasePage {
   async openFirstCustomerInteractionAccordion(): Promise<void> {
     await this.customerInteractionAccordion.first().click();
   }
+  
 }

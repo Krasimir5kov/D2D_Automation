@@ -189,20 +189,26 @@ export async function expectListIsNotEmpty(pageObject: PageWithTable): Promise<v
   await expect(pageObject.table.rows.first()).toBeVisible();
 }
 export async function expectEveryRowBauloseEinsatznameToBe(
-  pageObject: PageWithTable,
+  pageObject: PageWithTable & { listRows: Locator; baulosEinsatznameContents: Locator },
   name: string,
 ): Promise<void> {
   await waitForTableSettled(pageObject);
-  const rows = pageObject.table.rows;
-  await expect(rows.first()).toBeVisible();
+  await expect(pageObject.listRows.first()).toBeVisible();
 
-  const objektCellTexts = await rows.locator(`td[id$='-name']`).allInnerTexts();
-  objektCellTexts.forEach((text, i) => {
-    const lines = text.split('\n');
-    const einsatznameLine = lines.find((line) => /\s+-\s+/.test(line));
-    const bauloseEinsatzname = einsatznameLine ? einsatznameLine.split(/\s+-\s+/)[0].trim() : '';
-    expect(bauloseEinsatzname, `row ${i}: Baulos/Einsatzname "${bauloseEinsatzname}" does not match expected "${name}"`).toBe(name);
-  });
+  // Retry the complete check as React replaces the filtered rows. Never pass on
+  // zero content elements: each current data row must have matching content.
+  await expect(async () => {
+    const rowCount = await pageObject.listRows.count();
+    expect(rowCount, 'The filtered list must contain at least one row').toBeGreaterThan(0);
+    await expect(pageObject.baulosEinsatznameContents).toHaveCount(rowCount);
+    const texts = await pageObject.baulosEinsatznameContents.allInnerTexts();
+    expect(texts).toHaveLength(rowCount);
+    texts.forEach((text, index) => {
+      const line = text.split('\n').find(value => /\s+-\s+/.test(value));
+      const actualName = line?.split(/\s+-\s+/)[0].trim();
+      expect(actualName, `Row ${index + 1}: expected Baulos/Einsatzname "${name}"`).toBe(name);
+    });
+  }).toPass({ timeout: 10000 });
 }
 
 // Organisation is its own dedicated cell (td[id$='-organisation']). On Neubau, this cell

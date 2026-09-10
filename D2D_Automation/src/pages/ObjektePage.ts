@@ -23,6 +23,10 @@ export class ObjektePage extends BasePage {
   readonly ftthAusbauSidePanel: SidePanel;
   readonly bestandsbauSidePanel: SidePanel;
   readonly table: TableView;
+  readonly listRows: Locator;
+  readonly firstRow: Locator;
+  readonly baulosEinsatznameContents: Locator;
+  readonly firstRowBaulosEinsatznameContent: Locator;
   readonly searchInput: Locator;
   readonly neubauTab: Locator;
   readonly ftthTab: Locator;
@@ -53,6 +57,12 @@ export class ObjektePage extends BasePage {
     this.ftthAusbauSidePanel = new SidePanel(page, 'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
     this.bestandsbauSidePanel = new SidePanel(page, 'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
     this.table = new TableView(page);
+    // Bestandsbau rows are not guaranteed to expose the object-row-* id in the
+    // current integration build, so use the TableView's tbody-scoped data rows.
+    this.listRows = this.table.rows;
+    this.firstRow = this.listRows.first();
+    this.baulosEinsatznameContents = this.listRows.locator('td[id$="-name"]');
+    this.firstRowBaulosEinsatznameContent = this.firstRow.locator('td[id$="-name"]');
     this.searchInput = page.locator('#objects-search-field');
     this.neubauTab = page.getByRole('link', { name: /Neubau/i }).or(page.getByRole('tab', { name: /Neubau/i }));
     this.ftthTab = page.getByRole('link', { name: /FTTH/i }).or(page.getByRole('tab', { name: /FTTH/i }));

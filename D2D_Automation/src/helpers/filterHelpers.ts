@@ -6,10 +6,9 @@
 // DOM knowledge (checkbox structure, portal root, etc.) lives on FilterBar itself.
 // Assertions and step narration belong in the spec files where the tests live.
 // See src/helpers/filterAssertions.ts for the assertion-helper counterpart.
-import { type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 import type { FilterBar } from '../components/FilterBar';
 import { type TableView } from '../components/TableView';
-import { table } from 'console';
 
 type PageWithFilters = {
   filters: FilterBar;
@@ -86,16 +85,21 @@ export type FirstRowBauloseEinsatzname = {
 // line), joined by newlines when read via innerText() — splitting the whole cell text on
 // the dash directly would incorrectly include the address, since only the Einsatzname
 // line actually contains one. Isolate that line first, then split it.
-export async function getFirstRowBauloseEinsatzname(pageObject: { table: TableView }): Promise<FirstRowBauloseEinsatzname> {
-  const cellText = await pageObject.table.rows.first().locator("td[id$='-name']").innerText();
+export async function getFirstRowBauloseEinsatzname(
+  pageObject: { firstRowBaulosEinsatznameContent: Locator },
+): Promise<FirstRowBauloseEinsatzname> {
+  const content = pageObject.firstRowBaulosEinsatznameContent;
+  await content.waitFor({ state: 'visible' });
+  const cellText = await content.innerText();
   const lines = cellText.split('\n');
-  const einsatznameLine = lines.find((line) => /\s+-\s+/.test(line));
-  if (!einsatznameLine) {
+  const einsatznameLineObject = lines.find((line) => /\s+-\s+/.test(line));
+
+  if (!einsatznameLineObject) {
     throw new Error(`Could not find a Baulos/Einsatzname line in: "${cellText}"`);
   }
   return {
-    searchTerm: einsatznameLine.split(/\s+-\s+/)[0].trim(),
-    fullEinsatznameLine: einsatznameLine.trim(),
+    searchTerm: einsatznameLineObject.split(/\s+-\s+/)[0].trim(),
+    fullEinsatznameLine: einsatznameLineObject.trim(),
   };
 }
 

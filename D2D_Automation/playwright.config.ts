@@ -42,7 +42,7 @@ export default defineConfig({
   // updateSnapshots: 'missing',         // 'all' | 'none' | 'missing' — control --update-snapshots behavior from config
 
   // Scope: retry only on CI by default, just like the standard Playwright template.
-  retries: process.env.CI ? 2 : 2,
+ // retries: process.env.CI ? 2 : 2,
   timeout: 60_000,                    // Per-test timeout in ms (default is 30s) — raise for slow real environments
   //globalTimeout: 60 * 60 * 2000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
   expect: { timeout: 60_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)

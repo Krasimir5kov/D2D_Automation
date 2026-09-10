@@ -5,3 +5,11 @@ test-results/
 playwright/.cache/
 playwright/.auth/*.json
 !playwright/.auth/.gitkeep
+
+# Private local AI assistant context.
+CODEX_FRAMEWORK_CONTEXT.md
+JIRA_MCP_CONTEXT.md
+claude_codex_confing_mcp.json
+
+# Local Jira user-story exports; never commit these documents.
+POSS-*.doc
