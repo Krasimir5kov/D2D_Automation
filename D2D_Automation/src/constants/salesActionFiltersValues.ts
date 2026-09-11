@@ -54,3 +54,8 @@ export const aufgabeFilterOptions = {
     verkaufNext: { label: 'Verkauf Next', expectedInFTTH: false, expectedInBestandsbau: true },
     vorvertragOanTp: { label: 'Vorvertrag OAN/TP', expectedInFTTH: false, expectedInBestandsbau: true },
 } as const;
+export const immobilienartFilterOptions = {
+    einfamilienhaus: { label: 'Einfamilienhaus', expectedInFTTH: true, expectedInBestandsbau: false, expectedNEUBAU: false },
+    mehrgeschoßigerWohnbau: { label: 'mehrgeschoßiger Wohnbau', expectedInFTTH: true, expectedInBestandsbau: false, expectedNEUBAU: true },
+    unbekannt: { label: 'unbekannt', expectedInFTTH: true, expectedInBestandsbau: true, expectedNEUBAU: false },
+};
