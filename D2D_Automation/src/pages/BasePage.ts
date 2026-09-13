@@ -109,21 +109,25 @@ export abstract class BasePage {
   }
 
   // Retries page.goto() a few times on a transient connection-level failure
-  // (connection refused/aborted/reset, or the navigation itself timing out) before
-  // giving up — confirmed on CI, where the shared INT environment intermittently
-  // refuses/aborts the connection even with a single worker. Anything else (e.g. a
-  // real assertion failure later in the test) is unaffected, since this only wraps
-  // the goto() call itself.
-  private async gotoWithRetry(url: string, attempts = 3, delayMs = 3000): Promise<void> {
+  // (connection refused/aborted/reset, timed out, or empty response) before giving
+  // up — confirmed on CI, where the shared INT environment intermittently
+  // refuses/aborts/times out the connection even with a single worker. Anything else
+  // (e.g. a real assertion failure later in the test) is unaffected, since this only
+  // wraps the goto() call itself. Each attempt gets its own bounded timeout rather
+  // than inheriting the global navigationTimeout (confirmed 2026-09-13: with the
+  // global 120s navigationTimeout, a slow attempt could still be retrying when the
+  // outer per-test timeout fired and killed the whole beforeEach hook first,
+  // defeating the retry loop before it got a fair chance).
+  private async gotoWithRetry(url: string, attempts = 3, delayMs = 3000, attemptTimeoutMs = 20000): Promise<void> {
     const isRetryableNetworkError = (error: unknown): boolean =>
       error instanceof Error &&
-      /ERR_CONNECTION_REFUSED|ERR_ABORTED|ERR_CONNECTION_RESET|ERR_CONNECTION_CLOSED|ERR_EMPTY_RESPONSE|Timeout \d+ms exceeded/.test(
+      /ERR_CONNECTION_REFUSED|ERR_ABORTED|ERR_CONNECTION_RESET|ERR_CONNECTION_CLOSED|ERR_EMPTY_RESPONSE|ERR_TIMED_OUT|Timeout \d+ms exceeded/.test(
         error.message,
       );
 
     for (let attempt = 1; attempt <= attempts; attempt++) {
       try {
-        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: attemptTimeoutMs });
         return;
       } catch (error) {
         if (attempt === attempts || !isRetryableNetworkError(error)) {

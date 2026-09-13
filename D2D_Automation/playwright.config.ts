@@ -43,7 +43,7 @@ export default defineConfig({
 
   // Scope: retry only on CI by default, just like the standard Playwright template.
  // retries: process.env.CI ? 2 : 2,
-  timeout: 60_000,                    // Per-test timeout in ms (default is 30s) — raise for slow real environments
+  timeout: 90_000,                    // Per-test timeout in ms (default is 30s) — raised 2026-09-13 so it comfortably exceeds gotoWithRetry's worst case (3 attempts x 20s + 2x3s delay = ~66s), which a 60s ceiling was cutting off mid-retry
   //globalTimeout: 60 * 60 * 2000,      // Hard cap in ms for the ENTIRE test run across all tests/workers
   expect: { timeout: 60_000 },         // Default timeout for each individual expect() web-first assertion (default 5s)
   // reportSlowTests: { max: 5, threshold: 15_000 }, // Flag the N slowest test files over a threshold in the report

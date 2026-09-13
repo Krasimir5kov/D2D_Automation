@@ -260,6 +260,47 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
   Every major page already has list-view, side-panel, and filter-bar attribute work landed —
   don't assume a page has no stable locators or needs new FE work first without checking
   `D2D_Playwright_Attributes_Reference.md`/`testids-map.md` first.
+- **CI retry-logic gap confirmed and fixed 2026-09-13.** User reported
+  frequent Objekte CI failures (run 34758427895); checked the last 4 CI runs via `gh run list` /
+  `gh run view --log-failed` before assuming a page-specific bug. **Confirmed this is NOT an
+  Objekte-specific defect** — the exact same `net::ERR_TIMED_OUT`/`ERR_CONNECTION_REFUSED`/
+  `ERR_ABORTED` navigation-error pattern also hit Sales Actions specs and
+  `allPagesSmoke.spec.ts` (which touches every page) in the same runs, consistent with the
+  already-documented general INT flakiness above. Objekte does have the highest absolute failure
+  count in 2 of the 3 failed runs checked, most likely because it has the most navigation-heavy
+  spec files among the built-out pages (most parameterized cases × most sections), not a defect
+  in its own code. Two real, fixable gaps found while investigating: (1) `BasePage.ts`'s
+  `gotoWithRetry` retry regex does not include `ERR_TIMED_OUT`, which is now showing up
+  repeatedly in CI — any goto() hitting that specific error gets zero retries and fails
+  immediately on the first attempt. (2) The top-level `timeout: 60_000` in `playwright.config.ts`
+  is shorter than `use.navigationTimeout: 120_000` — so the "generous" navigation timeout can
+  never fully play out; the outer per-test clock kills the test/`beforeEach` hook before a slow
+  goto() (or its retries) gets anywhere near its own 120s allowance, matching the repeated
+  "Test timeout of 60000ms exceeded while running "beforeEach" hook" CI failures seen across
+  multiple runs. **Fixed, with the user's approval:** `gotoWithRetry` now matches `ERR_TIMED_OUT`
+  too, and gives each attempt its own bounded `attemptTimeoutMs` (default 20s) instead of
+  inheriting the global `navigationTimeout`; `playwright.config.ts`'s top-level `timeout` raised
+  60s → 90s to comfortably exceed the retry loop's worst case (3 x 20s + 2 x 3s delay ≈ 66s).
+  `npm run typecheck` passes. Not yet verified against a real CI run — worth watching the next
+  scheduled/manual run to confirm the same failure pattern doesn't recur. **Not yet committed —
+  these edits (`BasePage.ts`, `playwright.config.ts`) still sit as uncommitted local changes.**
+- **Separate local-only issue confirmed 2026-09-13: `--headed` local runs leave worker processes
+  that don't exit cleanly, unrelated to the CI fix above.** User pasted terminal history from
+  several local `npx playwright test tests/ui/objekte` runs. The confusing
+  "N errors were not a part of any test, see above for details" line is Playwright's own
+  `Error: worker-N process did not exit within 300000ms after stop, force-killed it` — a
+  process-teardown timeout, not a real test/business-logic failure (no artifacts are written for
+  it, and it's not tied to any specific spec). Confirmed correlation across the pasted history:
+  every `--headed` run had this (2, then 2, then 4 occurrences); the one plain headless run had
+  zero. Root cause traced to the user having `Ctrl+Z`'d (suspended, not killed) an earlier
+  `--headed` run — confirmed via `ps` showing that process still in `T` (stopped) state 5+ hours
+  later, PID tree 41712/41732/41766/41767, still holding its Chrome session open. Each subsequent
+  `--headed` run then has to compete with that leftover suspended session for local resources,
+  making clean worker shutdown slower/likelier to hit the 300s ceiling. **Not an Objekte bug, not
+  a code bug at all** — advise: prefer headless for routine local runs (`npx playwright test
+  tests/ui/objekte`, no `--headed`), and use Ctrl+C rather than Ctrl+Z to stop a run early — Ctrl+Z
+  freezes the process without letting Playwright attempt any teardown at all, guaranteeing this
+  exact kind of leftover mess.
 - **Sequencing decision:** finish filter+results test coverage across *every* page (breadth)
   before starting any page's deeper Side Panel testing (content, Customer Interaction creation,
   status pickers) — deliberately deferred, not skipped, so the filter-testing patterns/
