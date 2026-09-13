@@ -1,6 +1,6 @@
 import { test } from '../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
-import { expectEveryRowSalesStartWithinRelativeRange } from '../../../src/helpers/filterAssertions';
+import { expectEveryRowSalesStartWithinRelativeRange, expectEveryRowOrEmptyState } from '../../../src/helpers/filterAssertions';
 import { verkaufsstartStatusSectionOptions, verkaufsstartTerminOptions } from '../../../src/constants/objectFilterValues';
 import { expectListIsEmptyWithMessageByFilterDropDown } from '../../../src/helpers/filterAssertions';
 import { expectEveryRowColumnToContain  } from '../../../src/helpers/filterAssertions';
@@ -30,11 +30,15 @@ test.describe('Objekte Verkaufsstart Filter Apply', () => {
                 await test.step('Verify that chip criteria is visible in the Bar Chip', async () => {
                     await expect(objektePage.filters.filterBarChip(option.label)).toBeVisible();
                 });
-                await test.step('Verify that every row\'s Verkaufsstart date falls within the selected range', async () => {
-                    await expectEveryRowSalesStartWithinRelativeRange(objektePage, {
-                        columnIndex: VERKAUFSSTART_COLUMN_INDEX,
-                        maxDaysFromToday: option.maxDaysFromToday,
-                    });
+                await test.step('Verify results match the filter, or that the empty state is shown if no Neubau object currently qualifies', async () => {
+                    await expectEveryRowOrEmptyState(
+                        objektePage,
+                        () => expectEveryRowSalesStartWithinRelativeRange(objektePage, {
+                            columnIndex: VERKAUFSSTART_COLUMN_INDEX,
+                            maxDaysFromToday: option.maxDaysFromToday,
+                        }),
+                        `No Neubau object currently has a Verkaufsstart date within ${option.maxDaysFromToday} days (option: "${option.label}") on this environment.`,
+                    );
                 });
             });
 

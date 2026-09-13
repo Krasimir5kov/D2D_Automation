@@ -247,11 +247,15 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 - **Temporary, deliberately generous Playwright timeouts** are in place because the INT
   environment itself is confirmed slow/flaky (corroborated by real CI runs showing
   `ERR_CONNECTION_REFUSED`/`ERR_ABORTED` across unrelated pages, and manually-captured 10+s
-  requests) — not a code or locator problem. Current spots: `playwright.config.ts`
-  (`expect.timeout: 10_000`, `navigationTimeout: 15_000`), and a couple of `setTimeout`/hardcoded
-  `{ timeout: 60000 }` spots in specs/`filterAssertions.ts`. Revisit and lower these once the
-  environment stabilizes or the build-out reaches a natural pause — don't let them silently
-  become the permanent baseline.
+  requests) — not a code or locator problem. Current spots, **re-verified 2026-09-13 (raised
+  again since this note was last written — the old numbers below were stale)**:
+  `playwright.config.ts` top-level `timeout: 60_000`, `expect: { timeout: 60_000 }`,
+  `use.navigationTimeout: 120_000` (`use.actionTimeout` stayed at `10_000`), and a couple of
+  `setTimeout`/hardcoded `{ timeout: 60000 }` spots in specs/`filterAssertions.ts`. Also note:
+  `retries` in `playwright.config.ts` is currently fully commented out, so no automatic retry is
+  configured at all right now despite the flakiness above — not confirmed whether that's
+  deliberate. Revisit and lower these once the environment stabilizes or the build-out reaches a
+  natural pause — don't let them silently become the permanent baseline.
 - **FE stable-attribute ticket series (POSS-3397 → POSS-3422, 24 tickets) is fully Done.**
   Every major page already has list-view, side-panel, and filter-bar attribute work landed —
   don't assume a page has no stable locators or needs new FE work first without checking
@@ -264,16 +268,27 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 
 **Current build-out status is a moving target — don't trust a hardcoded snapshot of "which
 filter is done" here, it will go stale immediately.** To check what's actually built vs. stubbed
-right now: `grep -rl "test.describe.skip" tests/ui/<page>/` for stubs still pending, `git log
---oneline -20` for recent work, or just open the relevant `{page}{FilterName}FilterApply.spec.ts`
-directly. As of this writing (2026-09-13) the rough order has been Baulose (done) → Objekte
-(filters built; Neubau's `test.skip()` for the sort-performance bug is currently commented out —
-see the unconfirmed note above) → Sales Actions (in progress — Organisation/Baulos-Einsatzname/
-Phase reused from other pages; Ergebnis/Aufgabe/AblegerZustimmung built; Immobilienart and
-Bestellung über D2D have substantial coverage but known open issues, see below; remaining
-filters not yet started: Regime, Termin, Status, Planskizze, Kundendaten, Sales Action-Type,
-Objekt, zugewiesen an, upselling Potential) → Benutzerverwaltung/Importe/Konfiguration not yet
-started.
+right now: `grep -rl "test.describe.skip" tests/ui/<page>/` for stubs still pending, then also
+count real `test(...)` cases inside — a file can contain a `test.describe.skip()` wrapper around
+zero tests while its filename still suggests it's done. `git log --oneline -20` for recent work,
+or just open the relevant `{page}{FilterName}FilterApply.spec.ts` directly. As of this writing
+(2026-09-13, corrected via a full code audit — the previous version of this paragraph had
+Organisation/Phase wrong, see below) the rough order has been Baulose (Availability done; 4 of 5
+filters have a real Apply file — Organisation, Phase, Regime, Status; Importdatum has no Apply
+spec file yet at all) → Objekte (Availability, Search, Side Panel done; all 6 Apply files real;
+Neubau's `test.skip()` for the sort-performance bug is currently commented out on 3 of those 6 —
+see the unconfirmed note above) → Sales Actions (in progress — Availability done; only 6 of 18
+filters have a real Apply file so far: Ergebnis, Aufgabe, AblegerZustimmung, Baulos-Einsatzname,
+Immobilienart, Bestellung über D2D (that last one's known issue is now fixed, see below);
+**correction 2026-09-13: Organisation and Phase are NOT built — this paragraph previously said
+"reused from other pages," which was wrong; both are still empty `test.describe.skip()` stubs**;
+remaining filters genuinely not started: Regime, Termin, Status, Planskizze, Kundendaten, Sales
+Action-Type, Objekt, zugewiesen an, upselling Potential, Organisation, Phase) →
+Benutzerverwaltung/Importe/Konfiguration not yet started. **Also verified 2026-09-13: the
+Dropdown Content bucket (file 2 of the 3-file split) is at 0% on every page — all 27
+`*FilterDropdown.spec.ts` files that currently exist (Baulose 5, Objekte 5, Sales Actions 17) are
+still empty stubs with zero real tests; that's the next real gap to close, not any one page's
+Apply coverage.**
 
 **Second row-verification pattern confirmed and now in real use — Side Panel chip lookup, for
 filters with no list-column representation at all.** Distinct from `expectEveryRowStatusChipToBe`
@@ -290,15 +305,15 @@ side panel, read the relevant chip's text/color there via page-specific methods 
 table from `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`/`SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR`,
 which are for the list-row chips, not the side-panel ones — don't conflate the two**).
 
-**Concrete bug found during a 2026-09-13 audit, not yet fixed —
+**Bug found during a 2026-09-13 audit, fixed the same day —
 `salesActionsBestellungUeberD2DFilterApply.spec.ts`:** every "Verify that filter chip is
-displayed correctly" step (4 occurrences) does
+displayed correctly" step (**6 occurrences, not 4 as first counted** — lines 38, 83, 110, 133,
+178, 205) did
 `await salesActionsPage.filters.filterBarChipPlusPrefix(label, option);` with no `expect(...)`
 wrapper — `filterBarChipPlusPrefix` returns a `Locator` synchronously, so `await`ing it directly
-is a no-op and asserts nothing at all. Needs to be
+was a no-op and asserted nothing at all. Fixed to
 `await expect(salesActionsPage.filters.filterBarChipPlusPrefix(label, option)).toBeVisible();`
-at each of the 4 call sites. Flagged, not yet applied — needs the user's go-ahead per the
-approval gate.
+at all 6 call sites, with the user's go-ahead per the approval gate.
 
 **Open loose ends as of 2026-09-13:**
 - `KonfigurationPage.ts`'s header locator (now named `navSideBarHeader`, not `pageHeader` —
@@ -313,6 +328,30 @@ approval gate.
   specific filter before the assertion can be written correctly.
 - The `expectFilterVisible(filterId): Locator` duplicate-of-`trigger()` method previously flagged
   here has been removed from `FilterBar.ts` — resolved, no longer an open item.
+- **Cross-machine memory gap confirmed 2026-09-13:** several Sales Actions stub files (e.g.
+  `salesActionsOrganisationFilterApply.spec.ts`, `salesActionsPhaseFilterApply.spec.ts`,
+  `salesActionsBestellungUeberD2DFilterApply.spec.ts`'s header comment) point to local-memory
+  entry names (`reference-sales-actions-filters`, `project-sales-actions-filters-apply-progress`,
+  `project-breadth-first-filter-coverage`) as where "the confirmed locators and plan" live. On
+  this machine `~/.claude/projects/.../memory/` is completely empty, so whatever was in those
+  entries is not recoverable here — it was written on some other laptop and never made it into
+  this file. If you still know what those entries said, it's worth dictating the actual
+  locator/plan content into this file directly rather than trusting a spec-file comment to point
+  at memory that may not travel with you.
+- **New shared helper written 2026-09-13, not yet verified against a real INT run:**
+  `expectEveryRowOrEmptyState(pageObject, verifyRowContent, emptyStateAnnotation)` added to
+  `filterAssertions.ts` — wraps a row-content check for filters whose correct result can
+  legitimately be zero rows depending on what data currently exists (e.g. a rolling relative-date
+  window), verifying the empty-state UI plus a `test.info().annotations` note instead of failing
+  outright when the row count is 0. Wired into `objekteVerkaufsstartFilterApply.spec.ts`'s
+  Verkaufsstart-Termin NEUBAU check, which was previously failing whenever no Neubau object's
+  Verkaufsstart date fell inside the current 8-day/6-week window. `npm run typecheck` passes.
+  Deliberately written with a caller-supplied callback (not hardcoded date-range logic) so it can
+  be reused later by Sales Actions' Termin filter if that one hits the same data-availability
+  issue — not yet confirmed SA's Termin actually needs identical logic, that spec is still an
+  empty stub. **User is testing this against a real run before deciding whether to commit/push —
+  do not treat as confirmed working, and do not move it into the "already built" reusable-infra
+  list below until they confirm.**
 
 ---
 

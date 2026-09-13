@@ -1,7 +1,7 @@
 // Explicit assertion helpers for filter/list-result checks. Named with an "expect"
 // prefix on purpose, unlike the action helpers in filterHelpers.ts, so it's
 // unmistakable at a glance that these functions DO contain assertions.
-import { expect, type Locator } from '@playwright/test';
+import { expect, test, type Locator } from '@playwright/test';
 import type { TableView } from '../components/TableView';
 import type { FilterBar } from '../components/FilterBar';
 import type { AppNavigation } from '../components/AppNavigation';
@@ -187,6 +187,27 @@ export async function expectListIsEmptyWithMessageBySearchInput(pageObject: Page
 export async function expectListIsNotEmpty(pageObject: PageWithTable): Promise<void> {
   await waitForTableSettled(pageObject);
   await expect(pageObject.table.rows.first()).toBeVisible();
+}
+
+// Wraps a row-content check for filters whose correct result can legitimately be zero
+// rows depending on what data currently exists (e.g. a rolling relative-date window
+// like Verkaufsstart-Termin), as opposed to filters where zero rows always means a
+// bug. On zero rows, verifies the empty-state UI instead and attaches a report
+// annotation explaining why — the positive-path check is caller-supplied so this stays
+// reusable for other filters with the same data-availability uncertainty later.
+export async function expectEveryRowOrEmptyState(
+  pageObject: PageWithTable,
+  verifyRowContent: () => Promise<void>,
+  emptyStateAnnotation: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rowCount = await pageObject.table.rows.count();
+  if (rowCount === 0) {
+    test.info().annotations.push({ type: 'no-fixture-data', description: emptyStateAnnotation });
+    await expectListIsEmptyWithMessageByFilterDropDown(pageObject);
+  } else {
+    await verifyRowContent();
+  }
 }
 export async function expectEveryRowBauloseEinsatznameToBe(
   pageObject: PageWithTable & { listRows: Locator; baulosEinsatznameContents: Locator },

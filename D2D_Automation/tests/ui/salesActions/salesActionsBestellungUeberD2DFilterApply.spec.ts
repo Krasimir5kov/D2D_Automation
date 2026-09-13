@@ -35,7 +35,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded'])).toBeVisible();
             });
             await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
                 await salesActionsPage.gotoFtthSalesAction();
@@ -80,7 +80,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded'])).toBeVisible();
             });
             await test.step('Verify that no results are returned', async () => {
                 await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
@@ -107,7 +107,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded'])).toBeVisible();
             });
             await test.step('Verify that no results are returned', async () => {
                 await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
@@ -130,7 +130,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded'])).toBeVisible();
             });
             await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
                 await salesActionsPage.gotoFtthSalesAction();
@@ -175,7 +175,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded'])).toBeVisible();
             });
             await test.step('Verify that no results are returned', async () => {
                 await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
@@ -202,7 +202,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify that filter chip is displayed correctly', async () => {
-                await salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded']); 
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded'])).toBeVisible();
             });
             await test.step('Verify that no results are returned', async () => {
                 await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
