@@ -1,9 +1,205 @@
 # D2D Automation — AI Assistant Instructions
 
+This file is read automatically at the start of every Claude Code session opened in this
+repo, on **any** machine. It exists so that context built up on one computer (rules agreed,
+decisions made, current progress) isn't lost when the user switches to a different laptop —
+everything below used to live only in this assistant's local, per-machine memory and has been
+consolidated here on purpose. Keep it up to date as things change; it is meant to be edited,
+not just read.
+
 ## ⚠️ Approval gate (mandatory)
 Never apply any change to an existing source file without explicit approval from the user.
 Always propose the change first, wait for "yes" or "apply it", then act.
 New files may be drafted and shown, but must also be confirmed before being written to disk.
+
+---
+
+## ⚠️ Record everything, as it happens (mandatory)
+After the user asks you to apply *any* change — a commit, a push, a new test, a new POM
+method/locator, a new helper, a new decision, a new agreement about how something should work, a
+compromise/exception against a rule stated here, a bug found, an environment quirk discovered —
+write it down before considering the turn finished. Don't wait for a dedicated "update your
+notes" request; treat recording as part of doing the work, the same way running `npm run
+typecheck` after an edit is part of doing the work.
+
+- **Where: this file (`CLAUDE.md`) is the only place that's guaranteed to reach both laptops.**
+  Write the fact here, in the relevant section (`Known bugs, decisions, and status`,
+  `Open loose ends`, the filter-coverage status paragraph, etc.), in the *same* turn the
+  underlying change happens — not in a later cleanup pass, and not *only* in the local memory
+  system. Local, per-machine memory (`~/.claude/projects/.../memory/`) lives on whichever laptop
+  the session happens to be running on and does **not** sync anywhere — a fact written only
+  there is invisible on the other laptop after a `git pull`, full stop. It's fine to also note
+  something in memory for this session's own quick recall, but that is never a substitute for
+  writing it here — if a fact matters enough to remember next time, on either machine, it goes
+  in `CLAUDE.md`, no exceptions. If a session ever finds this file and local memory disagree,
+  fix them to match in that same turn rather than picking one silently.
+- **What counts:** not just "what changed" (git history already has that) but *why* — the
+  reasoning, the alternative that was rejected and why, the environment behavior that isn't
+  obvious from reading the code. The Objekte Neubau sort-performance timeout is the reference
+  example: the code alone shows a `test.skip()`, but only a written note explains *why* it's
+  skipped (a confirmed backend bug, Jira-filed, INT-specific — not generic flakiness, not a
+  locator problem) and what condition should make someone remove the skip. Any new bug,
+  compromise, or non-obvious decision should get the same treatment.
+- **Precision matters more than speed here.** Don't guess or assume a status — if something
+  looks like it changed (a `test.skip()` got commented out, a helper got renamed) but the reason
+  isn't confirmed from the code or conversation alone, write down what was actually observed and
+  flag it as unconfirmed rather than asserting it as resolved.
+
+---
+
+## How to communicate with this user
+
+- **User:** Krasimir Petkov — QA Manual/Automation Engineer, native Bulgarian speaker,
+  self-identifies as a beginner QA SDET deliberately building this framework to learn it.
+- **Bilingual responses (mandatory, every response):** add a Bulgarian translation in
+  parentheses immediately after every English sentence — prose only, never inside code blocks,
+  file paths, terminal commands, or variable/identifier names. This has repeatedly (3+ times)
+  silently dropped during long, fast, tool-call-heavy stretches of a session (lots of file
+  reads/edits, rapid debugging) — treat it as a per-response gate, not a habit that stays on
+  once started. If a drafted response has zero Bulgarian parentheticals anywhere in it, that
+  itself is the signal something has drifted — fix it before sending, regardless of how short,
+  mechanical, or code-focused the reply feels.
+- **Present both a beginner option and a pro option.** When there's more than one valid way to
+  do something (e.g. `test.beforeEach()` vs. a custom Playwright fixture for page-object
+  instantiation), explicitly name the simple/beginner-expected approach *and* the more advanced
+  one, and say which is which — don't default to silently showing only the most sophisticated
+  answer. The user engages comfortably with advanced concepts already, but wants to consciously
+  choose the level-up rather than only ever see it.
+- **When asked whether something already written is correct** ("is this right?", "did I write
+  this correctly?"): give reasoning, not just a verdict. State whether it's correct, then explain
+  *why* by pointing to the specific rule/convention below it does or doesn't follow (which layer
+  it belongs in, locator priority, assertion style, naming convention, etc.) and the specific
+  line/pattern that triggered the judgment — never answer with a bare yes/no, and never silently
+  rewrite it without first explaining what was wrong.
+- **For Objekte-page work specifically** (`ObjektePage.ts`, Objekte's `FilterBar.ts` usage,
+  `filterAssertions.ts` helpers used by Objekte specs, `tests/ui/objekte/**`): default to
+  teach-and-review, not write-for-them. Explain what's wrong and the shape of the fix in words;
+  let the user write the actual code. Only produce complete, ready-to-paste code when they
+  explicitly say "write it" / "apply it" / equivalent. This is a deliberate learning choice for
+  this one page, not just the general approval-gate rule — other pages don't have this same
+  "user writes it themselves" arrangement.
+- This project runs fully standalone in its own container — **never** add an actual import,
+  relative path, or build dependency from `D2D_Automation` into the FE (`microfrontend-door2door-main`)
+  or BE (`microservice-door2door`) source repos, even though reading those repos (when
+  available) is a legitimate way to learn real DOM/ids/network behavior. Any id/selector
+  knowledge learned that way gets hardcoded/mirrored as plain string constants in
+  `src/constants/*.ts` — never imported live from another repo.
+
+---
+
+## Testing conventions
+
+### Page Object Model — four buckets only
+Follow official Playwright POM style. Never use a `get` accessor for a fixed locator.
+
+| What | How |
+|---|---|
+| Component/helper instance created with `new` | `readonly` property, assigned in constructor |
+| Fixed locator (no parameter needed) | `readonly Locator`, assigned in constructor |
+| Dynamic locator (needs a parameter) | plain method returning `Locator` |
+| User action | `async` method |
+
+```ts
+export class AppNavigation {
+  readonly bauloseLink: Locator;       // fixed locator → readonly
+
+  constructor(private readonly page: Page) {
+    this.bauloseLink = page.getByRole('link', { name: /^Baulose$/i });
+  }
+
+  async goToBaulose(): Promise<void> { // action → async method
+    await this.bauloseLink.click();
+  }
+}
+```
+
+### Framework layers — one responsibility per layer (SOLID-style)
+Every piece of code in this framework belongs to exactly one of these layers. Each layer has
+one job; putting a layer's job in the wrong file is the single most common review finding in
+this project. When reviewing or writing anything, name which layer it's in and check it's only
+doing that layer's job.
+
+| Layer | Where | Owns | Never contains |
+|---|---|---|---|
+| **Page Objects** | `src/pages/*.ts` | Locators (readonly for fixed, method for dynamic) + user actions (click, fill, navigate) + one narrow `expectLoadedX()` readiness check per page/section | Business assertions, filter-result correctness checks |
+| **Components** | `src/components/*.ts` | Same as Page Objects, but for UI pieces shared *across* pages (`FilterBar`, `TableView`, `SidePanel`, `ModalDialog`, `SearchField`, `AppNavigation`) — narrow structural checks about the widget itself (e.g. `expectDropdownOpened()` confirming the portal isn't empty) are fine, business-outcome checks are not | Page-specific locators, business assertions |
+| **Action helpers** | `src/helpers/filterHelpers.ts` | Actions only, composed from Page Object/Component calls into a reusable flow (e.g. `selectFilterChoiceExpandingAllOptions`) | Any `expect()` call at all |
+| **Assertion helpers** | `src/helpers/filterAssertions.ts` | Business-correctness assertions, every export prefixed `expect...`; may internally handle cross-cutting technical concerns (settle-waiting, stuck-loading recovery) since those aren't business decisions | Business *decisions* about what a test should check — that's the spec's call, not the helper's |
+| **Fixtures** | `src/fixtures/*.ts` | Dependency injection — hands specs ready-to-use, authenticated page objects via `test.extend()` | Test logic |
+| **Specs** | `tests/ui/**/*.spec.ts` | The actual business assertions, `test.step` narration, orchestration of calls into every layer above | Raw `page.locator(...)` calls, inline retry/recovery logic, `new XPage(page)` construction (use the fixture) |
+
+**How this plays out concretely:**
+- A Page Object method like `openCreateModal()` clicks a button — it does not also assert the
+  modal opened; that `expect()` belongs in the spec (or, if repeated across many specs, in an
+  assertion helper called from the spec).
+- `filterHelpers.ts` and `filterAssertions.ts` are deliberately two separate files, not one,
+  specifically so a glance at the import line tells you whether a function can throw a test
+  failure or not.
+- A recovery/retry mechanism (`gotoWithRetry`, `expectWithRecovery`, the "Too Many Requests"
+  locator handler) lives once, in `BasePage.ts`, and every layer above just calls it — never
+  reimplement retry/wait logic inline in a spec or a one-off helper.
+
+### Filter test coverage — three separate concerns, three separate files per filter
+For every filter on every page, split coverage into three dedicated spec files rather than one
+combined one:
+1. **Availability** — `{page}FiltersAvailability.spec.ts`, one file per *page* covering every
+   filter on it: is the closed trigger visible with the right title.
+2. **Dropdown Content** — `{page}{FilterName}FilterDropdown.spec.ts`, one file per *filter*:
+   once opened, search-input presence/placeholder, header label, counter-badge behavior on
+   selecting an option.
+3. **Apply** — `{page}{FilterName}FilterApply.spec.ts`, one file per filter: select a value,
+   apply it, verify the list results/chip/criteria.
+
+**Scaffold all three immediately when a new page's filter list is confirmed** — one
+`test.describe.skip(...)` stub per filter, named consistently, with a header comment naming the
+trigger locator — *before* writing any real test logic and without waiting to be asked
+filter-by-filter. This has been corrected once already (only the first filter got a stub file
+the first time a new page started); don't repeat that.
+
+### Reusable filter-testing infrastructure (already built — reuse, don't rebuild)
+- `FilterBar.ts` — generic, page-agnostic: `trigger(id)`, `choiceLabelButton(label)`,
+  `choiceCheckbox(label)`, `choiceRadio(label)`, `filterBarChip(text)`,
+  `filterBarChipPlusPrefix(prefix, text)`, `expectDropdownOpened()`, `applyFilter()`. Every
+  filter panel across the whole app renders into the same `#filter-dropdown-root` portal, so
+  these work for any filter on any page — never write a page-specific duplicate.
+- `filterHelpers.ts` — action-only helpers with no assertions inside: notably
+  `selectFilterChoiceExpandingAllOptions(pageObject, openFilter, choiceLabel)` (opens the
+  filter, clicks "weitere anzeigen" if present, clicks the choice — does not apply).
+- `filterAssertions.ts` — assertion-only helpers, all prefixed `expect...`, including
+  `waitForTableSettled`/`expectTableSettled` (built-in stuck-loading recovery, see below),
+  `expectEveryRowColumnToContain` (has an opt-in `ignoreCase` flag for columns whose rendered
+  case differs from the filter's own label), `expectEveryRowPlzWithinRange`,
+  `expectEveryRowStatusChipToBe` (Sales Actions Status chip, scoped by `role="status"`),
+  `expectEveryRowAufgabeChipToBe` (Sales Actions Aufgabe task chip — has no stable attribute of
+  its own, located by its own exact text instead), `nearestNonTransparentBackgroundColor`
+  (climbs DOM ancestors for a real background color — `background-color` does not inherit, so
+  locating a colored badge by its own visible text often resolves to a transparent inner span;
+  **always start the climb from the deepest text node, never from an outer wrapper** — starting
+  too high climbs past the real colored element into an unrelated ancestor's color, like a table
+  row's own zebra-striping).
+- `door2doorRoutes` bare/root keys (`baulose.main`, `objekte.main`, `salesActions.main`,
+  `benutzerverwaltung.main`) plus each page's bare `goToXPage()`/`expectLoadedX()` methods exist
+  for testing the app's real auto-redirect-to-default-section behavior when no section is given
+  in the URL — use `gotoDoor2DoorRoute` (hard `page.goto()`) for this, not `AppNavigation`'s
+  soft in-app nav-link clicks.
+- Environment recovery is already built into `BasePage.ts` and does not need to be re-invented
+  per test: `registerErrorRecoveryHandler()` (auto-dismisses a recurring "Too Many Requests"
+  overlay), `gotoWithRetry()` (retries `page.goto()` on transient connection errors),
+  `expectWithRecovery()` / `AppNavigation.bounceToAnotherPageAndBack()` (recovers from a
+  stuck-loading table via browser-history bounce, confirmed to preserve already-applied filters
+  unlike a hard reload). `waitForTableSettled` already calls this recovery internally, so every
+  other row-assertion helper that calls it gets the recovery for free.
+- Search fields in this app do **not** use a native `placeholder` attribute — the visible
+  "placeholder-like" text is a floating `<label for="{input-id}"><span>{text}</span></label>`
+  sibling of the `<input>`. Use `BasePage.expectSearchFieldPlaceholderVisible(searchInput, text)`
+  (or `SearchField.expectPlaceholder(text)`), never `toHaveAttribute('placeholder', ...)`.
+
+### Locating things not exposed via `role`/id
+Several custom controls in this app (Objekte's PLZ/Fragebogen/Verkaufsstart radios) don't
+expose real ARIA roles to the accessibility tree — `getByRole('radio', ...)` silently finds
+nothing even though a real `<input type="radio">` exists in the DOM. `FilterBar.choiceRadio()`
+already works around this by matching on the real DOM input + label text instead of role — reuse
+it rather than re-discovering the same workaround. A future FE ticket candidate, not yet raised.
 
 ---
 
@@ -14,13 +210,109 @@ New files may be drafted and shown, but must also be confirmed before being writ
 | App | Door2Door (D2D) — React SPA, hash-based routing |
 | Stack | Playwright + TypeScript, Node 18+, strict mode on |
 | Auth | Manual 2FA via `tests/setup/auth.setup.ts`, storageState reuse |
-| Base URL env var | `INTEGRATION_URL` in `.env` |
+| Environments | INT (`INTEGRATION_URL`) and PROD (`PROD_URL`) in `.env`, switched via `TEST_ENV`; per-page-folder `:int`/`:prod` npm scripts (`cross-env`), and a GitHub Actions `environment` dropdown |
 | Auth state path | `playwright/.auth/user.json` (constant in `src/constants/auth.ts`) |
 | Route constants | `door2doorRoutes` in `src/pages/BasePage.ts` |
-| Stable HTML IDs | All in `src/frontend/shared/testIds/` (frontend repo) |
-| ID reference doc | `D2D_QA_Attributes_Work_Summary.md` (project root) |
-| ID reference (automation) | `references/testids-map.md` |
-| Architecture decisions | `references/decisions.md` |
+| Stable HTML IDs | All in `src/frontend/shared/testIds/` (frontend repo) — see the FE ticket series below |
+| ID reference (automation, older) | `testids-map.md` |
+| ID reference (automation, newer/more granular) | `D2D_Playwright_Attributes_Reference.md` — **re-read this fresh before any locator/attribute suggestion**, don't rely on a recalled summary; if it doesn't cover an element, say so and ask for a live devtools check rather than guessing |
+| Architecture decisions | `decisions.md` |
+| Best practices / roadmap | `best-practices.md` |
+
+---
+
+## Known bugs, decisions, and status (not derivable from the code alone)
+
+- **Objekte Neubau sort-performance bug — confirmed real, Jira ticket filed 2026-09-02.** The
+  `objects?type=NEUBAU&...&sortBy=SALESTART_DATE_TIME.DESC` request is slow specifically on INT
+  — confirmed ~25s on INT (123 items) vs. ~0.67s on PROD (1,910 items, 15x more data), so it's an
+  INT-environment-side issue (missing index / weaker backing DB / bad query plan), not a
+  scaling problem. This is the prime suspect for any new "stuck loading, 60-120s timeout"
+  failure specifically on Objekte Neubau. Mocking/caching this request's response was
+  considered and explicitly rejected — it's the same request the filter-correctness tests need
+  to verify against real data, so caching it would make those tests meaningless.
+  **Observed 2026-09-13, unconfirmed:** the `test.skip()` this bug caused (in
+  `objekteOrganisationFilterApply.spec.ts`, `objektePlzFilterApply.spec.ts`,
+  `objekteQuickFiltersApply.spec.ts`, and likely other Objekte specs) is now commented out
+  (`// test.skip();`) rather than active — but the explanatory comment above it still says
+  "remove once that ticket is resolved," unchanged. This could mean the Jira ticket got fixed,
+  or it could just be a manual, possibly temporary, re-enable to test something — **not
+  confirmed either way**. Ask the user directly before assuming the underlying backend bug is
+  actually fixed.
+- **Resolved, not a bug:** a Sales Actions "abgeschlossen" Status chip once rendered the wrong
+  grey inconsistently. Root cause was stale/corrupted data on one specific test record —
+  recreating its customer interaction fixed it permanently. If a Status-chip colour assertion
+  fails again, check whether it's isolated to one record first before suspecting a systemic
+  rendering bug.
+- **Temporary, deliberately generous Playwright timeouts** are in place because the INT
+  environment itself is confirmed slow/flaky (corroborated by real CI runs showing
+  `ERR_CONNECTION_REFUSED`/`ERR_ABORTED` across unrelated pages, and manually-captured 10+s
+  requests) — not a code or locator problem. Current spots: `playwright.config.ts`
+  (`expect.timeout: 10_000`, `navigationTimeout: 15_000`), and a couple of `setTimeout`/hardcoded
+  `{ timeout: 60000 }` spots in specs/`filterAssertions.ts`. Revisit and lower these once the
+  environment stabilizes or the build-out reaches a natural pause — don't let them silently
+  become the permanent baseline.
+- **FE stable-attribute ticket series (POSS-3397 → POSS-3422, 24 tickets) is fully Done.**
+  Every major page already has list-view, side-panel, and filter-bar attribute work landed —
+  don't assume a page has no stable locators or needs new FE work first without checking
+  `D2D_Playwright_Attributes_Reference.md`/`testids-map.md` first.
+- **Sequencing decision:** finish filter+results test coverage across *every* page (breadth)
+  before starting any page's deeper Side Panel testing (content, Customer Interaction creation,
+  status pickers) — deliberately deferred, not skipped, so the filter-testing patterns/
+  infrastructure stay fresh while building it out, rather than context-switching to a
+  qualitatively different testing domain (iframes, CRUD flows) mid-way.
+
+**Current build-out status is a moving target — don't trust a hardcoded snapshot of "which
+filter is done" here, it will go stale immediately.** To check what's actually built vs. stubbed
+right now: `grep -rl "test.describe.skip" tests/ui/<page>/` for stubs still pending, `git log
+--oneline -20` for recent work, or just open the relevant `{page}{FilterName}FilterApply.spec.ts`
+directly. As of this writing (2026-09-13) the rough order has been Baulose (done) → Objekte
+(filters built; Neubau's `test.skip()` for the sort-performance bug is currently commented out —
+see the unconfirmed note above) → Sales Actions (in progress — Organisation/Baulos-Einsatzname/
+Phase reused from other pages; Ergebnis/Aufgabe/AblegerZustimmung built; Immobilienart and
+Bestellung über D2D have substantial coverage but known open issues, see below; remaining
+filters not yet started: Regime, Termin, Status, Planskizze, Kundendaten, Sales Action-Type,
+Objekt, zugewiesen an, upselling Potential) → Benutzerverwaltung/Importe/Konfiguration not yet
+started.
+
+**Second row-verification pattern confirmed and now in real use — Side Panel chip lookup, for
+filters with no list-column representation at all.** Distinct from `expectEveryRowStatusChipToBe`
+(Status column, row-scoped, `role="status"`) and `expectEveryRowAufgabeChipToBe` (Aufgabe column,
+row-scoped, text-located): some filters (Bestellung über D2D confirmed; Ergebnis/Aufgabe/
+Planskizze/Ableger Zustimmung/Kundendaten suspected, same category) only show their result inside
+a Sales Action's **side panel**, not any table column. Pattern: open the first matching row's
+side panel, read the relevant chip's text/color there via page-specific methods (e.g.
+`SalesActionsPage.checkBestellungUeberD2DStatusInSidePanel()` /
+`expectBestellungUeberD2DStatusChipColour()`), against lookup constants
+`src/constants/salesActionSidePanelChipStatus.ts` (label text per option, e.g.
+`BestellungUeberD2DOptions`, `Planskizze`) and `src/constants/salesActionSidePanelChipColors.ts`
+(`SIDE_PANEL_CHIP_COLORS`, color per label text — **note this is a different, separate color
+table from `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`/`SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR`,
+which are for the list-row chips, not the side-panel ones — don't conflate the two**).
+
+**Concrete bug found during a 2026-09-13 audit, not yet fixed —
+`salesActionsBestellungUeberD2DFilterApply.spec.ts`:** every "Verify that filter chip is
+displayed correctly" step (4 occurrences) does
+`await salesActionsPage.filters.filterBarChipPlusPrefix(label, option);` with no `expect(...)`
+wrapper — `filterBarChipPlusPrefix` returns a `Locator` synchronously, so `await`ing it directly
+is a no-op and asserts nothing at all. Needs to be
+`await expect(salesActionsPage.filters.filterBarChipPlusPrefix(label, option)).toBeVisible();`
+at each of the 4 call sites. Flagged, not yet applied — needs the user's go-ahead per the
+approval gate.
+
+**Open loose ends as of 2026-09-13:**
+- `KonfigurationPage.ts`'s header locator (now named `navSideBarHeader`, not `pageHeader` —
+  renamed at some point after this note was first written) — scoped to
+  `#configuration-navigation-sidebar` (a confirmed-stable id, see ADR-008/009 in `decisions.md`)
+  `.getByText('Konfiguration', {exact:true})`. Better-scoped than before, but the header text
+  match itself is still explicitly commented "unconfirmed markup" in the source — not yet
+  verified via devtools.
+- Several Sales Actions filters under active development (Immobilienart confirmed, likely others
+  using the same pattern) have a `// row-check — see blocker below` placeholder where a per-row
+  content assertion should be — blocked on getting the real row HTML from devtools for that
+  specific filter before the assertion can be written correctly.
+- The `expectFilterVisible(filterId): Locator` duplicate-of-`trigger()` method previously flagged
+  here has been removed from `FilterBar.ts` — resolved, no longer an open item.
 
 ---
 
@@ -48,6 +340,12 @@ door2doorRoutes.konfiguration.aufgaben
 door2doorRoutes.konfiguration.gruppen
 door2doorRoutes.konfiguration.regime
 door2doorRoutes.konfiguration.aktivitaetenSetup
+
+// Bare/root keys — for testing real auto-redirect-to-default-section behavior
+door2doorRoutes.baulose.main
+door2doorRoutes.objekte.main
+door2doorRoutes.salesActions.main
+door2doorRoutes.benutzerverwaltung.main
 
 // ❌ WRONG — these flat keys do not exist
 door2doorRoutes.objekteNeubau
@@ -127,19 +425,21 @@ expect(await locator.textContent()).toBe('Hello')
 ```
 src/
   components/         Reusable UI helpers (FilterBar, TableView, SidePanel, ModalDialog, SearchField, AppNavigation, KonfigurationSideBar)
-  constants/          auth.ts — AUTH_FILE, AUTH_DIR, timeout constant
-  fixtures/           api.fixture.ts — authenticated APIRequestContext
+  constants/          auth.ts, route/filter-option/chip-color constants — mirrors of real app ids/values, never imported live from the FE/BE repos
+  fixtures/           object.fixture.ts (objektePage + salesActionsPage), salesAction.fixture.ts, api.fixture.ts — page objects injected via test.extend(), no manual `new XPage(page)` needed in specs
+  helpers/            filterHelpers.ts (actions, no assertions), filterAssertions.ts (assertions, all prefixed expect...)
   pages/              One file per app section, all extend BasePage
-    BasePage.ts       door2doorRoutes + buildDoor2DoorUrl + gotoDoor2DoorRoute
+    BasePage.ts       door2doorRoutes + buildDoor2DoorUrl + gotoDoor2DoorRoute + shared recovery mechanisms
     index.ts          Barrel re-exports for all page objects
 tests/
   setup/              auth.setup.ts — manual 2FA login, saves storageState
   preflight/          preflight.spec.ts — smoke: app mounts with saved auth
-  ui/                 Feature specs (UI)
+  ui/                 Feature specs (UI), one folder per page, 3 files per filter (see Testing conventions above)
   api/                Feature specs (API)
-references/
-  testids-map.md      Stable HTML IDs from POSS-3402 → POSS-3422 attribute work
-  decisions.md        Architecture decisions log
+testids-map.md                       Older stable HTML ID catalog (POSS-3402 → POSS-3422)
+D2D_Playwright_Attributes_Reference.md   Newer, more granular ID catalog — prefer this one, re-read fresh each time
+decisions.md                         Architecture decisions log (ADR-001+, "in force")
+best-practices.md                    Assertion/locator/test-structure conventions + roadmap
 ```
 
 ---
@@ -152,17 +452,3 @@ setup → api (API tests — separate project, no browser)
 ```
 
 The `api` project does not depend on `ui-preflight`. Keep them independent.
-
----
-
-## Known issues to fix before next test run
-
-1. `BenutzerverwaltungPage.goto()` — uses `door2doorRoutes.benutzerverwaltungUsers` (wrong flat key)
-2. `ObjektePage.goto()` — uses `door2doorRoutes.objekteNeubau` (wrong flat key)
-3. `SalesActionsPage.goto()` — uses `door2doorRoutes.salesActionsNeubau` (wrong flat key)
-4. `KonfigurationPage.goto()` — uses `door2doorRoutes.konfigurationOverview` (wrong flat key)
-5. `BenutzerverwaltungPage`, `ObjektePage`, `SalesActionsPage` — `new SidePanel(page)` missing 2 required args
-6. `ObjektePage.openAllFilters()`, `SalesActionsPage.openAllFilters()` — call non-existent `openAllFilters()` method
-7. `SalesActionsPage` — `searchInput` uses `#objects-search-field` (Objekte ID, wrong copy-paste)
-8. `bauloseListSectionView.spec.ts` — incomplete expression `const orgFilter = await baulosePage.` (syntax error)
-9. `SidePanel.ts` — dead import `import { strict } from 'assert'`
