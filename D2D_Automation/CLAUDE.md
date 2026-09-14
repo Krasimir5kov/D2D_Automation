@@ -249,13 +249,11 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
   `ERR_CONNECTION_REFUSED`/`ERR_ABORTED` across unrelated pages, and manually-captured 10+s
   requests) — not a code or locator problem. Current spots, **re-verified 2026-09-13 (raised
   again since this note was last written — the old numbers below were stale)**:
-  `playwright.config.ts` top-level `timeout: 60_000`, `expect: { timeout: 60_000 }`,
-  `use.navigationTimeout: 120_000` (`use.actionTimeout` stayed at `10_000`), and a couple of
-  `setTimeout`/hardcoded `{ timeout: 60000 }` spots in specs/`filterAssertions.ts`. Also note:
-  `retries` in `playwright.config.ts` is currently fully commented out, so no automatic retry is
-  configured at all right now despite the flakiness above — not confirmed whether that's
-  deliberate. Revisit and lower these once the environment stabilizes or the build-out reaches a
-  natural pause — don't let them silently become the permanent baseline.
+  `playwright.config.ts` top-level `timeout: 120_000`, `expect: { timeout: 120_000 }`, and a
+  couple of `setTimeout`/hardcoded `{ timeout: 60000 }` spots in specs/`filterAssertions.ts`.
+  `retries: process.env.CI ? 2 : 2` is enabled (was found fully commented out 2026-09-13,
+  re-enabled the same day). Revisit and lower these once the environment stabilizes or the
+  build-out reaches a natural pause — don't let them silently become the permanent baseline.
 - **FE stable-attribute ticket series (POSS-3397 → POSS-3422, 24 tickets) is fully Done.**
   Every major page already has list-view, side-panel, and filter-bar attribute work landed —
   don't assume a page has no stable locators or needs new FE work first without checking
@@ -281,9 +279,11 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
   too, and gives each attempt its own bounded `attemptTimeoutMs` (default 20s) instead of
   inheriting the global `navigationTimeout`; `playwright.config.ts`'s top-level `timeout` raised
   60s → 90s to comfortably exceed the retry loop's worst case (3 x 20s + 2 x 3s delay ≈ 66s).
-  `npm run typecheck` passes. Not yet verified against a real CI run — worth watching the next
-  scheduled/manual run to confirm the same failure pattern doesn't recur. **Not yet committed —
-  these edits (`BasePage.ts`, `playwright.config.ts`) still sit as uncommitted local changes.**
+  `npm run typecheck` passes. **Committed as `b570b9d` ("Retry goto() on ERR_TIMED_OUT and stop
+  the outer test timeout from cutting retries off early") — confirmed present in `BasePage.ts`
+  on this machine 2026-09-14, so this note's earlier "not yet committed" caveat no longer
+  applies.** Not yet verified against a real CI run — worth watching the next scheduled/manual
+  run to confirm the same failure pattern doesn't recur.
 - **Separate local-only issue confirmed 2026-09-13: `--headed` local runs leave worker processes
   that don't exit cleanly, unrelated to the CI fix above.** User pasted terminal history from
   several local `npx playwright test tests/ui/objekte` runs. The confusing
@@ -301,6 +301,21 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
   tests/ui/objekte`, no `--headed`), and use Ctrl+C rather than Ctrl+Z to stop a run early — Ctrl+Z
   freezes the process without letting Playwright attempt any teardown at all, guaranteeing this
   exact kind of leftover mess.
+- **Local `workers` count is machine-dependent — confirmed 2026-09-14 on a second (personal)
+  laptop.** `playwright.config.ts`'s local `workers` was found bumped `3 → 6` on this machine,
+  uncommitted. That change lines up exactly with two real local failures seen the same day: a
+  Chrome `Network service crashed or was terminated, restarting service` log followed by
+  `browser.newContext: Test ended`, and a separate `locator.click: Target page, context or
+  browser has been closed` thrown from inside `bounceToAnotherPageAndBack`'s stuck-loading
+  recovery (the context was already gone by the time recovery tried to click something). Root
+  cause: 6 parallel headless Chrome instances is real resource pressure, and this machine
+  apparently can't sustain it the way `workers: 3` has been stable elsewhere — not a code or
+  locator bug. **Fixed, with the user's approval: reverted to `workers: process.env.CI ? 3 : 3`
+  on this machine.** Since `workers` is a local, uncommitted-by-nature value that can legitimately
+  differ per machine's hardware, don't assume `3` is a hard ceiling everywhere or that `6` is
+  simply "wrong" — if this comes up again on a *different* machine, step the count up
+  incrementally and watch for this exact crash signature rather than assuming the same limit
+  applies.
 - **Sequencing decision:** finish filter+results test coverage across *every* page (breadth)
   before starting any page's deeper Side Panel testing (content, Customer Interaction creation,
   status pickers) — deliberately deferred, not skipped, so the filter-testing patterns/
