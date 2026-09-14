@@ -377,3 +377,41 @@ export async function expectEveryRowNameCellToContain(
     ).toBe(true);
   });
 }
+export async function expectEveryRowKundendatenIconToBe(
+  pageObject: PageWithTable & { kundendatenIconInRow: (row: Locator) => Locator },
+  expectedPresent: boolean,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    const icon = pageObject.kundendatenIconInRow(rows.nth(i));
+    if (expectedPresent) {
+      await expect(icon, `row ${i}: expected Kundendaten icon present`).toBeVisible();
+    } else {
+      await expect(icon, `row ${i}: expected no Kundendaten icon`).toHaveCount(0);
+    }
+  }
+}
+export async function expectEveryRowIconToBe(
+  pageObject: PageWithTable,
+  iconInRow: (row: Locator) => Locator,
+  expectedPresent: boolean,
+  iconLabel: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    const icon = iconInRow(rows.nth(i));
+    if (expectedPresent) {
+      await expect(icon, `row ${i}: expected ${iconLabel} icon present`).toBeVisible();
+    } else {
+      await expect(icon, `row ${i}: expected no ${iconLabel} icon`).toHaveCount(0);
+    }
+  }
+}
+
+

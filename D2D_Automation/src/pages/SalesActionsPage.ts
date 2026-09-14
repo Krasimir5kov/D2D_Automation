@@ -83,8 +83,8 @@ export class SalesActionsPage extends BasePage {
   readonly accordionBodyContent: Locator;
   readonly customerInteractionAccordionBodyState: Locator;
   readonly ablegerErfasstChipInSidePanel: Locator;
-  readonly bestellungUberStatusInSAPanel : Locator
-  readonly genericDropdownMenuOption : Locator;
+  readonly bestellungUberStatusInSAPanel: Locator
+  readonly genericDropdownMenuOption: Locator;
   readonly nichtErfasstRadioOptionInBestellungUeberD2DFilter: Locator;
   readonly erfasstRadioOptionInBestellungUeberD2DFilter: Locator;
   constructor(page: Page) {
@@ -142,7 +142,7 @@ export class SalesActionsPage extends BasePage {
     this.bestellungUberStatusInSAPanel = page.locator('#ftth-object-side-panel').getByText('Bestellung über D2D', { exact: true });
     this.nichtErfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['non-recorded'], { exact: true });
     this.erfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['recorded'], { exact: true });
-    
+
   }
   async openBaulosEinsatznameFilterDropDown(): Promise<void> {
     await this.baulosEinsatznameFilter.click();
@@ -212,7 +212,7 @@ export class SalesActionsPage extends BasePage {
   async expectAblegerErfasstChipInSidePanelVisible(): Promise<void> {
     await expect(this.ablegerErfasstChipInSidePanel).toBeVisible();
   }
-   async checkBestellungUeberD2DStatusInSidePanel(expectedStatus: string | RegExp): Promise<void> {
+  async checkBestellungUeberD2DStatusInSidePanel(expectedStatus: string | RegExp): Promise<void> {
     await expect(this.bestellungUberStatusInSAPanel.locator('..').getByText(expectedStatus, { exact: true })).toBeVisible();
   }
   phaseChipInSidePanelHeader(phaseValue: string): Locator {
@@ -390,15 +390,24 @@ export class SalesActionsPage extends BasePage {
     await this.filters.expectDropdownOpened();
   }
   async expectAblegerAbgelehntFilterOptionDisplayed(filterOption: string | RegExp): Promise<void> {
-    await expect(this.genericDropdownMenuOption.getByText(filterOption,{exact: true})).toBeVisible();
+    await expect(this.genericDropdownMenuOption.getByText(filterOption, { exact: true })).toBeVisible();
   }
   async selectAblegerAbgelehntOptionAndApplyFilter(filterOption: string | RegExp): Promise<void> {
-    await this.genericDropdownMenuOption.getByText(filterOption,{exact: true}).click();
+    await this.genericDropdownMenuOption.getByText(filterOption, { exact: true }).click();
     // Assuming there's an "Apply" button in the filter modal
     await this.filters.applyFilter();
   }
   async openFirstCustomerInteractionAccordion(): Promise<void> {
     await this.customerInteractionAccordion.first().click();
   }
-  
+  kundendatenIconInRow(row: Locator): Locator {
+    return row.locator('svg path[d^="M11 11a5.332 5.332 0"]');
+  }
+  upsellingPotentialIconInRow(row: Locator): Locator {
+    return row.locator('svg path[d^="M18.286 1.999h-4.572"]');
+  }
+  notizIconInRow(row: Locator): Locator {
+    return row.locator('svg path[d^="M17 0h-2.133v5.333H17V0z"]');
+  }
+
 }

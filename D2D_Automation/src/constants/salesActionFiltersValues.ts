@@ -16,6 +16,11 @@ export const phaseFilterOptions = {
     secondRun: '2nd Run',
     noPhase: 'Keine Phase',
 };
+export const KundendatenFilterOptions = {
+    noCustomer: { label: 'ohne Kundendaten', expectedIconPresent: false, expectedInNeubau: true, expectedInFTTH: true, expectedInBestandsbau: true },
+    withCustomer: { label: 'mit Kundendaten', expectedIconPresent: true, expectedInNeubau: false, expectedInFTTH: true, expectedInBestandsbau: true },
+} as const;
+;
 // Confirmed 2026-09-04: only leerverrohrungscheck and nachverdichtung return results in
 // FTTH-AUSBAU — every other Aufgabe value here is Bestandsbau-specific.
 export const aufgabeFilterOptions = {

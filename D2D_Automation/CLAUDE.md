@@ -360,6 +360,30 @@ side panel, read the relevant chip's text/color there via page-specific methods 
 (`SIDE_PANEL_CHIP_COLORS`, color per label text — **note this is a different, separate color
 table from `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`/`SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR`,
 which are for the list-row chips, not the side-panel ones — don't conflate the two**).
+**Correction 2026-09-14: Kundendaten is NOT in this side-panel category** — see the icons-column
+finding directly below, it has its own dedicated list-column representation instead.
+
+**Third row-verification pattern confirmed 2026-09-14 — the row's "icons" column
+(`BESTANDSBAU_COLUMNS`/`FTTH_COLUMNS`/`NEUBAU_COLUMNS.icons`, index 3, in the new
+`src/constants/salesActionsColumnsValues.ts`) is a third distinct mechanism, for filters whose
+result renders as a small SVG icon rather than a text chip.** Confirmed live via devtools on
+Kundendaten: the column always has 2 slot divs, slot 1 can hold up to 2 icons and slot 2 up to 1,
+and each icon type appears at most once per row — so the right way to check for one specific
+icon is to key a locator on that icon's own unique `<svg><path d="...">` value (`row.locator('svg
+path[d^="<distinctive prefix>"]')`, scoped to the row), never on the surrounding wrapper classes
+(`BrQIfq2NULZl0psfQ55A`/`PZa7BVFGq2MAw2SelECe`/`gucci-icon-v2` are CSS-module-generated and not
+locator-priority-safe) or a generic "any icon" locator (would strict-mode-violate on rows with
+2+ icons). Confirmed 3 icon meanings so far, all independently present/absent per row:
+- Person silhouette, `viewBox="0 0 22 22"`, path starts `M11 11a5.332 5.332 0` → Kundendaten present
+- Lightbulb, `viewBox="0 0 32 32"`, path starts `M17 0h-2.133v5.333H17V0z` → a Notiz was added
+- House, `viewBox="0 0 32 32"`, path starts `M18.286 1.999h-4.572` → Upselling Potential (confirmed Bestandsbau-only)
+
+**Confirmed identical on INT and PROD (2026-09-14)** via a devtools console check (querying
+`svg path` for each prefix and comparing the full `d` value) — safe to rely on across both
+environments, exactly because it's keyed on the icon's actual vector data rather than a
+build-generated CSS-module class hash (which legitimately can differ between an INT build and a
+PROD build even when the component itself hasn't changed). **Locators/spec not yet written as of
+this note — user is implementing `salesActionsKundendatenFilterApply.spec.ts` themselves.**
 
 **Bug found during a 2026-09-13 audit, fixed the same day —
 `salesActionsBestellungUeberD2DFilterApply.spec.ts`:** every "Verify that filter chip is
