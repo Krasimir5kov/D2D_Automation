@@ -371,6 +371,22 @@ Dropdown Content bucket (file 2 of the 3-file split) is at 0% on every page — 
 still empty stubs with zero real tests; that's the next real gap to close, not any one page's
 Apply coverage.**
 
+**Sales Actions Regime and Status are functionally built but the user is still personally
+reviewing both for mistakes as of 2026-09-16 — treat as "likely to change," not final.**
+Regime review round 1 found 4 things: (1) a stale doc comment in `salesActionFiltersValues.ts`
+claiming "Neubau has no Regime data" directly contradicted by the `wbtmBestand`/`wbtmNeubau`
+entries in the same object — **fixed, comment removed**; (2) same stale claim duplicated in
+`salesActionsRegimeFilterApply.spec.ts`'s own header comment (lines 5-8) — **still NOT fixed,
+still says the old wrong thing**, this is the one concrete pending fix; (3) missing
+`expectLoadedX()` readiness calls before the negated-section empty-state assertions — **fixed**
+by the user; (4) two different sections' empty-checks bundled into one `test.step` instead of
+one each — **fixed** by the user, went further than what was asked. **Resolved 2026-09-16 (user
+confirmed directly):** `wbtmBestand: { label: 'WBTM Bestand', expectedInNeubau: true, ... }` is
+correct as written — despite the label saying "Bestand," both `"WBTM Bestand"` and
+`"WBTM Neubau"` are genuinely Neubau-section regime values, not a copy-paste mix-up. No longer
+an open question.
+Status has not had a formal review pass in this conversation yet (only built, not reviewed).
+
 **Second row-verification pattern confirmed and now in real use — Side Panel chip lookup, for
 filters with no list-column representation at all.** Distinct from `expectEveryRowStatusChipToBe`
 (Status column, row-scoped, `role="status"`) and `expectEveryRowAufgabeChipToBe` (Aufgabe column,
