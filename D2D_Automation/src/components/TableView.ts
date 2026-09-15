@@ -9,8 +9,12 @@ export class TableView {
   readonly emptyStateHeadingByFilterDropdown: Locator;
   readonly emptyStateDescriptionByFilterDropdown: Locator;
   // Stores the active Playwright page so table locators can be created from it.
-  constructor(private readonly page: Page) {
-    this.table = page.locator('table, [role="table"], [class*="Table"]').first();
+  // tableRoot is optional — pages with a confirmed, more specific stable table-root
+  // locator (e.g. SalesActionsPage's per-section "..._SA_Table" classes) can pass it in
+  // to tighten table/rows/loadingCells/empty-state scoping for that page only; every page
+  // that doesn't pass one keeps today's exact generic-fallback behavior, unchanged.
+  constructor(private readonly page: Page, tableRoot?: Locator) {
+    this.table = tableRoot ?? page.locator('table, [role="table"], [class*="Table"]').first();
     // Scoped under this.table (not page-wide) so another table-like element elsewhere
     // on the page can't contribute rows. Scoped to tbody on both halves too — a plain
     // <tr> has an implicit ARIA role of "row" even inside <thead>, so an unscoped

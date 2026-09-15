@@ -7,7 +7,7 @@
  * for the confirmed locators and plan.
  */
 import { expect } from '@playwright/test';
-import { test } from '../../../src/fixtures/object.fixture';
+import { test } from '../../../src/fixtures/salesAction.fixture';
 import { SALES_ACTION_FILTER_TITLES_AND_ID } from '../../../src/constants/salesActionFiltersTitle';
 import { selectFilterChoiceExpandingAllOptions } from '../../../src/helpers/filterHelpers';
 import { ergebnisFilterOptions } from '../../../src/constants/salesActionFiltersValues';

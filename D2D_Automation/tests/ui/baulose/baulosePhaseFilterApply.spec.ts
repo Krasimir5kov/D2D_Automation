@@ -8,6 +8,7 @@ import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { selectFilterChoiceWithOutSearchInput, applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
 import { expectEveryRowColumnToContain, expectListIsEmptyWithMessageByFilterDropDown, expectListIsNotEmpty } from '../../../src/helpers/filterAssertions';
 import { FTTH_COLUMNS } from '../../../src/constants/baulose';
+import { BAULOSE_TABLE_PHASE_CHIP_COLORS } from '../../../src/constants/bauloseTableChipColors';
 
 const CONTRACT_SECTION_ENDPOINT = '/contract-section/paginatedContractSections';
 
@@ -17,10 +18,13 @@ test.describe('Baulose Page Filters  — Apply', () => {
     await baulosePage.expectLoadedBestandsbau();
   });
   test.describe('Phase filter', () => {
+    // color is only confirmed for Pre-Contracting/2nd Run — Keine Phase has no confirmed
+    // chip color, so it's left undefined and expectEveryRowColumnToContain's color check
+    // stays opt-in (same convention used everywhere else this constant pattern is used).
     const phaseValues = [
-      { Name: 'Pre-Contracting', expectedInBestandsbau: false },
-      { Name: '2nd Run', expectedInBestandsbau: false },
-      { Name: 'Keine Phase', expectedInBestandsbau: true }
+      { Name: 'Pre-Contracting', expectedInBestandsbau: false, color: BAULOSE_TABLE_PHASE_CHIP_COLORS.preContracting.color },
+      { Name: '2nd Run', expectedInBestandsbau: false, color: BAULOSE_TABLE_PHASE_CHIP_COLORS.secondRun.color },
+      { Name: 'Keine Phase', expectedInBestandsbau: true, color: undefined }
     ];
     for (const phaseValue of phaseValues) {
       test(`Apply Phase filter option (${phaseValue.Name}) and verify results in FTTH-AUSBAU list view`, async ({ page, baulosePage }) => {
@@ -40,6 +44,7 @@ test.describe('Baulose Page Filters  — Apply', () => {
           await expectEveryRowColumnToContain(baulosePage, {
             columnIndex: FTTH_COLUMNS.organisationAndPhase,
             expectedText: phaseValue.Name,
+            expectedBackgroundColor: phaseValue.color,
           })
         });
         await test.step(`Verify results in BESTANDSBAU list view is empty for the applied Phase Filter (${phaseValue.Name})`, async () => {

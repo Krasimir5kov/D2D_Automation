@@ -6,7 +6,7 @@
  * reference-sales-actions-filters and project-sales-actions-filters-apply-progress memory
  * for the confirmed locators and plan.
  */
-import { test } from '../../../src/fixtures/object.fixture';
+import { test } from '../../../src/fixtures/salesAction.fixture';
 
 test.describe.skip('Sales Actions Sales Action-Type Filter Apply', () => {
 });

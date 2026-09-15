@@ -11,16 +11,18 @@ export const ergebnisFilterOptions = {
     ftthAusbauOption: 'KGV Check',
     bestandsbauOption : 'Gespräch verweigert'
 };
+// expectChipDisplayed: confirmed 2026-09-16 — Pre-Contracting/2nd Run both render a Phase
+// chip (list view + side panel); Keine Phase renders none anywhere, same "no chip for the
+// null case" behavior already confirmed on the Baulose Phase filter.
 export const phaseFilterOptions = {
-    preContracting: 'Pre-Contracting',
-    secondRun: '2nd Run',
-    noPhase: 'Keine Phase',
-};
+    preContracting: { label: 'Pre-Contracting', expectChipDisplayed: true },
+    secondRun: { label: '2nd Run', expectChipDisplayed: true },
+    noPhase: { label: 'Keine Phase', expectChipDisplayed: false },
+} as const;
 export const KundendatenFilterOptions = {
     noCustomer: { label: 'ohne Kundendaten', expectedIconPresent: false, expectedInNeubau: true, expectedInFTTH: true, expectedInBestandsbau: true },
     withCustomer: { label: 'mit Kundendaten', expectedIconPresent: true, expectedInNeubau: false, expectedInFTTH: true, expectedInBestandsbau: true },
 } as const;
-;
 // Confirmed 2026-09-04: only leerverrohrungscheck and nachverdichtung return results in
 // FTTH-AUSBAU — every other Aufgabe value here is Bestandsbau-specific.
 export const aufgabeFilterOptions = {
@@ -41,3 +43,23 @@ export const immobilienartFilterOptions = {
     mehrgeschoßigerWohnbau: { label: 'mehrgeschoßiger Wohnbau', expectedInFTTH: true, expectedInBestandsbau: false, expectedNEUBAU: true },
     unbekannt: { label: 'unbekannt', expectedInFTTH: true, expectedInBestandsbau: true, expectedNEUBAU: false },
 };
+// Confirmed 2026-09-15: same Regime values/FTTH-vs-Bestandsbau split as the Baulose page
+// (see bauloseRegimeFilterApply.spec.ts) - Neubau has no underlying Baulos/contract-section
+// data at all, so no Regime value is ever expected there.
+export const regimeFilterOptions = {
+    vhcn: { label: 'VHCN', expectedInFTTH: true, expectedInBestandsbau: false },
+    zag: { label: 'ZAG', expectedInFTTH: true, expectedInBestandsbau: false },
+    fttb: { label: 'FTTB', expectedInFTTH: false, expectedInBestandsbau: true },
+    fttc: { label: 'FTTC', expectedInFTTH: false, expectedInBestandsbau: true },
+} as const;
+// Confirmed 2026-09-15 via live row DOM: data-status-value="NOT_EXECUTABLE" renders
+// role="status" text "nicht durchführbar" - matches SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS
+// exactly. "offen" (OPEN) is confirmed as the row's rendered text but has no confirmed
+// background color yet, so it's checked label-only (no color assertion) below. CARRIED_OUT's
+// German label is not yet confirmed at all, so it's deliberately left out rather than guessed.
+export const salesActionStatusOptions = {
+    offen: 'offen',
+    inBearbeitung: 'in Bearbeitung',
+    abgeschlossen: 'abgeschlossen',
+    nichtDurchfuehrbar: 'nicht durchführbar',
+} as const;

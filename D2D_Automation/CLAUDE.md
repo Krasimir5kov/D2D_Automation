@@ -53,11 +53,14 @@ typecheck` after an edit is part of doing the work.
   self-identifies as a beginner QA SDET deliberately building this framework to learn it.
 - **Bilingual responses (mandatory, every response):** add a Bulgarian translation in
   parentheses immediately after every English sentence — prose only, never inside code blocks,
-  file paths, terminal commands, or variable/identifier names. This has repeatedly (3+ times)
-  silently dropped during long, fast, tool-call-heavy stretches of a session (lots of file
-  reads/edits, rapid debugging) — treat it as a per-response gate, not a habit that stays on
-  once started. If a drafted response has zero Bulgarian parentheticals anywhere in it, that
-  itself is the signal something has drifted — fix it before sending, regardless of how short,
+  file paths, terminal commands, or variable/identifier names. This has now dropped 4+ times
+  confirmed, including at least once *after* this exact rule was already sitting in this file
+  (auto-loaded every session) — so simply having the rule in context is proven NOT sufficient on
+  its own. It specifically fails after long, fast, tool-call-heavy stretches of a session (lots
+  of file reads/edits, rapid debugging). The only mitigation that matters: treat it as an active
+  per-response gate, checked at the moment of drafting each reply, not a fact to have read once.
+  If a drafted response has zero Bulgarian parentheticals anywhere in it, that itself is the
+  signal something has drifted — fix it before sending, regardless of how short,
   mechanical, or code-focused the reply feels.
 - **Present both a beginner option and a pro option.** When there's more than one valid way to
   do something (e.g. `test.beforeEach()` vs. a custom Playwright fixture for page-object
@@ -177,6 +180,17 @@ the first time a new page started); don't repeat that.
   **always start the climb from the deepest text node, never from an outer wrapper** — starting
   too high climbs past the real colored element into an unrelated ancestor's color, like a table
   row's own zebra-striping).
+- `TableView.ts`'s constructor takes an optional 2nd `tableRoot?: Locator` parameter (added
+  2026-09-16) — a page with a confirmed, more specific stable table-root class can pass it in
+  to tighten `table`/`rows`/`loadingCells`/empty-state scoping for that page only, instead of
+  `TableView`'s generic (and collision-prone) `page.locator('table, [role="table"],
+  [class*="Table"]').first()` fallback. `SalesActionsPage.ts` is the first to use this —
+  `new TableView(page, page.locator('[class*="_SA_Table"]'))`, confirmed live that every Sales
+  Actions table root carries a `..._SA_Table` class (`Bestandsbau_SA_Table`/`FTTH_SA_Table`/
+  `Neubau_SA_Table`). The other 5 pages still call `new TableView(page)` with no 2nd argument —
+  completely unaffected, since the parameter is optional and falls back to the exact prior
+  behavior. If another page's own stable table-root class ever gets confirmed, applying the
+  same tightening there is the same one-line change — no further edits to `TableView.ts` needed.
 - `door2doorRoutes` bare/root keys (`baulose.main`, `objekte.main`, `salesActions.main`,
   `benutzerverwaltung.main`) plus each page's bare `goToXPage()`/`expectLoadedX()` methods exist
   for testing the app's real auto-redirect-to-default-section behavior when no section is given
@@ -333,13 +347,25 @@ Organisation/Phase wrong, see below) the rough order has been Baulose (Availabil
 filters have a real Apply file — Organisation, Phase, Regime, Status; Importdatum has no Apply
 spec file yet at all) → Objekte (Availability, Search, Side Panel done; all 6 Apply files real;
 Neubau's `test.skip()` for the sort-performance bug is currently commented out on 3 of those 6 —
-see the unconfirmed note above) → Sales Actions (in progress — Availability done; only 6 of 18
-filters have a real Apply file so far: Ergebnis, Aufgabe, AblegerZustimmung, Baulos-Einsatzname,
-Immobilienart, Bestellung über D2D (that last one's known issue is now fixed, see below);
-**correction 2026-09-13: Organisation and Phase are NOT built — this paragraph previously said
-"reused from other pages," which was wrong; both are still empty `test.describe.skip()` stubs**;
-remaining filters genuinely not started: Regime, Termin, Status, Planskizze, Kundendaten, Sales
-Action-Type, Objekt, zugewiesen an, upselling Potential, Organisation, Phase) →
+see the unconfirmed note above) → Sales Actions (in progress — Availability done; 11 of 18
+filters have a real Apply file as of 2026-09-15: Ergebnis, Aufgabe, AblegerZustimmung,
+Baulos-Einsatzname, Immobilienart, Bestellung über D2D, Kundendaten (new icon-column
+verification pattern, see below), Phase (reuses the side-panel-header check already proven by
+Ableger Zustimmung), Regime (new — reuses Baulose's confirmed VHCN/ZAG=FTTH-only,
+FTTB/FTTC=Bestandsbau-only split; row-check via each row's own `data-regime` attribute, a new
+`expectEveryRowRegimeToBe` helper), Status (new — row-check reuses the already-proven
+`expectEveryRowStatusChipToBe`; confirmed live that NOT_EXECUTABLE renders "nicht
+durchführbar" exactly matching `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`; scoped to
+FTTH-AUSBAU only since Status isn't confirmed to have Regime's same per-section split, and
+CARRIED_OUT's German label was deliberately left unguessed/omitted), Organisation (new —
+confirmed 2026-09-15 that unlike Objekte, there's no dedicated Organisation cell here at all;
+the name instead renders inside the "zugewiesen an" assigned-to cell, in its own stable div
+`.CtitwbHLBT1uebUegj6o`, alongside content that varies row to row — 1-3 assignee-name lines
+above it, an optional "(übergeben)" suffix below it — so the row-check is scoped to that one
+div specifically rather than the whole cell's text; a class-based locator, flagged as
+structurally unavoidable since no id/data-attribute exists for that specific line);
+remaining filters genuinely not started: Termin, Planskizze, Sales
+Action-Type, Objekt, zugewiesen an, upselling Potential) →
 Benutzerverwaltung/Importe/Konfiguration not yet started. **Also verified 2026-09-13: the
 Dropdown Content bucket (file 2 of the 3-file split) is at 0% on every page — all 27
 `*FilterDropdown.spec.ts` files that currently exist (Baulose 5, Objekte 5, Sales Actions 17) are
@@ -382,8 +408,36 @@ locator-priority-safe) or a generic "any icon" locator (would strict-mode-violat
 `svg path` for each prefix and comparing the full `d` value) — safe to rely on across both
 environments, exactly because it's keyed on the icon's actual vector data rather than a
 build-generated CSS-module class hash (which legitimately can differ between an INT build and a
-PROD build even when the component itself hasn't changed). **Locators/spec not yet written as of
-this note — user is implementing `salesActionsKundendatenFilterApply.spec.ts` themselves.**
+PROD build even when the component itself hasn't changed). **`salesActionsKundendatenFilterApply.spec.ts`
+is now written and confirmed working by the user (2026-09-15).**
+
+**Phase spec extended 2026-09-16 — the chip is checked in TWO places, not just the side
+panel.** The original version of this spec (side-panel-only, `phaseChipInSidePanelHeader`)
+missed that Pre-Contracting/2nd Run also render a Phase chip directly in the row's main-info
+cell (list view, `FTTH_COLUMNS.adresse` — the row's chip lives right after the Regime text,
+same styling class other row chips reuse). Confirmed colors: Pre-Contracting =
+`rgb(98, 149, 172)` (same blue as Status's `inbearbeitung`), 2nd Run = `rgb(229, 151, 0)`
+(same orange as `SIDE_PANEL_CHIP_COLORS['nicht erfasst']`/`'offen'`) — added as their own
+separate `SALES_ACTIONS_TABLE_PHASE_CHIP_COLORS` constant in `salesActionsTableChipColors.ts`
+(kept apart from `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS` even though 2 colors coincide,
+since Phase and Status are different concepts) and as 2 new keys directly in the existing
+`SIDE_PANEL_CHIP_COLORS` for the side-panel check (`SalesActionsPage.expectPhaseChipInSidePanelHeaderColourToBe()`,
+new). `phaseFilterOptions` was restructured from plain strings to `{label,
+expectChipDisplayed}` (Keine Phase = `false`, same "no chip for the null case" Baulose's own
+Phase filter already has) — the 3 usages in `salesActionsAblegerZustimmungFilterApply.spec.ts`
+were updated to match (`.secondRun` → `.secondRun.label`). New `expectNoRowColumnContains`
+helper added to `filterAssertions.ts` (inverse of `expectEveryRowColumnToContain`, for the
+Keine Phase absence check). `npm run typecheck` passes.
+
+**`src/constants/bauloseTableChipColors.ts` corrected 2026-09-16 — populated, not left
+empty.** Originally scaffolded empty (a repo-wide search found no existing Baulose
+chip-color checks to extract from), but the user clarified: Baulose's Phase filter renders
+the identical chip as Sales Actions' Phase filter, so the same 2 confirmed colors apply —
+`BAULOSE_TABLE_PHASE_CHIP_COLORS` (Pre-Contracting `rgb(98, 149, 172)`, 2nd Run
+`rgb(229, 151, 0)`). Wired into `baulosePhaseFilterApply.spec.ts`'s existing
+`expectEveryRowColumnToContain` call (previously text-only, no `expectedBackgroundColor` at
+all) — Keine Phase's color stays `undefined` (opt-in check, unconfirmed) since it has no
+confirmed chip color of its own.
 
 **Bug found during a 2026-09-13 audit, fixed the same day —
 `salesActionsBestellungUeberD2DFilterApply.spec.ts`:** every "Verify that filter chip is

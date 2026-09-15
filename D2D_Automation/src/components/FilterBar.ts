@@ -61,7 +61,7 @@ export class FilterBar {
       .locator('#filter-dropdown-root')
       .locator('input[type="checkbox"]')
       .locator('../..')
-      .filter({ has: this.page.getByText(exactLabel) })
+      .filter({ has: this.page.getByText(exactLabel, { exact: true }) })
       .locator('input[type="checkbox"]');
   }
 choiceRadio(choiceLabel: string): Locator {

@@ -131,3 +131,13 @@ export async function getFirstRowOrganisationNeubau(pageObject: { table: TableVi
     fullDisplayText: text,
   };
 }
+
+// Sales Actions has no dedicated Organisation cell the way Objekte does — the name lives
+// inside organisationInRow()'s own scoped div, which already isolates it from the
+// surrounding assignee-name lines/"(übergeben)" suffix, so no line-splitting is needed here.
+export async function getFirstRowSalesActionOrganisation(
+  pageObject: { table: TableView; organisationInRow: (row: Locator) => Locator },
+): Promise<string> {
+  const text = await pageObject.organisationInRow(pageObject.table.rows.first()).innerText();
+  return text.trim();
+}

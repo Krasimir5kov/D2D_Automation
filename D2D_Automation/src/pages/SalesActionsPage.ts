@@ -95,7 +95,11 @@ export class SalesActionsPage extends BasePage {
     this.neubauSidePanel = new SidePanel(page, 'neubau-object-side-panel', page.locator('#neubau-object-side-panel-close-button'));
     this.ftthSidePanel = new SidePanel(page, 'ftth-object-side-panel', page.locator('#ftth-object-side-panel-close-button'));
     this.bestandsbauSidePanel = new SidePanel(page, 'bestandsbau-object-side-panel', page.locator('#bestandsbau-object-side-panel-close-button'));
-    this.table = new TableView(page);
+    // Confirmed 2026-09-16: every Sales Actions table root carries a "..._SA_Table" class
+    // (Bestandsbau_SA_Table/FTTH_SA_Table/Neubau_SA_Table) — tighter and far less
+    // collision-prone than TableView's generic [class*="Table"] fallback, so every check
+    // built on this.table (rows, loadingCells, empty-state) inherits the safer scoping.
+    this.table = new TableView(page, page.locator('[class*="_SA_Table"]'));
     this.listRows = page.locator('tr[id^="sales-action-row-"]');
     this.firstRow = this.listRows.first();
     this.baulosEinsatznameContents = this.listRows.locator('div[id$="-main-info"]');
@@ -222,6 +226,10 @@ export class SalesActionsPage extends BasePage {
   }
   async expectPhaseChipInSidePanelHeaderToBe(phaseValue: string): Promise<void> {
     await expect(this.phaseChipInSidePanelHeader(phaseValue)).toBeVisible();
+  }
+  async expectPhaseChipInSidePanelHeaderColourToBe(phaseValue: keyof typeof SIDE_PANEL_CHIP_COLORS): Promise<void> {
+    const backgroundColor = await nearestNonTransparentBackgroundColor(this.phaseChipInSidePanelHeader(phaseValue));
+    expect(backgroundColor).toBe(SIDE_PANEL_CHIP_COLORS[phaseValue]);
   }
   async expectAblegerZustimmungChipColour(expectedStatus: keyof typeof SIDE_PANEL_CHIP_COLORS): Promise<void> {
     const chipValue = this.page.locator('#ftth-object-side-panel')
@@ -408,6 +416,15 @@ export class SalesActionsPage extends BasePage {
   }
   notizIconInRow(row: Locator): Locator {
     return row.locator('svg path[d^="M17 0h-2.133v5.333H17V0z"]');
+  }
+  // Confirmed 2026-09-15: unlike Objekte, Sales Actions has no dedicated Organisation
+  // column - the org/team name renders inside the "zugewiesen an" (assigned-to) cell, in
+  // its own stable div, alongside content that varies row to row (1-3 assignee name lines
+  // above it, an optional "(übergeben)" suffix below it). Scoping directly to this div
+  // (a structural class-based locator, unavoidable since no id/data-attribute exists for
+  // this specific line) keeps the check correct regardless of that surrounding variation.
+  organisationInRow(row: Locator): Locator {
+    return row.locator('.CtitwbHLBT1uebUegj6o');
   }
 
 }

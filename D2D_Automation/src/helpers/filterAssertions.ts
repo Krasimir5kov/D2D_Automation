@@ -173,6 +173,26 @@ export async function expectEveryRowColumnToContain(
   }
 }
 
+// Inverse of expectEveryRowColumnToContain — asserts NO row's given column contains any of
+// the given texts. Used where a filter option means "this content should be absent" (e.g.
+// Sales Actions Phase's "Keine Phase" — no Pre-Contracting/2nd Run chip anywhere).
+export async function expectNoRowColumnContains(
+  pageObject: PageWithTable,
+  columnIndex: number,
+  forbiddenTexts: string[],
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    for (const text of forbiddenTexts) {
+      await expect(rows.nth(i).locator('td').nth(columnIndex), `row ${i}: should not contain "${text}"`).not.toContainText(text);
+    }
+  }
+}
+
 // Asserts the list is currently empty (no data rows).
 export async function expectListIsEmptyWithMessageByFilterDropDown(pageObject: PageWithTable): Promise<void> {
   await waitForTableSettled(pageObject);
@@ -339,6 +359,37 @@ export async function expectEveryRowAufgabeChipToBe(
         `row ${i}: expected background ${expectedBackgroundColor}, got ${backgroundColor}`,
       ).toBe(expectedBackgroundColor);
     }
+  }
+}
+// Asserts every row's own data-regime attribute (confirmed present directly on the <tr>
+// for Sales Actions rows) equals the expected value - a data attribute, so this is
+// preferred over a text-column match per this project's locator-priority rules.
+export async function expectEveryRowRegimeToBe(
+  pageObject: PageWithTable,
+  expectedRegime: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const regimes = await rows.evaluateAll((rowElements) => rowElements.map((row) => row.getAttribute('data-regime')));
+  regimes.forEach((regime, i) => {
+    expect(regime, `row ${i}: expected data-regime "${expectedRegime}", got "${regime}"`).toBe(expectedRegime);
+  });
+}
+// Sales Actions equivalent of expectEveryRowOrganisationToBe — that one depends on
+// Objekte's dedicated td[id$='-organisation'] cell, which Sales Actions rows don't have.
+export async function expectEveryRowSalesActionOrganisationToBe(
+  pageObject: PageWithTable & { organisationInRow: (row: Locator) => Locator },
+  name: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    await expect(pageObject.organisationInRow(rows.nth(i)), `row ${i}: expected Organisation "${name}"`).toHaveText(name);
   }
 }
 export async function expectEveryRowDataObjectNameToContain(

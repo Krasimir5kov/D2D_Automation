@@ -7,7 +7,7 @@
  * for the confirmed locators and plan.
  */
 import { BestellungUeberD2DOptions } from '../../../src/constants/salesActionSidePanelChipStatus';
-import { test } from '../../../src/fixtures/object.fixture';
+import { test } from '../../../src/fixtures/salesAction.fixture';
 import { expect } from '@playwright/test';
 import { expectListIsEmptyWithMessageByFilterDropDown, expectListIsEmptyWithMessageBySearchInput, expectListIsNotEmpty, expectTableSettled, nearestNonTransparentBackgroundColor } from '../../../src/helpers/filterAssertions';
 import { applyFilterAndWaitForResults } from '../../../src/helpers/filterHelpers';
