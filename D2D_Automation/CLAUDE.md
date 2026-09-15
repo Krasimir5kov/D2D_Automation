@@ -385,7 +385,21 @@ confirmed directly):** `wbtmBestand: { label: 'WBTM Bestand', expectedInNeubau: 
 correct as written — despite the label saying "Bestand," both `"WBTM Bestand"` and
 `"WBTM Neubau"` are genuinely Neubau-section regime values, not a copy-paste mix-up. No longer
 an open question.
-Status has not had a formal review pass in this conversation yet (only built, not reviewed).
+**Status is explicitly WIP, paused mid-edit 2026-09-16 — the user will finish this on their
+personal laptop, don't treat the current state as final or reviewed.** Since being built,
+`salesActionStatusOptions` was restructured from plain strings to `{label}` objects, and two
+gaps flagged earlier got filled in by the user: `durchgefuehrt: { label: 'durchgeführt' }`
+(CARRIED_OUT's German label — previously left out as unconfirmed, now added) and the ambiguous
+single `"abgeschlossen"` entry (which couldn't be color-checked since it maps to two different
+colors depending on the underlying Ergebnis) was split into `abgeschlossenPositiv`/
+`abgeschlossenNegativ`. `STATUS_COLOR_BY_LABEL` in the spec file has **not** been updated to
+match the new split labels yet — it still keys off `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`'s
+original `inbearbeitung`/`nichtdurchführbar` labels only, so the new
+`abgeschlossenPositiv`/`abgeschlossenNegativ`/`durchgefuehrt` options currently get no color
+check at all (not wrong, just incomplete — no `expectedBackgroundColor` passed for them).
+`npm run typecheck` passes as of the WIP commit (`5d9ee89`), but this was committed explicitly
+as an unfinished snapshot, not reviewed code — don't assume it's correct without re-checking
+when this resumes.
 
 **Second row-verification pattern confirmed and now in real use — Side Panel chip lookup, for
 filters with no list-column representation at all.** Distinct from `expectEveryRowStatusChipToBe`
