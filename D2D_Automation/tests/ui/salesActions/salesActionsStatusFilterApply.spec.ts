@@ -21,7 +21,7 @@ import { test } from '../../../src/fixtures/salesAction.fixture';
 import { expect } from '@playwright/test';
 import { salesActionStatusOptions } from '../../../src/constants/salesActionFiltersValues';
 import { SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS } from '../../../src/constants/salesActionsTableChipColors';
-import { selectFilterChoiceExpandingAllOptions } from '../../../src/helpers/filterHelpers';
+import { selectFilterChoiceExpandingAllOptions, selectFilterChoiceWithOutSearchInput } from '../../../src/helpers/filterHelpers';
 import { expectEveryRowStatusChipToBe } from '../../../src/helpers/filterAssertions';
 
 const STATUS_COLOR_BY_LABEL: Partial<Record<string, string>> = {
@@ -31,22 +31,22 @@ const STATUS_COLOR_BY_LABEL: Partial<Record<string, string>> = {
 
 test.describe('Sales Actions Status Filter Apply', () => {
     for (const option of Object.values(salesActionStatusOptions)) {
-        test(`Apply Status filter option (${option}) and verify results`, async ({ salesActionsPage }) => {
+        test(`Apply Status filter option (${option.label}) and verify results`, async ({ salesActionsPage }) => {
             await test.step('Navigate to FTTH-AUSBAU section', async () => {
                 await salesActionsPage.gotoFtthSalesAction();
                 await salesActionsPage.expectLoadedFTTH();
             });
-            await test.step(`Select Status option "${option}"`, async () => {
-                await selectFilterChoiceExpandingAllOptions(salesActionsPage, () => salesActionsPage.openStatusFilterDropDown(), option);
+            await test.step(`Select Status option "${option.label}"`, async () => {
+                await selectFilterChoiceWithOutSearchInput(salesActionsPage, () => salesActionsPage.openStatusFilterDropDown(), option.label);
             });
             await test.step('Apply the filter', async () => {
                 await salesActionsPage.filters.applyFilter();
             });
             await test.step('Verify chip is visible', async () => {
-                await expect(salesActionsPage.filters.filterBarChip(option)).toBeVisible();
+                await expect(salesActionsPage.filters.filterBarChipPlusPrefix("Status: ",option.label)).toBeVisible();
             });
             await test.step('Verify every row shows the selected Status', async () => {
-                await expectEveryRowStatusChipToBe(salesActionsPage, option, STATUS_COLOR_BY_LABEL[option]);
+                await expectEveryRowStatusChipToBe(salesActionsPage, option.label, STATUS_COLOR_BY_LABEL[option.label]);
             });
         });
     }

@@ -50,7 +50,7 @@ export const regimeFilterOptions = {
     fttb: { label: 'FTTB', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
     fttc: { label: 'FTTC', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
     wbtmBestand: { label: 'WBTM Bestand', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
-    wbtmNeubau: { label: 'WBTM Neubau', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
+    wbtmNeubau: { label: 'WBTM Neubau', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false }
 } as const;
 // Confirmed 2026-09-15 via live row DOM: data-status-value="NOT_EXECUTABLE" renders
 // role="status" text "nicht durchführbar" - matches SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS
@@ -58,8 +58,11 @@ export const regimeFilterOptions = {
 // background color yet, so it's checked label-only (no color assertion) below. CARRIED_OUT's
 // German label is not yet confirmed at all, so it's deliberately left out rather than guessed.
 export const salesActionStatusOptions = {
-    offen: 'offen',
-    inBearbeitung: 'in Bearbeitung',
-    abgeschlossen: 'abgeschlossen',
-    nichtDurchfuehrbar: 'nicht durchführbar',
+    offen: { label: 'offen' },
+    inBearbeitung: { label: 'in Bearbeitung' },
+    abgeschlossenPositiv: { label: 'abgeschlossen - positiv' },
+    abgeschlossenNegativ: { label: 'abgeschlossen - negativ' },
+    durchgefuehrt: { label: 'durchgeführt' },
+    nichtDurchfuehrbar: { label: 'nicht durchführbar' }
+
 } as const;
