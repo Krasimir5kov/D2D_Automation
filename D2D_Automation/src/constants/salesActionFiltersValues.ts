@@ -43,14 +43,14 @@ export const immobilienartFilterOptions = {
     mehrgeschoßigerWohnbau: { label: 'mehrgeschoßiger Wohnbau', expectedInFTTH: true, expectedInBestandsbau: false, expectedNEUBAU: true },
     unbekannt: { label: 'unbekannt', expectedInFTTH: true, expectedInBestandsbau: true, expectedNEUBAU: false },
 };
-// Confirmed 2026-09-15: same Regime values/FTTH-vs-Bestandsbau split as the Baulose page
-// (see bauloseRegimeFilterApply.spec.ts) - Neubau has no underlying Baulos/contract-section
-// data at all, so no Regime value is ever expected there.
+
 export const regimeFilterOptions = {
-    vhcn: { label: 'VHCN', expectedInFTTH: true, expectedInBestandsbau: false },
-    zag: { label: 'ZAG', expectedInFTTH: true, expectedInBestandsbau: false },
-    fttb: { label: 'FTTB', expectedInFTTH: false, expectedInBestandsbau: true },
-    fttc: { label: 'FTTC', expectedInFTTH: false, expectedInBestandsbau: true },
+    vhcn: { label: 'VHCN', expectedInNeubau: false, expectedInFTTH: true, expectedInBestandsbau: false },
+    zag: { label: 'ZAG', expectedInNeubau: false, expectedInFTTH: true, expectedInBestandsbau: false },
+    fttb: { label: 'FTTB', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
+    fttc: { label: 'FTTC', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
+    wbtmBestand: { label: 'WBTM Bestand', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
+    wbtmNeubau: { label: 'WBTM Neubau', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
 } as const;
 // Confirmed 2026-09-15 via live row DOM: data-status-value="NOT_EXECUTABLE" renders
 // role="status" text "nicht durchführbar" - matches SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS

@@ -171,7 +171,7 @@ aria-label="offen"
 
 **Decision:** Each POSS attribute ticket (`POSS-3402` → `POSS-3422`) lives on its own isolated git branch in the frontend repo.
 
-**Impact on automation:** When writing tests for a section, confirm the corresponding POSS branch has been merged to main before relying on its IDs. Check `references/testids-map.md` known gaps section for what is not yet live.
+**Impact on automation:** When writing tests for a section, confirm the corresponding POSS branch has been merged to main before relying on its IDs (all 24 POSS-3397–3422 tickets are confirmed merged as of 2026-09-16). Check `D2D_Playwright_Attributes_Reference.md` for what's actually live.
 
 ---
 

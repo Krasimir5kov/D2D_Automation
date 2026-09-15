@@ -20,9 +20,12 @@ test.describe('Sales Actions Regime Filter Apply', () => {
                 if (option.expectedInFTTH) {
                     await salesActionsPage.gotoFtthSalesAction();
                     await salesActionsPage.expectLoadedFTTH();
-                } else {
+                } else if (option.expectedInBestandsbau) {
                     await salesActionsPage.gotoBestandsbauSalesAction();
                     await salesActionsPage.expectLoadedBestandsbau();
+                } else if (option.expectedInNeubau) {
+                    await salesActionsPage.gotoNeubauSalesAction();
+                    await salesActionsPage.expectLoadedNeubau();
                 }
             });
             await test.step(`Select Regime option "${option.label}"`, async () => {
@@ -38,20 +41,47 @@ test.describe('Sales Actions Regime Filter Apply', () => {
                 await expectEveryRowRegimeToBe(salesActionsPage, option.label);
             });
 
-            await test.step(`Verify the other of FTTH-AUSBAU/Bestandsbau is empty`, async () => {
+            await test.step(`Verify that expected sales action pages for the selected Regime option are empty`, async () => {
                 if (option.expectedInFTTH) {
-                    await salesActionsPage.gotoBestandsbauSalesAction();
-                } else {
-                    await salesActionsPage.gotoFtthSalesAction();
+                    await test.step('Verify Bestandsbau sales action page is empty', async () => {
+                        await salesActionsPage.gotoBestandsbauSalesAction();
+                        await salesActionsPage.expectLoadedBestandsbau();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
+                    await test.step('Verify Neubau sales action page is empty', async () => {
+                        await salesActionsPage.gotoNeubauSalesAction();
+                        await salesActionsPage.expectLoadedNeubau();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
+                } else if (option.expectedInNeubau) {
+                    await test.step('Verify FTTH sales action page is empty', async () => {
+                        await salesActionsPage.gotoFtthSalesAction();
+                        await salesActionsPage.expectLoadedFTTH();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
+                    await test.step('Verify Bestandsbau sales action page is empty', async () => {
+                        await salesActionsPage.gotoBestandsbauSalesAction();
+                        await salesActionsPage.expectLoadedBestandsbau();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
+                } else {    
+                    await test.step('Verify FTTH sales action page is empty', async () => {
+                        await salesActionsPage.gotoFtthSalesAction();
+                        await salesActionsPage.expectLoadedFTTH();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
+                    await test.step('Verify Neubau sales action page is empty', async () => {
+                        await salesActionsPage.gotoNeubauSalesAction();
+                        await salesActionsPage.expectLoadedNeubau();
+                        await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
+                        await expect(salesActionsPage.table.rows).toHaveCount(0);
+                    });
                 }
-                await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
-                await expect(salesActionsPage.table.rows).toHaveCount(0);
-            });
-
-            await test.step('Verify Neubau is empty', async () => {
-                await salesActionsPage.gotoNeubauSalesAction();
-                await expectListIsEmptyWithMessageByFilterDropDown(salesActionsPage);
-                await expect(salesActionsPage.table.rows).toHaveCount(0);
             });
         });
     }

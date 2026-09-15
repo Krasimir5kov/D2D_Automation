@@ -228,8 +228,7 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 | Auth state path | `playwright/.auth/user.json` (constant in `src/constants/auth.ts`) |
 | Route constants | `door2doorRoutes` in `src/pages/BasePage.ts` |
 | Stable HTML IDs | All in `src/frontend/shared/testIds/` (frontend repo) — see the FE ticket series below |
-| ID reference (automation, older) | `testids-map.md` |
-| ID reference (automation, newer/more granular) | `D2D_Playwright_Attributes_Reference.md` — **re-read this fresh before any locator/attribute suggestion**, don't rely on a recalled summary; if it doesn't cover an element, say so and ask for a live devtools check rather than guessing |
+| ID reference | `D2D_Playwright_Attributes_Reference.md` — the single, git-verified source of truth (consolidated 2026-09-16, every claim cites a real commit hash; `testids-map.md`/`D2D_QA_Attributes_Work_Summary.md` are retired, they used to disagree with each other and with the live app). **Re-read this fresh before any locator/attribute suggestion**, don't rely on a recalled summary; if it doesn't cover an element, say so and ask for a live devtools check (or a fresh `git show` against the FE repo) rather than guessing |
 | Architecture decisions | `decisions.md` |
 | Best practices / roadmap | `best-practices.md` |
 
@@ -271,7 +270,7 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 - **FE stable-attribute ticket series (POSS-3397 → POSS-3422, 24 tickets) is fully Done.**
   Every major page already has list-view, side-panel, and filter-bar attribute work landed —
   don't assume a page has no stable locators or needs new FE work first without checking
-  `D2D_Playwright_Attributes_Reference.md`/`testids-map.md` first.
+  `D2D_Playwright_Attributes_Reference.md` first.
 - **CI retry-logic gap confirmed and fixed 2026-09-13.** User reported
   frequent Objekte CI failures (run 34758427895); checked the last 4 CI runs via `gh run list` /
   `gh run view --log-failed` before assuming a page-specific bug. **Confirmed this is NOT an
@@ -486,6 +485,27 @@ at all 6 call sites, with the user's go-ahead per the approval gate.
   empty stub. **User is testing this against a real run before deciding whether to commit/push —
   do not treat as confirmed working, and do not move it into the "already built" reusable-infra
   list below until they confirm.**
+- **Done 2026-09-16 — the 3 overlapping attribute-reference docs are consolidated into one,
+  verified directly against real git history rather than secondhand summaries.** A background
+  research agent read all 27 non-duplicate commits across POSS-3397→3422 directly from the FE
+  repo (available locally at `D2D Repo\microfrontend-door2door-main`, sibling of
+  `D2D_Automation`), cross-checked every claim in the 3 old docs against what the commits
+  actually show, and drafted a discrepancy report + replacement doc. Found ~10 confirmed
+  contradictions (worst: `testids-map.md`, 4 entirely wrong sections including the known
+  Baulose `data-display-name` bug) and 2 unverifiable claims. **Independently spot-checked by
+  hand afterward** (not just trusted): `Table.tsx`/`TableEntry.tsx`'s `tr-` prefix + spread
+  order, the customer-interaction toggle's `data-testid` (not `id`), the unreachable
+  `SALES_ACTION_PANEL_IDS.noteAddButton` — all 3 confirmed correct directly in the FE source.
+  **Also verified branch/PR completeness** (a real concern the user raised): every one of the
+  21 surviving `origin/POSS-34xx` branches has zero commits not already in `main` (the one
+  apparent exception, `POSS-3418` showing "1 ahead" on GitHub, turned out to be a stray
+  `POSS-3419` commit sitting on the wrong branch — already accounted for, not missed work);
+  `POSS-3397`/`3398`/`3399` have no surviving branch (deleted after merge, normal) but their
+  commits are confirmed present in `main`'s history; every ticket's real merge commit was
+  found and its diff stat captured (2–39 files each, all non-trivial, nothing suspiciously
+  empty). **Result:** `D2D_Playwright_Attributes_Reference.md` now contains the consolidated,
+  commit-cited content; `D2D_QA_Attributes_Work_Summary.md` and `testids-map.md` are deleted;
+  the two scratch output files are deleted too (their content is now in the real doc).
 
 ---
 
@@ -609,8 +629,7 @@ tests/
   preflight/          preflight.spec.ts — smoke: app mounts with saved auth
   ui/                 Feature specs (UI), one folder per page, 3 files per filter (see Testing conventions above)
   api/                Feature specs (API)
-testids-map.md                       Older stable HTML ID catalog (POSS-3402 → POSS-3422)
-D2D_Playwright_Attributes_Reference.md   Newer, more granular ID catalog — prefer this one, re-read fresh each time
+D2D_Playwright_Attributes_Reference.md   The ID/attribute catalog — git-verified, re-read fresh each time
 decisions.md                         Architecture decisions log (ADR-001+, "in force")
 best-practices.md                    Assertion/locator/test-structure conventions + roadmap
 ```
