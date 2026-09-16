@@ -346,8 +346,8 @@ Organisation/Phase wrong, see below) the rough order has been Baulose (Availabil
 filters have a real Apply file — Organisation, Phase, Regime, Status; Importdatum has no Apply
 spec file yet at all) → Objekte (Availability, Search, Side Panel done; all 6 Apply files real;
 Neubau's `test.skip()` for the sort-performance bug is currently commented out on 3 of those 6 —
-see the unconfirmed note above) → Sales Actions (in progress — Availability done; 11 of 18
-filters have a real Apply file as of 2026-09-15: Ergebnis, Aufgabe, AblegerZustimmung,
+see the unconfirmed note above) → Sales Actions (in progress — Availability done; 12 of 18
+filters have a real Apply file as of 2026-09-16: Ergebnis, Aufgabe, AblegerZustimmung,
 Baulos-Einsatzname, Immobilienart, Bestellung über D2D, Kundendaten (new icon-column
 verification pattern, see below), Phase (reuses the side-panel-header check already proven by
 Ableger Zustimmung), Regime (new — reuses Baulose's confirmed VHCN/ZAG=FTTH-only,
@@ -362,8 +362,66 @@ the name instead renders inside the "zugewiesen an" assigned-to cell, in its own
 `.CtitwbHLBT1uebUegj6o`, alongside content that varies row to row — 1-3 assignee-name lines
 above it, an optional "(übergeben)" suffix below it — so the row-check is scoped to that one
 div specifically rather than the whole cell's text; a class-based locator, flagged as
-structurally unavoidable since no id/data-attribute exists for that specific line);
-remaining filters genuinely not started: Termin, Planskizze, Sales
+structurally unavoidable since no id/data-attribute exists for that specific line),
+Planskizze (new — same shape as Bestellung über D2D: FTTH-AUSBAU-only, radio dropdown
+offen/abgeschlossen, verified in the side panel's info section via a field-label-div +
+sibling-chip pattern, text + color both checked against `SIDE_PANEL_CHIP_COLORS`. **One new
+disambiguation technique worth remembering:** the label text "Planskizze" appears *twice* in
+the side panel — once as an action-bar quick-link button, once as this info-section field —
+so `page.locator('#ftth-object-side-panel').getByText('Planskizze', {exact:true})` alone would
+strict-mode-violate; `.last()` reliably picks the info-section one since the button always
+renders first in DOM order. Applies to any other field whose label text might collide with a
+button elsewhere in the same panel — check for this before assuming a plain `getByText` is
+safe. **Corrected 2026-09-16, same day:** the choice-selection step for both Planskizze and
+Bestellung über D2D originally used dedicated page-specific locators
+(`offenRadioOptionInPlanskizzeFilter` etc.) that just re-derived, by hand, what
+`filters.choiceLabelButton(label)` already provides generically via the shared
+`#filter-dropdown-root` portal — a direct violation of the "never write a page-specific
+duplicate" rule for `FilterBar.ts` stated earlier in this file. Both specs now call
+`salesActionsPage.filters.choiceLabelButton(...)` directly instead, and the 4 redundant
+locators (plus the now-unused `BestellungUeberD2DOptions`/`Planskizze` import they needed)
+were removed from `SalesActionsPage.ts` entirely. If a future filter's "select this choice"
+step is tempted to add a dedicated named locator instead of using `choiceLabelButton`, that's
+the same mistake — don't repeat it).
+**Flaky-assertion bug found and fixed 2026-09-16 in `salesActionsBestellungUeberD2DFilterApply.spec.ts`:**
+both FTTH tests' "Verify that the side panel is opened" step checked
+`salesActionsPage.aktvititenSidePanelSection` (just `page.getByRole('link', {name:
+/^Aktivitäten/i})` — the AKTIVITÄTEN tab link, unrelated to whether the panel actually opened
+for the right sales action) instead of the real check, `expectFtthSalesActionSidePanelOpen()`
+(URL pattern + the FTTH panel's actual root visible, same one Planskizze already uses
+correctly). This was flagged after the user saw this exact test fail intermittently
+(`FTTH-AUSBAU:Verify that nicht erfasst option update list items accordingly`) and asked
+whether the `choiceLabelButton` refactor above had caused it — **confirmed it did not**: that
+refactor only touched the selection step, not this one, in either test. The wrong-assertion
+bug is a much more likely explanation for the intermittent failures than the refactor. Both
+occurrences fixed to call `expectFtthSalesActionSidePanelOpen()` directly.
+
+**Follow-up, same day:** the very next live run showed `expectFtthSalesActionSidePanelOpen()`
+itself failing — `locator('#ftth-object-side-panel')` "element(s) not found" — on the same FTTH
+"nicht erfasst" test, one step later than before. Root cause found by reading the actual test
+order, not by guessing: the FTTH test applied the Bestellung über D2D filter while `beforeEach`
+had already landed it on **NEUBAU** (the bare Sales Actions route's default redirect), then
+called `gotoFtthSalesAction()` — confirmed via `BasePage.gotoDoor2DoorRoute()` →
+`gotoWithRetry()` to be a real `page.goto()`, i.e. a full page reload — to reach FTTH
+*after* applying the filter. A hard reload re-initializes the SPA from scratch and there is no
+filter query param in any confirmed route in this app, so the just-applied filter almost
+certainly does not survive that navigation; the row clicked afterward is from an
+unfiltered/still-settling FTTH list, which explains a row existing (the click succeeded) but the
+side panel not rendering in time (the "element(s) not found"). Planskizze (written earlier the
+same day) never had this problem because it navigates to FTTH **first**, then opens/applies the
+filter, with no navigation after — the safer order. Fix: reordered both FTTH tests in
+`salesActionsBestellungUeberD2DFilterApply.spec.ts` (nicht erfasst + erfasst) to navigate to
+FTTH via `gotoFtthSalesAction()` + `expectLoadedFTTH()` **first**, before opening the filter
+dropdown, matching Planskizze's structure exactly; the old "apply filter, then hard-navigate to
+FTTH" step is gone. `npm run typecheck` clean. **Not yet re-run against a live INT session** —
+still needs a real run to confirm this was the actual cause and not just a second symptom of the
+same underlying flakiness.
+
+**Lesson:** when a filter needs to be verified inside a specific section (FTTH/Neubau/Bestandsbau),
+navigate to that section *first*, then open/select/apply the filter there — never apply a filter
+and then navigate afterward, since navigation in this app is a hard `page.goto()` that can drop
+client-side filter state.
+remaining filters genuinely not started: Termin, Sales
 Action-Type, Objekt, zugewiesen an, upselling Potential) →
 Benutzerverwaltung/Importe/Konfiguration not yet started. **Also verified 2026-09-13: the
 Dropdown Content bucket (file 2 of the 3-file split) is at 0% on every page — all 27

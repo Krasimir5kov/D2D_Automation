@@ -15,7 +15,6 @@ import { BasePage, door2doorRoutes } from './BasePage';
 import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions } from '../constants/salesActionFiltersValues';
 import { nearestNonTransparentBackgroundColor } from '../helpers/filterAssertions';
 import { SIDE_PANEL_CHIP_COLORS } from '../constants/salesActionSidePanelChipColors';
-import { BestellungUeberD2DOptions } from '../constants/salesActionSidePanelChipStatus';
 
 
 // Represents the Sales Actions main page.
@@ -84,9 +83,8 @@ export class SalesActionsPage extends BasePage {
   readonly customerInteractionAccordionBodyState: Locator;
   readonly ablegerErfasstChipInSidePanel: Locator;
   readonly bestellungUberStatusInSAPanel: Locator
+  readonly planskizzeStatusInSAPanel: Locator
   readonly genericDropdownMenuOption: Locator;
-  readonly nichtErfasstRadioOptionInBestellungUeberD2DFilter: Locator;
-  readonly erfasstRadioOptionInBestellungUeberD2DFilter: Locator;
   constructor(page: Page) {
     super(page);
     this.navigation = new AppNavigation(page);
@@ -144,8 +142,10 @@ export class SalesActionsPage extends BasePage {
     this.customerInteractionAccordionBodyState = page.locator('div[class="gucci-common-accordion"]').locator('[class^="gucci-common-accordion-body"]');
     this.ablegerErfasstChipInSidePanel = page.locator('#ftth-object-side-panel').getByText('Ableger Zustimmung', { exact: true });
     this.bestellungUberStatusInSAPanel = page.locator('#ftth-object-side-panel').getByText('Bestellung über D2D', { exact: true });
-    this.nichtErfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['non-recorded'], { exact: true });
-    this.erfasstRadioOptionInBestellungUeberD2DFilter = this.genericDropdownMenuOption.getByText(BestellungUeberD2DOptions['recorded'], { exact: true });
+    // "Planskizze" text appears twice in the side panel — once as the action-bar quick-link
+    // button, once as this info-section field label. The info-section one always renders
+    // after the button in DOM order (confirmed live 2026-09-16), so .last() reliably picks it.
+    this.planskizzeStatusInSAPanel = page.locator('#ftth-object-side-panel').getByText('Planskizze', { exact: true }).last();
 
   }
   async openBaulosEinsatznameFilterDropDown(): Promise<void> {
@@ -218,6 +218,14 @@ export class SalesActionsPage extends BasePage {
   }
   async checkBestellungUeberD2DStatusInSidePanel(expectedStatus: string | RegExp): Promise<void> {
     await expect(this.bestellungUberStatusInSAPanel.locator('..').getByText(expectedStatus, { exact: true })).toBeVisible();
+  }
+  async checkPlanskizzeStatusInSidePanel(expectedStatus: string | RegExp): Promise<void> {
+    await expect(this.planskizzeStatusInSAPanel.locator('..').getByText(expectedStatus, { exact: true })).toBeVisible();
+  }
+  async expectPlanskizzeStatusChipColourToBe(expectedStatus: keyof typeof SIDE_PANEL_CHIP_COLORS): Promise<void> {
+    const chipValue = this.planskizzeStatusInSAPanel.locator('xpath=following-sibling::*[1]').getByText(expectedStatus, { exact: true });
+    const backgroundColor = await nearestNonTransparentBackgroundColor(chipValue);
+    expect(backgroundColor).toBe(SIDE_PANEL_CHIP_COLORS[expectedStatus]);
   }
   phaseChipInSidePanelHeader(phaseValue: string): Locator {
     return this.page.locator('#ftth-object-side-panel')
@@ -381,14 +389,19 @@ export class SalesActionsPage extends BasePage {
   async expectNeubauSalesActionSidePanelOpen(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/neubau\/\d+/);
     await expect(this.neubauSidePanel.root).toBeVisible();
+    await expect(this.ubersichtSidePanelSection).toBeVisible();
+
   }
   async expectFtthSalesActionSidePanelOpen(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/ftth\/\d+/);
     await expect(this.ftthSidePanel.root).toBeVisible();
+    await expect(this.ubersichtSidePanelSection).toBeVisible();
   }
   async expectBestandsbauSalesActionSidePanelOpen(): Promise<void> {
     await expect(this.page).toHaveURL(/\/door2door#\/sales-actions\/bestandsbau\/\d+/);
     await expect(this.bestandsbauSidePanel.root).toBeVisible();
+    await expect(this.ubersichtSidePanelSection).toBeVisible();
+
   }
   async expectAblegerZustimmungFilterDisplayed(): Promise<void> {
     await expect(this.ablegerZustimmungFilter).toBeVisible();

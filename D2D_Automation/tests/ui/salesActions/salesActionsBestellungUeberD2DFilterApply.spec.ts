@@ -21,11 +21,15 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
     });
     test.describe('Apply nicht erfasst option and check three different list section results', () => {
         test('FTTH-AUSBAU:Verify that nicht erfasst option update list items accordingly', async ({ salesActionsPage }) => {
+            await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
+                await salesActionsPage.gotoFtthSalesAction();
+                await salesActionsPage.expectLoadedFTTH();
+            });
             await test.step('Open Bestellung über D2D filter dropdown', async () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Select nicht erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.nichtErfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['non-recorded']).click();
                 // Add assertions here to verify that the list items are updated accordingly
             });
             await test.step('Verify that the option is checked', async () => {
@@ -37,9 +41,6 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
             await test.step('Verify that filter chip is displayed correctly', async () => {
                 await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['non-recorded'])).toBeVisible();
             });
-            await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
-                await salesActionsPage.gotoFtthSalesAction();
-            });
             await test.step('Verify that the list items are loaded', async () => {
                 await expectTableSettled(salesActionsPage);
             });
@@ -47,7 +48,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openFirstItemSidePanel();
             });
             await test.step('Verify that the side panel is opened', async () => {
-                await expect(salesActionsPage.aktvititenSidePanelSection).toBeVisible();
+                await salesActionsPage.expectFtthSalesActionSidePanelOpen();
             });
 
             await test.step('Check Bestellung über D2D status in side panel', async () => {
@@ -70,7 +71,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Selecting nicht erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.nichtErfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['non-recorded']).click();
             });
 
             await test.step('Verify that the option is checked', async () => {
@@ -97,7 +98,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Selecting nicht erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.nichtErfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['non-recorded']).click();
             });
 
             await test.step('Verify that the option is checked', async () => {
@@ -116,11 +117,15 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
     });
     test.describe('Apply erfasst option and check three different list section results', () => {
         test('FTTH-AUSBAU:Verify that nicht erfasst option update list items accordingly', async ({ salesActionsPage }) => {
+            await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
+                await salesActionsPage.gotoFtthSalesAction();
+                await salesActionsPage.expectLoadedFTTH();
+            });
             await test.step('Open Bestellung über D2D filter dropdown', async () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Select erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.erfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['recorded']).click();
                 // Add assertions here to verify that the list items are updated accordingly
             });
             await test.step('Verify that the option is checked', async () => {
@@ -132,9 +137,6 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
             await test.step('Verify that filter chip is displayed correctly', async () => {
                 await expect(salesActionsPage.filters.filterBarChipPlusPrefix(SALES_ACTION_FILTER_TITLES_AND_ID.hybrisOrder.label, BestellungUeberD2DOptions['recorded'])).toBeVisible();
             });
-            await test.step('Navigate to FTTH-AUSBAU section list items', async () => {
-                await salesActionsPage.gotoFtthSalesAction();
-            });
             await test.step('Verify that the list items are loaded', async () => {
                 await expectTableSettled(salesActionsPage);
             });
@@ -142,7 +144,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openFirstItemSidePanel();
             });
             await test.step('Verify that the side panel is opened', async () => {
-                await expect(salesActionsPage.aktvititenSidePanelSection).toBeVisible();
+                await salesActionsPage.expectFtthSalesActionSidePanelOpen();
             });
 
             await test.step('Check Bestellung über D2D status in side panel', async () => {
@@ -165,7 +167,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Selecting erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.erfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['recorded']).click();
             });
 
             await test.step('Verify that the option is checked', async () => {
@@ -192,7 +194,7 @@ test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
                 await salesActionsPage.openBestellungUeberD2DFilterDropDown();
             });
             await test.step('Selecting erfasst option in Bestellung über D2D filter', async () => {
-                await salesActionsPage.erfasstRadioOptionInBestellungUeberD2DFilter.click();
+                await salesActionsPage.filters.choiceLabelButton(BestellungUeberD2DOptions['recorded']).click();
             });
 
             await test.step('Verify that the option is checked', async () => {
