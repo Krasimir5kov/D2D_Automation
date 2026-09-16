@@ -68,3 +68,33 @@ export const salesActionStatusOptions = {
     nichtDurchfuehrbar: { chipLabel: 'nicht durchführbar' , listChipLabel: 'nicht durchführbar' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.nichtdurchführbar.color }
 
 } as const;
+export const terminFilterOptions = {
+    Termin: { label: 'Termin' },
+    ohneTermin: { label: 'ohne Termin' },
+    mitTermin: { label: 'mit Termin' },
+    mitTerminHeute: { label: 'mit Termin heute' },
+    mitTerminImZeitraum: { label: 'mit Termin im Zeitraum' },
+};
+// Confirmed 2026-09-16 by the user. Two dropdown groups: "Objekt Sales Action" entries
+// are advertising/marketing sales actions with NO customer interaction at all - not even
+// the usual ÜBERSICHT/AKTIVITÄTEN/etc. side panel tabs. "D2D Sales Action" entries do have
+// customer interaction + those tabs. Only d2dVerkauf is wired into a test today (the
+// Termin filter's Neubau sampling, to exclude Objekt Sales Action rows first) - the rest
+// are recorded now for later reuse, not yet wired into anything.
+// Also confirmed: on BESTANDSBAU, a d2dVerkauf sales action automatically becomes
+// a1InternetReadyCheck once it receives a Termin - a system-driven type change, not a
+// manual one. Relevant to the BESTANDSBAU "ohne Termin" fixme in
+// salesActionsTerminFilterApply.spec.ts.
+export const salesActionTypeFilterOptions = {
+    // Objekt Sales Action group
+    bautraegerUebergabemappe: { label: 'Bauträger Übergabemappe' },
+    mieterliste: { label: 'Mieterliste' },
+    mietervorveranstaltung: { label: 'Mietervorveranstaltung' },
+    salesPersonal: { label: 'Sales Personal' },
+    tuerhaenger: { label: 'Türhänger' },
+    verkaufsstand: { label: 'Verkaufsstand' },
+    werbemittelmassnahmen: { label: 'Werbemittelmaßnahmen' },
+    // D2D Sales Action group
+    a1InternetReadyCheck: { label: 'A1 Internet Ready Check' },
+    d2dVerkauf: { label: 'D2D Verkauf' },
+} as const;

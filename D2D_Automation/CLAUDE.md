@@ -607,6 +607,76 @@ at all 6 call sites, with the user's go-ahead per the approval gate.
   commit-cited content; `D2D_QA_Attributes_Work_Summary.md` and `testids-map.md` are deleted;
   the two scratch output files are deleted too (their content is now in the real doc).
 
+**Sales Actions Termin filter, "mit Termin" option only — added 2026-09-16.** Unlike
+Planskizze/Bestellung über D2D, this one is NOT FTTH-only: confirmed with the user that
+"mit Termin" is relevant for FTTH-AUSBAU **and** BESTANDSBAU, with NEUBAU always empty (the
+inverse of the other two filters' section split). A matching row has no visible table
+column/chip for this — the only way to verify it is inside the side panel's AKTIVITÄTEN tab.
+Confirmed via live DOM the user pasted: whenever an activity (customer-interaction or
+appointment accordion entry — id prefixes `accordion-header-customer-interaction-` and
+`accordion-header-appointment-`) has a scheduled Termin, a
+`Termin DD.MM.YYYY HH:MM - HH:MM` badge (plus stattgefunden/nicht stattgefunden/verschoben
+status) renders directly in its accordion **header**, before any click/expand. Confirmed 1:1
+with the user: an activity with no Termin omits this badge entirely (no empty placeholder),
+and the word "Termin" doesn't appear anywhere else in that tab — so a plain text match is
+safe proof in both directions, no accordion-clicking needed at all. New:
+`SalesActionsPage.expectAktivitatenHasAtLeastOneTermin()` (reuses the existing
+`accordionBodyContent` locator) and `filterAssertions.expectFirstNRowsSatisfy(pageObject,
+verifyRow, sampleSize = 10)` — generic on purpose, not Termin-specific, for any future filter
+whose result can only be verified per-row inside a side panel. FTTH/Bestandsbau each sample
+up to 10 rows (capped by actual row count) rather than just the first one, since a single row
+is weaker evidence here than for a table-visible chip. `npm run typecheck` clean.
+
+**Confirmed live by the user 2026-09-16: "mit Termin" works as expected against a real INT
+run.** Same day, added "ohne Termin" to the same spec file: confirmed with the user this one
+covers ALL THREE sections (FTTH, Neubau, Bestandsbau) as real/checkable, not just 2 of 3 —
+no section is expected empty for it, unlike "mit Termin"'s Neubau-always-empty rule. Added
+the inverse assertion `SalesActionsPage.expectAktivitatenHasNoTermin()` (same
+`accordionBodyContent` locator, same confirmed 1:1 badge correspondence, just
+`toHaveCount(0)` instead of `.first()` `toBeVisible()`), reused `expectFirstNRowsSatisfy` for
+all 3 sections. `npm run typecheck` clean.
+
+**Two issues found running "ohne Termin" live, same day (2026-09-16):**
+
+1. **Neubau mixes two Sales Action types — fixed.** Confirmed by the user: Neubau's list
+   contains "Objekt Sales Action" rows (advertising/marketing — Bauträger Übergabemappe,
+   Mieterliste, Mietervorveranstaltung, Sales Personal, Türhänger, Verkaufsstand,
+   Werbemittelmaßnahmen) which have **no customer interaction at all, not even the
+   ÜBERSICHT/AKTIVITÄTEN side panel tabs**, alongside "D2D Sales Action" rows (A1 Internet
+   Ready Check, D2D Verkauf) which do have those tabs. Termin only makes sense for the
+   latter. Fixed by adding a Sales Action-Type filter step (id `salesActionType`, already
+   scaffolded) selecting `D2D Verkauf` before sampling rows, in Neubau's "ohne Termin" test
+   only (the only Neubau test that samples real rows — "mit Termin" Neubau just checks
+   empty). New constant `salesActionTypeFilterOptions` in `salesActionFiltersValues.ts`
+   records all 9 options (both groups) for later reuse; only `d2dVerkauf` is wired in today.
+   **Follow-up, same day:** the plain `choiceLabelButton(...).click()` selection failed
+   live — `D2D Verkauf` is hidden behind a "N weitere anzeigen" expand button (N varies by
+   filter, not always 4) since Sales Action-Type has too many choices to show at once.
+   Rather than build something new, switched to the already-existing, already-proven
+   `filterHelpers.selectFilterChoiceExpandingAllOptions()` (used by Aufgabe, Regime,
+   Ergebnis, and 3 Baulose filters already) — it calls `FilterBar.expandMoreChoicesIfPresent()`
+   first, which clicks `showChoicesButton` (`getByText(/weitere anzeigen/i)`, already
+   number-agnostic, scoped to `#filter-dropdown-root` — the same portal as
+   `genericDropdownMenuOption`) only if it's actually present, so it's a safe no-op for
+   filters with few enough options to not need it.
+   **Final correction by the user, confirmed live:** Sales Action-Type's `D2D Verkauf` is a
+   checkbox choice, not a radio — `choiceCheckbox()` instead of `choiceRadio()` for its
+   checked-state assertion. Its filter chip also renders with no prefix label (unlike
+   Termin's own chip) — `filterBarChip(label)` instead of `filterBarChipPlusPrefix(...)`.
+   Confirmed working end to end.
+2. **BESTANDSBAU "ohne Termin" fails live — left as `test.fixme()`, not silently patched.**
+   Some returned rows actually do have a Termin. Confirmed by the user: on BESTANDSBAU, a
+   `D2D Verkauf` sales action automatically becomes `A1 Internet Ready Check` once it gets a
+   Termin — a system-driven type change. Likely the same root cause as issue 1 (an
+   auto-reclassified row not excluded the way Neubau's Objekt Sales Action rows now are),
+   but **deliberately not "fixed" by guessing** — the user wants to ask their lead/designer
+   what the expected behavior should be first (should "ohne Termin" scope to a specific
+   Sales Action-Type on Bestandsbau too, and if so which one?). Test body left intact with a
+   `FIXME` comment recording the hypothesis, so it can be re-enabled once answered.
+
+`npm run typecheck` clean. Out of scope for now: `mitTerminHeute`, `mitTerminImZeitraum` —
+the other 2 entries in `terminFilterOptions` — still need their own tests later.
+
 ---
 
 ## Route access rules — critical

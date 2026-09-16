@@ -229,6 +229,21 @@ export async function expectEveryRowOrEmptyState(
     await verifyRowContent();
   }
 }
+// Samples up to sampleSize rows, running the caller-supplied check against each one.
+// Generic on purpose: any filter whose result can only be verified inside a per-row
+// side panel (not a table column/chip) can reuse this, not just Termin.
+export async function expectFirstNRowsSatisfy(
+  pageObject: PageWithTable,
+  verifyRow: (row: Locator) => Promise<void>,
+  sampleSize: number = 10,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  const count = Math.min(sampleSize, await rows.count());
+  for (let i = 0; i < count; i++) {
+    await verifyRow(rows.nth(i));
+  }
+}
 export async function expectEveryRowBauloseEinsatznameToBe(
   pageObject: PageWithTable & { listRows: Locator; baulosEinsatznameContents: Locator },
   name: string,

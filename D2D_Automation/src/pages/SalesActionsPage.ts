@@ -262,6 +262,22 @@ export class SalesActionsPage extends BasePage {
     await expect(this.accordionBodyContent.getByText('durchgeführt von:', { exact: true }).first()).toBeVisible();
 
   }
+  // Confirmed live DOM 2026-09-16: the "Termin DD.MM.YYYY HH:MM - HH:MM" badge (plus its
+  // stattgefunden/nicht stattgefunden/verschoben status) renders in the accordion header
+  // itself - no click/expand needed. Confirmed 1:1 with the user: an entry with no Termin
+  // omits this badge entirely (no empty placeholder), and "Termin" doesn't appear anywhere
+  // else in this tab, so this text match is a safe, direct proof either way.
+  async expectAktivitatenHasAtLeastOneTermin(): Promise<void> {
+    await expect(
+      this.accordionBodyContent.getByText(/^Termin \d{2}\.\d{2}\.\d{4} \d{2}:\d{2} - \d{2}:\d{2}/).first()
+    ).toBeVisible();
+  }
+  // Inverse of the above, same confirmed 1:1 correspondence — for "ohne Termin".
+  async expectAktivitatenHasNoTermin(): Promise<void> {
+    await expect(
+      this.accordionBodyContent.getByText(/^Termin \d{2}\.\d{2}\.\d{4} \d{2}:\d{2} - \d{2}:\d{2}/)
+    ).toHaveCount(0);
+  }
   async openUbersichtSidePanelSection(): Promise<void> {
     await this.ubersichtSidePanelSection.click();
   }
