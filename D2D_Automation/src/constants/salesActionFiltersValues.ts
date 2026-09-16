@@ -1,3 +1,5 @@
+import { SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS } from './salesActionsTableChipColors';
+
 export const ablegerZustimmungOptions = {
     ablegerAbgelehnt: 'Ableger abgelehnt',
     ablegerZugestimmt: 'Ableger zugestimmt'
@@ -58,11 +60,11 @@ export const regimeFilterOptions = {
 // background color yet, so it's checked label-only (no color assertion) below. CARRIED_OUT's
 // German label is not yet confirmed at all, so it's deliberately left out rather than guessed.
 export const salesActionStatusOptions = {
-    offen: { label: 'offen' },
-    inBearbeitung: { label: 'in Bearbeitung' },
-    abgeschlossenPositiv: { label: 'abgeschlossen - positiv' },
-    abgeschlossenNegativ: { label: 'abgeschlossen - negativ' },
-    durchgefuehrt: { label: 'durchgeführt' },
-    nichtDurchfuehrbar: { label: 'nicht durchführbar' }
+    offen: { chipLabel: 'offen' , listChipLabel: 'offen' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.offen.color },
+    inBearbeitung: { chipLabel: 'in Bearbeitung' , listChipLabel: 'in Bearbeitung' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.inbearbeitung.color },
+    abgeschlossenPositiv: { chipLabel: 'abgeschlossen - positiv' , listChipLabel: 'abgeschlossen' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.abgeschlossenPositive.color},
+    abgeschlossenNegativ: { chipLabel: 'abgeschlossen - negativ' , listChipLabel: 'abgeschlossen' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.abgeschlossenNegative.color },
+    durchgefuehrt: { chipLabel: 'durchgeführt' , listChipLabel: 'durchgeführt' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.durchgeführt.color },
+    nichtDurchfuehrbar: { chipLabel: 'nicht durchführbar' , listChipLabel: 'nicht durchführbar' , color: SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.nichtdurchführbar.color }
 
 } as const;

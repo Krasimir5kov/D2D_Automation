@@ -2,10 +2,12 @@
 // they're easy to tell apart at a glance.
 
 export const SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS = {
+  offen: { label: 'offen', color: 'rgb(229, 151, 0)' },
   abgeschlossenNegative: { label: 'abgeschlossen', color: 'rgb(221, 221, 221)' },
   abgeschlossenPositive: { label: 'abgeschlossen', color: 'rgb(77, 150, 0)' },
   nichtdurchführbar: { label: 'nicht durchführbar', color: 'rgb(218, 41, 28)' },
   inbearbeitung: { label: 'in Bearbeitung', color: 'rgb(98, 149, 172)' },
+  durchgeführt: { label: 'durchgeführt', color: 'rgb(77, 150, 0)' },
 } as const;
 
 // Aufgabe's task chips all share this one color regardless of which specific task is
