@@ -354,9 +354,9 @@ Ableger Zustimmung), Regime (new — reuses Baulose's confirmed VHCN/ZAG=FTTH-on
 FTTB/FTTC=Bestandsbau-only split; row-check via each row's own `data-regime` attribute, a new
 `expectEveryRowRegimeToBe` helper), Status (new — row-check reuses the already-proven
 `expectEveryRowStatusChipToBe`; confirmed live that NOT_EXECUTABLE renders "nicht
-durchführbar" exactly matching `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`; scoped to
-FTTH-AUSBAU only since Status isn't confirmed to have Regime's same per-section split, and
-CARRIED_OUT's German label was deliberately left unguessed/omitted), Organisation (new —
+durchführbar" exactly matching `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`; since finished —
+checked across all 3 sections, CARRIED_OUT's German label confirmed as "durchgeführt," see the
+fuller note below), Organisation (new —
 confirmed 2026-09-15 that unlike Objekte, there's no dedicated Organisation cell here at all;
 the name instead renders inside the "zugewiesen an" assigned-to cell, in its own stable div
 `.CtitwbHLBT1uebUegj6o`, alongside content that varies row to row — 1-3 assignee-name lines
@@ -385,21 +385,33 @@ confirmed directly):** `wbtmBestand: { label: 'WBTM Bestand', expectedInNeubau: 
 correct as written — despite the label saying "Bestand," both `"WBTM Bestand"` and
 `"WBTM Neubau"` are genuinely Neubau-section regime values, not a copy-paste mix-up. No longer
 an open question.
-**Status is explicitly WIP, paused mid-edit 2026-09-16 — the user will finish this on their
-personal laptop, don't treat the current state as final or reviewed.** Since being built,
-`salesActionStatusOptions` was restructured from plain strings to `{label}` objects, and two
-gaps flagged earlier got filled in by the user: `durchgefuehrt: { label: 'durchgeführt' }`
-(CARRIED_OUT's German label — previously left out as unconfirmed, now added) and the ambiguous
-single `"abgeschlossen"` entry (which couldn't be color-checked since it maps to two different
-colors depending on the underlying Ergebnis) was split into `abgeschlossenPositiv`/
-`abgeschlossenNegativ`. `STATUS_COLOR_BY_LABEL` in the spec file has **not** been updated to
-match the new split labels yet — it still keys off `SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS`'s
-original `inbearbeitung`/`nichtdurchführbar` labels only, so the new
-`abgeschlossenPositiv`/`abgeschlossenNegativ`/`durchgefuehrt` options currently get no color
-check at all (not wrong, just incomplete — no `expectedBackgroundColor` passed for them).
-`npm run typecheck` passes as of the WIP commit (`5d9ee89`), but this was committed explicitly
-as an unfinished snapshot, not reviewed code — don't assume it's correct without re-checking
-when this resumes.
+**Status is now functionally complete as of 2026-09-16 (`072cdbb`).** Final shape:
+`salesActionStatusOptions` entries have `chipLabel` (the filter dropdown's own choice text,
+used for selecting + the filter-bar chip check) separate from `listChipLabel` (the bare text
+actually rendered in the row's chip — needed because `abgeschlossenPositiv`/
+`abgeschlossenNegativ`'s `chipLabel`s carry a `" - positiv"`/`" - negativ"` suffix the dropdown
+uses to distinguish them, but the row itself just renders bare `"abgeschlossen"` for both,
+color-distinguished instead), plus a `color` field referencing
+`SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS` directly (`undefined` where unconfirmed). All 6
+options now have confirmed colors except none remain unconfirmed — `offen`
+(`rgb(229, 151, 0)`) and `durchgeführt`/CARRIED_OUT (`rgb(77, 150, 0)`, same green as
+`abgeschlossenPositive` — confirmed intentional, not a copy-paste duplicate) were the last two
+filled in. **Section behavior:** `durchgeführt` is Neubau-only (hard checks: real rows there,
+hard-empty on FTTH-AUSBAU/Bestandsbau); every other status is checked across all 3 sections via
+`expectEveryRowOrEmptyState` — since this suite runs as Admin (sees more Sales Actions than an
+Agent/Channel user would), a section legitimately can come back empty for a given status
+without that being a bug, so a genuinely empty section still passes but gets a report
+annotation flagging it for manual confirmation. A `TODO` in the spec's header notes the
+deferred idea (not yet built) of a data-seeding prerequisite step that would let these become
+hard assertions later.
+**One naming trap hit and fixed along the way:** `salesActionsTableChipColors.ts` is *shared*
+with the already-working `salesActionsErgebnisFilterApply.spec.ts`, which references the
+original `abgeschlossenNegative`/`abgeschlossenPositive` (with a final "e"). A mid-session
+rename to `abgeschlossenNegativ`/`abgeschlossenPositiv` (dropped the "e", to fix an unrelated
+`TypeError`) silently broke Ergebnis instead — caught via `npm run typecheck`, fixed by
+reverting the shared file's spelling back to the original and correcting the 2 new references
+in `salesActionStatusOptions` instead. Lesson: when a shared constants file needs a key
+renamed, grep every consumer first, don't assume the new caller is the only one.
 
 **Second row-verification pattern confirmed and now in real use — Side Panel chip lookup, for
 filters with no list-column representation at all.** Distinct from `expectEveryRowStatusChipToBe`
