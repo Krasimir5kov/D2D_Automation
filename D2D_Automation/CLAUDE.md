@@ -25,6 +25,20 @@ typecheck` after an edit is part of doing the work.
 This rule applies equally to Claude Code, Codex, and any other assistant working in this
 repository. A Codex-made change or Git action must be recorded here in the same turn too.
 
+### Append-only history rule (agreed 2026-09-17)
+
+Treat this file as an append-only historical record. Never delete, replace, reword, or silently
+rewrite information that is already present, even when a newer discovery changes or contradicts
+it. Preserve the older statement as evidence of what was known or agreed at that time, then add
+a dated correction/addendum explaining the new finding. Reference the earlier heading and, when
+useful, the current line number(s) or exact earlier wording so the relationship is explicit.
+Add new status beneath the relevant existing section, or add a new dated subsection when no
+clear section exists. This avoids losing past reasoning and lets Claude Code and Codex reconstruct
+how the framework and its rules evolved. This append-only rule also applies to
+`CODEX_FRAMEWORK_CONTEXT.md`; updating a review date, removing a stale paragraph, or editing an
+old entry in place is prohibited unless the user explicitly authorizes that exact historical
+rewrite.
+
 - **Where: this file (`CLAUDE.md`) is the only place that's guaranteed to reach both laptops.**
   Write the fact here, in the relevant section (`Known bugs, decisions, and status`,
   `Open loose ends`, the filter-coverage status paragraph, etc.), in the *same* turn the
