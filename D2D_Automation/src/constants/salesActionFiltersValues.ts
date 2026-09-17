@@ -87,14 +87,14 @@ export const terminFilterOptions = {
 // salesActionsTerminFilterApply.spec.ts.
 export const salesActionTypeFilterOptions = {
     // Objekt Sales Action group
-    bautraegerUebergabemappe: { label: 'Bauträger Übergabemappe' },
-    mieterliste: { label: 'Mieterliste' },
+    bautraegerUebergabemappe: { label: 'Bauträger Übergabemappe', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
+    mieterliste: { label: 'Mieterliste', expectedInNeubau: true, expectedInFTTH: false, expectedInBestandsbau: false },
     mietervorveranstaltung: { label: 'Mietervorveranstaltung' },
     salesPersonal: { label: 'Sales Personal' },
     tuerhaenger: { label: 'Türhänger' },
     verkaufsstand: { label: 'Verkaufsstand' },
     werbemittelmassnahmen: { label: 'Werbemittelmaßnahmen' },
     // D2D Sales Action group
-    a1InternetReadyCheck: { label: 'A1 Internet Ready Check' },
-    d2dVerkauf: { label: 'D2D Verkauf' },
+    a1InternetReadyCheck: { label: 'A1 Internet Ready Check', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
+    d2dVerkauf: { label: 'D2D Verkauf', expectedInNeubau: true, expectedInFTTH: true, expectedInBestandsbau: true },
 } as const;

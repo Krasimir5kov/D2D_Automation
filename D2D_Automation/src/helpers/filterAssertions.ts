@@ -392,6 +392,27 @@ export async function expectEveryRowRegimeToBe(
     expect(regime, `row ${i}: expected data-regime "${expectedRegime}", got "${regime}"`).toBe(expectedRegime);
   });
 }
+// Asserts every rendered Sales Action row's stable data-sales-action-type attribute,
+// not a sample, while allowing valid result sets shorter than the usual 25-row page.
+// The visible type label is intentionally not checked here: it is a Neubau-only UI
+// presentation detail and therefore is not a valid cross-section result contract.
+export async function expectEveryRowSalesActionTypeToBe(
+  pageObject: PageWithTable,
+  expectedSalesActionType: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    const row = rows.nth(i);
+    await expect(
+      row,
+      `row ${i}: expected data-sales-action-type "${expectedSalesActionType}"`,
+    ).toHaveAttribute('data-sales-action-type', expectedSalesActionType);
+  }
+}
 // Sales Actions equivalent of expectEveryRowOrganisationToBe — that one depends on
 // Objekte's dedicated td[id$='-organisation'] cell, which Sales Actions rows don't have.
 export async function expectEveryRowSalesActionOrganisationToBe(

@@ -12,6 +12,38 @@ Never apply any change to an existing source file without explicit approval from
 Always propose the change first, wait for "yes" or "apply it", then act.
 New files may be drafted and shown, but must also be confirmed before being written to disk.
 
+### Explicit proposal-before-edit addendum (agreed 2026-09-17)
+
+This addendum strengthens the approval gate above and is mandatory for Claude Code, Codex,
+and every other assistant working in this repository:
+
+- A request, idea, requirement, correction, expanded scope, or statement such as "I agree, but
+  add..." is **not** permission to edit files. It is input for a revised proposal.
+- Before every source, test, configuration, or documentation edit, first show the user what
+  will be changed: the exact affected files, proposed code/diff or sufficiently exact draft,
+  what existing framework code will be reused, what will be newly added, and how it will be
+  validated.
+- After showing that complete proposal, stop and wait. Only the user's explicit approval of
+  that currently displayed proposal — for example `Go ahead` or `Apply it` — authorizes the edit.
+- If the user changes or expands the requested scope before approving it, the previous proposal
+  is no longer sufficient. Present the complete revised proposal and wait for fresh explicit
+  approval before editing anything.
+- IDE/tool settings such as automatic approval, `Approve for me`, sandbox permissions, or a
+  successful tool-approval dialog are execution permissions only. They never count as the
+  user's project-level approval to modify repository files and never override this gate.
+- Once approval is given, implement only the approved proposal. If implementation reveals a
+  material new file, design change, assertion, locator, refactor, or scope expansion, pause,
+  present that addition, and obtain another explicit approval before applying it.
+- Read-only inspection, explanation, and drafting are allowed before approval; filesystem
+  writes are not. Creating a new file counts as a filesystem write and requires the same gate.
+- Git staging, committing, and pushing remain separate actions and require explicit permission
+  in that moment; approval to edit code does not authorize Git publication actions.
+
+**Incident that established this clarification:** on 2026-09-17, Codex treated the user's
+expanded Sales Action-Type test requirements as permission to implement them and edited the
+files before displaying the revised complete proposal. The tests were accepted after the fact,
+but the process was wrong and must never be repeated.
+
 ---
 
 ## ⚠️ Record everything, as it happens (mandatory)
@@ -693,6 +725,34 @@ all 3 sections. `npm run typecheck` clean.
 
 `npm run typecheck` clean. Out of scope for now: `mitTerminHeute`, `mitTerminImZeitraum` —
 the other 2 entries in `terminFilterOptions` — still need their own tests later.
+
+**Sales Action-Type Apply coverage implemented 2026-09-17 (not yet committed at the time
+of this entry).** This extends the earlier Sales Action-Type notes under "Two issues found
+running `ohne Termin` live" (currently around lines 658-683); it does not replace them.
+The user confirmed this section matrix for the four representative choices now covered:
+`Bauträger Übergabemappe` and `Mieterliste` are Objekt Sales Action types that return rows
+only in Neubau (FTTH-AUSBAU and Bestandsbau must show the known filter empty state), `D2D
+Verkauf` must return rows in all three sections, and `A1 Internet Ready Check` returns rows
+only in Bestandsbau (Neubau and FTTH-AUSBAU must be empty). The four constants now record
+their `expectedInNeubau`/`expectedInFTTH`/`expectedInBestandsbau` applicability. The Apply
+spec selects through the existing `selectFilterChoiceExpandingAllOptions()` helper, verifies
+the checkbox and raw-label applied chip, then checks every currently rendered row (normally
+all 25, without hardcoding 25) through the new assertion-only helper
+`expectEveryRowSalesActionTypeToBe()`. That helper uses Playwright's retrying
+`toHaveAttribute('data-sales-action-type', expectedType)` on every table row. A visible type
+label was briefly considered as a second result check after inspecting Neubau's second-`td`
+DOM, then explicitly rejected by the user: that visible text is a Neubau-only presentation
+detail and is not a valid cross-section contract, so no locator or assertion for it was kept.
+Validation completed: `npm run typecheck` passed and Playwright `--list` discovered all four
+Apply cases. `playwright.config.ts` remains the user's unrelated intentional local change.
+
+**Live-validation follow-up, 2026-09-17:** extending the immediately preceding Sales
+Action-Type entry, all four new Apply cases passed against the configured INT environment with
+one worker and retries disabled. Playwright reported `5 passed, 1 skipped` in 3.2 minutes: the
+five passes are UI preflight plus the four Sales Action-Type cases, and the skipped test is the
+expected reusable-auth setup. This live run confirms the section matrix, filter persistence
+while moving between the three Sales Actions routes, both known filter empty-state messages,
+and every rendered row's `data-sales-action-type` assertion.
 
 **Sales Actions Ergebnis, Bestandsbau correction — committed and pushed 2026-09-17
 (`18e4f43`).** The confirmed Bestandsbau filter choice is `Kein A1 Kabel`, replacing

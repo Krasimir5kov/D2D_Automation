@@ -66,6 +66,9 @@ export class SalesActionsPage extends BasePage {
   readonly bestellungUeberD2DFilter: Locator;
   readonly ablegerZustimmungFilter: Locator;
   readonly kundendatenFilter: Locator;
+  // Sales Action-Type result verification uses each row's stable
+  // data-sales-action-type attribute. The visible type text is Neubau-only and must
+  // not be treated as a shared result locator across all three sections.
   readonly salesActionTypeFilter: Locator;
   readonly objektFilter: Locator;
   readonly zugewiesenAnFilter: Locator;
