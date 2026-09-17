@@ -88,7 +88,7 @@ test.describe('Sales Actions Ergebnis Filter Apply', () => {
             await expect(salesActionsPage.filters.filterBarChip(ergebnisFilterOptions.bestandsbauOption)).toBeVisible();
         });
         await test.step('Verify that the list is updated according to the applied Ergebnis filter', async () => {
-            await expectEveryRowStatusChipToBe(salesActionsPage, SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.abgeschlossenNegative.label, SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.abgeschlossenNegative.color);
+            await expectEveryRowStatusChipToBe(salesActionsPage, SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.nichtdurchführbar.label, SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.nichtdurchführbar.color);
         });
     });
 });

@@ -11,7 +11,7 @@ export const ablegerZustimmungsdokumentOptions = {
 export const ergebnisFilterOptions = {
     neubauOption: 'Abschluss anderer POS',
     ftthAusbauOption: 'KGV Check',
-    bestandsbauOption : 'Gespräch verweigert'
+    bestandsbauOption : 'Kein A1 Kabel'
 };
 // expectChipDisplayed: confirmed 2026-09-16 — Pre-Contracting/2nd Run both render a Phase
 // chip (list view + side panel); Keine Phase renders none anywhere, same "no chip for the
