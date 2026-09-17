@@ -9,7 +9,10 @@
  */
 import { expect } from '@playwright/test';
 import { test } from '../../../src/fixtures/salesAction.fixture';
-import { salesActionTypeFilterOptions } from '../../../src/constants/salesActionFiltersValues';
+import {
+    representativeObjectSalesActionTypeFilterOptions,
+    salesActionTypeFilterOptions,
+} from '../../../src/constants/salesActionFiltersValues';
 import { selectFilterChoiceExpandingAllOptions } from '../../../src/helpers/filterHelpers';
 import {
     expectEveryRowSalesActionTypeToBe,
@@ -17,12 +20,7 @@ import {
 } from '../../../src/helpers/filterAssertions';
 
 test.describe('Sales Actions Sales Action-Type Filter Apply', () => {
-    const objectSalesActionTypes = [
-        salesActionTypeFilterOptions.bautraegerUebergabemappe,
-        salesActionTypeFilterOptions.mieterliste,
-    ];
-
-    for (const option of objectSalesActionTypes) {
+    for (const option of representativeObjectSalesActionTypeFilterOptions) {
         test(`Apply Objekt Sales Action-Type (${option.label}) and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to the Neubau Sales Actions section', async () => {
                 await salesActionsPage.gotoNeubauSalesAction();

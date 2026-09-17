@@ -459,4 +459,9 @@ export class SalesActionsPage extends BasePage {
     return row.locator('.CtitwbHLBT1uebUegj6o');
   }
 
+  assignedUserInRow(row: Locator, assignedUserName: string): Locator {
+    const escapedName = assignedUserName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return row.getByText(new RegExp(`^${escapedName}(?:,| \\.\\.\\.)?$`, 'i'));
+  }
+
 }

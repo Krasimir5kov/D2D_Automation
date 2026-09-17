@@ -25,6 +25,33 @@ export const KundendatenFilterOptions = {
     noCustomer: { label: 'ohne Kundendaten', expectedIconPresent: false, expectedInNeubau: true, expectedInFTTH: true, expectedInBestandsbau: true },
     withCustomer: { label: 'mit Kundendaten', expectedIconPresent: true, expectedInNeubau: false, expectedInFTTH: true, expectedInBestandsbau: true },
 } as const;
+export const upsellingPotentialFilterOptions = {
+    withPotential: {
+        label: 'mit upselling Potential',
+        expectedIconPresent: true,
+        expectedIconColor: 'rgb(51, 51, 51)',
+        expectedInNeubau: false,
+        expectedInFTTH: false,
+        expectedInBestandsbau: true,
+    },
+    withoutPotential: {
+        label: 'ohne upselling Potential',
+        expectedIconPresent: true,
+        expectedIconColor: 'rgb(128, 128, 128)',
+        expectedInNeubau: false,
+        expectedInFTTH: false,
+        expectedInBestandsbau: true,
+    },
+} as const;
+export const zugewiesenAnFilterOptions = {
+    krasimirPetkov: {
+        searchTerm: 'Krasimir Petkov',
+        label: 'Krasimir Petkov',
+    },
+    nichtZugewiesen: {
+        label: 'nicht zugewiesen',
+    },
+} as const;
 // Confirmed 2026-09-04: only leerverrohrungscheck and nachverdichtung return results in
 // FTTH-AUSBAU — every other Aufgabe value here is Bestandsbau-specific.
 export const aufgabeFilterOptions = {
@@ -98,3 +125,8 @@ export const salesActionTypeFilterOptions = {
     a1InternetReadyCheck: { label: 'A1 Internet Ready Check', expectedInNeubau: false, expectedInFTTH: false, expectedInBestandsbau: true },
     d2dVerkauf: { label: 'D2D Verkauf', expectedInNeubau: true, expectedInFTTH: true, expectedInBestandsbau: true },
 } as const;
+
+export const representativeObjectSalesActionTypeFilterOptions = [
+    salesActionTypeFilterOptions.bautraegerUebergabemappe,
+    salesActionTypeFilterOptions.mieterliste,
+] as const;

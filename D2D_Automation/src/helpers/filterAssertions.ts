@@ -428,6 +428,24 @@ export async function expectEveryRowSalesActionOrganisationToBe(
     await expect(pageObject.organisationInRow(rows.nth(i)), `row ${i}: expected Organisation "${name}"`).toHaveText(name);
   }
 }
+export async function expectEveryRowAssignedUserToBe(
+  pageObject: PageWithTable & {
+    assignedUserInRow: (row: Locator, assignedUserName: string) => Locator;
+  },
+  assignedUserName: string,
+): Promise<void> {
+  await waitForTableSettled(pageObject);
+  const rows = pageObject.table.rows;
+  await expect(rows.first()).toBeVisible();
+
+  const rowCount = await rows.count();
+  for (let i = 0; i < rowCount; i++) {
+    await expect(
+      pageObject.assignedUserInRow(rows.nth(i), assignedUserName),
+      `row ${i}: expected assigned user "${assignedUserName}"`,
+    ).toBeVisible();
+  }
+}
 export async function expectEveryRowDataObjectNameToContain(
   pageObject: PageWithTable,
   searchValue: string,
@@ -486,6 +504,7 @@ export async function expectEveryRowIconToBe(
   iconInRow: (row: Locator) => Locator,
   expectedPresent: boolean,
   iconLabel: string,
+  expectedColor?: string,
 ): Promise<void> {
   await waitForTableSettled(pageObject);
   const rows = pageObject.table.rows;
@@ -495,6 +514,12 @@ export async function expectEveryRowIconToBe(
     const icon = iconInRow(rows.nth(i));
     if (expectedPresent) {
       await expect(icon, `row ${i}: expected ${iconLabel} icon present`).toBeVisible();
+      if (expectedColor) {
+        await expect(
+          icon,
+          `row ${i}: expected ${iconLabel} icon color ${expectedColor}`,
+        ).toHaveCSS('color', expectedColor);
+      }
     } else {
       await expect(icon, `row ${i}: expected no ${iconLabel} icon`).toHaveCount(0);
     }

@@ -31,7 +31,7 @@ export class FilterBar {
     this.phaseFilter = page.locator('#contractSectionPhaseAdmins', { hasText: 'Phase' });
     this.importDateFilter = page.locator('#importData', { hasText: 'Importdatum' });
     this.showChoicesButton = page.locator('#filter-dropdown-root').getByText(/weitere anzeigen/i);
-    this.dropDownSearchInput = page.locator('#filter-dropdown-root').getByRole('textbox', { name: 'Suche nach...' });
+    this.dropDownSearchInput = page.locator('#filterSearch');
     this.inputSearchLabelMostlyUsed = page.getByLabel('Suche nach...');
     this.dropdownRoot = page.locator('#filter-dropdown-root');
   }

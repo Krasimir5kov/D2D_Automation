@@ -37,6 +37,17 @@ export async function selectFilterChoiceWithOutSearchInput(
   await pageObject.filters.choiceLabelButton(choiceLabel).click();
 }
 
+export async function selectFilterChoiceWithSearchInput(
+  pageObject: PageWithFilters,
+  openFilter: () => Promise<void>,
+  searchTerm: string,
+  choiceLabel: string,
+): Promise<void> {
+  await openFilter();
+  await pageObject.filters.dropDownSearchInput.fill(searchTerm);
+  await pageObject.filters.choiceLabelButton(choiceLabel).click();
+}
+
 // Clicks "Anwenden" and waits for the resulting list-data network response to resolve
 // before returning, so the caller can safely read the table right after this.
 export async function applyFilterAndWaitForResults(

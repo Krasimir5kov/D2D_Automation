@@ -795,3 +795,18 @@ await page.getByTestId('sales-action-55-customer-interaction-1-toggle').click();
 | POSS-3422 | `c5ced5a6` | Aktivitäten Setup create button + import-format fix |
 
 (POSS-3400 = unrelated Baulose import-date sorting, out of scope. POSS-3401 does not exist.)
+
+## 2026-09-17 addendum — Sales Action assigned-to attributes still missing
+
+`SalesActionAssignedTo.tsx` is shared by the Neubau, FTTH-AUSBAU, and Bestandsbau Sales Action
+tables. Its outer container, assignee-name area, individual assignee entries, Organisation line,
+and optional object-status line currently have generated CSS-module classes only; POSS-3404 did
+not add stable attributes to them. The component also renders only the first three assignees and
+uses ` ...` when more exist.
+
+Temporary automation fallback: scope exact assignee visible-text lookup to the stable
+`#sales-action-row-{salesActionId}` row and allow the rendered comma/ellipsis suffix. Do not use
+the generated classes. Future frontend work should add an assigned-to container id, a stable
+assignees wrapper, per-assignee id/data attributes (prefer user id when available), and a stable
+Organisation id. The design must account for filtered assignees beyond the three visibly
+rendered names; attributes on visible entries alone do not solve that case.

@@ -754,6 +754,37 @@ expected reusable-auth setup. This live run confirms the section matrix, filter 
 while moving between the three Sales Actions routes, both known filter empty-state messages,
 and every rendered row's `data-sales-action-type` assertion.
 
+**Representative Objekt Sales Action-Type subset placement, 2026-09-17:** extending the
+preceding Sales Action-Type coverage entry, the reusable two-option coverage subset was moved
+out of `salesActionsTypeFilterApply.spec.ts` and exported from its originating
+`salesActionFiltersValues.ts` constants module as
+`representativeObjectSalesActionTypeFilterOptions`. It contains references to the existing
+`Bauträger Übergabemappe` and `Mieterliste` option objects, so labels and section expectations
+remain single-source rather than duplicated. The word `representative` is deliberate: this is
+the two-option Apply-coverage subset, not all seven Objekt Sales Action types. Future specs that
+need this exact subset must reuse the export instead of defining another local array.
+
+**Sales Actions Upselling Potential Apply coverage, 2026-09-17:** the filter trigger and open
+action already existed as `#upsellingPotential` / `openUpsellingPotentialFilterDropDown()`, and
+the row-level house-icon locator already existed as `upsellingPotentialIconInRow()` using the
+INT+PROD-confirmed SVG path prefix `M18.286 1.999h-4.572`; no new Page Object or FilterBar
+locator was needed. The two confirmed radio choices are `mit upselling Potential`
+(`#upselling-potential`) and `ohne upselling Potential` (`#no-upselling-potential`). Both return
+rows only in Bestandsbau; FTTH-AUSBAU and Neubau must show the known filter empty state. Both
+values render the same house/InternetIcon, so presence alone cannot distinguish them: `mit`
+uses computed `color: rgb(51, 51, 51)` and `ohne` uses `rgb(128, 128, 128)`. The reusable
+`expectEveryRowIconToBe()` helper therefore gained an optional `expectedColor` parameter and
+uses retrying `toHaveCSS('color', expectedColor)` after its existing visibility check; existing
+callers remain unchanged because the parameter is optional. The two option definitions live in
+`upsellingPotentialFilterOptions`, and the Apply spec uses the existing
+`selectFilterChoiceWithOutSearchInput()`, `choiceRadio()`, raw-label `filterBarChip()` (frontend
+source confirms `upsellingPotential` is not in `FiltersThatUseTheLabelInFilterChip`), the shared
+icon assertion, and the shared empty-state assertion. `npm run typecheck` and Playwright
+`--list` passed. The first dependent live run did not reach the feature cases because shared
+`ui-preflight` timed out after 120 seconds waiting for the authenticated Baulose navigation
+link (`1 failed`, `1 skipped`, `2 did not run`). A targeted `--no-deps` run using the same saved
+storage state then ran the feature cases directly and both passed (`2 passed` in 1.1 minutes).
+
 **Sales Actions Ergebnis, Bestandsbau correction — committed and pushed 2026-09-17
 (`18e4f43`).** The confirmed Bestandsbau filter choice is `Kein A1 Kabel`, replacing
 `Gespräch verweigert`. Rows returned for that choice show the `nicht durchführbar` status chip,
@@ -900,3 +931,49 @@ setup → api (API tests — separate project, no browser)
 ```
 
 The `api` project does not depend on `ui-preflight`. Keep them independent.
+
+## 2026-09-17 addendum — Sales Actions "zugewiesen an" filter and assignee locator gap
+
+The `salesActionsAssigneesSearch` filter is a `SearchMultiple` filter. Its trigger is the
+stable `#salesActionsAssigneesSearch` id and its shared dropdown search input is the stable
+`#filterSearch` id. Search for the user, select the exact checkbox choice, apply the filter,
+then verify the raw user-name filter chip and every rendered row in Neubau, FTTH-AUSBAU, and
+Bestandsbau.
+
+`SalesActionAssignedTo` has no stable id/data attribute for either its assignee-name area or
+its Organisation line. Until a frontend ticket adds them, assignee checks use an exact visible
+name locator scoped to the already-stable `sales-action-row-{id}` row; generated CSS-module
+classes must not be used. The rendered name can end with a comma or ` ...`, so the page-object
+locator accepts those suffixes. The component displays only the first three assignees, which
+means a filtered user who is fourth or later can be valid backend data but absent from visible
+row text. Record this limitation in failures and prefer stable assignee id/name attributes or
+response-data verification once available. The existing Organisation class fallback is part of
+the same frontend attribute gap.
+
+## 2026-09-17 addendum — assigned-user tests split by section and null-value coverage
+
+The Sales Actions `zugewiesen an` Apply coverage deliberately creates independent tests per
+section so a wrong result in Bestandsbau, FTTH-AUSBAU, or Neubau does not hide the successful
+outcomes of the other sections. A small section-definition array generates separate Playwright
+test cases; it does not combine section assertions into one test.
+
+Both confirmed choices are covered in every section. `Krasimir Petkov` is found through the
+nested `#filterSearch` input. `nicht zugewiesen` is the special `not-assigned` null-value
+checkbox and is visible immediately when the dropdown opens, so it must be selected with the
+no-search helper. Each test independently navigates, selects, applies, verifies the raw-label
+chip, and verifies every rendered row. This produces six independently reported tests.
+
+## 2026-09-17 addendum — assigned-user spec structure correction
+
+This note refines the preceding section without deleting its history. The section-definition
+array, local `SalesActionSection` type, navigation callbacks, and section loop were removed from
+the `zugewiesen an` spec because they made the file harder to scan before reaching the tests.
+The final structure follows the established framework convention: one outer concept describe,
+explicit nested describes for Bestandsbau, FTTH-AUSBAU, and Neubau, and a section-specific
+`beforeEach` that calls the existing Page Object navigation and loaded-check methods.
+
+The small loop over `Object.values(zugewiesenAnFilterOptions)` is intentionally preserved inside
+each section. It generates the two independent value cases (`Krasimir Petkov` and
+`nicht zugewiesen`) without hiding which list section is under test. The selected option's
+`searchTerm` property determines whether the search-input helper or no-search helper is used.
+The outcome remains six independent Playwright tests with clearer section-first source layout.
