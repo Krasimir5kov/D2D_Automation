@@ -22,6 +22,9 @@ write it down before considering the turn finished. Don't wait for a dedicated "
 notes" request; treat recording as part of doing the work, the same way running `npm run
 typecheck` after an edit is part of doing the work.
 
+This rule applies equally to Claude Code, Codex, and any other assistant working in this
+repository. A Codex-made change or Git action must be recorded here in the same turn too.
+
 - **Where: this file (`CLAUDE.md`) is the only place that's guaranteed to reach both laptops.**
   Write the fact here, in the relevant section (`Known bugs, decisions, and status`,
   `Open loose ends`, the filter-coverage status paragraph, etc.), in the *same* turn the
@@ -676,6 +679,15 @@ all 3 sections. `npm run typecheck` clean.
 
 `npm run typecheck` clean. Out of scope for now: `mitTerminHeute`, `mitTerminImZeitraum` —
 the other 2 entries in `terminFilterOptions` — still need their own tests later.
+
+**Sales Actions Ergebnis, Bestandsbau correction — committed and pushed 2026-09-17
+(`18e4f43`).** The confirmed Bestandsbau filter choice is `Kein A1 Kabel`, replacing
+`Gespräch verweigert`. Rows returned for that choice show the `nicht durchführbar` status chip,
+so `salesActionsErgebnisFilterApply.spec.ts` now verifies
+`SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS.nichtdurchführbar` instead of
+`abgeschlossenNegative`. `npm run typecheck` passed before the commit. The separate local
+`playwright.config.ts` change was deliberately excluded from the commit because the user uses
+machine-local timeout/worker adjustments while developing and running new tests.
 
 ---
 
