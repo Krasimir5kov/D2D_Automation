@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/salesAction.fixture';
 
-test.describe.skip('Sales Actions Sales Action-Type Filter Dropdown Content', () => {
+test.describe.skip('Sales Actions Sales Action-Type Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
 });

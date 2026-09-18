@@ -281,6 +281,182 @@ already discovers `.spec.ts` files recursively at any depth; no config file need
 this move. A page/section with zero filters (Konfiguration's Übersicht/Aufgaben/Gruppen) has no
 `content/`/`application/` subfolders at all — don't create empty ones.
 
+**Role tags — agreed 2026-09-18, applied to every existing test's outermost `test.describe`.**
+Every top-level `test.describe`/`test.describe.skip` call across the whole `tests/ui/` tree
+(and its stub-only files) now carries a `{ tag: [...] }` second argument — Playwright tags
+cascade down to every nested describe/test, so tagging only the outermost describe per file is
+enough; nested per-section describes that already had their own tag (Baulose's Bestandsbau/FTTH
+split, `bauloseSearch.spec.ts`, `bauloseSalesActionNavigation.spec.ts`) were left as-is and now
+just carry the tag redundantly at two levels, which is harmless.
+
+- **Every page except Konfiguration:** `{ tag: ['@Admin', '@Admin-Regional'] }` — both roles
+  can access these pages/filters without any extra permission.
+- **Konfiguration only:** access requires the base role (Admin or Admin-Regional) **plus** a
+  separately-grantable "Konfiguration" permission — not every Admin/Admin-Regional account can
+  see this page. Because of that extra dimension, every one of Konfiguration's 18 stub files
+  (all still empty `test.describe.skip(...)` bodies as of this writing) was split into **two**
+  top-level describes instead of one: `'{title} — Admin'` tagged
+  `{ tag: ['@Admin', '@Konfiguration'] }` and `'{title} — Admin-Regional'` tagged
+  `{ tag: ['@Admin-Regional', '@Konfiguration'] }` — mirroring how Baulose already splits by
+  section, just splitting by role-plus-permission instead. Whoever fills in real logic for a
+  Konfiguration file should keep this two-describe shape rather than collapsing it back to one.
+**Correction, same day, later — the "Konfiguration split" above was based on a wrong premise,
+reverted.** The bullet above claims Konfiguration page access itself needs an extra permission.
+Verified against the real FE source (`Widget.tsx` lines 25-132, the single place that gates all
+6 top-level nav links/routes) that this is **false**: Konfiguration's nav link/route uses
+`isAdminA1` (`hasRoles([ADMIN_A1, ADMIN_A1_REGION])`) only — exactly the same gate as Importe.
+The real `CONFIG_MANAGER` role (`RoleTypes.CONFIG_MANAGER = 'Konfig Manager'`, confirmed in
+`Role.type.ts`) is checked only *inside* Konfiguration's own sub-pages
+(`Regime.tsx`/`SalesActionTask.tsx`/`InteractionSection.tsx`/`InteractionOutcome.tsx`), and only
+to enable/disable each page's "create" button — it never affects whether the page/filters are
+visible at all. **All 18 Konfiguration files were reverted back to a single describe** tagged
+`{ tag: ['@Admin', '@Admin-Regional'] }`, identical to every other Admin-only page — the
+two-describe split (`— Admin` / `— Admin-Regional`) no longer exists anywhere in this codebase.
+
+**Reserved tags for future Konfiguration create-button coverage (not yet written, no test
+carries either tag as of this writing):**
+- `@Konfig-Manager` — a positive test proving the create button (e.g. `#create-regime-button`)
+  is visible/usable for a user who holds `CONFIG_MANAGER`.
+- `@No-Konfig-Manager` — a negative test proving that same button is **absent** for a base
+  Admin/Admin-Regional user who does *not* hold `CONFIG_MANAGER`. Deliberately its own explicit
+  tag rather than "absence of `@Konfig-Manager`" — Playwright's `--grep`/`--grep-invert` filter
+  by presence of a tag string, so a negative case needs its own positive tag to be reliably
+  selectable, not inferred from what's missing.
+- These two are completely orthogonal to `@Admin`/`@Admin-Regional` — a create-button test
+  would carry both, e.g. `{ tag: ['@Admin', '@Konfig-Manager'] }`.
+
+### Role tags, part 2 — Channel/Agent page access, agreed 2026-09-18
+
+Verified via the same `Widget.tsx` nav gate: `isAgentOrChannel = hasRoles([AGENT, CHANNEL])`
+unlocks Baulose/Objekte/Sales Actions only (Benutzerverwaltung/Importe/Konfiguration stay
+`isAdminA1`-only, i.e. Admin/Admin-Regional exclusive — confirms the user's original claim).
+Full access matrix as verified:
+
+| Page | Admin / Admin-Regional | Admin-Extern | Channel / Agent |
+|---|---|---|---|
+| Baulose | ✓ | ✗ | ✓ |
+| Objekte | ✓ | ✗ | ✓ |
+| Sales Actions | ✓ | ✗ | ✓ |
+| Benutzerverwaltung | ✓ | ✓ (new finding, not yet tagged/tested) | ✗ |
+| Importe | ✓ | ✗ | ✗ |
+| Konfiguration | ✓ | ✗ | ✗ |
+
+**`@Channel`/`@Agent` were added to the 37 existing test files confirmed (via
+`FilterConfigContext.tsx`) to use the *exact same filter id* regardless of role** — safe because
+tagging doesn't change what a test does, only whether it's selected by a persona-scoped run:
+
+- Sales Actions (13 filters × Dropdown+Apply): Baulos/Einsatzname, Termin, Immobilienart,
+  Status, Aufgabe, Ergebnis, Planskizze, Bestellung über D2D, Ableger Zustimmung, Kundendaten,
+  Sales Action-Type, Regime, Objekt.
+- Objekte (3 filters): Baulos/Einsatzname, PLZ, Verkaufsstart-Termin.
+- Baulose (3 filters, Importdatum has no Apply file yet): Importdatum (Dropdown only), Regime,
+  Status.
+
+**Deliberately NOT tagged — same visible label, but a genuinely different underlying
+filter/id per role, so the existing (Admin-built) test would use the wrong locator under a
+real Channel/Agent session:**
+- **Phase** (Sales Actions *and* Baulose) — **resolved same day, now tagged**, kept here only
+  for the reasoning. Confirmed two separate config entries in `FilterConfigContext.tsx`:
+  `contractSectionPhaseAdmins` (id `contractSectionPhaseAdmins`, Admin/Admin-Regional) vs
+  `contractSectionPhaseNonAdmins` (id `contractSectionPhase`, Admin-Extern/Channel/Agent) — the
+  same visible "Phase" filter renders one or the other id depending on role, never both at
+  once. Rather than write a second, role-specific test file, `FilterBar.ts`'s and
+  `SalesActionsPage.ts`'s `phaseFilter` locators were both changed to
+  `page.locator('#contractSectionPhaseAdmins, #contractSectionPhase', ...)` — a comma-separated
+  CSS selector list (OR), which resolves to whichever one actually exists in the DOM for the
+  session that's running. This makes the *existing* `salesActionsPhaseFilterApply/Dropdown.spec.ts`
+  and `baulosePhaseFilterApply/Dropdown.spec.ts` genuinely role-agnostic, so they were tagged
+  `@Channel`/`@Agent` too instead of needing a separate file. `npm run typecheck` clean;
+  `--grep "@Channel" --list` count went from 94 → 100 tests in 19 → 21 files after this change,
+  confirming the Phase files now actually contribute real tests to that persona's run (not just
+  a tag with no effect). **This is the reusable pattern for the remaining un-tagged items below
+  whenever their same-id-different-mechanism assumption turns out to be false** — check whether
+  a comma-OR locator fixes it before assuming a whole new file is required.
+- **upselling Potential** (Sales Actions) — exists as a Single-choice **dropdown** for
+  Admin/Admin-Regional only (`upsellingPotential`, already tested by
+  `salesActionsUpsellingPotentialFilterApply/Dropdown.spec.ts`), **and separately** as two
+  standalone **quick-filter pills** (same labels "mit"/"ohne upselling Potential") visible only
+  to Channel/Agent — confirmed by the user directly (not yet located as a distinct config key
+  in the source read so far). Different UI mechanism per role even though the labels match.
+- **zugewiesen an** (Sales Actions) — three distinct mechanisms sharing this concept, confirmed
+  via `FilterConfigContext.tsx`: (1) `salesActionsAssigneesSearch` — Admin/Admin-Regional only,
+  a searchable dropdown, **already tested** by `salesActionsZugewiesenAnFilterApply/Dropdown.spec.ts`
+  (its `nullValueChoiceLabel: 'nicht zugewiesen'` is the Admin-visible representation of "nicht
+  zugewiesen", visible immediately on opening the dropdown, before typing a search term); (2)
+  `salesActionsAssignees` — Channel/Agent only, a Multiple-choice dropdown, **id
+  `salesActionsAssignees`, not yet tested**; (3) `assigneeState` — Channel/Agent only, a
+  standalone quick-filter pill pair (`assigned-to-me`/"mir zugewiesen" and
+  `not-assigned`/"nicht zugewiesen"), **not yet tested**, and "mir zugewiesen" has no Admin
+  equivalent at all (only makes sense from a Channel/Agent "my own queue" perspective).
+- **vor Aviso** (Objekte) — confirmed Channel/Agent-**exclusive** quick filter
+  (`salesStartStatus`/`VOR_AVISO`, `roles: [CHANNEL, AGENT]` — Admin doesn't see this one at
+  all, the reverse of the usual pattern). Related to, but a different mechanism than, the
+  already-tested `objekteVerkaufsstartFilterApply/Dropdown.spec.ts` (`salesStartDate`, shared
+  by all roles).
+- **Objekte's 3 existing quick filters** (`objekteQuickFiltersApply.spec.ts` — "nicht
+  übergeben"/"zurückgewiesen"/"übergeben", the Fragebogen-status choices) — confirmed
+  Admin/Admin-Regional only (`fragebogenStatus`), correctly left untagged for Channel/Agent.
+- **Organisation** (every page it appears on) — confirmed Admin/Admin-Regional only wherever
+  checked, correctly left untagged for Channel/Agent (unchanged from earlier findings).
+
+**Future work list (new filters with no test file yet at all) — for whoever picks up
+Channel/Agent-specific coverage next:**
+1. `salesActionsAssignees` (Sales Actions "zugewiesen an", Channel/Agent-only dropdown).
+2. `assigneeState` (Sales Actions quick-filter pills "mir zugewiesen"/"nicht zugewiesen",
+   Channel/Agent-only).
+3. ~~Sales Actions'/Baulose's Channel/Agent Phase variant~~ — **resolved same day**, see the
+   Phase bullet above; no new file was needed, the existing locator was made role-agnostic.
+4. Sales Actions' Channel/Agent upselling-Potential quick-filter pills (exact config key not
+   yet located in source — locate it before writing the real test; check first whether it's
+   actually a comma-OR locator fix like Phase turned out to be, rather than assuming a new file
+   is required).
+5. Objekte's `vor Aviso` quick filter (`salesStartStatus`/`VOR_AVISO`).
+
+### Persona npm scripts, added 2026-09-18
+
+`package.json` gained 10 new scripts (`:int`/`:prod` pairs) so a specific role-persona test run
+never needs a hand-typed `--grep`:
+- `test:channel` / `test:agent` / `test:channel-agent` — `--grep "@Channel"` /
+  `--grep "@Agent"` / `--grep "@Channel|@Agent"` against `tests/ui`. All three currently select
+  the identical 94 tests in 19 files, since every test tagged `@Channel` is also tagged
+  `@Agent` (the app never distinguishes between them) — this is expected, not a bug; keeping
+  three separate scripts is just future-proofing in case that ever changes, plus it lets
+  whoever runs one name the persona they mean.
+- `test:admin-konfig-manager` — `--grep "@Konfig-Manager"`. Currently selects 0 tests (that
+  coverage doesn't exist yet) — this is correct/expected until the future-work item above is
+  built; don't treat 0 tests as a config bug.
+- `test:admin-no-konfig-manager` — `--grep "@Admin" --grep-invert "@Konfig-Manager"` (Playwright
+  supports combining `--grep` and `--grep-invert` as an AND — this is not a lookahead regex
+  trick, both flags are real Playwright CLI options). Currently selects the entire 182-test
+  `@Admin`-tagged suite (since nothing is `@Konfig-Manager`-tagged yet to exclude) — once the
+  future create-button tests land, this same script will correctly start excluding just the
+  `@Konfig-Manager` positive one while still including its `@No-Konfig-Manager` negative
+  sibling and everything else.
+- **Known `--grep` substring gotcha, relevant to any future script:** `--grep "@Admin"` also
+  matches `@Admin-Regional` and (if ever tagged) `@Admin-Extern`, since Playwright's grep is a
+  substring/regex match against the rendered tag string, not an exact-tag match. Not an issue
+  for any script above (none needs to exclude `@Admin-Regional` specifically), but the next
+  person adding a script that must distinguish `@Admin` from `@Admin-Regional` needs a
+  boundary-aware pattern, e.g. `--grep "@Admin(?!-)"`.
+- **What this does *not* yet solve:** these scripts control which *already-written* tests run
+  — they don't change which real user is logged in. The saved `storageState` from
+  `auth.setup.ts` is still whichever single mock user/role captured it. Actually running e.g.
+  `test:channel:int` against a real Channel-permissioned session needs either (a) a separate
+  Test ENV with pre-provisioned per-role users (the user is checking whether this is reachable,
+  not yet confirmed), or (b) manually changing the current mock user's granted roles, then
+  re-running `auth:setup:int` to capture a fresh `storageState` for that role, before running
+  the persona script. A full multi-persona auth infrastructure (separate storageStates +
+  Playwright config projects per persona) was explicitly deferred — not being built until (a)
+  is resolved one way or the other.
+
+- `tests/api/health.spec.ts` and `tests/preflight/preflight.spec.ts` were deliberately left
+  untagged — they're generic auth/smoke checks, not page-role-visibility tests, so the
+  Admin/Admin-Regional distinction doesn't apply to them.
+- Verified after applying: `npm run typecheck` clean, and `playwright test <page> --list` finds
+  the exact same real-test counts as before this change for every page with real logic
+  (Baulose 30, Objekte 53, Sales Actions 89) — confirming the tag insertion didn't alter any
+  test body or accidentally skip/unskip anything.
+
 ### Reusable filter-testing infrastructure (already built — reuse, don't rebuild)
 - `FilterBar.ts` — generic, page-agnostic: `trigger(id)`, `choiceLabelButton(label)`,
   `choiceCheckbox(label)`, `choiceRadio(label)`, `filterBarChip(text)`,

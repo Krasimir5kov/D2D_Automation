@@ -28,7 +28,11 @@ export class FilterBar {
     this.organisationFilter = page.locator('#organizations', { hasText: 'Organisation' });
     this.regimeFilter = page.locator('#baulosSubTypes', { hasText: 'Regime' });
     this.statusFilter = page.locator('#baulosStatus', { hasText: 'Status' });
-    this.phaseFilter = page.locator('#contractSectionPhaseAdmins', { hasText: 'Phase' });
+    // Admin/Admin-Regional render #contractSectionPhaseAdmins; Admin-Extern/Channel/Agent
+    // render a different id, #contractSectionPhase, for the same "Phase" filter — only one of
+    // the two ever exists in the DOM at once, so this OR-locator resolves correctly regardless
+    // of which role is logged in.
+    this.phaseFilter = page.locator('#contractSectionPhaseAdmins, #contractSectionPhase', { hasText: 'Phase' });
     this.importDateFilter = page.locator('#importData', { hasText: 'Importdatum' });
     this.showChoicesButton = page.locator('#filter-dropdown-root').getByText(/weitere anzeigen/i);
     this.dropDownSearchInput = page.locator('#filterSearch');

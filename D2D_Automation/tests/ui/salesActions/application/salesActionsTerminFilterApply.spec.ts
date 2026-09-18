@@ -31,7 +31,7 @@ import { expectFirstNRowsSatisfy, expectListIsEmptyWithMessageByFilterDropDown, 
 import { selectFilterChoiceExpandingAllOptions } from '../../../../src/helpers/filterHelpers';
 import { SALES_ACTION_FILTER_TITLES_AND_ID } from '../../../../src/constants/salesActionFiltersTitle';
 
-test.describe('Sales Actions Termin Filter Apply', () => {
+test.describe('Sales Actions Termin Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Apply mit Termin option and check three different list section results', () => {
         test('FTTH-AUSBAU: Verify that mit Termin option updates list items accordingly', async ({ salesActionsPage }) => {
             await test.step('Navigate to Sales Action Page', async () => {

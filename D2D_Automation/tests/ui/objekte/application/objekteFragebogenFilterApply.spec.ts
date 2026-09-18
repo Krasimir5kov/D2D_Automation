@@ -11,7 +11,7 @@ import { TABLE_STATUS_CHIP_COLORS } from '../../../../src/constants/objectStatus
 // running this against a tab other than Neubau.
 const FRAGEBOGEN_COLUMN_INDEX = 5;
 
-test.describe('Objekte Fragebogen Filter Apply', () => {
+test.describe('Objekte Fragebogen Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.

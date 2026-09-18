@@ -5,7 +5,7 @@
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { searchByPressingEnterAndWaitForResults, searchByClickingButtonAndWaitForResults } from '../../../src/helpers/filterHelpers';
 
-test.describe('Baulose Input Search Field', () => {
+test.describe('Baulose Input Search Field', { tag: ['@Admin', '@Admin-Regional'] }, () => {
   const CONTRACT_SECTION_ENDPOINT = '/contract-section/paginatedContractSections';
   const bauloseRegimeName = "BBI_PUSH_04"
   test.describe('Search field in Bestandsbau Section list items by pressing Enter', { tag: ['@Admin', '@Admin-Regional'] }, () => {

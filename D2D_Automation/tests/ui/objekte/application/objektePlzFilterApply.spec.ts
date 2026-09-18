@@ -2,7 +2,7 @@ import { test } from '../../../../src/fixtures/object.fixture';
 import { expect } from '@playwright/test';
 import { expectEveryRowPlzWithinRange, expectPlzRangeChipVisible, expectTableSettled } from '../../../../src/helpers/filterAssertions';
 import { plzOptions } from '../../../../src/constants/objectFilterValues';
-test.describe('Objekte PLZ Filter Apply', () => {
+test.describe('Objekte PLZ Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.

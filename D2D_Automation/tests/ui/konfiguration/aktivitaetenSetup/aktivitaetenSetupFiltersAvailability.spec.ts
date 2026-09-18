@@ -12,5 +12,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Aktivitäten Setup Filters Availability', () => {
+test.describe.skip('Konfiguration Aktivitäten Setup Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

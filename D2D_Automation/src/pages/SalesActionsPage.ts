@@ -117,7 +117,11 @@ export class SalesActionsPage extends BasePage {
     this.bestandsbauTabListView = page.getByRole(`table`)
     this.baulosEinsatznameFilter = page.locator('#contractSection');
     this.regimeFilter = page.locator('#salesActionObjectSubType');
-    this.phaseFilter = page.locator('#contractSectionPhaseAdmins');
+    // Admin/Admin-Regional render #contractSectionPhaseAdmins; Admin-Extern/Channel/Agent
+    // render a different id, #contractSectionPhase, for the same "Phase" filter — only one of
+    // the two ever exists in the DOM at once, so this OR-locator resolves correctly regardless
+    // of which role is logged in.
+    this.phaseFilter = page.locator('#contractSectionPhaseAdmins, #contractSectionPhase');
     this.terminFilter = page.locator('#appointment');
     this.immobilienartFilter = page.locator('#salesActionPropertyType');
     this.statusFilter = page.locator('#salesActionStatus');

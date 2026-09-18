@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/salesAction.fixture';
 
-test.describe.skip('Sales Actions zugewiesen an Filter Dropdown Content', () => {
+test.describe.skip('Sales Actions zugewiesen an Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

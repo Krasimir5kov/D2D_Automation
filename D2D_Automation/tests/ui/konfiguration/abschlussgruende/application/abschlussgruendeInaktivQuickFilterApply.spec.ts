@@ -11,5 +11,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Abschlussgründe Inaktiv Quick Filter Apply', () => {
+test.describe.skip('Konfiguration Abschlussgründe Inaktiv Quick Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

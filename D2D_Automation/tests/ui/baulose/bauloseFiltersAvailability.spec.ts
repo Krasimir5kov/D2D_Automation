@@ -7,7 +7,7 @@
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { BAULOSE_FILTERS } from '../../../src/constants/bauloseFiltersTitle';
 
-test.describe('Verification Baulose Page Filters Availability', () => {
+test.describe('Verification Baulose Page Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     test.describe('Bestandsbau Section',
         { tag: ['@Admin', '@Admin-Regional'] },
          () => {

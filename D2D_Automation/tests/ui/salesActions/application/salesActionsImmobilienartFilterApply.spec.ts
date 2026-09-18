@@ -12,7 +12,7 @@ import { selectFilterChoiceExpandingAllOptions, selectFilterChoiceWithOutSearchI
 import { expect } from '@playwright/test';
 import { expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Immobilienart Filter Apply', () => {
+test.describe('Sales Actions Immobilienart Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const option of Object.values(immobilienartFilterOptions)) {
         test(`Apply Immobilienart filter for option: ${option.label} and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to FTTH-AUSBAU section', async () => {

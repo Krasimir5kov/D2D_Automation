@@ -3,7 +3,7 @@ import { expect } from '@playwright/test';
 import { expectEveryRowOrganisationToBe } from '../../../../src/helpers/filterAssertions';
 import {  getFirstRowOrganisationNeubau } from '../../../../src/helpers/filterHelpers';
 
-test.describe('Objekte Organisation Filter Apply', () => {
+test.describe('Objekte Organisation Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.

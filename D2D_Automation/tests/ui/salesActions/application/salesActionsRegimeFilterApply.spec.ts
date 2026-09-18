@@ -13,7 +13,7 @@ import { regimeFilterOptions } from '../../../../src/constants/salesActionFilter
 import { selectFilterChoiceExpandingAllOptions } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowRegimeToBe, expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Regime Filter Apply', () => {
+test.describe('Sales Actions Regime Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const option of Object.values(regimeFilterOptions)) {
         test(`Apply Regime filter option (${option.label}) and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to the section this Regime is expected in', async () => {

@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/salesAction.fixture';
 
-test.describe.skip('Sales Actions Objekt Filter Apply', () => {
+test.describe.skip('Sales Actions Objekt Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
 });

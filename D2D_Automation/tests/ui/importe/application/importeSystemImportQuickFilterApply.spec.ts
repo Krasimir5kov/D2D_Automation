@@ -5,5 +5,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Importe System Import Quick Filter Apply', () => {
+test.describe.skip('Importe System Import Quick Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

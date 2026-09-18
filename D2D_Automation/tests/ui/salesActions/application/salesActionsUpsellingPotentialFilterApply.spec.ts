@@ -15,7 +15,7 @@ import {
     expectListIsEmptyWithMessageByFilterDropDown,
 } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Upselling Potential Filter Apply', () => {
+test.describe('Sales Actions Upselling Potential Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     for (const option of Object.values(upsellingPotentialFilterOptions)) {
         test(`Apply Upselling Potential option (${option.label}) and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to the Bestandsbau Sales Actions section', async () => {

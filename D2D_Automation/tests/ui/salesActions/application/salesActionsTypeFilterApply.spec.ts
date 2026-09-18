@@ -19,7 +19,7 @@ import {
     expectListIsEmptyWithMessageByFilterDropDown,
 } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Sales Action-Type Filter Apply', () => {
+test.describe('Sales Actions Sales Action-Type Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const option of representativeObjectSalesActionTypeFilterOptions) {
         test(`Apply Objekt Sales Action-Type (${option.label}) and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to the Neubau Sales Actions section', async () => {

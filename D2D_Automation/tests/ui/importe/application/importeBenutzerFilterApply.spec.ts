@@ -4,5 +4,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Importe Benutzer Filter Apply', () => {
+test.describe.skip('Importe Benutzer Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

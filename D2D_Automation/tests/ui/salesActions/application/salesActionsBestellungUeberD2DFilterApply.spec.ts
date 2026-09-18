@@ -14,7 +14,7 @@ import { applyFilterAndWaitForResults } from '../../../../src/helpers/filterHelp
 import { SIDE_PANEL_CHIP_COLORS } from '../../../../src/constants/salesActionSidePanelChipColors';
 import { SALES_ACTION_FILTER_TITLES_AND_ID } from '../../../../src/constants/salesActionFiltersTitle';
 
-test.describe('Sales Actions Bestellung über D2D Filter Apply', () => {
+test.describe('Sales Actions Bestellung über D2D Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.beforeEach(async ({ salesActionsPage }) => {
         await salesActionsPage.goToSalesActionPage();
         await salesActionsPage.expectLoadedSalesAction();

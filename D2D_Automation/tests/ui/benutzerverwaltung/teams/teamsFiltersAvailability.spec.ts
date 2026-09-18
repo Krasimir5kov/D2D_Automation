@@ -7,5 +7,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Teams Filters Availability', () => {
+test.describe.skip('Benutzerverwaltung Teams Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

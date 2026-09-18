@@ -5,5 +5,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Organisationen Ohne Admin Extern Quick Filter Apply', () => {
+test.describe.skip('Benutzerverwaltung Organisationen Ohne Admin Extern Quick Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

@@ -16,7 +16,7 @@ import { selectFilterChoiceExpandingAllOptions } from '../../../../src/helpers/f
 import { expectEveryRowAufgabeChipToBe, expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/helpers/filterAssertions';
 import { SALES_ACTIONS_TABLE_AUFGABE_CHIP_COLOR } from '../../../../src/constants/salesActionsTableChipColors';
 
-test.describe('Sales Actions Aufgabe Filter Apply', () => {
+test.describe('Sales Actions Aufgabe Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Apply every Aufgabe filter option in its expected section and verify results', () => {
         for (const option of Object.values(aufgabeFilterOptions)) {
             test(`Apply Aufgabe filter option (${option.label}) and verify results`, async ({ salesActionsPage }) => {

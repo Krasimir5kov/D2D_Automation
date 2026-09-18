@@ -30,7 +30,7 @@ import { salesActionStatusOptions } from '../../../../src/constants/salesActionF
 import { selectFilterChoiceWithOutSearchInput } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowOrEmptyState, expectEveryRowStatusChipToBe, expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Status Filter Apply', () => {
+test.describe('Sales Actions Status Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const [key, option] of Object.entries(salesActionStatusOptions)) {
         const isDurchgefuehrt = key === 'durchgefuehrt';
 

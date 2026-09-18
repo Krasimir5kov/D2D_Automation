@@ -9,7 +9,7 @@ import { test } from '../../../../src/fixtures/salesAction.fixture';
 import { expectEveryRowBauloseEinsatznameToBe } from '../../../../src/helpers/filterAssertions';
 import { getFirstRowBauloseEinsatzname } from '../../../../src/helpers/filterHelpers';
 import { expect } from '@playwright/test';
-test.describe('Sales Actions Baulos/Einsatzname Filter Apply', () => {
+test.describe('Sales Actions Baulos/Einsatzname Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Verify Baulos/Einsatzname filter functionality and results in three sections', () => {
         test.beforeEach(async ({ salesActionsPage }) => {
             await salesActionsPage.goToSalesActionPage();

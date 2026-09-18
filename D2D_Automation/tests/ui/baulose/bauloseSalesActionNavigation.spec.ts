@@ -5,7 +5,7 @@
 import { test, expect } from '../../../src/fixtures/baulose.fixture';
 import { expectEveryRowColumnToContain } from '../../../src/helpers/filterAssertions';
 
-test.describe('Baulose — Zu Sales Actions Navigation', () => {
+test.describe('Baulose — Zu Sales Actions Navigation', { tag: ['@Admin', '@Admin-Regional'] }, () => {
   test.describe('Navigation button in Bestandsbau Section list items', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     test(`Verify Bualose list items are not empty and have navigation buttons`, async ({page, baulosePage, salesActionsPage}) => {
         let firstRowDisplayName: string;

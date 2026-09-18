@@ -9,7 +9,7 @@ import { test } from '../../../src/fixtures/salesAction.fixture';
 import { expect } from '@playwright/test';
 import { SALES_ACTION_FILTER_TITLES_AND_ID } from '../../../src/constants/salesActionFiltersTitle';
 
-test.describe('Sales Actions Filters Availability', () => {
+test.describe('Sales Actions Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     test('Verify that all Sales Actions filters are displayed with the correct title', async ({ salesActionsPage }) => {
         await test.step('Navigate to Sales Action Page', async () => {
             await salesActionsPage.gotoFtthSalesAction();

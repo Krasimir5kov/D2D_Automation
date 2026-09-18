@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/baulose.fixture';
 
-test.describe.skip('Baulose Regime Filter Dropdown Content', () => {
+test.describe.skip('Baulose Regime Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
 });

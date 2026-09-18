@@ -11,7 +11,7 @@ import {
 } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowAssignedUserToBe } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions zugewiesen an Filter Apply', () => {
+test.describe('Sales Actions zugewiesen an Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
   test.describe('Bestandsbau', () => {
     test.beforeEach(async ({ salesActionsPage }) => {
       await salesActionsPage.gotoBestandsbauSalesAction();

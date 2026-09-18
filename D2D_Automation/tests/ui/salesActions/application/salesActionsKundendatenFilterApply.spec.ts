@@ -12,7 +12,7 @@ import { KundendatenFilterOptions } from '../../../../src/constants/salesActionF
 import { selectFilterChoiceExpandingAllOptions, selectFilterChoiceWithOutSearchInput } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowIconToBe, expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Kundendaten Filter Apply', () => {
+test.describe('Sales Actions Kundendaten Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const option of Object.values(KundendatenFilterOptions)) {
         test(`Apply Kundendaten filter option (${option.label}) and verify results across all sections`, async ({ salesActionsPage }) => {
             await test.step('Navigate to FTTH-AUSBAU section', async () => {

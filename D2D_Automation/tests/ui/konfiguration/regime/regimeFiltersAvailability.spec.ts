@@ -14,5 +14,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Regime Filters Availability', () => {
+test.describe.skip('Konfiguration Regime Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

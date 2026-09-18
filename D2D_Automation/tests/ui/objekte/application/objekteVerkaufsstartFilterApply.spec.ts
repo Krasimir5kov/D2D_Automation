@@ -6,7 +6,7 @@ import { expectListIsEmptyWithMessageByFilterDropDown } from '../../../../src/he
 import { expectEveryRowColumnToContain  } from '../../../../src/helpers/filterAssertions';
 const VERKAUFSSTART_COLUMN_INDEX = 3;
 
-test.describe('Objekte Verkaufsstart Filter Apply', () => {
+test.describe('Objekte Verkaufsstart Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Verify Verkaufsstart-Termin Filter Options Update List Items Accordingly', () => {
         test.beforeEach(async ({ objektePage }) => {
             await objektePage.goToObjektePage();

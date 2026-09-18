@@ -5,5 +5,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Organisationen Vertriebsschienenregion Filter Apply', () => {
+test.describe.skip('Benutzerverwaltung Organisationen Vertriebsschienenregion Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

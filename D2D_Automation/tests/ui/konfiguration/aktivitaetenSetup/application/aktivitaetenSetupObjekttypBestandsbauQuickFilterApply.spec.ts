@@ -5,5 +5,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Aktivitäten Setup Objekttyp Bestandsbau Quick Filter Apply', () => {
+test.describe.skip('Konfiguration Aktivitäten Setup Objekttyp Bestandsbau Quick Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

@@ -11,5 +11,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Importe Importdatum Filter Dropdown Content', () => {
+test.describe.skip('Importe Importdatum Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

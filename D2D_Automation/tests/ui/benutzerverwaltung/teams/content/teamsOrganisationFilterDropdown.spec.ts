@@ -8,5 +8,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Teams Organisation Filter Dropdown Content', () => {
+test.describe.skip('Benutzerverwaltung Teams Organisation Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

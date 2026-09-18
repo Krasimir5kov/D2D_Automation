@@ -8,5 +8,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Organisationen Vertriebsschienenregion Filter Dropdown Content', () => {
+test.describe.skip('Benutzerverwaltung Organisationen Vertriebsschienenregion Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

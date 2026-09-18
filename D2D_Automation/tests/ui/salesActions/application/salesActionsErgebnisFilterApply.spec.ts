@@ -14,7 +14,7 @@ import { ergebnisFilterOptions } from '../../../../src/constants/salesActionFilt
 import { expectEveryRowStatusChipToBe, expectListIsEmptyWithMessageByFilterDropDown, expectListIsEmptyWithMessageBySearchInput } from '../../../../src/helpers/filterAssertions';
 import { SALES_ACTIONS_TABLE_STATUS_CHIP_COLORS } from '../../../../src/constants/salesActionsTableChipColors';
 
-test.describe('Sales Actions Ergebnis Filter Apply', () => {
+test.describe('Sales Actions Ergebnis Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test('Verify that Neubau-specific Ergebnis filter option updates the list accordingly', async ({ salesActionsPage }) => {
         await test.step('Navigate to Sales Action Page', async () => {
             await salesActionsPage.gotoFtthSalesAction();

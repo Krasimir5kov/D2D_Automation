@@ -11,7 +11,7 @@ import { ablegerZustimmungOptions, ablegerZustimmungsdokumentOptions, phaseFilte
 import { expect } from '@playwright/test';
 import { expectTableSettled } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Ableger Zustimmung Filter Apply', () => {
+test.describe('Sales Actions Ableger Zustimmung Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Ableger Zustimmung Filter Apply', () => {
         test("Verify that filter section provide both Ableger options'", async ({ salesActionsPage }) => {
             await test.step('Navigate to Sales Action Page', async ({ }) => {

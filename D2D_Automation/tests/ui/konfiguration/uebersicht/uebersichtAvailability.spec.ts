@@ -6,5 +6,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Übersicht Availability', () => {
+test.describe.skip('Konfiguration Übersicht Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

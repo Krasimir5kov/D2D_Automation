@@ -9,5 +9,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Importe Filters Availability', () => {
+test.describe.skip('Importe Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

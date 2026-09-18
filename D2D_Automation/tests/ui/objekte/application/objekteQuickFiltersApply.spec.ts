@@ -24,7 +24,7 @@ const uebergabestatusChoices = [
     { label: 'zurückgewiesen', getButton: (objektePage: ObjektePage) => objektePage.quickFilterRejectButton },
     { label: 'übergeben', getButton: (objektePage: ObjektePage) => objektePage.quickFilterAssignedButton },
 ];
-test.describe('Objekte Quick Filters Apply', () => {
+test.describe('Objekte Quick Filters Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     // SKIPPED: known Objekte backend slowness (Neubau salesStartDate sort, Jira-filed
     // 2026-09-02, see project-neubau-sort-performance-bug memory) makes these too slow/
     // unreliable to run until fixed. Remove this test.skip() once that ticket is resolved.

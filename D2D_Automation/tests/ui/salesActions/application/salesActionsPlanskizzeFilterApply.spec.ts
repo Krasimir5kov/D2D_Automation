@@ -18,7 +18,7 @@ import { Planskizze } from '../../../../src/constants/salesActionSidePanelChipSt
 import { expectListIsEmptyWithMessageByFilterDropDown, expectTableSettled } from '../../../../src/helpers/filterAssertions';
 import { SALES_ACTION_FILTER_TITLES_AND_ID } from '../../../../src/constants/salesActionFiltersTitle';
 
-test.describe('Sales Actions Planskizze Filter Apply', () => {
+test.describe('Sales Actions Planskizze Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     test.describe('Apply offen option and check three different list section results', () => {
         test('FTTH-AUSBAU: Verify that offen option updates list items accordingly', async ({ salesActionsPage }) => {
             await test.step('Navigate to Sales Action Page', async () => {

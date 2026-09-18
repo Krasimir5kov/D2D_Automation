@@ -11,7 +11,7 @@ import { BESTANDSBAU_COLUMNS, FTTH_COLUMNS } from '../../../../src/constants/bau
 
 const CONTRACT_SECTION_ENDPOINT = '/contract-section/paginatedContractSections';
 
-test.describe('Baulose Page Filters  — Apply', () => {
+test.describe('Baulose Page Filters  — Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
   test.beforeEach(async ({ baulosePage }) => {
     await baulosePage.gotoBestandsbauListSection();
     await baulosePage.expectLoadedBestandsbau();

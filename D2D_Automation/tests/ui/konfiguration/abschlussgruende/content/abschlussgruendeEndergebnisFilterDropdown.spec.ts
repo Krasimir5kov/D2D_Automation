@@ -8,5 +8,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Abschlussgründe Endergebnis Filter Dropdown Content', () => {
+test.describe.skip('Konfiguration Abschlussgründe Endergebnis Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

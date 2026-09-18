@@ -14,5 +14,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Users Rolle Filter Dropdown Content', () => {
+test.describe.skip('Benutzerverwaltung Users Rolle Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

@@ -16,7 +16,7 @@ import { expect } from '@playwright/test';
 import { getFirstRowSalesActionOrganisation } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowOrEmptyState, expectEveryRowSalesActionOrganisationToBe } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Organisation Filter Apply', () => {
+test.describe('Sales Actions Organisation Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
     let name = '';
 
     test('FTTH-AUSBAU: Filtering by the first row\'s Organisation shows only matching rows', async ({ salesActionsPage }) => {

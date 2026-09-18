@@ -17,7 +17,7 @@ import { FTTH_COLUMNS } from '../../../../src/constants/salesActionsColumnsValue
 import { selectFilterChoiceWithOutSearchInput } from '../../../../src/helpers/filterHelpers';
 import { expectEveryRowColumnToContain, expectNoRowColumnContains, expectTableSettled } from '../../../../src/helpers/filterAssertions';
 
-test.describe('Sales Actions Phase Filter Apply', () => {
+test.describe('Sales Actions Phase Filter Apply', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
     for (const [key, option] of Object.entries(phaseFilterOptions)) {
         test(`Apply Phase filter option (${option.label}) and verify results`, async ({ salesActionsPage }) => {
             await test.step('Navigate to FTTH-AUSBAU section', async () => {

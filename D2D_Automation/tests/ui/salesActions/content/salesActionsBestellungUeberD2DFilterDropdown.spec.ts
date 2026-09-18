@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/salesAction.fixture';
 
-test.describe.skip('Sales Actions Bestellung über D2D Filter Dropdown Content', () => {
+test.describe.skip('Sales Actions Bestellung über D2D Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional', '@Channel', '@Agent'] }, () => {
 });

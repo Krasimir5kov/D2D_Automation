@@ -9,5 +9,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Konfiguration Abschlussgründe Filters Availability', () => {
+test.describe.skip('Konfiguration Abschlussgründe Filters Availability', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

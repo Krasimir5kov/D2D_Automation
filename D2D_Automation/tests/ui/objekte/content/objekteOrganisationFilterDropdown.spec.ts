@@ -8,5 +8,5 @@
  */
 import { test } from '../../../../src/fixtures/object.fixture';
 
-test.describe.skip('Objekte Organisation Filter Dropdown Content', () => {
+test.describe.skip('Objekte Organisation Filter Dropdown Content', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });

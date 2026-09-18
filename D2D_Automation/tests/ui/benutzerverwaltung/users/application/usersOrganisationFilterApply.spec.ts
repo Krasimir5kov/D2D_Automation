@@ -5,5 +5,5 @@
  */
 import { test } from '@playwright/test';
 
-test.describe.skip('Benutzerverwaltung Users Organisation Filter Apply', () => {
+test.describe.skip('Benutzerverwaltung Users Organisation Filter Apply', { tag: ['@Admin', '@Admin-Regional'] }, () => {
 });
