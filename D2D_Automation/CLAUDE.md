@@ -460,6 +460,25 @@ never needs a hand-typed `--grep`:
   those two secrets belong to (currently the Admin mock user). Don't expect picking a persona
   in CI to also switch the logged-in identity until separate per-persona secrets/auth exist.
 
+- **Page-scoped persona scripts, added same day, later.** The 5 persona scripts above all
+  scope to `tests/ui` — i.e. "run this persona across every page it can see." A second set
+  scopes to one page's folder instead, for when only one page needs checking:
+  `test:baulose-channel` / `test:baulose-agent` / `test:baulose-channel-agent`,
+  `test:objekte-channel` / `test:objekte-agent` / `test:objekte-channel-agent`,
+  `test:salesActions-channel` / `test:salesActions-agent` / `test:salesActions-channel-agent`,
+  `test:konfiguration-admin-konfig-manager` / `test:konfiguration-admin-no-konfig-manager` (no
+  Benutzerverwaltung/Importe page-scoped persona scripts exist — neither page has any
+  Channel/Agent-visible content, and Konfig-Manager is Konfiguration-specific). **Naming
+  convention going forward: the bare persona name (`test:channel`) means "every page this
+  persona can reach"; `{page}-{persona}` means "just this one page."** All 11 were validated
+  with `--list` before committing (Baulose 11 tests/5 files, Objekte 16/5, Sales Actions 77/15,
+  identical across Channel/Agent/Channel-Agent per page since the app never differentiates the
+  two roles) — **except both Konfiguration ones show 0 tests, which is correct and not a
+  tagging bug:** every Konfiguration spec file is still an empty `test.describe.skip(...)`
+  stub with zero real `test()` bodies, so `--list` shows 0 for *any* filter combination there,
+  tagged or not, until real Konfiguration test logic gets written. Also added to
+  `d2d-tests.yml`'s dropdown, same mechanism as the bare persona scripts.
+
 - `tests/api/health.spec.ts` and `tests/preflight/preflight.spec.ts` were deliberately left
   untagged — they're generic auth/smoke checks, not page-role-visibility tests, so the
   Admin/Admin-Regional distinction doesn't apply to them.

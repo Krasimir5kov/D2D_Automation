@@ -22,6 +22,17 @@ on:
           - test:channel-agent
           - test:admin-no-konfig-manager
           - test:admin-konfig-manager
+          - test:baulose-channel
+          - test:baulose-agent
+          - test:baulose-channel-agent
+          - test:objekte-channel
+          - test:objekte-agent
+          - test:objekte-channel-agent
+          - test:salesActions-channel
+          - test:salesActions-agent
+          - test:salesActions-channel-agent
+          - test:konfiguration-admin-konfig-manager
+          - test:konfiguration-admin-no-konfig-manager
       environment:
         description: Environment to run against
         required: true
