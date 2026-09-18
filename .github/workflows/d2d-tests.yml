@@ -17,6 +17,11 @@ on:
           - test:baulose
           - test:salesActions
           - test:smokeTestAllPAges
+          - test:channel
+          - test:agent
+          - test:channel-agent
+          - test:admin-no-konfig-manager
+          - test:admin-konfig-manager
       environment:
         description: Environment to run against
         required: true

@@ -418,10 +418,10 @@ Channel/Agent-specific coverage next:**
 never needs a hand-typed `--grep`:
 - `test:channel` / `test:agent` / `test:channel-agent` — `--grep "@Channel"` /
   `--grep "@Agent"` / `--grep "@Channel|@Agent"` against `tests/ui`. All three currently select
-  the identical 94 tests in 19 files, since every test tagged `@Channel` is also tagged
-  `@Agent` (the app never distinguishes between them) — this is expected, not a bug; keeping
-  three separate scripts is just future-proofing in case that ever changes, plus it lets
-  whoever runs one name the persona they mean.
+  the identical 100 tests in 21 files (updated after the Phase fix below), since every test
+  tagged `@Channel` is also tagged `@Agent` (the app never distinguishes between them) — this
+  is expected, not a bug; keeping three separate scripts is just future-proofing in case that
+  ever changes, plus it lets whoever runs one name the persona they mean.
 - `test:admin-konfig-manager` — `--grep "@Konfig-Manager"`. Currently selects 0 tests (that
   coverage doesn't exist yet) — this is correct/expected until the future-work item above is
   built; don't treat 0 tests as a config bug.
@@ -448,6 +448,17 @@ never needs a hand-typed `--grep`:
   the persona script. A full multi-persona auth infrastructure (separate storageStates +
   Playwright config projects per persona) was explicitly deferred — not being built until (a)
   is resolved one way or the other.
+- **GitHub Actions:** `.github/workflows/d2d-tests.yml`'s manual `workflow_dispatch` dropdown
+  (`test_command` input) now lists all 5 persona script base names alongside the existing
+  per-page ones, since the workflow already builds `npm run ${test_command}:${environment}`
+  dynamically — no other workflow change was needed, the new package.json scripts just had to
+  be added as selectable options. **Same auth limitation applies here too, more visibly:** the
+  workflow's own "Create fresh auth state" step always runs before "Run tests" using the same
+  `AUTH_USERNAME`/`AUTH_PASSWORD` GitHub secrets for every run, regardless of which
+  `test_command` is picked — so selecting `test:channel` in the dropdown filters which tagged
+  tests execute, but the session that runs them is still authenticated as whichever account
+  those two secrets belong to (currently the Admin mock user). Don't expect picking a persona
+  in CI to also switch the logged-in identity until separate per-persona secrets/auth exist.
 
 - `tests/api/health.spec.ts` and `tests/preflight/preflight.spec.ts` were deliberately left
   untagged — they're generic auth/smoke checks, not page-role-visibility tests, so the
