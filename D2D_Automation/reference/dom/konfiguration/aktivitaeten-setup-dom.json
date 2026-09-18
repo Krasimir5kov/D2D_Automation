@@ -1,0 +1,67 @@
+<div class="UDYvdG45wMOJbQlRI5hA"><div class="ve75bZ_1KJCM3fuIdREt"><div class="RhOzFPp__HeB5tosixWQ"><h2 class="ynoZbjUeWsAdXD7w9pwn">Aktivitäten Setup</h2><div id="create-activity-setup-button" aria-label="Create activity setup" style="display: inline;"><div class="wWkBokS4J_HWHj7EKwHT"><div class="gucci-common-button "><button type="button" class="normal link   "><div class="button-content-with-icons" style="--content-middle-row: 1; --content-label-start: 2; --content-label-end: 4; --content-last-row: 2;"><div class="button-icon-left"><div class="gucci-icon-v2  "><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M18.667 13.333V0h-5.334v13.333H0v5.334h13.333V32h5.334V18.667H32v-5.334H18.667z"></path></svg></div></div><div class="content-label"><span>Setup erstellen</span></div></div></button></div></div></div></div><div><div class="rKlV2fnvJSFkCR7ROIl8"><div class="_nNccfD8pU0Fviw0YF88"><div class="GyfjSF_5Zl90cmzsLA91"><div id="quick-filter-objectType" class="DntgWQkqJW3kBWnGZM5x"><div id="quick-filter-objectType-NEUBAU" class="qWiipqdmvgb4hpbhqJmH " role="button" aria-pressed="false" tabindex="0">Neubau</div><div id="quick-filter-objectType-FTTH" class="qWiipqdmvgb4hpbhqJmH " role="button" aria-pressed="false" tabindex="0">FTTH-Ausbau</div><div id="quick-filter-objectType-BESTANDSBAU" class="qWiipqdmvgb4hpbhqJmH " role="button" aria-pressed="false" tabindex="0">Bestandsbau</div></div></div></div></div></div><div>10 Ergebnisse</div><div><table class="MqHtbkdfMGAlebPCVeVf Interaction_Sections_Table_View"><thead><tr id="th" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        undefined
+        undefined
+        undefined
+      "><td style="height: 1px;">Objekttyp</td><td style="height: 1px;">Regime</td><td style="height: 1px;">Aufgabe</td><td style="height: 1px;"> </td></tr></thead><tbody><tr id="activity-setup-row-1" data-activity-setup-id="1" data-object-type="Neubau" data-regime="" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Neubau</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-1-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-7" data-activity-setup-id="7" data-object-type="FTTH-Ausbau" data-regime="" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>FTTH-Ausbau</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-7-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-10" data-activity-setup-id="10" data-object-type="FTTH-Ausbau" data-regime="" data-task="Leerverrohrungscheck" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>FTTH-Ausbau</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>Leerverrohrungscheck</div></td><td style="height: 1px;"><div id="activity-setup-10-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-16" data-activity-setup-id="16" data-object-type="FTTH-Ausbau" data-regime="VHCN" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>FTTH-Ausbau</div></td><td style="height: 1px;"><div>VHCN</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-16-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-4" data-activity-setup-id="4" data-object-type="Bestandsbau" data-regime="" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Bestandsbau</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-4-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-25" data-activity-setup-id="25" data-object-type="Bestandsbau" data-regime="NVD Trial 01" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Bestandsbau</div></td><td style="height: 1px;"><div>NVD Trial 01</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-25-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-13" data-activity-setup-id="13" data-object-type="Bestandsbau" data-regime="OAN/TP 1" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Bestandsbau</div></td><td style="height: 1px;"><div>OAN/TP 1</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-13-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-19" data-activity-setup-id="19" data-object-type="Bestandsbau" data-regime="OAN/TP 2" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Bestandsbau</div></td><td style="height: 1px;"><div>OAN/TP 2</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-19-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-22" data-activity-setup-id="22" data-object-type="Bestandsbau" data-regime="OAN/TP 3" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>Bestandsbau</div></td><td style="height: 1px;"><div>OAN/TP 3</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-22-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr><tr id="activity-setup-row-0" data-activity-setup-id="0" data-object-type="" data-regime="" data-task="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div id="activity-setup-0-context-menu-button" aria-label="Open activity setup actions" class="Z_HuxTlSmMekkooNLCyU"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></td></tr></tbody></table></div></div></div>

@@ -96,6 +96,59 @@ rewrite.
 
 ---
 
+## ⚠️ Reference sources — check before guessing, never guess when one already has the answer (mandatory)
+
+This rule applies equally to Claude Code, Codex, and any other assistant working in this
+repository. There is now a large, deliberately-built body of reference material specifically so
+neither assistant has to guess at a locator, id, attribute, or DOM structure. Guessing when one
+of these sources already has the answer is the exact failure mode this rule exists to prevent —
+treat "I'm not sure, let me check" as the default, not "this is probably right."
+
+Before suggesting or writing any locator, id, attribute, filter structure, or DOM assumption,
+check these sources **in this order**, and stop as soon as one has the answer:
+
+1. **`reference/docs/D2D_Playwright_Attributes_Reference.md`** (moved from the repo root
+   2026-09-18) — the consolidated, git-verified id/attribute catalog covering the pages built
+   out so far. Re-read it fresh every time, never from memory of a prior read (this generalizes
+   the narrower single-doc version of this rule already stated below under "How to communicate
+   with this user" → "Always Read Attributes Reference" — same rule, same reasoning, now
+   explicitly extended to sources #2 and #3 too).
+2. **`reference/fe-source/testIds/*.ids.ts`** — a local, point-in-time mirror (copied
+   2026-09-18, see that folder's own README) of the FE team's raw, centralized stable-id
+   constants (the POSS-3397→3422 ticket series' output). Check this when a page/filter isn't
+   covered by source #1 yet (e.g. it's newly scaffolded, like Benutzerverwaltung/Importe/
+   Konfiguration were on 2026-09-18). If the live sibling checkout
+   `D2D Repo\microfrontend-door2door-main\src\frontend\shared\testIds\*.ids.ts` is available on
+   this machine, prefer it over the mirror — it may be newer; the mirror exists specifically
+   for machines/futures where that sibling checkout isn't available. **If no file exists for
+   that page/section in either location, that absence is itself a confirmed finding** — it
+   means the FE team never built stable-id infrastructure for it (Gruppen is the concrete
+   example) — report that plainly rather than treating the silence as "I didn't look hard
+   enough."
+3. **`reference/dom/<page>/*.json`** (moved from `D2D_Automation/reference-dom/` 2026-09-18) —
+   live DOM the user has pasted/captured, kept on disk rather than discarded after one read.
+   Re-read the relevant file here before asking the user to re-paste something already
+   captured. This source **wins over #1 and #2 on any conflict, always** — it's what the app
+   actually renders, not what a doc or source file says it should render (the Gruppen row-id
+   case — `tr-group-{id}` confirmed live vs. a wrong `group-{id}` guessed from source alone —
+   is the concrete precedent for this).
+
+All of the above, plus the project's other living docs (`decisions.md`, `best-practices.md`,
+`project-map.mmd`, Jira exports), now live together under `reference/` — see
+`reference/README.md` for the full map. This keeps the framework root
+(`playwright.config.ts`, `package.json`, `src/`, `tests/`, etc.) free of anything that isn't
+actual framework code/config, per the user's 2026-09-18 request.
+
+**If none of the three has the answer**, say so explicitly and either ask the user for a live
+devtools/DOM paste or propose a targeted read of a specific likely source file — never present
+an unconfirmed guess as if it were settled fact. The full reasoning and the Gruppen precedent
+are written up in more detail under the dated "Where to look first when confirming a new
+filter/id" note further below (Benutzerverwaltung/Importe/Konfiguration section) — this section
+is the current, consolidated, always-applies statement of the same rule; that dated note stays
+as historical record per the append-only rule above, it is not superseded or deleted.
+
+---
+
 ## How to communicate with this user
 
 - **User:** Krasimir Petkov — QA Manual/Automation Engineer, native Bulgarian speaker,
@@ -276,10 +329,14 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 | Environments | INT (`INTEGRATION_URL`) and PROD (`PROD_URL`) in `.env`, switched via `TEST_ENV`; per-page-folder `:int`/`:prod` npm scripts (`cross-env`), and a GitHub Actions `environment` dropdown |
 | Auth state path | `playwright/.auth/user.json` (constant in `src/constants/auth.ts`) |
 | Route constants | `door2doorRoutes` in `src/pages/BasePage.ts` |
-| Stable HTML IDs | All in `src/frontend/shared/testIds/` (frontend repo) — see the FE ticket series below |
-| ID reference | `D2D_Playwright_Attributes_Reference.md` — the single, git-verified source of truth (consolidated 2026-09-16, every claim cites a real commit hash; `testids-map.md`/`D2D_QA_Attributes_Work_Summary.md` are retired, they used to disagree with each other and with the live app). **Re-read this fresh before any locator/attribute suggestion**, don't rely on a recalled summary; if it doesn't cover an element, say so and ask for a live devtools check (or a fresh `git show` against the FE repo) rather than guessing |
-| Architecture decisions | `decisions.md` |
-| Best practices / roadmap | `best-practices.md` |
+| Stable HTML IDs | All in `src/frontend/shared/testIds/` (frontend repo) — see the FE ticket series below; a local point-in-time mirror also lives at `reference/fe-source/testIds/` (moved/copied 2026-09-18, see that folder's own README for why and how to refresh) |
+| ID reference | `reference/docs/D2D_Playwright_Attributes_Reference.md` (moved from the repo root 2026-09-18) — the single, git-verified source of truth (consolidated 2026-09-16, every claim cites a real commit hash; `testids-map.md`/`D2D_QA_Attributes_Work_Summary.md` are retired, they used to disagree with each other and with the live app). **Re-read this fresh before any locator/attribute suggestion**, don't rely on a recalled summary; if it doesn't cover an element, say so and ask for a live devtools check (or a fresh `git show` against the FE repo) rather than guessing |
+| Architecture decisions | `reference/docs/decisions.md` (moved from the repo root 2026-09-18) |
+| Best practices / roadmap | `reference/docs/best-practices.md` (moved from the repo root 2026-09-18) |
+| Project structure diagram | `reference/docs/project-map.mmd` (moved from the repo root 2026-09-18) |
+| Jira ticket exports | `reference/docs/jira-exports/` — static POSS-34xx `.doc` exports + a full Jira HTML export, offline reference only, not auto-synced with live Jira (moved from the repo root 2026-09-18) |
+| API endpoint reference collection | `Test_all_int_endpoints/` — a sibling folder (outside `D2D_Automation`, alongside `D2D Repo`) holding a Postman/Newman collection + environment for INT endpoints. Not yet wired into this framework's own API tests — flagged 2026-09-18 as the reference to check before writing new API test coverage here, so existing endpoint/assertion knowledge isn't rebuilt from scratch |
+| Codex/Jira local handoff files | `CODEX_FRAMEWORK_CONTEXT.md` and `JIRA_MCP_CONTEXT.md` **stay at the repo root on purpose** (not moved into `reference/` with everything else 2026-09-18) — both are private, gitignored, per-machine Codex onboarding snapshots, and `CLAUDE.md` itself proves the pattern: this kind of file is expected at repo root by convention. Moving them risked silently breaking however Codex discovers them; ask the user to confirm Codex's actual discovery mechanism before ever relocating either file |
 
 ---
 
@@ -319,7 +376,8 @@ it rather than re-discovering the same workaround. A future FE ticket candidate,
 - **FE stable-attribute ticket series (POSS-3397 → POSS-3422, 24 tickets) is fully Done.**
   Every major page already has list-view, side-panel, and filter-bar attribute work landed —
   don't assume a page has no stable locators or needs new FE work first without checking
-  `D2D_Playwright_Attributes_Reference.md` first.
+  `reference/docs/D2D_Playwright_Attributes_Reference.md` first (path updated 2026-09-18; this
+  file used to sit at the repo root).
 - **CI retry-logic gap confirmed and fixed 2026-09-13.** User reported
   frequent Objekte CI failures (run 34758427895); checked the last 4 CI runs via `gh run list` /
   `gh run view --log-failed` before assuming a page-specific bug. **Confirmed this is NOT an
@@ -600,7 +658,8 @@ at all 6 call sites, with the user's go-ahead per the approval gate.
 **Open loose ends as of 2026-09-13:**
 - `KonfigurationPage.ts`'s header locator (now named `navSideBarHeader`, not `pageHeader` —
   renamed at some point after this note was first written) — scoped to
-  `#configuration-navigation-sidebar` (a confirmed-stable id, see ADR-008/009 in `decisions.md`)
+  `#configuration-navigation-sidebar` (a confirmed-stable id, see ADR-008/009 in
+  `reference/docs/decisions.md`, path updated 2026-09-18)
   `.getByText('Konfiguration', {exact:true})`. Better-scoped than before, but the header text
   match itself is still explicitly commented "unconfirmed markup" in the source — not yet
   verified via devtools.
@@ -655,6 +714,10 @@ at all 6 call sites, with the user's go-ahead per the approval gate.
   empty). **Result:** `D2D_Playwright_Attributes_Reference.md` now contains the consolidated,
   commit-cited content; `D2D_QA_Attributes_Work_Summary.md` and `testids-map.md` are deleted;
   the two scratch output files are deleted too (their content is now in the real doc).
+  **Path update, 2026-09-18:** this file moved from the repo root to `reference/docs/` as part
+  of a broader cleanup that pulled all reference/documentation material out of the framework
+  root — see the "Reference sources" section and the dated note further below for the full
+  reorganization; its content/status described above is unaffected by the move.
 
 **Sales Actions Termin filter, "mit Termin" option only — added 2026-09-16.** Unlike
 Planskizze/Bestellung über D2D, this one is NOT FTTH-only: confirmed with the user that
@@ -906,7 +969,7 @@ expect(await locator.textContent()).toBe('Hello')
 src/
   components/         Reusable UI helpers (FilterBar, TableView, SidePanel, ModalDialog, SearchField, AppNavigation, KonfigurationSideBar)
   constants/          auth.ts, route/filter-option/chip-color constants — mirrors of real app ids/values, never imported live from the FE/BE repos
-  fixtures/           object.fixture.ts (objektePage + salesActionsPage), salesAction.fixture.ts, api.fixture.ts — page objects injected via test.extend(), no manual `new XPage(page)` needed in specs
+  fixtures/           object.fixture.ts (objektePage + salesActionsPage), salesAction.fixture.ts, baulose.fixture.ts, api.fixture.ts — page objects injected via test.extend(), no manual `new XPage(page)` needed in specs. No fixture yet for Benutzerverwaltung/Importe/Konfiguration (2026-09-18 stub scaffolding imports straight from @playwright/test instead)
   helpers/            filterHelpers.ts (actions, no assertions), filterAssertions.ts (assertions, all prefixed expect...)
   pages/              One file per app section, all extend BasePage
     BasePage.ts       door2doorRoutes + buildDoor2DoorUrl + gotoDoor2DoorRoute + shared recovery mechanisms
@@ -916,9 +979,12 @@ tests/
   preflight/          preflight.spec.ts — smoke: app mounts with saved auth
   ui/                 Feature specs (UI), one folder per page, 3 files per filter (see Testing conventions above)
   api/                Feature specs (API)
-D2D_Playwright_Attributes_Reference.md   The ID/attribute catalog — git-verified, re-read fresh each time
-decisions.md                         Architecture decisions log (ADR-001+, "in force")
-best-practices.md                    Assertion/locator/test-structure conventions + roadmap
+reference/            Reference/docs material only, nothing imported by code (moved out of the
+                       root 2026-09-18 to keep the framework root clean — see reference/README.md)
+  docs/                D2D_Playwright_Attributes_Reference.md, decisions.md, best-practices.md,
+                       project-map.mmd, jira-exports/ (POSS-34xx .doc files + a Jira HTML export)
+  fe-source/testIds/   Local point-in-time mirror of the FE repo's shared/testIds/*.ids.ts
+  dom/<page>/          Live DOM the user has pasted/captured (currently dom/konfiguration/)
 ```
 
 ---
@@ -977,3 +1043,181 @@ each section. It generates the two independent value cases (`Krasimir Petkov` an
 `nicht zugewiesen`) without hiding which list section is under test. The selected option's
 `searchTerm` property determines whether the search-input helper or no-search helper is used.
 The outcome remains six independent Playwright tests with clearer section-first source layout.
+
+---
+
+## 2026-09-18 — Benutzerverwaltung, Importe, and Konfiguration: filter scaffolding stubs added
+
+Three pages that had zero filter test coverage (`Benutzerverwaltung`, `Importe`,
+`Konfiguration`) now have full `test.describe.skip(...)` stub scaffolding — the same "scaffold
+all three buckets immediately, before real logic" convention already used for Baulose/Objekte/
+Sales Actions. No real test logic was written; every file is an empty skipped describe block
+with a header comment naming its trigger. `npm run typecheck` passes after each batch.
+
+**Ground truth source:** `FilterConfigContext.tsx` in the sibling FE repo
+(`D2D Repo\microfrontend-door2door-main`, read-only, per the no-cross-repo-dependency rule —
+ids are hardcoded as string literals in the spec header comments only, nothing is imported) for
+Benutzerverwaltung/Importe, cross-checked against live DOM the user pasted for Konfiguration.
+Where source and live DOM disagreed, live DOM won (see the Users "roles" note below).
+
+### Benutzerverwaltung — split into 3 folders, one per tab (not one flat folder)
+Deliberately deviates from the single-flat-folder pattern every other page uses, per the
+user's explicit request: `Users`/`Teams`/`Organisationen` are different enough (different
+filter sets entirely) that separate folders read more clearly.
+- `tests/ui/benutzerverwaltung/users/`: `usersFiltersAvailability`,
+  `usersOrganisationFilterDropdown`/`FilterApply` (`#organizations`),
+  `usersRolleFilterDropdown`/`FilterApply` (`#roles`), `usersAktivQuickFilterApply`
+  (`#quick-filter-activeUser-active-users`), `usersInaktivQuickFilterApply`
+  (`#quick-filter-activeUser-inactive-users`), `usersOhneRolleQuickFilterApply`
+  (`#quick-filter-roles-no-role`). The 3 quick filters are 3 separate stub files, not one
+  combined file, per the user's explicit correction — they render as 3 independent pills, not
+  choices grouped under one visible dropdown.
+- `tests/ui/benutzerverwaltung/teams/`: `teamsFiltersAvailability`,
+  `teamsOrganisationFilterDropdown`/`FilterApply` (`#organizations`, same filter as Users' tab
+  — shared across `displayedAt: ['users','teams','objects','sales-actions','baulose']`),
+  `teamsOhneMitgliederQuickFilterApply` (`#quick-filter-noTeamMembers-no-team-members`).
+- `tests/ui/benutzerverwaltung/organisationen/`: `organisationenFiltersAvailability`,
+  `organisationenVertriebsschienenregionFilterDropdown`/`FilterApply`
+  (`#distributionRegions`), `organisationenOhneAdminExternQuickFilterApply`
+  (`#quick-filter-no-admin-extern-no-admin-extern`),
+  `organisationenOhneAdminA1RegionQuickFilterApply`
+  (`#quick-filter-no-admin-a1-region-no-admin-a1-region`).
+
+**Unconfirmed, flagged in the stub headers, not yet resolved:** `FilterConfigContext.tsx`'s
+source has the key `roles` defined TWICE in the same `filters{}` object literal inside
+`filterConfigContext()` — once as a Multiple "Rolle" dropdown (~line 320), once as a Single
+"ohne Rolle" quick filter (~line 793). In a plain JS object literal the second definition
+would silently win, which would mean the Multiple dropdown is dead code and unreachable at
+runtime. The user confirmed live that BOTH a Rolle dropdown and a separate "ohne Rolle" quick
+pill exist in the real app, so this is a real discrepancy between static source and live
+behavior, not a misread — verify the real trigger via devtools before writing
+`usersRolleFilterDropdown`/`FilterApply`'s real logic.
+
+### Importe — one flat folder (only one section, unlike Benutzerverwaltung)
+`tests/ui/importe/`: `importeFiltersAvailability`, `importeOrganisationFilterDropdown`/
+`FilterApply` (`#importOrganisations`), `importeBenutzerFilterDropdown`/`FilterApply`
+(`#importedByUser`), `importeImportdatumFilterDropdown`/`FilterApply` (`#importData` — the
+user confirmed this is the correct/unique real DOM id, correcting an initial guess of
+`#importDate`; this is the same shared range filter Baulose already has, config key
+`importDate`, `displayedAt: ['imports','baulose']`), `importeSystemImportQuickFilterApply`
+(`#quick-filter-systemImport-system-import`), `importeDateiImportQuickFilterApply`
+(`#quick-filter-systemImport-datei-import`). The user confirmed System Import/Datei Import are
+2 separate individual quick filter pills, not one dropdown with 2 choices.
+
+### Konfiguration — one folder per sidebar item, ground-truthed via user-pasted live DOM
+`KonfigurationPage.ts` has no `filters: FilterBar` field and the whole page previously had zero
+filter-related infrastructure; these are the first filter-adjacent tests for this page. All 6
+sidebar sections got their own folder under `tests/ui/konfiguration/` per the user's explicit
+request, confirmed via 5 separate live-DOM pastes (Übersicht, Abschlussgründe, Aufgaben,
+Gruppen, Regime, Aktivitäten Setup) plus a parallel read-only research pass against the FE
+source for cross-checking (both agreed on every point except Gruppen's row id, see below).
+
+- `tests/ui/konfiguration/uebersicht/`: `uebersichtAvailability` only — confirmed via live DOM
+  this sub-page is a pure placeholder, its entire render output is one `<h2>Übersicht</h2>`,
+  no filters, no search, no create button, no table at all.
+- `tests/ui/konfiguration/abschlussgruende/` (7 files) — the one Konfiguration section with
+  real filter variety: `abschlussgruendeFiltersAvailability`, `abschlussgruendeAktivQuickFilterApply`
+  / `abschlussgruendeInaktivQuickFilterApply` (`#quick-filter-outcomeStatus-active-outcome` /
+  `-inactive-outcome`), `abschlussgruendeEndergebnisFilterDropdown`/`FilterApply`
+  (`#isFinalResult`), `abschlussgruendeKundenkontaktFilterDropdown`/`FilterApply`
+  (`#isCustomerContact`). `isFinalResult`/`isCustomerContact` are a different filter shape
+  than the shared `FilterConfigContext.tsx` system — they're bespoke dropdown-style toggle
+  divs local to this page's own `InteractionOutcome` component (confirmed: restricted to
+  `displayedAt: ['interaction-outcomes']` only in the separate `FilterConfigurationConfigContext.tsx`
+  registry, do not appear anywhere else). **Flagged quirk, needs devtools reconfirmation, not
+  yet acted on:** the live DOM pasted shows the row's `data-status` attribute inverted
+  relative to its own visible "aktiv"/"inaktiv" text — row 274 shows "aktiv" with
+  `data-status="false"`, row 220 shows "inaktiv" with `data-status="true"`. Both quick-filter
+  Apply stub headers carry this note; prefer matching the rendered Status cell text over
+  `data-status` for the real assertion unless this gets reconfirmed as intentional.
+- `tests/ui/konfiguration/aufgaben/`: `aufgabenAvailability` only — confirmed via live DOM
+  (`SalesActionTask` component) this section has NO filters at all, just a search field
+  (`#sales-action-tasks-search-field`), a create button (`#create-task-button`), and a table
+  (`task-row-{taskId}`, attributes `data-task-id`/`data-task-type`/`data-display-name`).
+- `tests/ui/konfiguration/gruppen/`: `gruppenAvailability` only — confirmed via live DOM
+  (`InteractionGroups` component) this section has NO filters, NO search field, and NO create
+  button — just a header, a result count, and a table. **Correction of the source-only
+  research pass:** the parallel FE-source research agent guessed the row id would be
+  `group-${groupId}` (reading the row-model's `id` field, a Table-component internal key, not
+  necessarily a rendered DOM attribute); the user's live DOM paste shows the real rendered row
+  id is actually `tr-group-{id}` (e.g. `tr-group-0`), with no `data-*` attributes at all. Live
+  DOM wins — use `tr-group-{id}`, not `group-{id}`, if/when a real Gruppen test needs to locate
+  a row.
+- `tests/ui/konfiguration/regime/` (4 files): `regimeFiltersAvailability`,
+  `regimeObjekttypNeubauQuickFilterApply` / `...FtthQuickFilterApply` /
+  `...BestandsbauQuickFilterApply` (`#quick-filter-objectType-NEUBAU` / `-FTTH` /
+  `-BESTANDSBAU`). Table rows are `regime-row-{regimeId}` with `data-regime-id`,
+  `data-object-type`, `data-regime`, `data-display-name`, `data-sub-type`, `data-created-at`;
+  search field `#regime-search-field`; create button `#create-regime-button`. **Per
+  `FilterConfigContext.tsx`, this quick filter is role-gated to ADMIN_A1/ADMIN_A1_REGION** —
+  flagged in the Availability stub's header as a setup gotcha to confirm (the automation's test
+  user needs one of those roles or the pills won't render at all) before writing real
+  assertions; the user's own live DOM paste did show the pills rendering, so the current mock
+  user likely already satisfies this, but it hasn't been explicitly re-confirmed here.
+- `tests/ui/konfiguration/aktivitaetenSetup/` (4 files): `aktivitaetenSetupFiltersAvailability`,
+  `aktivitaetenSetupObjekttypNeubauQuickFilterApply` / `...FtthQuickFilterApply` /
+  `...BestandsbauQuickFilterApply` — **the exact same 3 quick-filter pill ids as Regime**
+  (`#quick-filter-objectType-NEUBAU`/`-FTTH`/`-BESTANDSBAU`), confirmed identical via both the
+  FE source (`displayRestrictions.displayedAt: ['regime','outcome-setup']` on the same single
+  `objectType` config entry) and the user's live DOM paste for this section. No search field on
+  this sub-page. Create button `#create-activity-setup-button`. Table rows are
+  `activity-setup-row-{id}` with `data-activity-setup-id`, `data-object-type`, `data-regime`,
+  `data-task`.
+
+### Where to look first when confirming a new filter/id — agreed 2026-09-18
+
+Established after the Gruppen row-id discrepancy above surfaced a real question ("did you
+research this by opening the app in a browser, or by reading files?" — answer was files only,
+this session has no browser/Chrome connector; see `reference-claude-chrome-workflow` memory for
+the separate `claude --chrome` terminal setup that would add live-browser access). Going
+forward, use this order, cheapest/most-authoritative first:
+
+1. **`D2D Repo\microfrontend-door2door-main\src\frontend\shared\testIds\*.ids.ts`** — the
+   FE team's own centralized stable-id constants (the POSS-3397→3422 ticket series' output).
+   When a file exists here for the page/section in question, its exported id template is the
+   real DOM id, no guessing needed. **If no file exists here for that page/section, treat that
+   absence itself as a signal** — it means the FE team never built stable-id infrastructure for
+   it (Gruppen is the confirmed example: no `configurationGroups.ids.ts` or equivalent exists
+   anywhere in this folder), not that something was missed by not looking hard enough.
+2. **The component's own render code** (e.g. `InteractionGroupsTable.tsx`,
+   `FilterConfigContext.tsx` for filter trigger ids specifically — filter ids are a special
+   case, never in the testIds folder, they come straight from `filterConfig.id`/`choice.id`
+   used literally as the DOM id inside the generic `FilterDropdownButton.tsx`/
+   `QuickFilterMultipleChoice.tsx` components) — read this when step 1 has no file, but treat
+   its output as a hypothesis, not confirmed fact, especially for any id built from a template
+   literal rather than copied straight from a testIds constant.
+3. **Live DOM** — either the user pasting/attaching a real capture (see the reference-dom
+   folder below), or a live devtools check via the separate `claude --chrome` terminal setup.
+   This wins on conflict with steps 1-2, every time — it's what the browser actually renders,
+   not what the source suggests it should render. The Gruppen case is the concrete example:
+   step 2 alone would have shipped the wrong row id (`group-{id}` guessed from an internal
+   Table row-model key, vs. the real `tr-group-{id}` the live DOM showed).
+
+**Live DOM captures the user pastes are kept, not just read once and discarded.** They now
+live under `D2D_Automation/reference/dom/<page>/` (currently:
+`reference/dom/konfiguration/abschlussgruende-dom.json`, `aufgaben-dom.json`,
+`gruppen-dom.json`, `regime-dom.json`, `aktivitaeten-setup-dom.json` — captured 2026-09-18,
+environment not explicitly confirmed by the user at capture time, assume INT — the default
+working environment per `project-local-stack-setup` memory — unless told otherwise). Re-read
+the relevant file here first before re-asking the user to re-paste something already captured,
+and before trusting a source-code guess over what's already on disk.
+
+**Path update, 2026-09-18 (same day, later):** step 1's sibling-repo path is unchanged, but a
+local point-in-time mirror of it now also exists at `D2D_Automation/reference/fe-source/testIds/`
+(check that folder's own README for the capture date/refresh steps) — prefer the live sibling
+repo when available, fall back to the mirror when it isn't. The old
+`D2D_Automation/reference-dom/` folder from earlier this same day was also renamed to
+`D2D_Automation/reference/dom/` as part of pulling every reference/doc file out of the
+framework root into one `reference/` folder — see the consolidated "⚠️ Reference sources"
+section near the top of this file for the current, authoritative statement of this whole
+lookup order; this section stays as the original historical record of how/why it was agreed.
+
+### Cross-cutting gap, not yet resolved: no fixture exists for any of the 3 new pages
+Unlike Baulose/Objekte/Sales Actions (each has its own `*.fixture.ts` in `src/fixtures/`),
+there is no `benutzerverwaltung.fixture.ts`, `importe.fixture.ts`, or `konfiguration.fixture.ts`.
+Every stub file created in this session imports `test` directly from `@playwright/test` instead
+of a page fixture, since creating a new fixture file is a separate architectural decision that
+was not part of what the user asked to be scaffolded — deliberately not created without a
+separate explicit approval. Whoever picks up real logic for any of these 3 pages will need to
+either add the matching fixture first (mirroring `baulose.fixture.ts`'s shape) or decide on a
+different DI approach, and switch these stub files' import accordingly.

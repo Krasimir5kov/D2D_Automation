@@ -1,0 +1,1075 @@
+<div class="GizbwflhCsOzyCakaHpX" id="interaction-outcome-sidebar" aria-label="Interaction outcome sidebar" data-sidebar-state="closed"><div class="gOspaS20zqtLahkXfjx5"><h2 class="spVtluu3i7gRp1o_oryR">Abschlussgründe</h2><div id="create-interaction-outcome-button" aria-label="Create interaction outcome" style="display: inline;"><div class="wWkBokS4J_HWHj7EKwHT"><div class="gucci-common-button "><button type="button" class="normal link   "><div class="button-content-with-icons" style="--content-middle-row: 1; --content-label-start: 2; --content-label-end: 4; --content-last-row: 2;"><div class="button-icon-left"><div class="gucci-icon-v2  "><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M18.667 13.333V0h-5.334v13.333H0v5.334h13.333V32h5.334V18.667H32v-5.334H18.667z"></path></svg></div></div><div class="content-label"><span>Abschlussgrunde erstellen</span></div></div></button></div></div></div></div><div class="fb11CMe3ne_qt8PxUHHV"> Infotext...</div><div><div class="KJBVZSjaKNbDypKdMbyH"><div class="gucci-common-search-field  gucci-common-floating-label  show-border  "><div class="flexed-container primary "><label for="interaction-outcomes-search-field"><span>Suche in Abschlussgründe...</span></label><input id="interaction-outcomes-search-field" type="text" autocomplete="off" spellcheck="false" value=""><button class="search-button icon-a1-lupe" type="button"></button></div></div></div></div><div><div class="rKlV2fnvJSFkCR7ROIl8"><div class="_nNccfD8pU0Fviw0YF88"><div class="GyfjSF_5Zl90cmzsLA91"><div id="quick-filter-outcomeStatus" class="DntgWQkqJW3kBWnGZM5x"><div id="quick-filter-outcomeStatus-active-outcome" class="qWiipqdmvgb4hpbhqJmH " role="button" aria-pressed="false" tabindex="0">aktiv</div><div id="quick-filter-outcomeStatus-inactive-outcome" class="qWiipqdmvgb4hpbhqJmH " role="button" aria-pressed="false" tabindex="0">inaktiv</div></div><div class="UFvrUIjxpN2jf7hCLUNw"><div tabindex="0" role="button" class="HePyFz5n_qN7wvTgUrv1" id="isFinalResult">Endergebnis<div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4.268 6L0 10.267l16 16 16-16L27.734 6 16.001 17.733 4.268 6z"></path></svg></div></div></div></div><div class="UFvrUIjxpN2jf7hCLUNw"><div tabindex="0" role="button" class="HePyFz5n_qN7wvTgUrv1" id="isCustomerContact">Kundenkontakt<div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4.268 6L0 10.267l16 16 16-16L27.734 6 16.001 17.733 4.268 6z"></path></svg></div></div></div></div></div></div></div></div><div>178 Ergebnisse</div><table class="MqHtbkdfMGAlebPCVeVf Interaction_Outcomes_Table_View"><thead><tr id="th" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        undefined
+        undefined
+        undefined
+      "><td style="height: 1px;">ID</td><td style="height: 1px;">Anzeigename</td><td style="height: 1px;">Endergebnis</td><td style="height: 1px;">Kundenkontakt</td><td style="height: 1px;">Status</td><td style="height: 1px;"></td></tr></thead><tbody><tr id="interaction-outcome-row-274" data-outcome-id="274" data-display-name="123" data-final-result="true" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>274</div></td><td style="height: 1px;"><div>123</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-274-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-273" data-outcome-id="273" data-display-name="123" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>273</div></td><td style="height: 1px;"><div>123</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-273-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-293" data-outcome-id="293" data-display-name="1234" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>293</div></td><td style="height: 1px;"><div>1234</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-293-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-220" data-outcome-id="220" data-display-name="3210983109#(@!*#)!@(TEST-SPECIAL-CHARACTERCS)&lt;?&gt;:{}&quot;|" data-final-result="false" data-customer-contact="true" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>220</div></td><td style="height: 1px;"><div>3210983109#(@!*#)!@(TEST-SPECIAL-CHARACTERCS)&lt;?&gt;:{}"|</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-220-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-219" data-outcome-id="219" data-display-name="888.  888 k]’;./p[.  —-" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>219</div></td><td style="height: 1px;"><div>888.  888 k]’;./p[.  —-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-219-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-203" data-outcome-id="203" data-display-name="A1 A" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>203</div></td><td style="height: 1px;"><div>A1 A</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-203-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-142" data-outcome-id="142" data-display-name="A1 Xplore TV Home" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>142</div></td><td style="height: 1px;"><div>A1 Xplore TV Home</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-142-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-143" data-outcome-id="143" data-display-name="A1 Xplore TV Stream" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>143</div></td><td style="height: 1px;"><div>A1 Xplore TV Stream</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-143-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-211" data-outcome-id="211" data-display-name="AA" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>211</div></td><td style="height: 1px;"><div>AA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-211-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-212" data-outcome-id="212" data-display-name="AAA" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>212</div></td><td style="height: 1px;"><div>AAA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-212-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-215" data-outcome-id="215" data-display-name="AAA" data-final-result="" data-customer-contact="false" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>215</div></td><td style="height: 1px;"><div>AAA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-215-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-208" data-outcome-id="208" data-display-name="AAAA" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>208</div></td><td style="height: 1px;"><div>AAAA</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-208-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-210" data-outcome-id="210" data-display-name="AAAAA" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>210</div></td><td style="height: 1px;"><div>AAAAA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-210-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-206" data-outcome-id="206" data-display-name="AAAAAA" data-final-result="false" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>206</div></td><td style="height: 1px;"><div>AAAAAA</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-206-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-209" data-outcome-id="209" data-display-name="AAAAAA" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>209</div></td><td style="height: 1px;"><div>AAAAAA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-209-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-61" data-outcome-id="61" data-display-name="Ableger abgelehnt" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>61</div></td><td style="height: 1px;"><div>Ableger abgelehnt</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-61-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-62" data-outcome-id="62" data-display-name="Ableger zugestimmt" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>62</div></td><td style="height: 1px;"><div>Ableger zugestimmt</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-62-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-14" data-outcome-id="14" data-display-name="Abschluss anderer POS" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>14</div></td><td style="height: 1px;"><div>Abschluss anderer POS</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-14-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-144" data-outcome-id="144" data-display-name="Additional Entertainment" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>144</div></td><td style="height: 1px;"><div>Additional Entertainment</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-144-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-29" data-outcome-id="29" data-display-name="Adresse existiert nicht" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>29</div></td><td style="height: 1px;"><div>Adresse existiert nicht</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-29-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-137" data-outcome-id="137" data-display-name="Angebot für Zielprodukt nicht vorhanden" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>137</div></td><td style="height: 1px;"><div>Angebot für Zielprodukt nicht vorhanden</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-137-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-237" data-outcome-id="237" data-display-name="BIK Breitbandinitiative Kärnten" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>237</div></td><td style="height: 1px;"><div>BIK Breitbandinitiative Kärnten</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-237-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-30" data-outcome-id="30" data-display-name="BUE Adresse: keine direkte Bearbeitung" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>30</div></td><td style="height: 1px;"><div>BUE Adresse: keine direkte Bearbeitung</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-30-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-109" data-outcome-id="109" data-display-name="Besitzer unerreichbar" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>109</div></td><td style="height: 1px;"><div>Besitzer unerreichbar</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-109-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-171" data-outcome-id="171" data-display-name="Betreuer kontaktiert" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>171</div></td><td style="height: 1px;"><div>Betreuer kontaktiert</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-171-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-35" data-outcome-id="35" data-display-name="Bob" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>35</div></td><td style="height: 1px;"><div>Bob</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-35-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-127" data-outcome-id="127" data-display-name="Briefkästen" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>127</div></td><td style="height: 1px;"><div>Briefkästen</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-127-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-162" data-outcome-id="162" data-display-name="CR Netcube" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>162</div></td><td style="height: 1px;"><div>CR Netcube</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-162-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-11" data-outcome-id="11" data-display-name="D2D Verkauf" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>11</div></td><td style="height: 1px;"><div>D2D Verkauf</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-11-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-216" data-outcome-id="216" data-display-name="DAAA" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>216</div></td><td style="height: 1px;"><div>DAAA</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-216-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-25" data-outcome-id="25" data-display-name="Drei" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>25</div></td><td style="height: 1px;"><div>Drei</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-25-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-128" data-outcome-id="128" data-display-name="Flyer" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>128</div></td><td style="height: 1px;"><div>Flyer</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-128-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-36" data-outcome-id="36" data-display-name="Georg" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>36</div></td><td style="height: 1px;"><div>Georg</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-36-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-44" data-outcome-id="44" data-display-name="Gespräch verweigert" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>44</div></td><td style="height: 1px;"><div>Gespräch verweigert</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-44-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-87" data-outcome-id="87" data-display-name="IKB" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>87</div></td><td style="height: 1px;"><div>IKB</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-87-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-119" data-outcome-id="119" data-display-name="Identadresse" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>119</div></td><td style="height: 1px;"><div>Identadresse</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-119-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-114" data-outcome-id="114" data-display-name="Infra Check" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>114</div></td><td style="height: 1px;"><div>Infra Check</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-114-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-23" data-outcome-id="23" data-display-name="Innonet" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>23</div></td><td style="height: 1px;"><div>Innonet</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-23-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-172" data-outcome-id="172" data-display-name="Internet@Home" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>172</div></td><td style="height: 1px;"><div>Internet@Home</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-172-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-8" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="8" data-display-name="Ja" data-final-result="" data-customer-contact="" data-status="false"><td style="height: 1px;"><div>8</div></td><td style="height: 1px;"><div>Ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-8-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-235" data-outcome-id="235" data-display-name="KELAG" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>235</div></td><td style="height: 1px;"><div>KELAG</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-235-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-63" data-outcome-id="63" data-display-name="KGV Check" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>63</div></td><td style="height: 1px;"><div>KGV Check</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-63-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-20" data-outcome-id="20" data-display-name="Kabelplus" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>20</div></td><td style="height: 1px;"><div>Kabelplus</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-20-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-31" data-outcome-id="31" data-display-name="Kein A1 Kabel" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>31</div></td><td style="height: 1px;"><div>Kein A1 Kabel</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-31-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-32" data-outcome-id="32" data-display-name="Kein Zutritt Wohnhaus" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>32</div></td><td style="height: 1px;"><div>Kein Zutritt Wohnhaus</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-32-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-39" data-outcome-id="39" data-display-name="Kraftcom" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>39</div></td><td style="height: 1px;"><div>Kraftcom</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-39-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-160" data-outcome-id="160" data-display-name="KuBi Sonstiges" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>160</div></td><td style="height: 1px;"><div>KuBi Sonstiges</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-160-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-167" data-outcome-id="167" data-display-name="Kunde besorgt sich Produkt selber" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>167</div></td><td style="height: 1px;"><div>Kunde besorgt sich Produkt selber</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-167-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-66" data-outcome-id="66" data-display-name="Kunde gräbt selber (LV nicht OK)" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>66</div></td><td style="height: 1px;"><div>Kunde gräbt selber (LV nicht OK)</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-66-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-103" data-outcome-id="103" data-display-name="Kunde nicht angetroffen" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>103</div></td><td style="height: 1px;"><div>Kunde nicht angetroffen</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-103-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-57" data-outcome-id="57" data-display-name="Kunde unerreichbar" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>57</div></td><td style="height: 1px;"><div>Kunde unerreichbar</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-57-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-120" data-outcome-id="120" data-display-name="Kunde überlegt noch" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>120</div></td><td style="height: 1px;"><div>Kunde überlegt noch</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-120-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-54" data-outcome-id="54" data-display-name="LV OK" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>54</div></td><td style="height: 1px;"><div>LV OK</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-54-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-170" data-outcome-id="170" data-display-name="Lead erstellt" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>170</div></td><td style="height: 1px;"><div>Lead erstellt</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-170-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-118" data-outcome-id="118" data-display-name="Leerparzelle" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>118</div></td><td style="height: 1px;"><div>Leerparzelle</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-118-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-233" data-outcome-id="233" data-display-name="Leitungsrecht fehlt" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>233</div></td><td style="height: 1px;"><div>Leitungsrecht fehlt</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-233-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-21" data-outcome-id="21" data-display-name="LiWest" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>21</div></td><td style="height: 1px;"><div>LiWest</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-21-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-37" data-outcome-id="37" data-display-name="LiWest mobil" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>37</div></td><td style="height: 1px;"><div>LiWest mobil</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-37-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-129" data-outcome-id="129" data-display-name="Liftaushang" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>129</div></td><td style="height: 1px;"><div>Liftaushang</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-129-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-64" data-outcome-id="64" data-display-name="Luftkabel / Erdkabel Check" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>64</div></td><td style="height: 1px;"><div>Luftkabel / Erdkabel Check</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-64-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-158" data-outcome-id="158" data-display-name="M4S/CR Fixed" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>158</div></td><td style="height: 1px;"><div>M4S/CR Fixed</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-158-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-159" data-outcome-id="159" data-display-name="M4S/CR Mobile Voice" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>159</div></td><td style="height: 1px;"><div>M4S/CR Mobile Voice</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-159-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-113" data-outcome-id="113" data-display-name="MGWB Check" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>113</div></td><td style="height: 1px;"><div>MGWB Check</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-113-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-19" data-outcome-id="19" data-display-name="Magenta" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>19</div></td><td style="height: 1px;"><div>Magenta</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-19-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-12" data-outcome-id="12" data-display-name="Mieterlistenkontakt" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>12</div></td><td style="height: 1px;"><div>Mieterlistenkontakt</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-12-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-13" data-outcome-id="13" data-display-name="Mietervorveranstaltung" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>13</div></td><td style="height: 1px;"><div>Mietervorveranstaltung</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-13-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-16" data-outcome-id="16" data-display-name="Mitbewerb Langzeitkunde" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>16</div></td><td style="height: 1px;"><div>Mitbewerb Langzeitkunde</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-16-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-18" data-outcome-id="18" data-display-name="Mitbewerb bereits beschlossen" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>18</div></td><td style="height: 1px;"><div>Mitbewerb bereits beschlossen</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-18-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-15" data-outcome-id="15" data-display-name="Mitbewerb günstiger" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>15</div></td><td style="height: 1px;"><div>Mitbewerb günstiger</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-15-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-17" data-outcome-id="17" data-display-name="Mitbewerb schneller in der Herstellung" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>17</div></td><td style="height: 1px;"><div>Mitbewerb schneller in der Herstellung</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-17-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-238" data-outcome-id="238" data-display-name="NETcompany" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>238</div></td><td style="height: 1px;"><div>NETcompany</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-238-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-165" data-outcome-id="165" data-display-name="NEXT" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>165</div></td><td style="height: 1px;"><div>NEXT</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-165-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-135" data-outcome-id="135" data-display-name="Negative Erfahrung eingeben" data-final-result="true" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>135</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-135-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-9" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="9" data-display-name="Nein" data-final-result="" data-customer-contact="" data-status="false"><td style="height: 1px;"><div>9</div></td><td style="height: 1px;"><div>Nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-9-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-130" data-outcome-id="130" data-display-name="Ralph/Olaf" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>130</div></td><td style="height: 1px;"><div>Ralph/Olaf</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-130-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-65" data-outcome-id="65" data-display-name="Reihenhaus Check" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>65</div></td><td style="height: 1px;"><div>Reihenhaus Check</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-65-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-48" data-outcome-id="48" data-display-name="Restbindungsdauer" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>48</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-48-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-111" data-outcome-id="111" data-display-name="Rücktritt/Anmeldung Mitbewerb" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>111</div></td><td style="height: 1px;"><div>Rücktritt/Anmeldung Mitbewerb</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-111-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-123" data-outcome-id="123" data-display-name="SMS Inhalt" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>123</div></td><td style="height: 1px;"><div>SMS Inhalt</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-123-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-121" data-outcome-id="121" data-display-name="SMS gesendet" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>121</div></td><td style="height: 1px;"><div>SMS gesendet</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-121-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-24" data-outcome-id="24" data-display-name="Salzburg AG" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>24</div></td><td style="height: 1px;"><div>Salzburg AG</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-24-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-131" data-outcome-id="131" data-display-name="Schwarzes Brett" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>131</div></td><td style="height: 1px;"><div>Schwarzes Brett</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-131-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-146" data-outcome-id="146" data-display-name="Security" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>146</div></td><td style="height: 1px;"><div>Security</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-146-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-136" data-outcome-id="136" data-display-name="Spusu" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>136</div></td><td style="height: 1px;"><div>Spusu</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-136-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-92" data-outcome-id="92" data-display-name="Stadtwerke" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>92</div></td><td style="height: 1px;"><div>Stadtwerke</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-92-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-112" data-outcome-id="112" data-display-name="Storno" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>112</div></td><td style="height: 1px;"><div>Storno</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-112-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-68" data-outcome-id="68" data-display-name="Storno (LV nicht OK)" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>68</div></td><td style="height: 1px;"><div>Storno (LV nicht OK)</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-68-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-257" data-outcome-id="257" data-display-name="TEST24.04.2026" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>257</div></td><td style="height: 1px;"><div>TEST24.04.2026</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-257-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-256" data-outcome-id="256" data-display-name="TEST24.04.2026" data-final-result="false" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>256</div></td><td style="height: 1px;"><div>TEST24.04.2026</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-256-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-163" data-outcome-id="163" data-display-name="TUP Netcube" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>163</div></td><td style="height: 1px;"><div>TUP Netcube</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-163-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-156" data-outcome-id="156" data-display-name="TUP/LUP BBI Fixed" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>156</div></td><td style="height: 1px;"><div>TUP/LUP BBI Fixed</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-156-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-157" data-outcome-id="157" data-display-name="TUP/LUP FWA" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>157</div></td><td style="height: 1px;"><div>TUP/LUP FWA</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-157-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-161" data-outcome-id="161" data-display-name="TUP/LUP Mobile Voice" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>161</div></td><td style="height: 1px;"><div>TUP/LUP Mobile Voice</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-161-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-38" data-outcome-id="38" data-display-name="Telering" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>38</div></td><td style="height: 1px;"><div>Telering</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-38-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-52" data-outcome-id="52" data-display-name="Termin abgesagt" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>52</div></td><td style="height: 1px;"><div>Termin abgesagt</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-52-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-102" data-outcome-id="102" data-display-name="Termin vereinbart" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>102</div></td><td style="height: 1px;"><div>Termin vereinbart</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-102-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-253" data-outcome-id="253" data-display-name="Test 21 04 2026" data-final-result="true" data-customer-contact="true" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>253</div></td><td style="height: 1px;"><div>Test 21 04 2026</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-253-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-91" data-outcome-id="91" data-display-name="Tirolnet" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>91</div></td><td style="height: 1px;"><div>Tirolnet</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-91-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-26" data-outcome-id="26" data-display-name="Türnummer existiert nicht" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>26</div></td><td style="height: 1px;"><div>Türnummer existiert nicht</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-26-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-132" data-outcome-id="132" data-display-name="Türwerbung" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>132</div></td><td style="height: 1px;"><div>Türwerbung</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-132-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-218" data-outcome-id="218" data-display-name="Ubg" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>218</div></td><td style="height: 1px;"><div>Ubg</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-218-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-73" data-outcome-id="73" data-display-name="Umstieg A1 zu OAN/TP" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>73</div></td><td style="height: 1px;"><div>Umstieg A1 zu OAN/TP</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-73-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-6" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="6" data-display-name="Upgrade" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>6</div></td><td style="height: 1px;"><div>Upgrade</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-6-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-3" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="3" data-display-name="Verkauf" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>3</div></td><td style="height: 1px;"><div>Verkauf</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-3-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-4" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="4" data-display-name="Verkauf BBI" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>4</div></td><td style="height: 1px;"><div>Verkauf BBI</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-4-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-69" data-outcome-id="69" data-display-name="Verkauf BBI A1 Netz (Neu)" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>69</div></td><td style="height: 1px;"><div>Verkauf BBI A1 Netz (Neu)</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-69-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-70" data-outcome-id="70" data-display-name="Verkauf BBI OAN/TP" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>70</div></td><td style="height: 1px;"><div>Verkauf BBI OAN/TP</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-70-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-51" data-outcome-id="51" data-display-name="Verkauf BBI Produkt" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>51</div></td><td style="height: 1px;"><div>Verkauf BBI Produkt</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-51-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-71" data-outcome-id="71" data-display-name="Verkauf BBI Upselling (Speed Upgrade)" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>71</div></td><td style="height: 1px;"><div>Verkauf BBI Upselling (Speed Upgrade)</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-71-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-126" data-outcome-id="126" data-display-name="Verkauf BBI auf andere Adresse" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>126</div></td><td style="height: 1px;"><div>Verkauf BBI auf andere Adresse</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-126-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-141" data-outcome-id="141" data-display-name="Verkauf Entertainment" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>141</div></td><td style="height: 1px;"><div>Verkauf Entertainment</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-141-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-145" data-outcome-id="145" data-display-name="Verkauf Extended" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>145</div></td><td style="height: 1px;"><div>Verkauf Extended</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-145-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-152" data-outcome-id="152" data-display-name="Verkauf FWA" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>152</div></td><td style="height: 1px;"><div>Verkauf FWA</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-152-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-154" data-outcome-id="154" data-display-name="Verkauf HV Netcube" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>154</div></td><td style="height: 1px;"><div>Verkauf HV Netcube</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-154-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-148" data-outcome-id="148" data-display-name="Verkauf HV Voice" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>148</div></td><td style="height: 1px;"><div>Verkauf HV Voice</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-148-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-1" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="1" data-display-name="Verkauf Infra + Service" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>1</div></td><td style="height: 1px;"><div>Verkauf Infra + Service</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-1-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-104" data-outcome-id="104" data-display-name="Verkauf Infrastruktur only" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>104</div></td><td style="height: 1px;"><div>Verkauf Infrastruktur only</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-104-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-173" data-outcome-id="173" data-display-name="Verkauf Internet@Home" data-final-result="false" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>173</div></td><td style="height: 1px;"><div>Verkauf Internet@Home</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-173-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-151" data-outcome-id="151" data-display-name="Verkauf Internet@Home" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>151</div></td><td style="height: 1px;"><div>Verkauf Internet@Home</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-151-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-155" data-outcome-id="155" data-display-name="Verkauf KuBi &amp; Core Upselling" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>155</div></td><td style="height: 1px;"><div>Verkauf KuBi &amp; Core Upselling</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-155-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-166" data-outcome-id="166" data-display-name="Verkauf Low Value" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>166</div></td><td style="height: 1px;"><div>Verkauf Low Value</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-166-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-5" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="5" data-display-name="Verkauf Netcube" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>5</div></td><td style="height: 1px;"><div>Verkauf Netcube</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-5-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-153" data-outcome-id="153" data-display-name="Verkauf Pots zu BBI" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>153</div></td><td style="height: 1px;"><div>Verkauf Pots zu BBI</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-153-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-105" data-outcome-id="105" data-display-name="Verkauf Service only" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>105</div></td><td style="height: 1px;"><div>Verkauf Service only</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-105-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-7" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="7" data-display-name="Verkauf TV" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>7</div></td><td style="height: 1px;"><div>Verkauf TV</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-7-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-134" data-outcome-id="134" data-display-name="Verkauf anderer POS" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>134</div></td><td style="height: 1px;"><div>Verkauf anderer POS</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-134-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-50" data-outcome-id="50" data-display-name="Verkauf sonstiges Produkt" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>50</div></td><td style="height: 1px;"><div>Verkauf sonstiges Produkt</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-50-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-10" data-outcome-id="10" data-display-name="Verkaufsstand" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>10</div></td><td style="height: 1px;"><div>Verkaufsstand</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-10-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-147" data-outcome-id="147" data-display-name="Versicherung" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>147</div></td><td style="height: 1px;"><div>Versicherung</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-147-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-74" data-outcome-id="74" data-display-name="Vorvertrag OAN/TP" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>74</div></td><td style="height: 1px;"><div>Vorvertrag OAN/TP</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-74-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-93" data-outcome-id="93" data-display-name="Waldviertel" data-final-result="false" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>93</div></td><td style="height: 1px;"><div>Waldviertel</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-93-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-82" data-outcome-id="82" data-display-name="Wechsel zu Mitbewerb" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>82</div></td><td style="height: 1px;"><div>Wechsel zu Mitbewerb</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-82-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-110" data-outcome-id="110" data-display-name="Widerruf Fernabsatzgesetz" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>110</div></td><td style="height: 1px;"><div>Widerruf Fernabsatzgesetz</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-110-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-22" data-outcome-id="22" data-display-name="Wien Energie" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>22</div></td><td style="height: 1px;"><div>Wien Energie</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-22-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-40" data-outcome-id="40" data-display-name="Yesss!" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>40</div></td><td style="height: 1px;"><div>Yesss!</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-40-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-124" data-outcome-id="124" data-display-name="Zielprodukt bereits vorhanden" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>124</div></td><td style="height: 1px;"><div>Zielprodukt bereits vorhanden</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-124-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-67" data-outcome-id="67" data-display-name="Zusatzverkauf Grabung (LV nicht OK)" data-final-result="" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>67</div></td><td style="height: 1px;"><div>Zusatzverkauf Grabung (LV nicht OK)</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-67-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-213" data-outcome-id="213" data-display-name="aaaAAaa" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>213</div></td><td style="height: 1px;"><div>aaaAAaa</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-213-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-207" data-outcome-id="207" data-display-name="aaaa" data-final-result="false" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>207</div></td><td style="height: 1px;"><div>aaaa</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-207-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-133" data-outcome-id="133" data-display-name="andere Werbemittel" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>133</div></td><td style="height: 1px;"><div>andere Werbemittel</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-133-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-168" data-outcome-id="168" data-display-name="anderer Ablehnungsgrund" data-final-result="true" data-customer-contact="true" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>168</div></td><td style="height: 1px;"><div>anderer Ablehnungsgrund</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-168-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-169" data-outcome-id="169" data-display-name="anderer Ablehnungsgrund eingeben" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>169</div></td><td style="height: 1px;"><div>anderer Ablehnungsgrund eingeben</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-169-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-41" data-outcome-id="41" data-display-name="anderer Mitbewerber" data-final-result="true" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>41</div></td><td style="height: 1px;"><div>anderer Mitbewerber</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-41-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-49" data-outcome-id="49" data-display-name="anderer Mitbewerber" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>49</div></td><td style="height: 1px;"><div>anderer Mitbewerber</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-49-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-117" data-outcome-id="117" data-display-name="bei Mitbewerb unterschrieben" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>117</div></td><td style="height: 1px;"><div>bei Mitbewerb unterschrieben</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-117-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-115" data-outcome-id="115" data-display-name="bereits FTTH bei A1" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>115</div></td><td style="height: 1px;"><div>bereits FTTH bei A1</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-115-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-116" data-outcome-id="116" data-display-name="bereits FTTH bei Mitbewerb" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>116</div></td><td style="height: 1px;"><div>bereits FTTH bei Mitbewerb</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-116-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-42" data-outcome-id="42" data-display-name="darf nicht entscheiden" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>42</div></td><td style="height: 1px;"><div>darf nicht entscheiden</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-42-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-214" data-outcome-id="214" data-display-name="dsasfasfasgasg" data-final-result="true" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>214</div></td><td style="height: 1px;"><div>dsasfasfasgasg</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-214-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-97" data-outcome-id="97" data-display-name="falsche OAN Machbarkeit" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>97</div></td><td style="height: 1px;"><div>falsche OAN Machbarkeit</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-97-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-53" data-outcome-id="53" data-display-name="fehlende Infrastruktur" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>53</div></td><td style="height: 1px;"><div>fehlende Infrastruktur</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-53-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-122" data-outcome-id="122" data-display-name="gesendet an" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>122</div></td><td style="height: 1px;"><div>gesendet an</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-122-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-139" data-outcome-id="139" data-display-name="kein M4S/CR" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>139</div></td><td style="height: 1px;"><div>kein M4S/CR</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-139-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-107" data-outcome-id="107" data-display-name="kein Mehrwert" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>107</div></td><td style="height: 1px;"><div>kein Mehrwert</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-107-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-140" data-outcome-id="140" data-display-name="kein NEXT" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>140</div></td><td style="height: 1px;"><div>kein NEXT</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-140-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-138" data-outcome-id="138" data-display-name="kein TUP/LUP" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>138</div></td><td style="height: 1px;"><div>kein TUP/LUP</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-138-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-99" data-outcome-id="99" data-display-name="kein Zutritt Wohnhaus" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>99</div></td><td style="height: 1px;"><div>kein Zutritt Wohnhaus</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-99-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-34" data-outcome-id="34" data-display-name="keine Angabe" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>34</div></td><td style="height: 1px;"><div>keine Angabe</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-34-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-149" data-outcome-id="149" data-display-name="mit Hardware" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>149</div></td><td style="height: 1px;"><div>mit Hardware</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-149-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-45" data-outcome-id="45" data-display-name="möchte keine Bindung" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>45</div></td><td style="height: 1px;"><div>möchte keine Bindung</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-45-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-80" data-outcome-id="80" data-display-name="möchte keinen Hausanschluss" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>80</div></td><td style="height: 1px;"><div>möchte keinen Hausanschluss</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-80-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-47" data-outcome-id="47" data-display-name="negative Erfahrung A1" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>47</div></td><td style="height: 1px;"><div>negative Erfahrung A1</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-47-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-27" data-outcome-id="27" data-display-name="nicht bezogen" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>27</div></td><td style="height: 1px;"><div>nicht bezogen</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-27-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-28" data-outcome-id="28" data-display-name="nicht erreicht" data-final-result="" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>28</div></td><td style="height: 1px;"><div>nicht erreicht</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-28-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-239" data-outcome-id="239" data-display-name="nöGIG" data-final-result="" data-customer-contact="" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>239</div></td><td style="height: 1px;"><div>nöGIG</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-239-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-150" data-outcome-id="150" data-display-name="ohne Hardware" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>150</div></td><td style="height: 1px;"><div>ohne Hardware</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-150-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-236" data-outcome-id="236" data-display-name="sbidi" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>236</div></td><td style="height: 1px;"><div>sbidi</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-236-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-234" data-outcome-id="234" data-display-name="technisch nicht möglich" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>234</div></td><td style="height: 1px;"><div>technisch nicht möglich</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-234-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-254" data-outcome-id="254" data-display-name="test_23.04.2026" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>254</div></td><td style="height: 1px;"><div>test_23.04.2026</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-254-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-255" data-outcome-id="255" data-display-name="test_23.04.2026" data-final-result="false" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>255</div></td><td style="height: 1px;"><div>test_23.04.2026</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-255-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-33" data-outcome-id="33" data-display-name="unbewohnt" data-final-result="true" data-customer-contact="false" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>33</div></td><td style="height: 1px;"><div>unbewohnt</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-33-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-108" data-outcome-id="108" data-display-name="zu aufwändig" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>108</div></td><td style="height: 1px;"><div>zu aufwändig</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-108-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-43" data-outcome-id="43" data-display-name="zu geringe Bandbreite" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>43</div></td><td style="height: 1px;"><div>zu geringe Bandbreite</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-43-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-2" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      " data-outcome-id="2" data-display-name="zu teuer" data-final-result="true" data-customer-contact="true" data-status="false"><td style="height: 1px;"><div>2</div></td><td style="height: 1px;"><div>zu teuer</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 90px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-2-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-46" data-outcome-id="46" data-display-name="zufrieden bei Mitbewerb" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>46</div></td><td style="height: 1px;"><div>zufrieden bei Mitbewerb</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-46-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-125" data-outcome-id="125" data-display-name="zufrieden mit A1 Produkten" data-final-result="true" data-customer-contact="true" data-status="false" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>125</div></td><td style="height: 1px;"><div>zufrieden mit A1 Produkten</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>ja</div></td><td style="height: 1px;"><div>aktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-125-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-164" data-outcome-id="164" data-display-name="Übersiedelung" data-final-result="false" data-customer-contact="false" data-status="" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>164</div></td><td style="height: 1px;"><div>Übersiedelung</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>nein</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-164-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr><tr id="interaction-outcome-row-217" data-outcome-id="217" data-display-name="—-==][Bygy7.,’[" data-final-result="" data-customer-contact="" data-status="true" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>217</div></td><td style="height: 1px;"><div>—-==][Bygy7.,’[</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>inaktiv</div></td><td style="height: 0px; vertical-align: middle;"><div role="none"><div id="interaction-outcome-217-context-menu-button" aria-label="Open interaction outcome actions" role="button" class="C9kIX4XgZiOpah5bvS6w" tabindex="0"><div class="gucci-icon-button-v2   secondary" role="button" tabindex="0"><div class="gucci-icon-v2  "><svg viewBox="0 0 20 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 3.118H6.486v6.951h6.952V3.118zM13.402 12.793H6.45v6.952h6.952v-6.952zM13.402 22.468H6.45v6.952h6.952v-6.952z"></path></svg></div></div></div></div></td></tr></tbody></table></div>

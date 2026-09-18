@@ -1,0 +1,337 @@
+<div class="UDYvdG45wMOJbQlRI5hA"><div class="bF5e0uPjQ54kVj6ctv4f"><div class="jmJqeH5lek8FW2WhUcJ4"><h2 class="U4nmYRBst9sHE8DucbD6">Aufgaben</h2><div id="create-task-button" aria-label="Create task" style="display: inline;"><div class="wWkBokS4J_HWHj7EKwHT"><div class="gucci-common-button "><button type="button" class="normal link   "><div class="button-content-with-icons" style="--content-middle-row: 1; --content-label-start: 2; --content-label-end: 4; --content-last-row: 2;"><div class="button-icon-left"><div class="gucci-icon-v2  "><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M18.667 13.333V0h-5.334v13.333H0v5.334h13.333V32h5.334V18.667H32v-5.334H18.667z"></path></svg></div></div><div class="content-label"><span>Aufgabe erstellen</span></div></div></button></div></div></div></div><div><div class="KJBVZSjaKNbDypKdMbyH"><div class="gucci-common-search-field  gucci-common-floating-label  show-border  "><div class="flexed-container primary "><label for="sales-action-tasks-search-field"><span>Suche in Aufgaben...</span></label><input id="sales-action-tasks-search-field" type="text" autocomplete="off" spellcheck="false" value=""><button class="search-button icon-a1-lupe" type="button"></button></div></div></div></div><div>55 Ergebnisse</div><div><table class="MqHtbkdfMGAlebPCVeVf Sales_Action_Tasks_Table_View"><thead><tr id="th" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        undefined
+        undefined
+        undefined
+      "><td style="height: 1px;">ID</td><td style="height: 1px;">TASK_TYPE</td><td style="height: 1px;">Anzeigename</td></tr></thead><tbody><tr id="task-row-231" data-task-id="231" data-task-type="1234" data-display-name="1234" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>231</div></td><td style="height: 1px;"><div>1234</div></td><td style="height: 1px;"><div>1234</div></td></tr><tr id="task-row-133" data-task-id="133" data-task-type="AUFGABE_TEST" data-display-name="Aufgabe" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>133</div></td><td style="height: 1px;"><div>AUFGABE_TEST</div></td><td style="height: 1px;"><div>Aufgabe</div></td></tr><tr id="task-row-134" data-task-id="134" data-task-type="AUFGABE_TEST2" data-display-name="Aufgabe success modal test content" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>134</div></td><td style="height: 1px;"><div>AUFGABE_TEST2</div></td><td style="height: 1px;"><div>Aufgabe success modal test content</div></td></tr><tr id="task-row-191" data-task-id="191" data-task-type="AUFGABEN" data-display-name="aufgaben" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>191</div></td><td style="height: 1px;"><div>AUFGABEN</div></td><td style="height: 1px;"><div>aufgaben</div></td></tr><tr id="task-row-13" data-task-id="13" data-task-type="BBI_ZU_FWA" data-display-name="BBI zu FWA" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>13</div></td><td style="height: 1px;"><div>BBI_ZU_FWA</div></td><td style="height: 1px;"><div>BBI zu FWA</div></td></tr><tr id="task-row-43" data-task-id="43" data-task-type="BBI_ZU_NETCUBE" data-display-name="BBI zu Netcube" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>43</div></td><td style="height: 1px;"><div>BBI_ZU_NETCUBE</div></td><td style="height: 1px;"><div>BBI zu Netcube</div></td></tr><tr id="task-row-172" data-task-id="172" data-task-type="BULGARIA" data-display-name="BULGARIA" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>172</div></td><td style="height: 1px;"><div>BULGARIA</div></td><td style="height: 1px;"><div>BULGARIA</div></td></tr><tr id="task-row-136" data-task-id="136" data-task-type="DDDDDDDDDDDDD222222222222222222222222222" data-display-name="dddddddd22222222222" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>136</div></td><td style="height: 1px;"><div>DDDDDDDDDDDDD222222222222222222222222222</div></td><td style="height: 1px;"><div>dddddddd22222222222</div></td></tr><tr id="task-row-131" data-task-id="131" data-task-type="FIRST TEST" data-display-name="First Test" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>131</div></td><td style="height: 1px;"><div>FIRST TEST</div></td><td style="height: 1px;"><div>First Test</div></td></tr><tr id="task-row-171" data-task-id="171" data-task-type="KRASI_PETKOV" data-display-name="KRASIMIR PETKOV" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>171</div></td><td style="height: 1px;"><div>KRASI_PETKOV</div></td><td style="height: 1px;"><div>KRASIMIR PETKOV</div></td></tr><tr id="task-row-173" data-task-id="173" data-task-type="KRASI_TESTER" data-display-name="KRASIMIR TESTER" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>173</div></td><td style="height: 1px;"><div>KRASI_TESTER</div></td><td style="height: 1px;"><div>KRASIMIR TESTER</div></td></tr><tr id="task-row-18" data-task-id="18" data-task-type="KUPFER_OUT" data-display-name="Kupfer Phase Out" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>18</div></td><td style="height: 1px;"><div>KUPFER_OUT</div></td><td style="height: 1px;"><div>Kupfer Phase Out</div></td></tr><tr id="task-row-17" data-task-id="17" data-task-type="KUPFER_ZU_GLAS_A1" data-display-name="Kupfer zu Glasfaser A1 Netz" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>17</div></td><td style="height: 1px;"><div>KUPFER_ZU_GLAS_A1</div></td><td style="height: 1px;"><div>Kupfer zu Glasfaser A1 Netz</div></td></tr><tr id="task-row-2" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="2" data-task-type="LVRR" data-display-name="Leerverrohrungscheck"><td style="height: 1px;"><div>2</div></td><td style="height: 1px;"><div>LVRR</div></td><td style="height: 1px;"><div>Leerverrohrungscheck</div></td></tr><tr id="task-row-121" data-task-id="121" data-task-type="LEVEL0" data-display-name="Level 0 (Ableger öffentl)" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>121</div></td><td style="height: 1px;"><div>LEVEL0</div></td><td style="height: 1px;"><div>Level 0 (Ableger öffentl)</div></td></tr><tr id="task-row-122" data-task-id="122" data-task-type="LEVEL1" data-display-name="Level 1 (Ableger priv)" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>122</div></td><td style="height: 1px;"><div>LEVEL1</div></td><td style="height: 1px;"><div>Level 1 (Ableger priv)</div></td></tr><tr id="task-row-125" data-task-id="125" data-task-type="LEVEL3" data-display-name="Level 3 (GF im Haus ohne Abschlusspunkt)" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>125</div></td><td style="height: 1px;"><div>LEVEL3</div></td><td style="height: 1px;"><div>Level 3 (GF im Haus ohne Abschlusspunkt)</div></td></tr><tr id="task-row-126" data-task-id="126" data-task-type="LEVEL4" data-display-name="Level 4 (GF im Wohnbereich)" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>126</div></td><td style="height: 1px;"><div>LEVEL4</div></td><td style="height: 1px;"><div>Level 4 (GF im Wohnbereich)</div></td></tr><tr id="task-row-211" data-task-id="211" data-task-type="LEVEL1A" data-display-name="LEVEL1A" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>211</div></td><td style="height: 1px;"><div>LEVEL1A</div></td><td style="height: 1px;"><div>LEVEL1A</div></td></tr><tr id="task-row-212" data-task-id="212" data-task-type="LEVEL1B" data-display-name="LEVEL1B" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>212</div></td><td style="height: 1px;"><div>LEVEL1B</div></td><td style="height: 1px;"><div>LEVEL1B</div></td></tr><tr id="task-row-213" data-task-id="213" data-task-type="LEVEL2" data-display-name="LEVEL2" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>213</div></td><td style="height: 1px;"><div>LEVEL2</div></td><td style="height: 1px;"><div>LEVEL2</div></td></tr><tr id="task-row-1" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="1" data-task-type="NVD" data-display-name="Nachverdichtung"><td style="height: 1px;"><div>1</div></td><td style="height: 1px;"><div>NVD</div></td><td style="height: 1px;"><div>Nachverdichtung</div></td></tr><tr id="task-row-63" data-task-id="63" data-task-type="NETCUBE_ZU_BBI" data-display-name="Netcube zu BBI" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>63</div></td><td style="height: 1px;"><div>NETCUBE_ZU_BBI</div></td><td style="height: 1px;"><div>Netcube zu BBI</div></td></tr><tr id="task-row-11" data-task-id="11" data-task-type="NETCUBE_ZU_BBI_A1" data-display-name="Netcube zu BBI A1 Netz" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>11</div></td><td style="height: 1px;"><div>NETCUBE_ZU_BBI_A1</div></td><td style="height: 1px;"><div>Netcube zu BBI A1 Netz</div></td></tr><tr id="task-row-10" data-task-id="10" data-task-type="NETCUBE_ZU_BBI_OAN" data-display-name="Netcube zu BBI OAN/TP" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>10</div></td><td style="height: 1px;"><div>NETCUBE_ZU_BBI_OAN</div></td><td style="height: 1px;"><div>Netcube zu BBI OAN/TP</div></td></tr><tr id="task-row-14" data-task-id="14" data-task-type="NETCUBE_ZU_FWA" data-display-name="Netcube zu FWA" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>14</div></td><td style="height: 1px;"><div>NETCUBE_ZU_FWA</div></td><td style="height: 1px;"><div>Netcube zu FWA</div></td></tr><tr id="task-row-151" data-task-id="151" data-task-type="NEW" data-display-name="NEW" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>151</div></td><td style="height: 1px;"><div>NEW</div></td><td style="height: 1px;"><div>NEW</div></td></tr><tr id="task-row-137" data-task-id="137" data-task-type="NEW_TASK" data-display-name="new task" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>137</div></td><td style="height: 1px;"><div>NEW_TASK</div></td><td style="height: 1px;"><div>new task</div></td></tr><tr id="task-row-215" data-task-id="215" data-task-type="P1_VK_SERVICE" data-display-name="P1_VK_SERVICE" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>215</div></td><td style="height: 1px;"><div>P1_VK_SERVICE</div></td><td style="height: 1px;"><div>P1_VK_SERVICE</div></td></tr><tr id="task-row-216" data-task-id="216" data-task-type="P2_ABLEGER_PRIVAT" data-display-name="P2_ABLEGER_PRIVAT" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>216</div></td><td style="height: 1px;"><div>P2_ABLEGER_PRIVAT</div></td><td style="height: 1px;"><div>P2_ABLEGER_PRIVAT</div></td></tr><tr id="task-row-217" data-task-id="217" data-task-type="P3_ABSCHLPUNKT_OUTDOOR" data-display-name="P3_ABSCHLPUNKT_OUTDOOR" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>217</div></td><td style="height: 1px;"><div>P3_ABSCHLPUNKT_OUTDOOR</div></td><td style="height: 1px;"><div>P3_ABSCHLPUNKT_OUTDOOR</div></td></tr><tr id="task-row-214" data-task-id="214" data-task-type="P3_ABSCHLPUNKT_UNKNOWN" data-display-name="P3_ABSCHLPUNKT_UNKNOWN" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>214</div></td><td style="height: 1px;"><div>P3_ABSCHLPUNKT_UNKNOWN</div></td><td style="height: 1px;"><div>P3_ABSCHLPUNKT_UNKNOWN</div></td></tr><tr id="task-row-22" data-task-id="22" data-task-type="POTS_OUT" data-display-name="POTS Phase out" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>22</div></td><td style="height: 1px;"><div>POTS_OUT</div></td><td style="height: 1px;"><div>POTS Phase out</div></td></tr><tr id="task-row-20" data-task-id="20" data-task-type="POTS_ZU_BBI_A1" data-display-name="POTS zu BBI A1 Netz" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>20</div></td><td style="height: 1px;"><div>POTS_ZU_BBI_A1</div></td><td style="height: 1px;"><div>POTS zu BBI A1 Netz</div></td></tr><tr id="task-row-21" data-task-id="21" data-task-type="POTS_ZU_BBI_OAN" data-display-name="POTS zu BBI OAN/TP" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>21</div></td><td style="height: 1px;"><div>POTS_ZU_BBI_OAN</div></td><td style="height: 1px;"><div>POTS zu BBI OAN/TP</div></td></tr><tr id="task-row-132" data-task-id="132" data-task-type="TEST_14_05_2026" data-display-name="test 14 05 2026" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>132</div></td><td style="height: 1px;"><div>TEST_14_05_2026</div></td><td style="height: 1px;"><div>test 14 05 2026</div></td></tr><tr id="task-row-138" data-task-id="138" data-task-type="TEST_NEW_TASK" data-display-name="TEST NEW TASK" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>138</div></td><td style="height: 1px;"><div>TEST_NEW_TASK</div></td><td style="height: 1px;"><div>TEST NEW TASK</div></td></tr><tr id="task-row-135" data-task-id="135" data-task-type="TTTTTTTTTT2TTTTTTT" data-display-name="ttttttttttttttttt" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>135</div></td><td style="height: 1px;"><div>TTTTTTTTTT2TTTTTTT</div></td><td style="height: 1px;"><div>ttttttttttttttttt</div></td></tr><tr id="task-row-8" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="8" data-task-type="UM_ZU_OAN_HC" data-display-name="Umsteiger zu OAN/TP (HC)"><td style="height: 1px;"><div>8</div></td><td style="height: 1px;"><div>UM_ZU_OAN_HC</div></td><td style="height: 1px;"><div>Umsteiger zu OAN/TP (HC)</div></td></tr><tr id="task-row-9" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="9" data-task-type="UM_ZU_OAN_HP" data-display-name="Umsteiger zu OAN/TP (HP)"><td style="height: 1px;"><div>9</div></td><td style="height: 1px;"><div>UM_ZU_OAN_HP</div></td><td style="height: 1px;"><div>Umsteiger zu OAN/TP (HP)</div></td></tr><tr id="task-row-4" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="4" data-task-type="UP_BBI" data-display-name="Upsell BBI"><td style="height: 1px;"><div>4</div></td><td style="height: 1px;"><div>UP_BBI</div></td><td style="height: 1px;"><div>Upsell BBI</div></td></tr><tr id="task-row-12" data-task-id="12" data-task-type="UP_BBI_A1" data-display-name="Upsell BBI A1 Netz" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>12</div></td><td style="height: 1px;"><div>UP_BBI_A1</div></td><td style="height: 1px;"><div>Upsell BBI A1 Netz</div></td></tr><tr id="task-row-42" data-task-id="42" data-task-type="UP_NETCUBE" data-display-name="Upsell Netcube" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>42</div></td><td style="height: 1px;"><div>UP_NETCUBE</div></td><td style="height: 1px;"><div>Upsell Netcube</div></td></tr><tr id="task-row-101" data-task-id="101" data-task-type="UP_HV_VOICE" data-display-name="Upsell/Weiterbindung HV Voice" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>101</div></td><td style="height: 1px;"><div>UP_HV_VOICE</div></td><td style="height: 1px;"><div>Upsell/Weiterbindung HV Voice</div></td></tr><tr id="task-row-3" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="3" data-task-type="VK_BBI" data-display-name="Verkauf BBI"><td style="height: 1px;"><div>3</div></td><td style="height: 1px;"><div>VK_BBI</div></td><td style="height: 1px;"><div>Verkauf BBI</div></td></tr><tr id="task-row-7" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="7" data-task-type="VK_BBI_A1" data-display-name="Verkauf BBI A1 Netz"><td style="height: 1px;"><div>7</div></td><td style="height: 1px;"><div>VK_BBI_A1</div></td><td style="height: 1px;"><div>Verkauf BBI A1 Netz</div></td></tr><tr id="task-row-5" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="5" data-task-type="VK_BBI_OAN_HC" data-display-name="Verkauf BBI OAN/TP (HC)"><td style="height: 1px;"><div>5</div></td><td style="height: 1px;"><div>VK_BBI_OAN_HC</div></td><td style="height: 1px;"><div>Verkauf BBI OAN/TP (HC)</div></td></tr><tr id="task-row-6" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      " data-task-id="6" data-task-type="VK_BBI_OAN_HP" data-display-name="Verkauf BBI OAN/TP (HP)"><td style="height: 1px;"><div>6</div></td><td style="height: 1px;"><div>VK_BBI_OAN_HP</div></td><td style="height: 1px;"><div>Verkauf BBI OAN/TP (HP)</div></td></tr><tr id="task-row-19" data-task-id="19" data-task-type="VK_FTTH_BBI" data-display-name="Verkauf FTTH BBI" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>19</div></td><td style="height: 1px;"><div>VK_FTTH_BBI</div></td><td style="height: 1px;"><div>Verkauf FTTH BBI</div></td></tr><tr id="task-row-15" data-task-id="15" data-task-type="VK_FWA" data-display-name="Verkauf FWA" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>15</div></td><td style="height: 1px;"><div>VK_FWA</div></td><td style="height: 1px;"><div>Verkauf FWA</div></td></tr><tr id="task-row-16" data-task-id="16" data-task-type="VK_INFRA_U_SERVICE" data-display-name="Verkauf Hausanschluss + Service" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>16</div></td><td style="height: 1px;"><div>VK_INFRA_U_SERVICE</div></td><td style="height: 1px;"><div>Verkauf Hausanschluss + Service</div></td></tr><tr id="task-row-61" data-task-id="61" data-task-type="VK_HV_VOICE" data-display-name="Verkauf High Value Voice" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>61</div></td><td style="height: 1px;"><div>VK_HV_VOICE</div></td><td style="height: 1px;"><div>Verkauf High Value Voice</div></td></tr><tr id="task-row-41" data-task-id="41" data-task-type="VK_NETCUBE" data-display-name="Verkauf Netcube" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>41</div></td><td style="height: 1px;"><div>VK_NETCUBE</div></td><td style="height: 1px;"><div>Verkauf Netcube</div></td></tr><tr id="task-row-62" data-task-id="62" data-task-type="VK_NEXT" data-display-name="Verkauf Next" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>62</div></td><td style="height: 1px;"><div>VK_NEXT</div></td><td style="height: 1px;"><div>Verkauf Next</div></td></tr><tr id="task-row-81" data-task-id="81" data-task-type="VV_OAN_TP" data-display-name="Vorvertrag OAN/TP" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        null
+        undefined
+      "><td style="height: 1px;"><div>81</div></td><td style="height: 1px;"><div>VV_OAN_TP</div></td><td style="height: 1px;"><div>Vorvertrag OAN/TP</div></td></tr></tbody></table></div></div></div>

@@ -1,0 +1,736 @@
+<div class="UDYvdG45wMOJbQlRI5hA"><div class="YHiIkfLLbAYZMdLgNwcX"><div class="auO_UNpS9Cp1gj53fn29"><h2 class="Yf9gLqihMj9CW3kBbCMv">Gruppen</h2></div><div>103 Ergebnisse</div><table class="MqHtbkdfMGAlebPCVeVf Groups_Table_View"><thead><tr id="th" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        undefined
+        undefined
+        undefined
+      "><td style="height: 1px;">ID</td><td style="height: 1px;">Anzeigename</td><td style="height: 1px;">Typ</td><td style="height: 1px;">Auswahlart</td><td style="height: 1px;">Zusatzinfo</td><td style="height: 1px;">verwendet in Setup</td></tr></thead><tbody><tr id="tr-group-0" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>0</div></td><td style="height: 1px;"><div>NA</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>0 - -, -, -,
+NA </div></td></tr><tr id="tr-group-1" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>1</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>1 - Neubau, -, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-2" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>2</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 3, 4</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-3" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>3</div></td><td style="height: 1px;"><div>Modem</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 2</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-4" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>4</div></td><td style="height: 1px;"><div>Abschluss/Bearbeitung im Rahmen von</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 2</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-5" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>5</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 6, 7</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-6" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>6</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 5
+hat Untergruppe 8</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-7" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>7</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 5</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-8" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>8</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 6</div></td><td style="height: 1px;"><div>2 - Neubau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-9" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>9</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>3 - Neubau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-10" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>10</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>4 - Bestandsbau, -, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-11" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>11</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 60, 61, 62, 63, 64</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-12" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>12</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 13, 14, 15, 65</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-13" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>13</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 12</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-14" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>14</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 12
+hat Untergruppe 16</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-15" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>15</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 12</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-16" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>16</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 14</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-17" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>17</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 18, 19, 66, 91</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-18" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>18</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 17
+hat Untergruppe 20</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-19" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>19</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 17</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-20" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>20</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 18</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-21" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>21</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>7 - FTTH-Ausbau, -, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-22" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>22</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>8 - FTTH-Ausbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-23" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>23</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 42</div></td><td style="height: 1px;"><div>8 - FTTH-Ausbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-24" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>24</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>9 - FTTH-Ausbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-25" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>25</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>10 - FTTH-Ausbau, -, Leerverrohrungscheck,
+in Bearbeitung </div></td></tr><tr id="tr-group-26" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>26</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>11 - FTTH-Ausbau, -, Leerverrohrungscheck,
+abgeschlossen </div></td></tr><tr id="tr-group-27" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>27</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 28</div></td><td style="height: 1px;"><div>11 - FTTH-Ausbau, -, Leerverrohrungscheck,
+abgeschlossen </div></td></tr><tr id="tr-group-28" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>28</div></td><td style="height: 1px;"><div>Ableger Zustimmung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 27</div></td><td style="height: 1px;"><div>11 - FTTH-Ausbau, -, Leerverrohrungscheck,
+abgeschlossen </div></td></tr><tr id="tr-group-29" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>29</div></td><td style="height: 1px;"><div>Leerverrohrungscheck (LV-Check)</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>12 - FTTH-Ausbau, -, Leerverrohrungscheck,
+nicht durchführbar </div></td></tr><tr id="tr-group-30" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>30</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>13 - Bestandsbau, OAN/TP 1, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-31" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>31</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 67, 68, 69, 70, 71</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-32" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>32</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 33, 34, 35, 72</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-33" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>33</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 32</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-34" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>34</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 32
+hat Untergruppe 36</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-35" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>35</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 32</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-36" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>36</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 34</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-37" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>37</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 73, 74</div></td><td style="height: 1px;"><div>15 - Bestandsbau, OAN/TP 1, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-38" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>38</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>16 - FTTH-Ausbau, VHCN, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-39" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>39</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>17 - FTTH-Ausbau, VHCN, -,
+abgeschlossen </div></td></tr><tr id="tr-group-40" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>40</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 43</div></td><td style="height: 1px;"><div>17 - FTTH-Ausbau, VHCN, -,
+abgeschlossen </div></td></tr><tr id="tr-group-41" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>41</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>18 - FTTH-Ausbau, VHCN, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-42" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>42</div></td><td style="height: 1px;"><div>Ableger Zustimmung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 23</div></td><td style="height: 1px;"><div>8 - FTTH-Ausbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-43" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>43</div></td><td style="height: 1px;"><div>Ableger Zustimmung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 40</div></td><td style="height: 1px;"><div>17 - FTTH-Ausbau, VHCN, -,
+abgeschlossen </div></td></tr><tr id="tr-group-44" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>44</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>19 - Bestandsbau, OAN/TP 2, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-45" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>45</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 75, 76, 77, 78, 79</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-46" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>46</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 47, 48, 49, 80</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-47" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>47</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 46</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-48" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>48</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 46
+hat Untergruppe 50</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-49" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>49</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 46</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-50" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>50</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 48</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-51" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>51</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 81, 82</div></td><td style="height: 1px;"><div>21 - Bestandsbau, OAN/TP 2, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-52" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>52</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>22 - Bestandsbau, OAN/TP 3, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-53" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>53</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 83, 84, 85, 86, 87</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-54" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>54</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 55, 56, 57, 88</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-55" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>55</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 54</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-56" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>56</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 54
+hat Untergruppe 58</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-57" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>57</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 54</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-58" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>58</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 56</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-59" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>59</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 89, 90</div></td><td style="height: 1px;"><div>24 - Bestandsbau, OAN/TP 3, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-60" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>60</div></td><td style="height: 1px;"><div>Auswahl Entertainment</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 11</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-61" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>61</div></td><td style="height: 1px;"><div>Auswahl Extended</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 11</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-62" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>62</div></td><td style="height: 1px;"><div>Auswahl HV Voice</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 11</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-63" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>63</div></td><td style="height: 1px;"><div>Auswahl Internet@Home</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 11</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-64" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>64</div></td><td style="height: 1px;"><div>Auswahl KuBi &amp; Core Upselling</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 11</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-65" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>65</div></td><td style="height: 1px;"><div>anderer Absagegrund eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 12</div></td><td style="height: 1px;"><div>5 - Bestandsbau, -, -,
+abgeschlossen </div></td></tr><tr id="tr-group-66" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>66</div></td><td style="height: 1px;"><div>Auswahl Angebot nicht vorhanden</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 17</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-67" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>67</div></td><td style="height: 1px;"><div>Auswahl Entertainment</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 31</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-68" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>68</div></td><td style="height: 1px;"><div>Auswahl Extended</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 31</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-69" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>69</div></td><td style="height: 1px;"><div>Auswahl HV Voice</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 31</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-70" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>70</div></td><td style="height: 1px;"><div>Auswahl Internet@Home</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 31</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-71" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>71</div></td><td style="height: 1px;"><div>Auswahl KuBi &amp; Core Upselling</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 31</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-72" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>72</div></td><td style="height: 1px;"><div>anderer Ablehnungsgrund eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 32</div></td><td style="height: 1px;"><div>14 - Bestandsbau, OAN/TP 1, -,
+abgeschlossen </div></td></tr><tr id="tr-group-73" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>73</div></td><td style="height: 1px;"><div>Auswahl Angebot nicht vorhanden</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 37</div></td><td style="height: 1px;"><div>15 - Bestandsbau, OAN/TP 1, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-74" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>74</div></td><td style="height: 1px;"><div>BUE Adresse: keine direkte Bearbeitung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 37</div></td><td style="height: 1px;"><div>15 - Bestandsbau, OAN/TP 1, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-75" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>75</div></td><td style="height: 1px;"><div>Auswahl Entertainment</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 45</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-76" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>76</div></td><td style="height: 1px;"><div>Auswahl Extended</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 45</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-77" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>77</div></td><td style="height: 1px;"><div>Auswahl HV Voice</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 45</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-78" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>78</div></td><td style="height: 1px;"><div>Auswahl Internet@Home</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 45</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-79" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>79</div></td><td style="height: 1px;"><div>Auswahl KuBi &amp; Core Upselling</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 45</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-80" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>80</div></td><td style="height: 1px;"><div>anderer Ablehnungsgrund eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 46</div></td><td style="height: 1px;"><div>20 - Bestandsbau, OAN/TP 2, -,
+abgeschlossen </div></td></tr><tr id="tr-group-81" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>81</div></td><td style="height: 1px;"><div>Auswahl Angebot nicht vorhanden</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 51</div></td><td style="height: 1px;"><div>21 - Bestandsbau, OAN/TP 2, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-82" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>82</div></td><td style="height: 1px;"><div>BUE Adresse: keine direkte Bearbeitung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 51</div></td><td style="height: 1px;"><div>21 - Bestandsbau, OAN/TP 2, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-83" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>83</div></td><td style="height: 1px;"><div>Auswahl Entertainment</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 53</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-84" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>84</div></td><td style="height: 1px;"><div>Auswahl Extended</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 53</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-85" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>85</div></td><td style="height: 1px;"><div>Auswahl HV Voice</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 53</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-86" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>86</div></td><td style="height: 1px;"><div>Auswahl Internet@Home</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 53</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-87" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>87</div></td><td style="height: 1px;"><div>Auswahl KuBi &amp; Core Upselling</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 53</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-88" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>88</div></td><td style="height: 1px;"><div>anderer Ablehnungsgrund eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 54</div></td><td style="height: 1px;"><div>23 - Bestandsbau, OAN/TP 3, -,
+abgeschlossen </div></td></tr><tr id="tr-group-89" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>89</div></td><td style="height: 1px;"><div>Auswahl Angebot nicht vorhanden</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 59</div></td><td style="height: 1px;"><div>24 - Bestandsbau, OAN/TP 3, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-90" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>90</div></td><td style="height: 1px;"><div>BUE Adresse: keine direkte Bearbeitung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 59</div></td><td style="height: 1px;"><div>24 - Bestandsbau, OAN/TP 3, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-91" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>91</div></td><td style="height: 1px;"><div>BUE Adresse: keine direkte Bearbeitung</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Mehrfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 17</div></td><td style="height: 1px;"><div>6 - Bestandsbau, -, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-92" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>92</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>25 - Bestandsbau, NVD Trial 01, -,
+in Bearbeitung </div></td></tr><tr id="tr-group-93" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>93</div></td><td style="height: 1px;"><div>Ergebnis - positiv</div></td><td style="height: 1px;"><div>positiv</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>-</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-94" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>94</div></td><td style="height: 1px;"><div>Ergebnis - negativ</div></td><td style="height: 1px;"><div>negativ</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 95, 96, 97</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-95" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>95</div></td><td style="height: 1px;"><div>Negative Erfahrung eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 94</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-96" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>96</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 94
+hat Untergruppe 98</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-97" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>97</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 94</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-98" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>98</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 96</div></td><td style="height: 1px;"><div>26 - Bestandsbau, NVD Trial 01, -,
+abgeschlossen </div></td></tr><tr id="tr-group-99" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>99</div></td><td style="height: 1px;"><div>Ergebnis</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>hat Untergruppe 100, 101</div></td><td style="height: 1px;"><div>27 - Bestandsbau, NVD Trial 01, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-100" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>100</div></td><td style="height: 1px;"><div>Mitbewerber</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Einfachauswahl</div></td><td style="height: 1px;"><div>ist Untergruppe von 99
+hat Untergruppe 102</div></td><td style="height: 1px;"><div>27 - Bestandsbau, NVD Trial 01, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-101" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>101</div></td><td style="height: 1px;"><div>Restbindungsdauer</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 99</div></td><td style="height: 1px;"><div>27 - Bestandsbau, NVD Trial 01, -,
+nicht durchführbar </div></td></tr><tr id="tr-group-102" class="
+        _0sLeWN9iFu4_KyLTsdzA
+        undefined
+        B1UBG9IYgc3eGfcqp1qY
+        ESlSQ9ToPSUXlCtzA1Um
+        undefined
+      "><td style="height: 1px;"><div>102</div></td><td style="height: 1px;"><div>Mitbewerber eingeben</div></td><td style="height: 1px;"><div>neutral</div></td><td style="height: 1px;"><div>Texteingabefeld</div></td><td style="height: 1px;"><div>ist Untergruppe von 100</div></td><td style="height: 1px;"><div>27 - Bestandsbau, NVD Trial 01, -,
+nicht durchführbar </div></td></tr></tbody></table></div></div>
