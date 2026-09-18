@@ -248,18 +248,38 @@ doing that layer's job.
 For every filter on every page, split coverage into three dedicated spec files rather than one
 combined one:
 1. **Availability** — `{page}FiltersAvailability.spec.ts`, one file per *page* covering every
-   filter on it: is the closed trigger visible with the right title.
+   filter on it: is the closed trigger visible with the right title. Lives at the page folder's
+   own root, not inside `content/` or `application/` (see the folder-nesting rule below) — it's
+   a third, separate concern from either of those two.
 2. **Dropdown Content** — `{page}{FilterName}FilterDropdown.spec.ts`, one file per *filter*:
    once opened, search-input presence/placeholder, header label, counter-badge behavior on
-   selecting an option.
-3. **Apply** — `{page}{FilterName}FilterApply.spec.ts`, one file per filter: select a value,
-   apply it, verify the list results/chip/criteria.
+   selecting an option. Lives inside that page's `content/` subfolder.
+3. **Apply** — `{page}{FilterName}FilterApply.spec.ts` (or `{...}QuickFilterApply.spec.ts` for a
+   quick-filter pill, which has no dropdown "content" to test at all — no Dropdown Content file
+   exists for those), one file per filter: select a value, apply it, verify the list
+   results/chip/criteria. Lives inside that page's `application/` subfolder.
 
 **Scaffold all three immediately when a new page's filter list is confirmed** — one
 `test.describe.skip(...)` stub per filter, named consistently, with a header comment naming the
 trigger locator — *before* writing any real test logic and without waiting to be asked
 filter-by-filter. This has been corrected once already (only the first filter got a stub file
 the first time a new page started); don't repeat that.
+
+**Folder nesting — agreed 2026-09-18, applied to every page.** Every page folder under
+`tests/ui/` (and every Benutzerverwaltung tab / Konfiguration section subfolder) splits into
+two nested subfolders: `content/` (every `*FilterDropdown.spec.ts`) and `application/` (every
+`*FilterApply.spec.ts` and `*QuickFilterApply.spec.ts`). Everything else — the page's own
+`*FiltersAvailability.spec.ts`, and any non-filter spec like `bauloseSearch.spec.ts`,
+`objekteSidePanel.spec.ts`, `bauloseSalesActionNavigation.spec.ts` — stays at the page folder's
+own root, outside both subfolders. Rationale: `content/` (the Dropdown Content bucket) is 0%
+built out everywhere as of this writing, and grouping every still-empty stub for that one
+concern together, across every filter on a page, makes that upcoming build-out phase far easier
+to track and batch-run than hunting them across a flat folder mixed with `application/` files.
+Filenames themselves never changed, only their containing folder — `npm run test:{page}:int`
+and the CI workflow both still work unmodified, since Playwright's `testDir`/CLI path argument
+already discovers `.spec.ts` files recursively at any depth; no config file needed updating for
+this move. A page/section with zero filters (Konfiguration's Übersicht/Aufgaben/Gruppen) has no
+`content/`/`application/` subfolders at all — don't create empty ones.
 
 ### Reusable filter-testing infrastructure (already built — reuse, don't rebuild)
 - `FilterBar.ts` — generic, page-agnostic: `trigger(id)`, `choiceLabelButton(label)`,
@@ -977,7 +997,10 @@ src/
 tests/
   setup/              auth.setup.ts — manual 2FA login, saves storageState
   preflight/          preflight.spec.ts — smoke: app mounts with saved auth
-  ui/                 Feature specs (UI), one folder per page, 3 files per filter (see Testing conventions above)
+  ui/                 Feature specs (UI), one folder per page, 3 files per filter (see Testing
+                       conventions above). Each page folder nests content/ (Dropdown Content)
+                       and application/ (Apply) subfolders (2026-09-18); Availability + any
+                       non-filter spec stay at that page folder's own root
   api/                Feature specs (API)
 reference/            Reference/docs material only, nothing imported by code (moved out of the
                        root 2026-09-18 to keep the framework root clean — see reference/README.md)
